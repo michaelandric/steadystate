@@ -25,15 +25,15 @@ hemispheres = ["lh","rh"]
 mm = makesubmitargs.makeargs
 mm.ijkTALAIRACHcoordsargs("TTavg152T1","automask_d1")
 
-for ss in subjects:
+#for ss in subjects:
     #print commands.getoutput("python makesubmitargs.py --subject "+ss) ## for dir maker
     #mm.ijkcoordsargs(ss,"/mnt/tier2/urihas/Andric/steadystate/","automask_d3")
     #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 /mnt/tier2/urihas/Andric/steadystate/ --arg2 automask_d3") ## for submit.10.getijk
     #mm.autotlrcargs(ss)
-    for cc in conditions:
+    #for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 "+`cc`) ## this was for submit.splice
-        mm.maskdumpargs(ss,cc)
+        #mm.maskdumpargs(ss,cc)
         #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 /mnt/tier2/urihas/Andric/steadystate/ --arg2 automask_d3 --arg3 "+`cc`) ## for submit.3.maskdump
         #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 "+dictionary[ss]+" --arg2 "+`cc`)  ## this is for submit.4.corr
         #mm.threshargs(ss,cc) ## for submit.6.threshold
