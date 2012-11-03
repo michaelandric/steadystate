@@ -1,0 +1,3 @@
+03.Oct.2012
+Did a test of Vol2Surf. Here's how I ran it:
+python 1.vol2surf.py --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/ANGO/SUMA/ --spec sANGO_lh_mesh140ANGO_lh.spec --surfA sANGO_lh_mesh140lh.smoothwm.asc --surfB sANGO_lh_mesh140lh.pial.asc --map_function max_abs --surfvol /mnt/tier2/urihas/sam.steadystate/ANGO/ANGO.SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/ANGO/connectivity/ANGO.1.comm.tree3_filt3.ijk+orig. --outputname lh_ANGO.1.comm.tree3_file3.ijk.max_abs.1D

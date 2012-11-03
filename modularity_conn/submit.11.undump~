@@ -1,0 +1,20 @@
+executable	= 11.undump.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/11.$(Process).out
+error		= ./logs/11.$(Process).err
+log 		= ./logs/11.$(Process).log
+
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.1.degrees --ijkfile /mnt/tier2/urihas/Andric/steadystate/MYTP/ijk_coords_MYTP --master /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.1.degrees.ijk 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.2.degrees --ijkfile /mnt/tier2/urihas/Andric/steadystate/MYTP/ijk_coords_MYTP --master /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.2.degrees.ijk 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.3.degrees --ijkfile /mnt/tier2/urihas/Andric/steadystate/MYTP/ijk_coords_MYTP --master /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.3.degrees.ijk 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.4.degrees --ijkfile /mnt/tier2/urihas/Andric/steadystate/MYTP/ijk_coords_MYTP --master /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.4.degrees.ijk 
+queue 
+

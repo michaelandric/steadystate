@@ -1,0 +1,20 @@
+executable	= 10.getijk.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/10.$(Process).out
+error		= ./logs/10.$(Process).err
+log 		= ./logs/10.$(Process).log
+
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/TRCO/automask_d3_TRCO+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.1.TRCO.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/TRCO/ijk_coords_TRCO 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/CLFR/automask_d3_CLFR+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.1.CLFR.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/CLFR/ijk_coords_CLFR 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/PIGL/automask_d3_PIGL+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.1.PIGL.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/PIGL/ijk_coords_PIGL 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/SNNW/automask_d3_SNNW+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.1.SNNW.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/SNNW/ijk_coords_SNNW 
+queue 
+

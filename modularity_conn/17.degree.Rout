@@ -1,0 +1,49 @@
+
+R version 2.15.1 (2012-06-22) -- "Roasted Marshmallows"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ## getting the degree of each voxel
+> library(bct)
+Loading required package: RcppGSL
+Loading required package: Rcpp
+Loading required package: snow
+> 
+> Args <- Sys.getenv("R_ARGS")
+> print(noquote(strsplit(Args," ")[[1]]))
+[1] MNGO  28266 1    
+> print(length(noquote(strsplit(Args," ")[[1]])))
+[1] 3
+> ss <- noquote(strsplit(Args," ")[[1]][1])
+> nVoxArg <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
+> Cond <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
+> print(Cond)
+[1] 1
+> print(nVoxArg)
+[1] 23081
+> 
+> setwd(paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/",sep=""))
+> outname <- paste(ss,".",Cond,".degrees",sep="")
+> inmatrix <- paste("cleanTS.Cond",Cond,".",ss,".noijk_dump.bin.corr.thresh",sep="")
+> 
+> outdegrees <- fdegrees_und(inmatrix,nVoxArg)
+> write(outdegrees,outname,sep="\n")
+> 
+> proc.time()
+    user   system  elapsed 
+   6.026    2.364 1068.864 

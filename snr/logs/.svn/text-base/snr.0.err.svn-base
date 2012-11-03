@@ -1,0 +1,47 @@
+++ 3dTstat: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
+++ Authored by: KR Hammett & RW Cox
+*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
+  such as /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//blur.1.ANGO.steadystate.TRIM+orig.BRIK,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//blur.1.ANGO.steadystate.TRIM+orig.BRIK is 2.990485 degrees from plumb.
+++ Output dataset /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//mean.blur.1.ANGO.steadystate.TRIM+orig.BRIK
+++ 3dDetrend: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
+*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
+  such as /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//blur.1.ANGO.steadystate.TRIM+orig.BRIK,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//blur.1.ANGO.steadystate.TRIM+orig.BRIK is 2.990485 degrees from plumb.
+++ 3dTstat: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
+++ Authored by: KR Hammett & RW Cox
+*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
+  such as /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//detrend.blur.1.ANGO.steadystate.TRIM+orig.BRIK,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//detrend.blur.1.ANGO.steadystate.TRIM+orig.BRIK is 2.990485 degrees from plumb.
+++ Output dataset /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//stdev.blur.1.ANGO.steadystate.TRIM+orig.BRIK
+++ 3dcalc: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
+++ Authored by: A cast of thousands
+*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
+  such as /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//mean.blur.1.ANGO.steadystate.TRIM+orig.BRIK,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//mean.blur.1.ANGO.steadystate.TRIM+orig.BRIK is 2.990485 degrees from plumb.
+++ Reading dataset /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//mean.blur.1.ANGO.steadystate.TRIM+orig.BRIK (409600 bytes)
+++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//stdev.blur.1.ANGO.steadystate.TRIM+orig.BRIK is 2.990485 degrees from plumb.
+++ Reading dataset /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//stdev.blur.1.ANGO.steadystate.TRIM+orig.BRIK (409600 bytes)
+++ Computing sub-brick 0
+++ Computing output statistics
+++ Output dataset /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR//snr.blur.1.ANGO.steadystate.TRIM+orig.BRIK

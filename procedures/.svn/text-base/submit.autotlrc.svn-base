@@ -1,0 +1,68 @@
+executable	= autotlrc.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/autotlrc.$(Process).out
+error		= ./logs/autotlrc.$(Process).err
+log 		= ./logs/autotlrc.$(Process).log
+
+
+arguments    = --Subject MYTP --tlrc_brain MYTPtlrc+tlrc 
+queue 
+
+arguments    = --Subject TRCO --tlrc_brain TRCOtlrc+tlrc 
+queue 
+
+arguments    = --Subject PIGL --tlrc_brain PIGLtlrc+tlrc 
+queue 
+
+arguments    = --Subject SNNW --tlrc_brain SNNWtlrc+tlrc 
+queue 
+
+arguments    = --Subject LDMW --tlrc_brain LDMWtlrc+tlrc 
+queue 
+
+arguments    = --Subject FLTM --tlrc_brain FLTMtlrc+tlrc 
+queue 
+
+arguments    = --Subject EZCR --tlrc_brain EZCRtlrc+tlrc 
+queue 
+
+arguments    = --Subject EEPA --tlrc_brain EEPAtlrc+tlrc 
+queue 
+
+arguments    = --Subject DNLN --tlrc_brain DNLNtlrc+tlrc 
+queue 
+
+arguments    = --Subject CRFO --tlrc_brain CRFOtlrc+tlrc 
+queue 
+
+arguments    = --Subject ANMS --tlrc_brain ANMStlrc+tlrc 
+queue 
+
+arguments    = --Subject BARS --tlrc_brain BARStlrc+tlrc 
+queue 
+
+arguments    = --Subject MRZM --tlrc_brain MRZMtlrc+tlrc 
+queue 
+
+arguments    = --Subject MRVV --tlrc_brain MRVVtlrc+tlrc 
+queue 
+
+arguments    = --Subject MRMK --tlrc_brain MRMKtlrc+tlrc 
+queue 
+
+arguments    = --Subject MRMC --tlrc_brain MRMCtlrc+tlrc 
+queue 
+
+arguments    = --Subject MRAG --tlrc_brain MRAGtlrc+tlrc 
+queue 
+
+arguments    = --Subject MNGO --tlrc_brain MNGOtlrc+tlrc 
+queue 
+
+arguments    = --Subject LRVN --tlrc_brain LRVNtlrc+tlrc 
+queue 
+
+arguments    = --Subject CLFR --tlrc_brain CLFRtlrc+tlrc 
+queue 
+

@@ -1,0 +1,53 @@
+06.Sept.2012
+This is how I ran 4.corr.R:
+R CMD BATCH --vanilla "--args ANGO" 4.corr.R
+
+07.Sept.2012
+This is how I ran 5.filestomatrix.R
+R CMD BATCH --vanilla "--args ANGO 22170" 5.filestomatrix.R
+
+This is how I ran 6.thresholdmat.R
+R CMD BATCH --vanilla "--args ANGO" 6.thresholdmat.R
+
+R CMD BATCH --vanilla "--args ANGO" 7.blondel_convert.R
+
+
+I copy 8.blondel.R to the directory and run it there. This is because I want the *.Rout. 
+The *.Rout file shows the increase in modularity through the different levels. 
+R CMD BATCH --vanilla "--args ANGO 2" 8.blondel.R
+
+I copy 9.hierarchy.R to the directory and run it there. This is because I have to input
+the number of levels manually after reading it from '8.blondel.R'. The old bct functions used to
+output the levels, but the new bct doesn't do that. 
+R CMD BATCH --vanilla "--args ANGO 2 3" 9.hierarchy.R
+
+13.Sept.2012
+This is how I now run 4.corr.R because using the 'fcorr' function:
+R CMD BATCH --vanilla "--args CLFR 24883 100" 4.corr.R
+
+22.Sept.2012
+This is how I'm trying to run 12.zscoreMPI.R:
+source RInvoke.sh 12.zscoreMPI.R ANGO 22170 1 1107 4374 1772 2891
+
+But keep getting an error that includes the following:
+4 nodes produced errors; first error: could not find function "par_fmoduledegree_zscore"
+
+
+24.Sept.2012
+How to run 13.filter_comm.R. This gives first pass for communities > 100 voxels
+source RInvoke.sh 13.filter_comm.R ANGO 22170 2 3
+
+How to run 14.undump_filter_comm.py
+python 14.undump_filter_comm.py ANGO 2 3
+
+
+25.Sept.2012
+Now running 4.corr.R with the RInvoke script and condor
+
+10.Oct.2012
+Had to go back and trim first 10 images from time series - included silence to auditory stim transition.
+This is how I'm running 4.corrORIG.R
+R CMD BATCH --vanilla "--args ANGO 22170" 4.corrORIG.R
+
+18.Oct.2012
+"submit.4.corrAUX" was used because ran out of disk space while running submit.4.corr. Two subjects didn't finish, re-running them.

@@ -1,0 +1,55 @@
+
+R version 2.15.1 (2012-06-22) -- "Roasted Marshmallows"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(bct)
+Loading required package: RcppGSL
+Loading required package: Rcpp
+Loading required package: snow
+> 
+> Args <- Sys.getenv("R_ARGS")
+> print(noquote(strsplit(Args," ")[[1]]))
+[1] SNNW 3    3   
+> print(length(noquote(strsplit(Args," ")[[1]])))
+[1] 3
+> subj <- noquote(strsplit(Args," ")[[1]][1])
+> cond <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
+> nlevels <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
+> 
+> 
+> 
+> blondel_hier <- function(i,ss,nlevels)
++ {
++     subjdir <- paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/",sep="")
++     #subjdir <- paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/thresh.6/",sep="")
++     setwd(paste(subjdir))
++     tree <- paste("cleanTS.Cond",i,".",ss,".noijk_dump.bin.corr.thresh.tree",sep="")
++     for (lvl in 0:nlevels)
++     {
++         communities = blondel_hierarchy(tree,lvl)
++     }
++ 
++ }
+> 
+> 
+> blondel_hier(cond,subj,nlevels)
+> 
+> proc.time()
+   user  system elapsed 
+  1.335   2.650   7.854 

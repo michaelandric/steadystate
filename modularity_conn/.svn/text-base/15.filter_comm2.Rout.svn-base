@@ -1,0 +1,60 @@
+
+R version 2.15.1 (2012-06-22) -- "Roasted Marshmallows"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ## this is simple code for getting quick filter passes of the communities.
+> ## originally seelcts only those greater than 100 voxels
+> Args <- Sys.getenv("R_ARGS")
+> ss <- noquote(strsplit(Args," ")[[1]][1])
+> nVoxArg <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
+> Cond <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
+> treeNum <- as.numeric(noquote(strsplit(Args," ")[[1]][4]))
+> 
+> #setwd(paste(Sys.getenv("state"),"/",ss,"/connectivity/",sep=""))
+> setwd(paste(Sys.getenv("state"),"/",ss,"/corrORIG_versionTRIM/",sep=""))
+> print(getwd())
+[1] "/mnt/tier2/urihas/Andric/steadystate/ANGO/corrORIG_versionTRIM"
+> tree = read.table(paste(ss,".",Cond,".comm.tree",treeNum,"_filt.txt",sep=""))
+> filt.tree = tree
+> print(summary(filt.tree))
+       V1        
+ Min.   :   0.0  
+ 1st Qu.: 307.0  
+ Median : 703.0  
+ Mean   : 859.8  
+ 3rd Qu.:1377.0  
+ Max.   :2382.0  
+> junk = c(as.matrix(read.table(paste("junk_comms_Cond",Cond,".txt",sep=""))))
+> filt.tree[which(filt.tree[,1] %in% junk),1]=0
+> print(summary(filt.tree))
+       V1        
+ Min.   :   0.0  
+ 1st Qu.:   0.0  
+ Median :   0.0  
+ Mean   : 468.7  
+ 3rd Qu.: 357.0  
+ Max.   :2382.0  
+> print(length(filt.tree[,1]))
+[1] 22169
+> write.table(filt.tree[,1],paste(ss,".",Cond,".comm.tree",treeNum,"_filt2.txt",sep=""),row.names=F,col.names=F,quote=F)
+> #write.table(filt.tree[,1],paste(ss,".",Cond,".comm.tree",treeNum,"_filt3.txt",sep=""),row.names=F,col.names=F,quote=F)
+> 
+> proc.time()
+   user  system elapsed 
+  0.408   0.026   0.570 

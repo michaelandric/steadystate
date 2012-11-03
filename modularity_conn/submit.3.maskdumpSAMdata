@@ -1,0 +1,10 @@
+executable	= /usr/bin/python
+universe 	= vanilla
+getenv		= true
+output		= ./logs/3.$(Process).out
+error		= ./logs/3.$(Process).err
+log 		= ./logs/3.$(Process).log
+
+
+arguments       = 3.maskdump.py --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/ANGO/automask_d3_ANGO+orig --inputfile /mnt/tier2/urihas/sam.steadystate/ANGO/corr17.4.ANGO.steadystate+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/seed17.4.ANGO.steadystate.noijk_dump
+queue

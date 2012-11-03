@@ -1,0 +1,53 @@
+000 (693.023.000) 10/25 17:37:43 Job submitted from host: <192.168.240.30:57721>
+...
+001 (693.023.000) 10/25 17:37:45 Job executing on host: <192.168.240.31:54635>
+...
+006 (693.023.000) 10/25 17:37:54 Image size of job updated: 1
+	4  -  MemoryUsage of job (MB)
+	3104  -  ResidentSetSize of job (KB)
+...
+006 (693.023.000) 10/25 17:42:55 Image size of job updated: 284536
+	37  -  MemoryUsage of job (MB)
+	37880  -  ResidentSetSize of job (KB)
+...
+006 (693.023.000) 10/25 17:47:56 Image size of job updated: 284536
+	39  -  MemoryUsage of job (MB)
+	39712  -  ResidentSetSize of job (KB)
+...
+001 (693.023.000) 10/25 18:18:46 Job executing on host: <192.168.240.30:39776>
+...
+006 (693.023.000) 10/25 18:28:57 Image size of job updated: 300000
+	40  -  MemoryUsage of job (MB)
+	40088  -  ResidentSetSize of job (KB)
+...
+006 (693.023.000) 10/25 18:33:58 Image size of job updated: 300000
+	40  -  MemoryUsage of job (MB)
+	40092  -  ResidentSetSize of job (KB)
+...
+006 (693.023.000) 10/25 19:39:11 Image size of job updated: 300000
+	40  -  MemoryUsage of job (MB)
+	40104  -  ResidentSetSize of job (KB)
+...
+006 (693.023.000) 10/25 20:09:17 Image size of job updated: 300000
+	40  -  MemoryUsage of job (MB)
+	40108  -  ResidentSetSize of job (KB)
+...
+006 (693.023.000) 10/25 21:04:28 Image size of job updated: 300000
+	40  -  MemoryUsage of job (MB)
+	40112  -  ResidentSetSize of job (KB)
+...
+005 (693.023.000) 10/25 21:16:32 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 02:14:13, Sys 0 00:07:01  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 02:14:13, Sys 0 00:07:01  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request          
+	   Cpus                 :                 1          
+	   Disk (KB)            :        1        1          
+	   Memory (MB)          :       40       40          
+...

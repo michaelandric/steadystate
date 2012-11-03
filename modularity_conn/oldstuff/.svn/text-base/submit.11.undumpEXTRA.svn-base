@@ -1,0 +1,10 @@
+executable	= /usr/bin/python
+universe 	= vanilla
+getenv		= true
+output		= ./logs/10.$(Process).out
+error		= ./logs/10.$(Process).err
+log 		= ./logs/10.$(Process).log
+
+arguments	= 11.undump.py --inputfile /mnt/tier2/urihas/Andric/steadystate/ANGO/TaskOutCor_Cond4Files/ANGO.4.comm.tree4 --ijkfile /mnt/tier2/urihas/Andric/steadystate/ANGO/ijk_coords_ANGO --master /mnt/tier2/urihas/Andric/steadystate/ANGO/reg.3.ANGO.steadystate+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/TaskOutCor_Cond4Files/ANGO.4.comm.tree4
+queue
+

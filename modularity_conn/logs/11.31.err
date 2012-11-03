@@ -1,0 +1,11 @@
+++ 3dUndump: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
+++ WARNING: file /home/michaeljames.andric/.afni.log is now 838719556 (839 million) bytes long!
+*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
+  such as /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.1.EEPA.steadystate.TRIM+orig.BRIK,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/EEPA/blur.1.EEPA.steadystate.TRIM+orig.BRIK is 4.499976 degrees from plumb.
+++ Output dataset /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/EEPA.4.degrees.ijkSHORT+orig.BRIK

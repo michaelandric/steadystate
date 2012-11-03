@@ -1,0 +1,20 @@
+#!/usr/bin/python
+
+import os
+import shutil
+
+                                                                                
+        
+def cp_files(sumadir,spec,outdir):
+    shutil.copy2(sumadir+spec, outdir)
+
+
+def Vol2Surf(spec,surfA,surfB,mapfunc,surfvol,gridparent,outname):
+    print os.system("3dVol2Surf -spec "+spec+" -surf_A "+surfA+" -surf_B "+surfB+" \
+                                -map_func "+mapfunc+" -f_steps 10 -f_index voxels -f_p1_fr -0.1 -f_pn_fr 0.1 \
+                                -oob_index -1 -oob_value 0 -no_headers \
+                                -outcols_NSD_format -sv "+surfvol+" -grid_parent "+gridparent+" \
+                                -out_1D "+outname)
+
+
+

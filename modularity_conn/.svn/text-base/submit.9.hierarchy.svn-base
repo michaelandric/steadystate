@@ -1,0 +1,20 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/9.$(Process).out
+error		= ./logs/9.$(Process).err
+log 		= ./logs/9.$(Process).log
+
+
+arguments	= 9.hierarchy.R ANGO 1 5
+queue
+
+arguments	= 9.hierarchy.R ANGO 2 5
+queue
+
+arguments	= 9.hierarchy.R ANGO 3 4
+queue
+
+arguments	= 9.hierarchy.R ANGO 4 5
+queue
+

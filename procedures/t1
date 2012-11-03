@@ -1,0 +1,24 @@
+arguments    = 4.corr.R ANGO 22170 90 1 
+queue 
+
+arguments    = 4.corr.R ANGO 22170 90 2 
+queue 
+
+arguments    = 4.corr.R ANGO 22170 90 3 
+queue 
+
+arguments    = 4.corr.R ANGO 22170 90 4 
+queue 
+
+arguments    = 4.corr.R MYTP 26202 90 1 
+queue 
+
+arguments    = 4.corr.R MYTP 26202 90 2 
+queue 
+
+arguments    = 4.corr.R MYTP 26202 90 3 
+queue 
+
+arguments    = 4.corr.R MYTP 26202 90 4 
+queue 
+

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/p/steadystate/code/!svn/ver/5/trunk/procedures
+END
+get_wc.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/steadystate/code/!svn/ver/5/trunk/procedures/get_wc.py
+END
+submit.dir_maker
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/p/steadystate/code/!svn/ver/5/trunk/procedures/submit.dir_maker
+END
+submit.autotlrc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/p/steadystate/code/!svn/ver/45/trunk/procedures/submit.autotlrc
+END
+subject_blurTSwordcounts.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/p/steadystate/code/!svn/ver/5/trunk/procedures/subject_blurTSwordcounts.txt
+END
+submit.splice
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/p/steadystate/code/!svn/ver/5/trunk/procedures/submit.splice
+END
+dir_maker.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/p/steadystate/code/!svn/ver/5/trunk/procedures/dir_maker.py
+END
+t1
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/p/steadystate/code/!svn/ver/5/trunk/procedures/t1
+END
+autotlrc.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/p/steadystate/code/!svn/ver/44/trunk/procedures/autotlrc.py
+END
+makesubmitargs.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/p/steadystate/code/!svn/ver/54/trunk/procedures/makesubmitargs.py
+END
+remover.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/steadystate/code/!svn/ver/5/trunk/procedures/remover.py
+END
+splice.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/steadystate/code/!svn/ver/5/trunk/procedures/splice.py
+END
+exec_makesubmitargs.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/p/steadystate/code/!svn/ver/47/trunk/procedures/exec_makesubmitargs.py
+END
+submit.4.corr
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/p/steadystate/code/!svn/ver/5/trunk/procedures/submit.4.corr
+END
+exec_friedmanargs.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/p/steadystate/code/!svn/ver/52/trunk/procedures/exec_friedmanargs.py
+END

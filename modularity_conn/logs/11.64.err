@@ -1,0 +1,10 @@
+++ 3dUndump: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
+*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
+  such as /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM+orig.BRIK,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM+orig.BRIK is 2.502724 degrees from plumb.
+++ Output dataset /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/MRAG.1.degrees.ijkSHORT+orig.BRIK

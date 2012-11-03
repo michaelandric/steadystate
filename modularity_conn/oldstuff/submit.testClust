@@ -1,0 +1,9 @@
+executable	= testClust.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/test.$(Process).out
+error		= ./logs/test.$(Process).err
+log 		= ./logs/test.$(Process).log
+
+arguments	= TRCO 28705 100 1
+queue

@@ -1,0 +1,31 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/21.$(Process).out
+error		= ./logs/21.$(Process).err
+log 		= ./logs/21.$(Process).log
+
+
+arguments    = 21.friedmanposthoc.R 1
+queue 
+
+arguments    = 21.friedmanposthoc.R 2
+queue 
+
+arguments    = 21.friedmanposthoc.R 3
+queue 
+
+arguments    = 21.friedmanposthoc.R 4
+queue 
+
+arguments    = 21.friedmanposthoc.R 5
+queue 
+
+arguments    = 21.friedmanposthoc.R 6
+queue 
+
+arguments    = 21.friedmanposthoc.R 7
+queue 
+
+arguments    = 21.friedmanposthoc.R 8
+queue 

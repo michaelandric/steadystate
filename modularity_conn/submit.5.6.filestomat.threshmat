@@ -1,0 +1,31 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/5.6.$(Process).out
+error		= ./logs/5.6.$(Process).err
+log 		= ./logs/5.6.$(Process).log
+
+
+arguments	= 5.6.filestomat.threshmat.R MYTP 26202 1
+queue
+
+arguments       = 5.6.filestomat.threshmat.R MYTP 26202 2
+queue
+
+arguments       = 5.6.filestomat.threshmat.R MYTP 26202 3
+queue
+
+arguments       = 5.6.filestomat.threshmat.R MYTP 26202 4
+queue
+
+arguments	= 5.6.filestomat.threshmat.R ANGO 22170 1
+queue
+
+arguments       = 5.6.filestomat.threshmat.R ANGO 22170 2
+queue
+
+arguments       = 5.6.filestomat.threshmat.R ANGO 22170 3
+queue
+
+arguments       = 5.6.filestomat.threshmat.R ANGO 22170 4
+queue

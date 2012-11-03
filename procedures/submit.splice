@@ -1,0 +1,187 @@
+executable	= splice.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/splice.$(Process).out
+error		= ./logs/splice.$(Process).err
+log 		= ./logs/splice.$(Process).log
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/LDMW --Condition 1 --Subject LDMW 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/LDMW --Condition 2 --Subject LDMW 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/LDMW --Condition 3 --Subject LDMW 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/LDMW --Condition 4 --Subject LDMW 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/FLTM --Condition 1 --Subject FLTM 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/FLTM --Condition 2 --Subject FLTM 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/FLTM --Condition 3 --Subject FLTM 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/FLTM --Condition 4 --Subject FLTM 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/EZCR --Condition 1 --Subject EZCR 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/EZCR --Condition 2 --Subject EZCR 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/EZCR --Condition 3 --Subject EZCR 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/EZCR --Condition 4 --Subject EZCR 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/EEPA --Condition 1 --Subject EEPA 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/EEPA --Condition 2 --Subject EEPA 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/EEPA --Condition 3 --Subject EEPA 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/EEPA --Condition 4 --Subject EEPA 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/DNLN --Condition 1 --Subject DNLN 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/DNLN --Condition 2 --Subject DNLN 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/DNLN --Condition 3 --Subject DNLN 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/DNLN --Condition 4 --Subject DNLN 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/CRFO --Condition 1 --Subject CRFO 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/CRFO --Condition 2 --Subject CRFO 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/CRFO --Condition 3 --Subject CRFO 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/CRFO --Condition 4 --Subject CRFO 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/ANMS --Condition 1 --Subject ANMS 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/ANMS --Condition 2 --Subject ANMS 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/ANMS --Condition 3 --Subject ANMS 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/ANMS --Condition 4 --Subject ANMS 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/BARS --Condition 1 --Subject BARS 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/BARS --Condition 2 --Subject BARS 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/BARS --Condition 3 --Subject BARS 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/BARS --Condition 4 --Subject BARS 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRZM --Condition 1 --Subject MRZM 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRZM --Condition 2 --Subject MRZM 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRZM --Condition 3 --Subject MRZM 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRZM --Condition 4 --Subject MRZM 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRVV --Condition 1 --Subject MRVV 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRVV --Condition 2 --Subject MRVV 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRVV --Condition 3 --Subject MRVV 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRVV --Condition 4 --Subject MRVV 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRMK --Condition 1 --Subject MRMK 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRMK --Condition 2 --Subject MRMK 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRMK --Condition 3 --Subject MRMK 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRMK --Condition 4 --Subject MRMK 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRMC --Condition 1 --Subject MRMC 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRMC --Condition 2 --Subject MRMC 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRMC --Condition 3 --Subject MRMC 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRMC --Condition 4 --Subject MRMC 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRAG --Condition 1 --Subject MRAG 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRAG --Condition 2 --Subject MRAG 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRAG --Condition 3 --Subject MRAG 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MRAG --Condition 4 --Subject MRAG 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MNGO --Condition 1 --Subject MNGO 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MNGO --Condition 2 --Subject MNGO 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MNGO --Condition 3 --Subject MNGO 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/MNGO --Condition 4 --Subject MNGO 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/LRVN --Condition 1 --Subject LRVN 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/LRVN --Condition 2 --Subject LRVN 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/LRVN --Condition 3 --Subject LRVN 
+queue 
+
+arguments    = --OutDir /mnt/tier2/urihas/Andric/steadystate/LRVN --Condition 4 --Subject LRVN 
+queue 
+

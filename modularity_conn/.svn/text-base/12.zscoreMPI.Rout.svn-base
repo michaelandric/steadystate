@@ -1,0 +1,146 @@
+
+R version 2.15.1 (2012-06-22) -- "Roasted Marshmallows"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ## get the z score for each voxel
+> ## 02.Oct.2012 Making a stupid version of this that just finds the Z score for every voxel with a community assignment
+> library(Rmpi)
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+--------------------------------------------------------------------------
+[[43846,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: mat-dt410-uhs1
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+CMA: unable to get RDMA device list
+> library(snow)
+> library(bct)
+Loading required package: RcppGSL
+Loading required package: Rcpp
+> 
+> cluster <- makeMPIcluster(8)
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+	8 slaves are spawned successfully. 0 failed.
+> 
+> Args <- Sys.getenv("R_ARGS")
+> print(noquote(strsplit(Args," ")[[1]]))
+[1] ANGO  26202 2     tree3
+> print(length(noquote(strsplit(Args," ")[[1]])))
+[1] 4
+> ss <- noquote(strsplit(Args," ")[[1]][1])
+> nVoxArg <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
+> Cond <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
+> Tree <- noquote(strsplit(Args," ")[[1]][4])
+> print(Cond)
+[1] 2
+> print(nVoxArg)
+[1] 26202
+> 
+> inmatrix <- paste(Sys.getenv("state"),"/",ss,"/connectivity/",ss,".",Cond,".corrmatrix.bin.thresh",sep="")
+> cifile <- paste(Sys.getenv("state"),"/",ss,"/connectivity/",ss,".",Cond,".comm.",Tree,".justcomm",sep="")
+> ci <- as.matrix(read.table(cifile))
+> CommSet <- unique(ci)
+> print(length(CommSet))
+[1] 3874
+> 
+> outname <- paste(Sys.getenv("state"),"/",ss,"/connectivity/",ss,".",Cond,".",Tree,".allZscores.txt",sep="")
+> 
+> 
+> ## run the zscore function
+> WriteScores <- function(x, inmatrix, ci)
++ {
++     library(bct)
++     par_fmodule_degree_zscore(inmatrix, ci, x)
++ }
+> 
+> ## concatentate the zbin out files from par_fmodule_degree_zscore
+> zfile_concat <- function(filelist, size)
++ {
++     Z = mat.or.vec(size, 1)
++     ## overwrite any zero value with new value
++     for (f in filelist)
++     {
++         zz <- file(f, "rb")
++         zarray <- readBin(zz, numeric(), size)
++         zarray[which(is.na(zarray))] = 0
++         idx = 0
++         for (ii in zarray)
++         {
++             if (ii != 0)
++             {
++                 Z[idx] = ii
++             }
++             idx = idx + 1
++         }
++         close(zz)
++     }
++     return(Z)
++ }
+> 
+> ##Compute z scores in paralell
+> parallelFmod <- function(CommSet, nVox, inmatrix, ci, outname)
++ {
++     comm.zscores <- parSapply(cluster, CommSet, WriteScores, inmatrix, ci)
++     Zscores <- zfile_concat(c(comm.zscores),nVox)
++     write.table(round(Zscores,4),outname,row.names=F,col.names=F,quote=F)
++ }
+> 
+> 
+> 
+> parallelFmod(CommSet, nVoxArg, inmatrix, ci, outname)
+[mat-dt410-uhs1:08353] 8 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[mat-dt410-uhs1:08352] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+> stopCluster(cluster)
+[1] 1
+> mpi.exit()
+[1] "Detaching Rmpi. Rmpi cannot be used unless relaunching R."
+> 
+> proc.time()
+     user    system   elapsed 
+ 1852.442  8733.542 16289.993 
+"") only supports open = "w+" and open = "w+b": using the former
+Execution halted

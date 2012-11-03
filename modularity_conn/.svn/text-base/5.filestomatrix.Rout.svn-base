@@ -1,0 +1,140 @@
+
+R version 2.15.1 (2012-06-22) -- "Roasted Marshmallows"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(Rmpi)
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+--------------------------------------------------------------------------
+[[35323,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: mat-dt410-uhs1
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+CMA: unable to get RDMA device list
+> library(snow)
+> library(bct)
+Loading required package: RcppGSL
+Loading required package: Rcpp
+> 
+> cluster <- makeMPIcluster(16)
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+CMA: unable to get RDMA device list
+librdmacm: couldn't read ABI version.
+librdmacm: assuming: 4
+	16 slaves are spawned successfully. 0 failed.
+> 
+> args = commandArgs(trailingOnly=TRUE)
+> ss = args[1]
+> nvox = as.numeric(args[2])
+> print(ss)
+[1] "ANGO"
+> print(nvox)
+[1] 22170
+> print(str(nvox))
+ num 22170
+NULL
+> 
+> filestomat <- function(i,ss,nvox)
++ {
++     library(bct)
++     prefix <- paste(Sys.getenv("state"),"/",ss,"/corrORIG_versionTRIM/CorrTask.masked.voxel",sep="")
++     suffix <- paste(".",i,".",ss,"noijk.txt",sep="")
++     out <- paste(Sys.getenv("state"),"/",ss,"/corrORIG_versionTRIM/",ss,".",i,".corrmatrix.bin",sep="")
++     filestomatrix(prefix,nvox,suffix,out)
++ }
+> 
+> 
+> #for (i in 1:4)
+> #{
+> #    pref <- paste(Sys.getenv("state"),"/",ss,"/TaskOutCor_Cond",i,"Files/CorrTask.masked.voxel",sep="")
+> #    suf <- paste(".",i,".",ss,"noijk.txt",sep="")
+> #    out <- paste(Sys.getenv("state"),"/",ss,"/TaskOutCor_Cond",i,"Files/",ss,".",i,".corrmatrix.bin",sep="")
+> #    clusterCall(cluster,FUN=filestomatrix,pref,nvox,suf,out)
+> #}
+> 
+> parSapply(cluster,1:4,filestomat,ss,nvox)
+[mat-dt410-uhs1:00540] 16 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[mat-dt410-uhs1:00540] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[[1]]
+NULL
+
+[[2]]
+NULL
+
+[[3]]
+NULL
+
+[[4]]
+NULL
+
+> stopCluster(cluster)
+[1] 1
+> 
+> proc.time()
+    user   system  elapsed 
+ 245.935 1789.851 2037.587 

@@ -1,0 +1,12 @@
+++ WARNING: file /home/michaeljames.andric/.afni.log is now 838687013 (839 million) bytes long!
+*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
+  such as /mnt/tier2/urihas/Andric/steadystate/MRMK/automask_d3_MRMK+orig.BRIK,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/MRMK/automask_d3_MRMK+orig.BRIK is 4.820971 degrees from plumb.
+++ 3dmaskdump: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
+++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/MRMK/blur.1.MRMK.steadystate.TRIM+orig.BRIK is 4.820971 degrees from plumb.
+++ 26331 voxels in the mask

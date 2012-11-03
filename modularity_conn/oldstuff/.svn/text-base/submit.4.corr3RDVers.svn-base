@@ -1,0 +1,18 @@
+executable	= runR.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/4.$(Process).out
+error		= ./logs/4.$(Process).err
+log 		= ./logs/4.$(Process).log
+
+arguments	= TRCO 28705 100 1
+queue
+
+arguments       = TRCO 28705 100 2
+queue
+
+arguments       = TRCO 28705 100 3
+queue
+
+arguments       = TRCO 28705 100 4
+queue

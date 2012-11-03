@@ -1,0 +1,54 @@
+executable	= dir_maker.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/dm.$(Process).out
+error		= ./logs/dm.$(Process).err
+log 		= ./logs/dm.$(Process).log
+
+
+
+arguments    = --Subject LDMW 
+queue 
+
+arguments    = --Subject FLTM 
+queue 
+
+arguments    = --Subject EZCR 
+queue 
+
+arguments    = --Subject EEPA 
+queue 
+
+arguments    = --Subject DNLN 
+queue 
+
+arguments    = --Subject CRFO 
+queue 
+
+arguments    = --Subject ANMS 
+queue 
+
+arguments    = --Subject BARS 
+queue 
+
+arguments    = --Subject MRZM 
+queue 
+
+arguments    = --Subject MRVV 
+queue 
+
+arguments    = --Subject MRMK 
+queue 
+
+arguments    = --Subject MRMC 
+queue 
+
+arguments    = --Subject MRAG 
+queue 
+
+arguments    = --Subject MNGO 
+queue 
+
+arguments    = --Subject LRVN 
+queue 
+

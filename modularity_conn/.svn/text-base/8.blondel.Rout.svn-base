@@ -1,0 +1,77 @@
+
+R version 2.15.1 (2012-06-22) -- "Roasted Marshmallows"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(bct)
+Loading required package: RcppGSL
+Loading required package: Rcpp
+Loading required package: snow
+> 
+> Args <- Sys.getenv("R_ARGS")
+> print(noquote(strsplit(Args," ")[[1]]))
+[1] CLFR 3   
+> print(length(noquote(strsplit(Args," ")[[1]])))
+[1] 2
+> subj <- noquote(strsplit(Args," ")[[1]][1])
+> cond <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
+> 
+> 
+> blondel_meth <- function(i,ss)
++ {
++     library(bct)
++     srcdst <- paste(Sys.getenv("state"),"/",ss,"/cleanTS.Cond",i,".",ss,".steadystate.noijk_dump.bin.corr.thresh.srcdst",sep="")
++     tree <- paste(Sys.getenv("state"),"/",ss,"/cleanTS.Cond",i,".",ss,".steadystate.noijk_dump.bin.corr.thresh.tree",sep="")
++     modularity_score = blondel_community(srcdst,tree)
++     return(modularity_score)
++     print(modularity_score)
++ }
+> 
+> mod = blondel_meth(cond,subj)
+Begin: Wed Sep 26 16:17:15 2012
+level 0:
+  start computation: Wed Sep 26 16:17:34 2012
+  network size: 24883 nodes, 24927058 links, 2.49271e+07 weight.
+  modularity increased from -5.10464e-05 to 0.509342
+  end computation: Wed Sep 26 16:17:42 2012
+level 1:
+  start computation: Wed Sep 26 16:17:42 2012
+  network size: 81 nodes, 6371 links, 2.49271e+07 weight.
+  modularity increased from 0.509342 to 0.517697
+  end computation: Wed Sep 26 16:17:42 2012
+level 2:
+  start computation: Wed Sep 26 16:17:42 2012
+  network size: 14 nodes, 196 links, 2.49271e+07 weight.
+  modularity increased from 0.517697 to 0.524146
+  end computation: Wed Sep 26 16:17:42 2012
+level 3:
+  start computation: Wed Sep 26 16:17:42 2012
+  network size: 13 nodes, 169 links, 2.49271e+07 weight.
+  modularity increased from 0.524146 to 0.524146
+  end computation: Wed Sep 26 16:17:42 2012
+End: Wed Sep 26 16:17:42 2012
+Total duration: 27 sec.
+0.524146
+> print(mod)
+[1] 0.5241455
+> modout <- paste(Sys.getenv("state"),"/",subj,"/modularityscore.",subj,".Cond",cond,".txt",sep="")
+> write.table(mod,modout,row.names=F,col.names=F,quote=F)
+> 
+> proc.time()
+   user  system elapsed 
+  4.338   0.456  28.773 

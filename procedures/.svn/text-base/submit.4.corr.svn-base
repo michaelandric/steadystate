@@ -1,0 +1,103 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/4.$(Process).out
+error		= ./logs/4.$(Process).err
+log 		= ./logs/4.$(Process).log
+
+arguments    = 4.corr.R LDMW 27133 90 1 
+queue 
+
+arguments    = 4.corr.R LDMW 27133 90 2 
+queue 
+
+arguments    = 4.corr.R LDMW 27133 90 3 
+queue 
+
+arguments    = 4.corr.R LDMW 27133 90 4 
+queue 
+
+arguments    = 4.corr.R FLTM 32555 90 1 
+queue 
+
+arguments    = 4.corr.R FLTM 32555 90 2 
+queue 
+
+arguments    = 4.corr.R FLTM 32555 90 3 
+queue 
+
+arguments    = 4.corr.R FLTM 32555 90 4 
+queue 
+
+arguments    = 4.corr.R EZCR 31902 90 1 
+queue 
+
+arguments    = 4.corr.R EZCR 31902 90 2 
+queue 
+
+arguments    = 4.corr.R EZCR 31902 90 3 
+queue 
+
+arguments    = 4.corr.R EZCR 31902 90 4 
+queue 
+
+arguments    = 4.corr.R EEPA 30432 90 1 
+queue 
+
+arguments    = 4.corr.R EEPA 30432 90 2 
+queue 
+
+arguments    = 4.corr.R EEPA 30432 90 3 
+queue 
+
+arguments    = 4.corr.R EEPA 30432 90 4 
+queue 
+
+arguments    = 4.corr.R DNLN 25884 90 1 
+queue 
+
+arguments    = 4.corr.R DNLN 25884 90 2 
+queue 
+
+arguments    = 4.corr.R DNLN 25884 90 3 
+queue 
+
+arguments    = 4.corr.R DNLN 25884 90 4 
+queue 
+
+arguments    = 4.corr.R CRFO 28632 90 1 
+queue 
+
+arguments    = 4.corr.R CRFO 28632 90 2 
+queue 
+
+arguments    = 4.corr.R CRFO 28632 90 3 
+queue 
+
+arguments    = 4.corr.R CRFO 28632 90 4 
+queue 
+
+arguments    = 4.corr.R ANMS 25009 90 1 
+queue 
+
+arguments    = 4.corr.R ANMS 25009 90 2 
+queue 
+
+arguments    = 4.corr.R ANMS 25009 90 3 
+queue 
+
+arguments    = 4.corr.R ANMS 25009 90 4 
+queue 
+
+arguments    = 4.corr.R BARS 28340 90 1 
+queue 
+
+arguments    = 4.corr.R BARS 28340 90 2 
+queue 
+
+arguments    = 4.corr.R BARS 28340 90 3 
+queue 
+
+arguments    = 4.corr.R BARS 28340 90 4 
+queue 
+

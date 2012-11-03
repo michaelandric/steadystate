@@ -1,0 +1,32 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/17.$(Process).out
+error		= ./logs/17.$(Process).err
+log 		= ./logs/17.$(Process).log
+
+
+
+arguments    = 17.degree.R MRZM 23081 1 
+queue 
+
+arguments    = 17.degree.R MRZM 23081 2 
+queue 
+
+arguments    = 17.degree.R MRZM 23081 3 
+queue 
+
+arguments    = 17.degree.R MRZM 23081 4 
+queue 
+
+arguments    = 17.degree.R MNGO 28266 1 
+queue 
+
+arguments    = 17.degree.R MNGO 28266 2 
+queue 
+
+arguments    = 17.degree.R MNGO 28266 3 
+queue 
+
+arguments    = 17.degree.R MNGO 28266 4 
+queue 

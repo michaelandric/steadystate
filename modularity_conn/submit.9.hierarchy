@@ -1,0 +1,68 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/9.$(Process).out
+error		= ./logs/9.$(Process).err
+log 		= ./logs/9.$(Process).log
+
+
+arguments    = 9.hierarchy.R MYTP 1 4 
+queue 
+
+arguments    = 9.hierarchy.R MYTP 2 3 
+queue 
+
+arguments    = 9.hierarchy.R MYTP 3 3 
+queue 
+
+arguments    = 9.hierarchy.R MYTP 4 3 
+queue 
+
+arguments    = 9.hierarchy.R TRCO 1 4 
+queue 
+
+arguments    = 9.hierarchy.R TRCO 2 4 
+queue 
+
+arguments    = 9.hierarchy.R TRCO 3 4 
+queue 
+
+arguments    = 9.hierarchy.R TRCO 4 3 
+queue 
+
+arguments    = 9.hierarchy.R CLFR 1 4 
+queue 
+
+arguments    = 9.hierarchy.R CLFR 2 3 
+queue 
+
+arguments    = 9.hierarchy.R CLFR 3 4 
+queue 
+
+arguments    = 9.hierarchy.R CLFR 4 3 
+queue 
+
+arguments    = 9.hierarchy.R PIGL 1 4 
+queue 
+
+arguments    = 9.hierarchy.R PIGL 2 4 
+queue 
+
+arguments    = 9.hierarchy.R PIGL 3 4 
+queue 
+
+arguments    = 9.hierarchy.R PIGL 4 4 
+queue 
+
+arguments    = 9.hierarchy.R SNNW 1 3 
+queue 
+
+arguments    = 9.hierarchy.R SNNW 2 4 
+queue 
+
+arguments    = 9.hierarchy.R SNNW 3 3 
+queue 
+
+arguments    = 9.hierarchy.R SNNW 4 3 
+queue 
+

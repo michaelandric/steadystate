@@ -1,0 +1,20 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/13.$(Process).out
+error		= ./logs/13.$(Process).err
+log 		= ./logs/13.$(Process).log
+
+
+arguments	= 13.filter_comm.R ANGO 22170 1 1
+queue
+
+arguments	= 13.filter_comm.R ANGO 22170 2 1
+queue
+
+arguments	= 13.filter_comm.R ANGO 22170 3 1
+queue
+
+arguments	= 13.filter_comm.R ANGO 22170 4 1
+queue
+

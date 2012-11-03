@@ -1,0 +1,32 @@
+executable	= surfprocs.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/1.$(Process).out
+error		= ./logs/1.$(Process).err
+log 		= ./logs/1.$(Process).log
+
+
+arguments    = --subject ANGO --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/ANGO/SUMA/ --spec sANGO_lh_mesh140ANGO_lh.spec --surfA sANGO_lh_mesh140lh.smoothwm.asc --surfB sANGO_lh_mesh140lh.pial.asc --map_function max_abs --surfvol /mnt/tier2/urihas/sam.steadystate/ANGO/ANGO.SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ANGO.1.degrees.ijk+orig. --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/surfacedata/ANGO.1.degrees_lh_max_abs.1D 
+queue 
+
+arguments    = --subject ANGO --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/ANGO/SUMA/ --spec sANGO_rh_mesh140ANGO_rh.spec --surfA sANGO_rh_mesh140rh.smoothwm.asc --surfB sANGO_rh_mesh140rh.pial.asc --map_function max_abs --surfvol /mnt/tier2/urihas/sam.steadystate/ANGO/ANGO.SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ANGO.1.degrees.ijk+orig. --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/surfacedata/ANGO.1.degrees_rh_max_abs.1D 
+queue 
+
+arguments    = --subject ANGO --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/ANGO/SUMA/ --spec sANGO_lh_mesh140ANGO_lh.spec --surfA sANGO_lh_mesh140lh.smoothwm.asc --surfB sANGO_lh_mesh140lh.pial.asc --map_function max_abs --surfvol /mnt/tier2/urihas/sam.steadystate/ANGO/ANGO.SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ANGO.2.degrees.ijk+orig. --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/surfacedata/ANGO.2.degrees_lh_max_abs.1D 
+queue 
+
+arguments    = --subject ANGO --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/ANGO/SUMA/ --spec sANGO_rh_mesh140ANGO_rh.spec --surfA sANGO_rh_mesh140rh.smoothwm.asc --surfB sANGO_rh_mesh140rh.pial.asc --map_function max_abs --surfvol /mnt/tier2/urihas/sam.steadystate/ANGO/ANGO.SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ANGO.2.degrees.ijk+orig. --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/surfacedata/ANGO.2.degrees_rh_max_abs.1D 
+queue 
+
+arguments    = --subject ANGO --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/ANGO/SUMA/ --spec sANGO_lh_mesh140ANGO_lh.spec --surfA sANGO_lh_mesh140lh.smoothwm.asc --surfB sANGO_lh_mesh140lh.pial.asc --map_function max_abs --surfvol /mnt/tier2/urihas/sam.steadystate/ANGO/ANGO.SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ANGO.3.degrees.ijk+orig. --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/surfacedata/ANGO.3.degrees_lh_max_abs.1D 
+queue 
+
+arguments    = --subject ANGO --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/ANGO/SUMA/ --spec sANGO_rh_mesh140ANGO_rh.spec --surfA sANGO_rh_mesh140rh.smoothwm.asc --surfB sANGO_rh_mesh140rh.pial.asc --map_function max_abs --surfvol /mnt/tier2/urihas/sam.steadystate/ANGO/ANGO.SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ANGO.3.degrees.ijk+orig. --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/surfacedata/ANGO.3.degrees_rh_max_abs.1D 
+queue 
+
+arguments    = --subject ANGO --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/ANGO/SUMA/ --spec sANGO_lh_mesh140ANGO_lh.spec --surfA sANGO_lh_mesh140lh.smoothwm.asc --surfB sANGO_lh_mesh140lh.pial.asc --map_function max_abs --surfvol /mnt/tier2/urihas/sam.steadystate/ANGO/ANGO.SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ANGO.4.degrees.ijk+orig. --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/surfacedata/ANGO.4.degrees_lh_max_abs.1D 
+queue 
+
+arguments    = --subject ANGO --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/ANGO/SUMA/ --spec sANGO_rh_mesh140ANGO_rh.spec --surfA sANGO_rh_mesh140rh.smoothwm.asc --surfB sANGO_rh_mesh140rh.pial.asc --map_function max_abs --surfvol /mnt/tier2/urihas/sam.steadystate/ANGO/ANGO.SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ANGO.4.degrees.ijk+orig. --outputname /mnt/tier2/urihas/Andric/steadystate/ANGO/surfacedata/ANGO.4.degrees_rh_max_abs.1D 
+queue 
+

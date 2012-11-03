@@ -1,0 +1,32 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/4.$(Process).out
+error		= ./logs/4.$(Process).err
+log 		= ./logs/4.$(Process).log
+
+
+arguments    = 4.corr.R MRMC 29045 90 1 
+queue 
+
+arguments    = 4.corr.R MRMC 29045 90 2 
+queue 
+
+arguments    = 4.corr.R MRMC 29045 90 3 
+queue 
+
+arguments    = 4.corr.R MRMC 29045 90 4 
+queue 
+
+arguments    = 4.corr.R MNGO 28266 90 1 
+queue 
+
+arguments    = 4.corr.R MNGO 28266 90 2 
+queue 
+
+arguments    = 4.corr.R MNGO 28266 90 3 
+queue 
+
+arguments    = 4.corr.R MNGO 28266 90 4 
+queue 
+

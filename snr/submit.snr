@@ -1,0 +1,32 @@
+executable	= snr.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/snr.$(Process).out
+error		= ./logs/snr.$(Process).err
+log 		= ./logs/snr.$(Process).log
+
+
+arguments       = --WorkDir /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR/ --InputTSprefix blur.1.ANGO.steadystate.TRIM
+queue
+
+arguments       = --WorkDir /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR/ --InputTSprefix blur.2.ANGO.steadystate.TRIM
+queue
+
+arguments       = --WorkDir /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR/ --InputTSprefix blur.3.ANGO.steadystate.TRIM
+queue
+
+arguments       = --WorkDir /mnt/tier2/urihas/Andric/steadystate/ANGO/SNR/ --InputTSprefix blur.4.ANGO.steadystate.TRIM
+queue
+
+
+arguments       = --WorkDir /mnt/tier2/urihas/Andric/steadystate/MYTP/SNR/ --InputTSprefix blur.1.MYTP.steadystate.TRIM
+queue
+
+arguments       = --WorkDir /mnt/tier2/urihas/Andric/steadystate/MYTP/SNR/ --InputTSprefix blur.2.MYTP.steadystate.TRIM
+queue
+
+arguments       = --WorkDir /mnt/tier2/urihas/Andric/steadystate/MYTP/SNR/ --InputTSprefix blur.3.MYTP.steadystate.TRIM
+queue
+
+arguments       = --WorkDir /mnt/tier2/urihas/Andric/steadystate/MYTP/SNR/ --InputTSprefix blur.4.MYTP.steadystate.TRIM
+queue

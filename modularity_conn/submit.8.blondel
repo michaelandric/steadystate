@@ -1,0 +1,92 @@
+executable	= RInvoke_blondel.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/8.$(Process).out
+error		= ./logs/8.$(Process).err
+log 		= ./logs/8.$(Process).log
+
+
+arguments    = 8.blondel MRZM 1 
+queue 
+
+arguments    = 8.blondel MRZM 2 
+queue 
+
+arguments    = 8.blondel MRZM 3 
+queue 
+
+arguments    = 8.blondel MRZM 4 
+queue 
+
+arguments    = 8.blondel MRVV 1 
+queue 
+
+arguments    = 8.blondel MRVV 2 
+queue 
+
+arguments    = 8.blondel MRVV 3 
+queue 
+
+arguments    = 8.blondel MRVV 4 
+queue 
+
+arguments    = 8.blondel MRMK 1 
+queue 
+
+arguments    = 8.blondel MRMK 2 
+queue 
+
+arguments    = 8.blondel MRMK 3 
+queue 
+
+arguments    = 8.blondel MRMK 4 
+queue 
+
+arguments    = 8.blondel MRMC 1 
+queue 
+
+arguments    = 8.blondel MRMC 2 
+queue 
+
+arguments    = 8.blondel MRMC 3 
+queue 
+
+arguments    = 8.blondel MRMC 4 
+queue 
+
+arguments    = 8.blondel MRAG 1 
+queue 
+
+arguments    = 8.blondel MRAG 2 
+queue 
+
+arguments    = 8.blondel MRAG 3 
+queue 
+
+arguments    = 8.blondel MRAG 4 
+queue 
+
+arguments    = 8.blondel MNGO 1 
+queue 
+
+arguments    = 8.blondel MNGO 2 
+queue 
+
+arguments    = 8.blondel MNGO 3 
+queue 
+
+arguments    = 8.blondel MNGO 4 
+queue 
+
+arguments    = 8.blondel LRVN 1 
+queue 
+
+arguments    = 8.blondel LRVN 2 
+queue 
+
+arguments    = 8.blondel LRVN 3 
+queue 
+
+arguments    = 8.blondel LRVN 4 
+queue 
+

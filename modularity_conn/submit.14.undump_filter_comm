@@ -1,0 +1,22 @@
+executable	= 14.undump_filter_comm.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/14.$(Process).out
+error		= ./logs/14.$(Process).err
+log 		= ./logs/14.$(Process).log
+
+
+
+
+arguments    = CLFR 1 4 1 
+queue 
+
+arguments    = CLFR 2 3 1 
+queue 
+
+arguments    = CLFR 3 4 1 
+queue 
+
+arguments    = CLFR 4 3 1 
+queue 
+

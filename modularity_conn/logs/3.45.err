@@ -1,0 +1,4 @@
+++ WARNING: file /home/michaeljames.andric/.afni.log is now 838731393 (839 million) bytes long!
+++ 3dmaskdump: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
+** FATAL ERROR: Can't open dataset /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/BARS.2.degrees.ijkSHORT+tlrc!
+** Program compile date = Apr 26 2011

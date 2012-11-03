@@ -1,0 +1,188 @@
+executable	= 3.maskdump.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/3.$(Process).out
+error		= ./logs/3.$(Process).err
+log 		= ./logs/3.$(Process).log
+
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/automask_d3_LDMW+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.1.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.1.LDMW.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/automask_d3_LDMW+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.2.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.2.LDMW.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/automask_d3_LDMW+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.3.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.3.LDMW.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/automask_d3_LDMW+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.4.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.4.LDMW.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/automask_d3_FLTM+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.1.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.1.FLTM.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/automask_d3_FLTM+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.2.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.2.FLTM.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/automask_d3_FLTM+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.3.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.3.FLTM.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/automask_d3_FLTM+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.4.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.4.FLTM.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EZCR/automask_d3_EZCR+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.1.EZCR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.1.EZCR.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EZCR/automask_d3_EZCR+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.2.EZCR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.2.EZCR.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EZCR/automask_d3_EZCR+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.3.EZCR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.3.EZCR.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EZCR/automask_d3_EZCR+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.4.EZCR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.4.EZCR.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/automask_d3_EEPA+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.1.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.1.EEPA.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/automask_d3_EEPA+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.2.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.2.EEPA.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/automask_d3_EEPA+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.3.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.3.EEPA.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/automask_d3_EEPA+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.4.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.4.EEPA.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/automask_d3_DNLN+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.1.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.1.DNLN.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/automask_d3_DNLN+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.2.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.2.DNLN.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/automask_d3_DNLN+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.3.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.3.DNLN.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/automask_d3_DNLN+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.4.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.4.DNLN.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/automask_d3_CRFO+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.1.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.1.CRFO.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/automask_d3_CRFO+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.2.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.2.CRFO.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/automask_d3_CRFO+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.3.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.3.CRFO.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/automask_d3_CRFO+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.4.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.4.CRFO.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/automask_d3_ANMS+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.1.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.1.ANMS.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/automask_d3_ANMS+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.2.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.2.ANMS.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/automask_d3_ANMS+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.3.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.3.ANMS.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/automask_d3_ANMS+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.4.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.4.ANMS.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/BARS/automask_d3_BARS+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/blur.1.BARS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/blur.1.BARS.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/BARS/automask_d3_BARS+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/blur.2.BARS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/blur.2.BARS.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/BARS/automask_d3_BARS+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/blur.3.BARS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/blur.3.BARS.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/BARS/automask_d3_BARS+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/blur.4.BARS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/blur.4.BARS.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/automask_d3_MRZM+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.1.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.1.MRZM.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/automask_d3_MRZM+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.2.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.2.MRZM.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/automask_d3_MRZM+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.3.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.3.MRZM.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/automask_d3_MRZM+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.4.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.4.MRZM.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/automask_d3_MRVV+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.1.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.1.MRVV.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/automask_d3_MRVV+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.2.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.2.MRVV.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/automask_d3_MRVV+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.3.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.3.MRVV.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/automask_d3_MRVV+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.4.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.4.MRVV.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/automask_d3_MRMK+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.1.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.1.MRMK.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/automask_d3_MRMK+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.2.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.2.MRMK.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/automask_d3_MRMK+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.3.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.3.MRMK.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/automask_d3_MRMK+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.4.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.4.MRMK.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/automask_d3_MRMC+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.1.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.1.MRMC.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/automask_d3_MRMC+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.2.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.2.MRMC.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/automask_d3_MRMC+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.3.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.3.MRMC.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/automask_d3_MRMC+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.4.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.4.MRMC.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/automask_d3_MRAG+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/automask_d3_MRAG+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.2.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.2.MRAG.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/automask_d3_MRAG+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.3.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.3.MRAG.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/automask_d3_MRAG+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.4.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.4.MRAG.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/automask_d3_MNGO+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.1.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.1.MNGO.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/automask_d3_MNGO+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.2.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.2.MNGO.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/automask_d3_MNGO+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.3.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.3.MNGO.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/automask_d3_MNGO+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.4.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.4.MNGO.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/automask_d3_LRVN+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.1.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.1.LRVN.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/automask_d3_LRVN+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.2.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.2.LRVN.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/automask_d3_LRVN+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.3.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.3.LRVN.steadystate.TRIM.noijk_dump 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/automask_d3_LRVN+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.4.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.4.LRVN.steadystate.TRIM.noijk_dump 
+queue 
+
