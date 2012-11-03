@@ -1,4 +1,4 @@
-test1
+Steady State
 =====
 
-this is a test setup
+This is code for analyzing the steady state data.
