@@ -50,3 +50,6 @@ for code in combo_codes:
 outf = open("combo_pairs_pattern.txt","w")
 outf.write(code_out)
 outf.close()
+
+print os.system("paste -d ' ' ijk_coords_TTavg152T1 combo_pairs_pattern.txt > combo_pairs_pattern.ijk.txt")
+print os.system("3dUndump -prefix combo_pairs_pattern.ijk -ijk -datum short -master automask_d1_TTavg152T1+tlrc combo_pairs_pattern.ijk.txt")
