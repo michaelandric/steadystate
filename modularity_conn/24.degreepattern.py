@@ -36,10 +36,14 @@ combo_codes = []
 meds = open("mediansAllConditions.sorted.txt","r")
 for line in meds:
     aa = line.split()
-    aa_dict = dict(zip(range(1,5),map(int,aa)))
-    sorted_aa_key = sorted(aa_dict.iteritems(), key=operator.itemgetter(1))
-    key_tuple = sorted_aa_key[0][0], sorted_aa_key[1][0], sorted_aa_key[2][0], sorted_aa_key[3][0]
-    combo_codes.append(combo_dict[key_tuple])
+    aa_int = map(int,aa)
+    if sum(aa_int) == 0:
+        combo_codes.append(0)
+    else:    
+        aa_dict = dict(zip(range(1,5),aa_int))
+        sorted_aa_key = sorted(aa_dict.iteritems(), key=operator.itemgetter(1))
+        key_tuple = sorted_aa_key[0][0], sorted_aa_key[1][0], sorted_aa_key[2][0], sorted_aa_key[3][0]
+        combo_codes.append(combo_dict[key_tuple])
 
 
 code_out = ""
