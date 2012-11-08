@@ -126,6 +126,9 @@ class MakeArgs:
     def friedmanargs(self,start,end):
         print "arguments    = 19.friedman.R "+`start`+" "+`end`+" \nqueue \n"
 
+    def voxel_id_args(self,subject,arg1):
+        print "arguments   = --number_voxels "+arg1+" --subject "+subject+" \nqueue \n"
+
     def tester(self):
         print "this is a test"
 
