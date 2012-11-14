@@ -1,72 +1,18 @@
-## get the z score for each voxel
-## 02.Oct.2012 Making a stupid version of this that just finds the Z score for every voxel with a community assignment
-library(Rmpi)
-library(snow)
+## getting the degree of each voxel
 library(bct)
-
-cluster <- makeMPIcluster(8)
 
 Args <- Sys.getenv("R_ARGS")
 print(noquote(strsplit(Args," ")[[1]]))
 print(length(noquote(strsplit(Args," ")[[1]])))
 ss <- noquote(strsplit(Args," ")[[1]][1])
-nVoxArg <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
+Tree <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
 Cond <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
-Tree <- noquote(strsplit(Args," ")[[1]][4])
-print(Cond)
-print(nVoxArg)
+print(c(ss,Tree,Cond))
 
-inmatrix <- paste(Sys.getenv("state"),"/",ss,"/connectivity/",ss,".",Cond,".corrmatrix.bin.thresh",sep="")
-cifile <- paste(Sys.getenv("state"),"/",ss,"/connectivity/",ss,".",Cond,".comm.",Tree,".justcomm",sep="")
-ci <- as.matrix(read.table(cifile))
-CommSet <- unique(ci)
-print(length(CommSet))
+setwd(paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/",sep=""))
+threshmat <- paste("cleanTS.Cond",Cond,".",ss,".noijk_dump.bin.corr.thresh",sep="")
+comms <- paste("cleanTS.Cond",Cond,".",ss,".noijk_dump.bin.corr.thresh.tree",Tree,".justcomm",sep="")
+part_coef <- fparticipation_coef(threshmat,as.matrix(read.table(comms)))
 
-outname <- paste(Sys.getenv("state"),"/",ss,"/connectivity/",ss,".",Cond,".",Tree,".allZscores.txt",sep="")
-
-
-## run the zscore function
-WriteScores <- function(x, inmatrix, ci)
-{
-    library(bct)
-    fparticipation_coef(inmatrix, ci)
-}
-
-## concatentate the zbin out files from par_fmodule_degree_zscore
-zfile_concat <- function(filelist, size)
-{
-    Z = mat.or.vec(size, 1)
-    ## overwrite any zero value with new value
-    for (f in filelist)
-    {
-        zz <- file(f, "rb")
-        zarray <- readBin(zz, numeric(), size)
-        zarray[which(is.na(zarray))] = 0
-        idx = 0
-        for (ii in zarray)
-        {
-            if (ii != 0)
-            {
-                Z[idx] = ii
-            }
-            idx = idx + 1
-        }
-        close(zz)
-    }
-    return(Z)
-}
-
-##Compute z scores in paralell
-parallelFmod <- function(CommSet, nVox, inmatrix, ci, outname)
-{
-    comm.zscores <- parSapply(cluster, CommSet, WriteScores, inmatrix, ci)
-    Zscores <- zfile_concat(c(comm.zscores),nVox)
-    write.table(round(Zscores,4),outname,row.names=F,col.names=F,quote=F)
-}
-
-fparticipation_coef(inmatrix,ci)
-
-
-#parallelFmod(CommSet, nVoxArg, inmatrix, ci, outname)
-stopCluster(cluster)
-mpi.exit()
+outname <- paste(ss,".",Cond,".part_coef",sep="")
+write(round(part_coef,4),outname,sep="\n")
