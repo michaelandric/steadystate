@@ -1,9 +1,10 @@
 #!/usr/bin/python
 
-## Here's how you use this on the command line:
-## python exec_makesubmitargs.py >> submit.try
-## where 'submit.try' is the condor_submit file that you're adding arguments to
-
+"""
+Here's how you use this on the command line:
+python exec_makesubmitargs.py >> submit.try
+where 'submit.try' is the condor_submit file that you're adding arguments to
+"""
 import commands
 import makesubmitargs
 
@@ -11,12 +12,18 @@ import makesubmitargs
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
-#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
+##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
 subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO not in here
 conditions = range(1,5)
-## this is the dictionary that maps nvox to subject
+
+"""
+this is the dictionary that maps nvox to subject
+"""
 dictionary = {'EZCR': '31902', 'FLTM': '32555', 'MRZM': '23081', 'MRMC': '29045', 'ANMS': '25009', 'MRAG': '26830', 'ANGO': '22170', 'PIGL': '26253', 'CLFR': '24883', 'CRFO': '28632', 'EEPA': '30432', 'TRCO': '28705', 'MRMK': '26331', 'SNNW': '27839', 'BARS': '28340', 'LDMW': '27133', 'LRVN': '26562', 'MRVV': '24476', 'DNLN': '25884', 'MYTP': '26202', 'MNGO': '28266'}
-## this dictionary gives the highest level (at .5 corr threshold)
+
+"""
+this dictionary gives the highest level (at .5 corr threshold)
+"""
 #dictionary2 = {'MYTP':(4,3,3,3), 'TRCO':(4,4,4,3), 'CLFR':(4,3,4,3), 'PIGL':(4,4,4,4), 'SNNW':(3,4,3,3)}
 #dictionary2 = {"LDMW":(,) ,"FLTM":() ,"EZCR":() ,"EEPA":() ,"DNLN":() ,"CRFO":() ,"ANMS":() ,"BARS":()}
 hemispheres = ["lh","rh"]
@@ -31,7 +38,8 @@ for ss in subjects:
     #mm.ijkcoordsargs(ss,"/mnt/tier2/urihas/Andric/steadystate/","automask_d3")
     #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 /mnt/tier2/urihas/Andric/steadystate/ --arg2 automask_d3") ## for submit.10.getijk
     #mm.autotlrcargs(ss)
-    mm.voxel_id_args(ss, dictionary[ss])
+    #mm.voxel_id_args(ss, dictionary[ss])
+    mm.maskdumpargs(ss)
     #for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 "+`cc`) ## this was for submit.splice
@@ -49,4 +57,5 @@ for ss in subjects:
         #mm.degree(ss,dictionary[ss],cc)
         #for h in hemispheres:
         #    mm.vol2surfargs(ss, "s"+ss+"_"+h+"_mesh140"+ss+"_"+h+".spec", "s"+ss+"_"+h+"_mesh140"+h+".smoothwm.asc", "s"+ss+"_"+h+"_mesh140"+h+".pial.asc", "max_abs", ss+"."+`cc`+".degrees.ijk+orig.", ss+"."+`cc`+".degrees_"+h+"_max_abs.1D")
+        #mm.bintomatrix_args(ss,dictionary[ss],cc)
 
