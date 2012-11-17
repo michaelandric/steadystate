@@ -17,9 +17,7 @@ class MaskOps:
 
     def get_opts(self):
         desc="""
-        This is a program to make white matter and ventricle masks to then regress out some sources of nuisance noise.  
-        It uses AFNI functions, as well as FSL.  You will need an environment variable 'FSLDIR' pointing to the FSL directory. 
-        Note: Make sure to include '+orig' for all input AFNI data types specified here. 
+        This is a program to make white matter and ventricle masks to then regress out some sources of nuisance noise. It uses AFNI functions, as well as FSL.  You will need an environment variable 'FSLDIR' pointing to the FSL directory. Note: Make sure to include '+orig' for all input AFNI data types specified here.
         """
         self.usage = "usage: %prog [options]"
         self.parser = OptionParser(description=desc, version="%prog 28.April.2010")
