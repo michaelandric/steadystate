@@ -1,0 +1,69 @@
+executable	= maskdump.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/3.$(Process).out
+error		= ./logs/3.$(Process).err
+log 		= ./logs/3.$(Process).log
+
+
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/MYTPvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/MYTPvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/TRCOvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/TRCOvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/PIGLvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/PIGLvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/SNNWvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/SNNWvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/LDMWvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/LDMWvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/FLTMvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/FLTMvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/EZCRvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/EZCRvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/EEPAvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/EEPAvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/DNLNvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/DNLNvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/CRFOvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/CRFOvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/ANMSvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/ANMSvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/BARSvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/BARSvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/MRZMvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/MRZMvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/MRVVvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/MRVVvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/MRMKvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/MRMKvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/MRMCvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/MRMCvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/MRAGvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/MRAGvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/MNGOvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/MNGOvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/LRVNvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/LRVNvoxel_index.ijk+tlrc.txt 
+queue 
+
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/CLFRvoxel_index.ijk+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/CLFRvoxel_index.ijk+tlrc.txt 
+queue 
+
