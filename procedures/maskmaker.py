@@ -95,7 +95,10 @@ class MaskOps:
         os.system("3dmerge -1filter_nzmean 2 -prefix "+self.options.loc+"/volume.aroundVent.blur."+self.options.id+" "+self.options.loc+"/volume.aroundVent.preblur."+self.options.id+"+orig") ## blur around the ventricle
         
         print "<<<<<<<< Generating the Ventricles seed 'Vseed' >>>>>>>>>>>>> "+time.ctime()
-        Vseed = "-8 13 19\n8 13 19\n" ## creating seed in areas of ventricle - tal coords 
+        """
+        This creates seed in areas of ventricle, using talairach coords
+        """
+        Vseed = "-8 13 19\n8 13 19\n"
         file = open('vent.seed.tal.1D','w')
         file.write(Vseed)
         file.close()
