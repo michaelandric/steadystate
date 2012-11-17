@@ -31,20 +31,22 @@ class MakeArgs:
         print "arguments    = --Subject "+subject+" --tlrc_brain "+subject+"tlrc+tlrc \nqueue \n"
 
     def maskdumpargsOLD(self):
-        ##arg1 == steadystate dir, e.g., '/mnt/tier2/urihas/Andric/steadystate/'
-        ##arg2 == automask, e.g., 'automask_d3'
-        ##arg3 == Condition, e.g., '1'
-        ## example command line:
-        ##  python makesubmitargs.py --subject BARS --arg1 /mnt/tier2/urihas/Andric/steadystate/ --arg2 automask_d3 --arg3 1
+        """
+        arg1 == steadystate dir, e.g., '/mnt/tier2/urihas/Andric/steadystate/'
+        arg2 == automask, e.g., 'automask_d3'
+        arg3 == Condition, e.g., '1'
+        example command line:
+        python makesubmitargs.py --subject BARS --arg1 /mnt/tier2/urihas/Andric/steadystate/ --arg2 automask_d3 --arg3 1
+        """
         automask = self.options.arg1+self.options.subject+"/"+self.options.arg2+"_"+self.options.subject+"+orig"
         input = self.options.arg1+self.options.subject+"/blur."+self.options.arg3+"."+self.options.subject+".steadystate.TRIM+orig"
         output = self.options.arg1+self.options.subject+"/blur."+self.options.arg3+"."+self.options.subject+".steadystate.TRIM.noijk_dump"
         print "arguments    = --ijk no --automask "+automask+" --inputfile "+input+" --outputname "+output+" \nqueue \n"
 
-    def maskdumpargs(self,subject,arg1):
+    def maskdumpargs(self,subject):
         automask = "/mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc"
-        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees.ijkSHORT+tlrc"
-        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees.ijkSHORTtlrc.txt"
+        input = os.environ["state"]+"/"+subject+"/"+subject+"voxel_index.ijk+tlrc"
+        output = os.environ["state"]+"/"+subject+"/"+subject+"voxel_index.ijk+tlrc.txt"
         print "arguments    = --ijk no --automask "+automask+" --inputfile "+input+" --outputname "+output+" \nqueue \n" 
 
     def dir_maker(self):
@@ -128,6 +130,9 @@ class MakeArgs:
 
     def voxel_id_args(self,subject,arg1):
         print "arguments   = --number_voxels "+arg1+" --subject "+subject+" \nqueue \n"
+
+    def bintomatrix_args(self,subject,arg1,arg2):
+        print "arguments   = 26.bintomatrix.R "+subject+" "+arg1+" "+`arg2`+" \nqueue \n"
 
     def tester(self):
         print "this is a test"
