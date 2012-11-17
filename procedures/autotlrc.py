@@ -23,8 +23,12 @@ class AutoTLRC:
         for cc in range(1,5):
             print os.system("@auto_tlrc -apar "+self.options.tlrcT1+" -input "+self.options.subject+"."+`cc`+".degrees.ijkSHORT+orig -dxyz 2")
 
+    def index_auto_tlrc(self):
+        os.chdir(os.environ["state"]+"/"+self.options.subject)
+        print os.system("@auto_tlrc -apar corrTRIM_BLUR/"+self.options.tlrcT1+" -input "+self.options.subject+"voxel_index.ijk+orig -dxyz 2")
+
 
 atlrc = AutoTLRC()
 atlrc.get_opts()
-atlrc.auto_tlrc_ex()
+atlrc.index_auto_tlrc()
 
