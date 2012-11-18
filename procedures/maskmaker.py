@@ -5,6 +5,9 @@ Here is a sample command line for using this program:
 
 [andric@cosmo mask]$ MaskMaker.py --identity hel1 --volume /gpfs/pads/projects/normal_language/HEL/hel1/masking/volume.hel1+orig. --automask /gpfs/pads/projects/normal_language/HEL/hel1/masking/automask_d1_hel1+orig. --makeautobox n --location /gpfs/pads/projects/normal_language/HEL/hel1/masking/
 
+Second sample command line:
+[michaeljames.andric@mat-dt410-uhs1 procedures]$ ./maskmaker.py --identity ANGO --volume /mnt/tier2/urihas/Andric/steadystate/ANGO/ANGOavg_Alnd+orig. --automask /mnt/tier2/urihas/Andric/steadystate/ANGO/automask_d2_ANGO+orig. --makeautobox y --location /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ 2>&1 | tee -a maskmaker.log
+
 """
 
 import os
@@ -66,18 +69,19 @@ class MaskOps:
         frac_mask = self.options.loc+"/automask_frac_"+self.options.id+"+orig"
         print "<<<<<<<<<<<<<<<<<<<<<< 3dfractionize >>>>>>>>>>>>>>>>>>>>>>>>>>> \n"+time.ctime()
         os.system("3dfractionize -template "+self.options.loc+"/volume.box."+self.options.id+"+orig -input "+auto_mask+" -preserve -clip 0.2 -prefix "+frac_mask)
-        """
-        This is where we make sure FSL is sourced
-        """
-        print "Sourcing FSLDIR: "+os.environ["FSLDIR"]
-        print commands.getoutput("source "+os.environ["FSLDIR"]+"/etc/fslconf/fsl.csh") ## source FSL
         print "<<<<<<<< 3dcalc to get masked volume from the fractionized and boxed volume >>>>>>>>>>>>>\n"+time.ctime()
         os.system("3dcalc -a "+frac_mask+" -b "+self.options.loc+"/volume.box."+self.options.id+"+orig -expr 'step(a)*b' -prefix "+self.options.loc+"/volume.masked."+self.options.id+"+orig") ## mask sample volume
         """
-        This NIFTI conversion is needed because that's the format fsl uses
+        This 3dAFNItoNIFTI conversion is needed because that's the format fsl uses
         """
         print "<<<<<<<< 3dAFNItoNIFTI to get nii volume >>>>>>>>>>>>>\n"+time.ctime()
         os.system("3dAFNItoNIFTI -prefix "+self.options.loc+"/volume.masked."+self.options.id+".nii "+self.options.loc+"/volume.masked."+self.options.id+"+orig") ## convert to nii
+        """
+        Now have to make sure FSL is sourced.
+        For some (yet unknown) reason, the env variable is not sticking.
+        This is why I reset it here
+        """
+        os.environ["FSLDIR"] = "/mnt/tier2/urihas/Software/fsl/bin/fsl"
         """
         now use FSL program 'fast' to segment the volume
         """
