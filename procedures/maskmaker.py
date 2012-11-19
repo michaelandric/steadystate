@@ -14,6 +14,7 @@ import os
 import sys
 import commands
 import time
+import shutil
 from optparse import OptionParser
 
 class MaskOps:
@@ -43,102 +44,69 @@ class MaskOps:
     def Autobox(self):
     	"""
     	To not include the whole image - surrounding black space, etc.
-    	We clip a box around the volume
+    	We use this to clip a box around the volume
     	"""
         print "Cropping volume to box fit around the volume.\n"
         print "<<<<<<<<<<<<<<<<<<<<<< 3dAutobox >>>>>>>>>>>>>>>>>>>>>>>>>>>\n"+time.ctime()
         os.system("3dAutobox -noclust -prefix "+self.options.loc+"/volume.box."+self.options.id+" "+self.options.vol)
-        
-    def TLRC_algn(self):
-    	"""
-    	Here we get rid of the skull and align the brain to talairach coords
-    	"""
-        print "Skull strip and get a tal align coordinate vector\n"
-        print "<<<<<<<<<<<<<<<<<<<<<< 3dSkullStrip >>>>>>>>>>>>>>>>>>>>>>>>>>>\n"+time.ctime()
-        os.system("3dSkullStrip -input "+self.options.vol+" -prefix "+self.options.loc+"/volume.sklstrp."+self.options.id+" -orig_vol") ## do Skull strip
-        print "<<<<<<<<<<<<<<<<<<<<<< 3dZeropad >>>>>>>>>>>>>>>>>>>>>>>>>>>\n"+time.ctime()
-        os.system("3dZeropad -I 10 -S 10 -A 10 -P 10 -L 10 -R 10 -prefix "+self.options.loc+"/volume.padded.sklstrp."+self.options.id+" "+self.options.loc+"/volume.sklstrp."+self.options.id+"+orig") ## create extra padding in the volume space
-        print "<<<<<<<<<<<<<<<<<<<<<< 3dresample >>>>>>>>>>>>>>>>>>>>>>>>>>>\n"+time.ctime()
-        os.system("3dresample -inset "+os.environ["AFNI_PLUGINPATH"]+"/TT_N27+tlrc -master "+self.options.loc+"/volume.padded.sklstrp."+self.options.id+"+orig -prefix "+self.options.loc+"/template.resampled."+self.options.id+"+orig") ## resample to tal
-        print "<<<<<<<<<<<<<<<<<<<<<< 3dWarpDrive >>>>>>>>>>>>>>>>>>>>>>>>>>>\n"+time.ctime()
-        os.system("3dWarpDrive -affine_general -cubic -input "+self.options.loc+"/volume.padded.sklstrp."+self.options.id+"+orig -prefix "+self.options.loc+"/volume.tal.padded.sklstrp."+self.options.id+" -base "+self.options.loc+"/template.resampled."+self.options.id+"+orig -1Dmatrix_save "+self.options.loc+"/volume.tal."+self.options.id+".1D") ## using this to get the tal transform matrix 'volume.tal.*.1D'
-        
-    def CalcMaskedVol(self,vol):
+
+    def get_volume(self):
+        """
+        Have to make sure the correct volume is in the working directory
+        """
+        if not os.path.exists(self.options.loc+"/"+self.options.id+".SurfVol_Alnd_Exp+orig.BRIK"):
+            parts = ["HEAD","BRIK"]
+            for HB in parts:
+                shutil.copy2("/mnt/tier2/urihas/sam.steadystate/"+self.options.id+"/"+self.options.id+".SurfVol_Alnd_Exp+orig."+HB,self.options.loc)
+        """
+        Convert AFNI to NIFTI
+        """
+        os.chdir(self.options.loc)
+        print "Now working in: "+os.getcwd()
+        print os.system("3dAFNItoNIFTI "+self.options.id+".SurfVol_Alnd_Exp+orig")
+
+    def bet_brain(self):
+        os.chdir(self.options.loc)
+        print "Now working in: "+os.getcwd()
+        """
+        Use FSL's bet to extract brain from *SurfVol_Alnd_Exp+orig
+        """
+        print os.system("bet "+self.options.loc+"/"+self.options.id+".SurfVol_Alnd_Exp "+self.options.loc+"/"+self.options.id+".SurfVol_Alnd_Exp_brain -R -f 0.5 -g 0")
+                
+    def CalcMaskedVol(self):
+        os.chdir(self.options.loc)
+        print "Now working in: "+os.getcwd()
         print "Get masked data from the volume for ventricles and white matter.\n"
         auto_mask = self.options.amask
-        frac_mask = self.options.loc+"/automask_frac_"+self.options.id+"+orig"
-        print "<<<<<<<<<<<<<<<<<<<<<< 3dfractionize >>>>>>>>>>>>>>>>>>>>>>>>>>> \n"+time.ctime()
-        os.system("3dfractionize -template "+self.options.loc+"/volume.box."+self.options.id+"+orig -input "+auto_mask+" -preserve -clip 0.2 -prefix "+frac_mask)
-        print "<<<<<<<< 3dcalc to get masked volume from the fractionized and boxed volume >>>>>>>>>>>>>\n"+time.ctime()
-        os.system("3dcalc -a "+frac_mask+" -b "+self.options.loc+"/volume.box."+self.options.id+"+orig -expr 'step(a)*b' -prefix "+self.options.loc+"/volume.masked."+self.options.id+"+orig") ## mask sample volume
         """
-        This 3dAFNItoNIFTI conversion is needed because that's the format fsl uses
-        """
-        print "<<<<<<<< 3dAFNItoNIFTI to get nii volume >>>>>>>>>>>>>\n"+time.ctime()
-        os.system("3dAFNItoNIFTI -prefix "+self.options.loc+"/volume.masked."+self.options.id+".nii "+self.options.loc+"/volume.masked."+self.options.id+"+orig") ## convert to nii
-        """
-        Now have to make sure FSL is sourced.
-        For some (yet unknown) reason, the env variable is not sticking.
-        This is why I reset it here
-        """
-        os.environ["FSLDIR"] = "/mnt/tier2/urihas/Software/fsl/bin/fsl"
-        """
-        now use FSL program 'fast' to segment the volume
+        Use FSL program 'fast' to segment the volume
         """
         print "<<<<<<<< running 'fast' to get segmentation >>>>>>>>>>>>> "+time.ctime()
-        print os.system("fast -o "+self.options.loc+"/volume."+self.options.id+" "+self.options.loc+"/volume.masked."+self.options.id+".nii") ## segments volume?
-        print "<<<<<<<< 3dcalc to get mask around ventricles from nii segmentation >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dcalc -a "+self.options.loc+"/volume."+self.options.id+"_seg.nii.gz -b "+frac_mask+" -expr '100*step(b)*iszero(amongst(a,1,0))' -prefix "+self.options.loc+"/volume.aroundVent.preblur."+self.options.id)  ## mask around the ventricle
-        print "<<<<<<<< 3dmerge to blur aroundVent >>>>>>>>>>>>> "+time.ctime()
+        print os.system("fast -t 1 -n 4 -H 0.4 -I 4 -l 20.0 -g -o "+self.options.id+".SurfVol_Alnd_Exp_fast_out "+self.options.id+".SurfVol_Alnd_Exp_brain")
         """
-        Note: This blur is not 'one size fits all', i.e., may have to change 1filter_nzmean value so it doesn't blur over the ventricle completely.
-        Start with '-1filter_nzmean 3'
+        Use FSL program 'first' to segment the subcortical.
+        'first' is run NOT run on the output from 'bet' (but 'fast' is run on that brain).
+        For some reason, 'first' needs the original T1 - not the extracted.
         """
-        os.system("3dmerge -1filter_nzmean 2 -prefix "+self.options.loc+"/volume.aroundVent.blur."+self.options.id+" "+self.options.loc+"/volume.aroundVent.preblur."+self.options.id+"+orig") ## blur around the ventricle
-        
-        print "<<<<<<<< Generating the Ventricles seed 'Vseed' >>>>>>>>>>>>> "+time.ctime()
+        print "<<<<<<<<<<<<<< runing 'first' to segment the subcortical >>>>>>>>>>>"
+        print os.system("run_first_all -i "+self.options.id+".SurfVol_Alnd_Exp.nii -o "+self.options.id+".SurfVol_Alnd_Exp_first_out")
         """
-        This creates seed in areas of ventricle, using talairach coords
+        Get the gray matter mask by combining segmentations from cortex and subcortical
         """
-        Vseed = "-8 13 19\n8 13 19\n"
-        file = open('vent.seed.tal.1D','w')
-        file.write(Vseed)
-        file.close()
-        
-        print "<<<<<<<< Warping from talrch using 'Vecwarp'  >>>>>>>>>>>>> "+time.ctime()
-        os.system("Vecwarp -matvec "+self.options.loc+"/volume.tal."+self.options.id+".1D -forward -input vent.seed.tal.1D -output "+self.options.loc+"/vent.seed.1D")
-        print "<<<<<<<< 3dUndump to get ventricles seed >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dUndump -xyz -orient RAI -prefix "+self.options.loc+"/vent.seed."+self.options.id+" -master "+frac_mask+" -srad 8 "+self.options.loc+"/vent.seed.1D")
-        print "<<<<<<<< 3dcalc to get inverted vent volume seed  >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dcalc -a "+self.options.loc+"/volume.aroundVent.blur."+self.options.id+"+orig -b "+frac_mask+" -c "+self.options.loc+"/vent.seed."+self.options.id+"+orig -expr 'step(b)*iszero(step(a))*(1+100*step(c))' -prefix "+self.options.loc+"/volume.aroundVent.inv."+self.options.id)
-        print "<<<<<<<< 3dmerge to cluster around the vent >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dmerge -dxyz=1 -1clust_max 2 1 -prefix "+self.options.loc+"/volume.aroundVent.clust."+self.options.id+" "+self.options.loc+"/volume.aroundVent.inv."+self.options.id+"+orig")
-        print "<<<<<<<< 3dcalc to get masked volume ventricles >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dcalc -datum byte -a "+self.options.loc+"/volume.aroundVent.clust."+self.options.id+"+orig -expr '100*step(a-1)' -prefix "+self.options.loc+"/volume.vent.init."+self.options.id)
-        print "<<<<<<<< 3dmerge to get masked volume ventricles blur >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dmerge -1filter_nzmean 5 -prefix "+self.options.loc+"/volume.vent.init.blur."+self.options.id+" "+self.options.loc+"/volume.vent.init."+self.options.id+"+orig")
-        print "<<<<<<<< 3dcalc to grab masked volume ventricles using the blurred >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dcalc -a "+self.options.loc+"/volume.aroundVent.preblur."+self.options.id+"+orig -b "+self.options.loc+"/volume.vent.init.blur."+self.options.id+"+orig -c "+self.options.loc+"/volume.masked."+self.options.id+"+orig -expr 'iszero(a)*iszero(b)*step(c)' -prefix "+self.options.loc+"/volume.aroundVent.init."+self.options.id)
-        print "<<<<<<<< 3dmerge to get init volume around ventricles >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dmerge -dxyz=1 -1clust_order 2 1 -prefix "+self.options.loc+"/volume.aroundVent.init.clust."+self.options.id+" "+self.options.loc+"/volume.aroundVent.init."+self.options.id+"+orig")
-        print "<<<<<<<< 3dcalc to get init preclustered volume around ventricles >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dcalc -a "+self.options.loc+"/volume.aroundVent.init.clust."+self.options.id+"+orig -b "+self.options.loc+"/volume.vent.init."+self.options.id+"+orig -c "+self.options.loc+"/volume.aroundVent.preblur."+self.options.id+"+orig -d "+self.options.loc+"/volume.masked."+self.options.id+"+orig -expr 'iszero(c)*iszero(equals(a,1))*(1+100*step(b))*step(d)' -prefix "+self.options.loc+"/volume.vent.init.preclust."+self.options.id)
-        print "<<<<<<<< 3dmerge to get initial clustered volume around ventricles >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dmerge -dxyz=1 -1clust_max 2 1 -prefix "+self.options.loc+"/volume.vent.init.clust."+self.options.id+" "+self.options.loc+"/volume.vent.init.preclust."+self.options.id+"+orig")
-        
+        print "<<<<<<<<<<<< now get the mask >>>>>>>>>>>>>"
+        graymatter = self.options.id+"_graymattermask"
+        print os.system("3dcalc -a "+self.options.id+".SurfVol_Alnd_Exp_first_out_all_fast_firstseg.nii.gz -b "+self.options.id+".SurfVol_Alnd_Exp_fast_out_seg_1.nii.gz -c "+self.options.id+".SurfVol_Alnd_Exp_fast_out_seg_2.nii.gz -expr 'step(a+b+c)' -prefix "+graymatter)
         """
-        Finally getting the ventricles mask
+        Now resample mask into functional resolution
         """
-        print "<<<<<<<< 3dcalc and 3dfractionize to get ventricles mask >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dcalc -datum byte -a "+self.options.loc+"/volume.vent.init.clust."+self.options.id+"+orig -expr 'step(a-1)' -prefix "+self.options.loc+"/volume.VENT."+self.options.id)
-        
-        """
-        Finally getting the white matter mask
-        """
-        print "<<<<<<<< 3dcalc and 3dfractionize to get white matter mask >>>>>>>>>>>>> "+time.ctime()
-        os.system("3dcalc -datum byte -a "+self.options.loc+"/volume."+self.options.id+"_seg.nii.gz -expr 'equals(a,3)' -prefix "+self.options.loc+"/volume.WM."+self.options.id)
+        print os.system("3dresample -master "+auto_mask+" -inset "+graymatter+"+orig -prefix "+graymatter+"_resampled")
         
     def Clipper(self):
+        """
+        This is a legacy function.
+        I haven't used it in 2+ years.
+        There may be bugs.
+        """
         print "Now get quartile clips\n"
         auto_mask = self.options.amask
         vent_med1 = os.system("3dmaskave -median -mask "+self.options.loc+"/volume.VENT."+self.options.id+"+orig "+self.options.loc+"/volume.box."+self.options.id+"+orig | awk '{print $1}'").split('\n')[2]
@@ -147,8 +115,7 @@ class MaskOps:
         print "vent_med2: "+vent_med2
         print "now running: 3dcalc -a "+self.options.loc+"/volume.box."+self.options.id+"+orig -b "+self.options.loc+"/volume.VENT."+self.options.id+"+orig. -expr 'step(a-"+vent_med2+")*step(b)' -prefix "+self.options.loc+"/mask.VENTclip."+self.options.id+"+orig"
         print os.system("3dcalc -a "+self.options.loc+"/volume.box."+self.options.id+"+orig -b "+self.options.loc+"/volume.VENT."+self.options.id+"+orig. -expr 'step(a-"+vent_med2+")*step(b)' -prefix "+self.options.loc+"/mask.VENTclip."+self.options.id+"+orig")
-        print os.system("3dfractionize -template "+auto_mask+" -input "+self.options.loc+"/mask.VENTclip."+self.options.id+"+orig -prefix "+self.options.loc+"/mask.VENTclip.frac."+self.options.id+"+orig -vote -clip 0.5")
-        
+        print os.system("3dfractionize -template "+auto_mask+" -input "+self.options.loc+"/mask.VENTclip."+self.options.id+"+orig -prefix "+self.options.loc+"/mask.VENTclip.frac."+self.options.id+"+orig -vote -clip 0.5")        
         wm_med1 = commands.getoutput("3dmaskave -median -mask "+self.options.loc+"/volume.WM."+self.options.id+"+orig "+self.options.loc+"/volume.box."+self.options.id+"+orig | awk '{print $1}'").split('\n')[2]
         print "wm_med1: "+wm_med1
         wm_med2 = commands.getoutput("3dmaskave -median -mask "+self.options.loc+"/volume.WM."+self.options.id+"+orig -drange "+wm_med1+" 100000 "+self.options.loc+"/volume.box."+self.options.id+"+orig | awk '{print $1}'").split('\n')[2]
@@ -158,13 +125,17 @@ class MaskOps:
         print os.system("3dfractionize -template "+auto_mask+" -input "+self.options.loc+"/mask.WMclip."+self.options.id+"+orig -prefix "+self.options.loc+"/mask.WMclip.frac."+self.options.id+"+orig -vote -clip 0.9")
 
 
-mm = MaskOps()
-mm.get_opts()
-if mm.options.doautobox == "y" or mm.options.doautobox == "yes":
-    mm.Autobox()
-    vol = mm.options.loc+"/volume.box."+mm.options.id+"+orig"
-elif mm.options.doautobox == "n" or mm.options.doautobox == None:
-    vol = mm.options.vol
-mm.TLRC_algn()
-mm.CalcMaskedVol(vol)
-mm.Clipper()
+def main():
+    mm = MaskOps()
+    mm.get_opts()
+    if mm.options.doautobox == "y" or mm.options.doautobox == "yes":
+        mm.Autobox()
+        vol = mm.options.loc+"/volume.box."+mm.options.id+"+orig"
+    #elif mm.options.doautobox == "n" or mm.options.doautobox == None:
+    #    vol = mm.options.vol
+    mm.get_volume()
+    mm.bet_brain()
+    mm.CalcMaskedVol()
+
+if __name__ == "__main__":
+    main()
