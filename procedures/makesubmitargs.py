@@ -143,6 +143,11 @@ class MakeArgs:
     def bintomatrix_args(self,subject,arg1,arg2):
         print "arguments   = 26.bintomatrix.R "+subject+" "+arg1+" "+`arg2`+" \nqueue \n"
 
+    def maskmakerargs(self,subject):
+        automask = os.environ["state"]+"/"+subject+"/automask_d2_"+subject+"+orig"
+        location = os.environ["state"]+"/"+subject+"/masking/"
+        print "arguments   = --identity "+subject+" --automask "+automask+" --makeautobox n --location "+location+" \nqueue \n"
+
     def tester(self):
         print "this is a test"
 
