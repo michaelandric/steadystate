@@ -27,9 +27,9 @@ class BCT_Corr:
         (self.options, args) = self.parser.parse_args()
 
     def deconvolve(self):
-		"""
-		This is used to clean the time series. Here, I regress against the motion series. The 'error' time series is then the cleaned.
-		""" 
+	"""
+	This is used to clean the time series. Here, I regress against the motion series. The 'error' time series is then the cleaned.
+	""" 
         print "The out directory is: "+self.options.outD
         os.chdir(self.options.self.options.outD)
         print "Working in :"+os.getcwd()
