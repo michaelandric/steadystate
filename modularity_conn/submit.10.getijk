@@ -7,24 +7,6 @@ log 		= ./logs/10.$(Process).log
 
 
 
-arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/automask_d3_MRZM+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.1.MRZM.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRZM/ijk_coords_MRZM 
-queue 
-
-arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/automask_d3_MRVV+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.1.MRVV.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRVV/ijk_coords_MRVV 
-queue 
-
-arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/automask_d3_MRMK+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.1.MRMK.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRMK/ijk_coords_MRMK 
-queue 
-
-arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/automask_d3_MRMC+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.1.MRMC.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRMC/ijk_coords_MRMC 
-queue 
-
-arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/automask_d3_MRAG+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRAG/ijk_coords_MRAG 
-queue 
-
-arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/automask_d3_MNGO+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.1.MNGO.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MNGO/ijk_coords_MNGO 
-queue 
-
-arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/automask_d3_LRVN+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.1.LRVN.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/LRVN/ijk_coords_LRVN 
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ANGO_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/ANGO/blur.1.ANGO.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ijk_coords_graymattermask_ANGO 
 queue 
 
