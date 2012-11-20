@@ -8,12 +8,12 @@ where 'submit.try' is the condor_submit file that you're adding arguments to
 import commands
 import makesubmitargs
 
-#subjects = ["ANGO"]
+subjects = ["ANGO"]
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
 ##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
-subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO not in here
+#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO not in here
 conditions = range(1,5)
 
 """
@@ -26,6 +26,7 @@ this dictionary gives the highest level (at .5 corr threshold)
 """
 #dictionary2 = {'MYTP':(4,3,3,3), 'TRCO':(4,4,4,3), 'CLFR':(4,3,4,3), 'PIGL':(4,4,4,4), 'SNNW':(3,4,3,3)}
 #dictionary2 = {"LDMW":(,) ,"FLTM":() ,"EZCR":() ,"EEPA":() ,"DNLN":() ,"CRFO":() ,"ANMS":() ,"BARS":()}
+dictionary2 = {"ANGO":(3,3,3,2)}
 hemispheres = ["lh","rh"]
 
 
@@ -35,13 +36,13 @@ mm = makesubmitargs.makeargs
 
 for ss in subjects:
     #print commands.getoutput("python makesubmitargs.py --subject "+ss) ## for dir maker
-    #mm.ijkcoordsargs(ss,"/mnt/tier2/urihas/Andric/steadystate/","automask_d3")
+    #mm.ijkcoordsargs(ss)
     #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 /mnt/tier2/urihas/Andric/steadystate/ --arg2 automask_d3") ## for submit.10.getijk
     #mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, dictionary[ss])
     #mm.maskdumpargs(ss)
-    mm.maskmakerargs(ss)
-    #for cc in conditions:
+    #mm.maskmakerargs(ss)
+    for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 "+`cc`) ## this was for submit.splice
         #mm.maskdumpargs(ss,cc)
@@ -53,7 +54,7 @@ for ss in subjects:
         #mm.blondelargs(ss,cc) ## for submit.8.blondel
         #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 "+`cc`)  ## for submit.6.threshold, submit.7.blondel_convert, submit.8.blondel, submit.9.hierarchy
             #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 /mnt/tier2/urihas/Andric/steadystate/ --arg2 "+`cc`+" --arg3 "+`i`) ## for submit.11.undump
-        #mm.undumpargs(ss,ss+"."+`cc`+".degrees",ss+"."+`cc`+".degrees.ijkSHORT")
+        mm.undumpargs(ss,cc,dictionary2[ss][cc-1])
         #mm.filter(ss,cc,dictionary2[ss][cc-1]) ## for submit.13.filter
         #mm.undump14(ss,cc,dictionary2[ss][cc-1],1)
         #mm.degree(ss,dictionary[ss],cc)
