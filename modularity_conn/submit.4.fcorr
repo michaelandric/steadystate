@@ -1,0 +1,20 @@
+executable	= 4.fcorr.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/4.$(Process).out
+error		= ./logs/4.$(Process).err
+log 		= ./logs/4.$(Process).log
+
+
+arguments    = --subject ANGO --source_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/ --output_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ANGO_graymattermask_resampled+orig --condition 1 
+queue 
+
+arguments    = --subject ANGO --source_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/ --output_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ANGO_graymattermask_resampled+orig --condition 2 
+queue 
+
+arguments    = --subject ANGO --source_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/ --output_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ANGO_graymattermask_resampled+orig --condition 3 
+queue 
+
+arguments    = --subject ANGO --source_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/ --output_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ANGO_graymattermask_resampled+orig --condition 4 
+queue 
+
