@@ -2,7 +2,7 @@
 
 import os
 import sys
-import commands
+from subprocess import call
 import shutil
 
 
@@ -22,5 +22,5 @@ shutil.copy2(R_SCRIPT,WORKDIR+R_SCRIPT_NEW)
 os.chdir(WORKDIR)
 
 print os.getcwd()
-print commands.getoutput("R CMD BATCH --vanilla "+R_SCRIPT_NEW)
+print call("R CMD BATCH --vanilla "+R_SCRIPT_NEW)
 

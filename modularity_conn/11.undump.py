@@ -8,7 +8,7 @@ class AFNIproc_undump:
     def get_opts(self):
         desc = """rogram for pasting ijk coordinates to input text files and doing 3dUndump"""
         self.usage = "usage: %prog [options]"
-        self.parser = OptionParser(description=desc, version="%prog Sep.2012")
+        self.parser = OptionParser(description=desc, version="%prog Nov.2012")
         self.parser.add_option("--inputfile", dest="input",
                                help="input text file")
         self.parser.add_option("--ijkfile", dest="ijk",
@@ -22,7 +22,7 @@ class AFNIproc_undump:
 
     def get_data(self):
         """
-        Adding '1' to every community to not have 0
+        Adding '1' to every community to not have '0' as a community label.
         """
         inputf = open(self.options.input,'r')
         voxelnum = []
@@ -47,9 +47,16 @@ class AFNIproc_undump:
         outf.close()
 
     def paste_ijk(self):
+    	"""
+    	This function works from the naming convention given in 'get_data' function. 
+    	Use 'paste_ijk2' if giving the full input filename.
+    	"""
         print call("paste -d ' ' "+self.options.ijk+" "+self.options.input+".justcomm > "+self.options.input+".ijk.txt",shell=True)
 
     def paste_ijk2(self):
+    	"""
+    	If specifying the full input name, can use this paste function.
+    	"""
         print call("paste -d ' ' "+self.options.ijk+" "+self.options.input+" > "+self.options.input+".ijk.txt",shell=True)
 
     def undump(self):
