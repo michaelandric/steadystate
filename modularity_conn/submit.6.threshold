@@ -6,87 +6,14 @@ error		= ./logs/6.$(Process).err
 log 		= ./logs/6.$(Process).log
 
 
-arguments    = 6.thresholdmat.R MRZM 1 
+arguments    = 6.thresholdmat.R ANGO 1 
 queue 
 
-arguments    = 6.thresholdmat.R MRZM 2 
+arguments    = 6.thresholdmat.R ANGO 2 
 queue 
 
-arguments    = 6.thresholdmat.R MRZM 3 
+arguments    = 6.thresholdmat.R ANGO 3 
 queue 
 
-arguments    = 6.thresholdmat.R MRZM 4 
+arguments    = 6.thresholdmat.R ANGO 4 
 queue 
-
-arguments    = 6.thresholdmat.R MRVV 1 
-queue 
-
-arguments    = 6.thresholdmat.R MRVV 2 
-queue 
-
-arguments    = 6.thresholdmat.R MRVV 3 
-queue 
-
-arguments    = 6.thresholdmat.R MRVV 4 
-queue 
-
-arguments    = 6.thresholdmat.R MRMK 1 
-queue 
-
-arguments    = 6.thresholdmat.R MRMK 2 
-queue 
-
-arguments    = 6.thresholdmat.R MRMK 3 
-queue 
-
-arguments    = 6.thresholdmat.R MRMK 4 
-queue 
-
-arguments    = 6.thresholdmat.R MRMC 1 
-queue 
-
-arguments    = 6.thresholdmat.R MRMC 2 
-queue 
-
-arguments    = 6.thresholdmat.R MRMC 3 
-queue 
-
-arguments    = 6.thresholdmat.R MRMC 4 
-queue 
-
-arguments    = 6.thresholdmat.R MRAG 1 
-queue 
-
-arguments    = 6.thresholdmat.R MRAG 2 
-queue 
-
-arguments    = 6.thresholdmat.R MRAG 3 
-queue 
-
-arguments    = 6.thresholdmat.R MRAG 4 
-queue 
-
-arguments    = 6.thresholdmat.R MNGO 1 
-queue 
-
-arguments    = 6.thresholdmat.R MNGO 2 
-queue 
-
-arguments    = 6.thresholdmat.R MNGO 3 
-queue 
-
-arguments    = 6.thresholdmat.R MNGO 4 
-queue 
-
-arguments    = 6.thresholdmat.R LRVN 1 
-queue 
-
-arguments    = 6.thresholdmat.R LRVN 2 
-queue 
-
-arguments    = 6.thresholdmat.R LRVN 3 
-queue 
-
-arguments    = 6.thresholdmat.R LRVN 4 
-queue 
-
