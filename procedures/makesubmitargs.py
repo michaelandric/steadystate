@@ -43,10 +43,10 @@ class MakeArgs:
         output = self.options.arg1+self.options.subject+"/blur."+self.options.arg3+"."+self.options.subject+".steadystate.TRIM.noijk_dump"
         print "arguments    = --ijk no --automask "+automask+" --inputfile "+input+" --outputname "+output+" \nqueue \n"
 
-    def maskdumpargs(self,subject):
-        automask = "/mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc"
-        input = os.environ["state"]+"/"+subject+"/"+subject+"voxel_index.ijk+tlrc"
-        output = os.environ["state"]+"/"+subject+"/"+subject+"voxel_index.ijk+tlrc.txt"
+    def maskdumpargs(self,subject,arg1):
+        automask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+orig"
+        input = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM+orig"
+        output = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM_graymask_dump"
         print "arguments    = --ijk no --automask "+automask+" --inputfile "+input+" --outputname "+output+" \nqueue \n" 
 
     def dir_maker(self):
@@ -56,6 +56,15 @@ class MakeArgs:
         ##arg1 == number of voxels, e.g., 22170
         ##arg2 == Condition, e.g., 2
         print "arguments    = 4.corr.R "+self.options.subject+" "+self.options.arg1+" 90 "+self.options.arg2+" \nqueue \n"
+
+    def fcorrargs(self,subject,arg1):
+        sourcedir = os.environ["state"]+"/"+subject+"/"
+        outdir = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"
+        """
+        Have to give full path for mask
+        """
+        mask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+orig"
+        print "arguments    = --subject "+subject+" --source_directory "+sourcedir+" --output_directory "+outdir+" --mask "+mask+" --condition "+`arg1`+" \nqueue \n"
 
     def threshargs(self,subject,arg1):
         ##arg1 == Condition, e.g., 2
