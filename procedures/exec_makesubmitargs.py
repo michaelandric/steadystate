@@ -8,12 +8,12 @@ where 'submit.try' is the condor_submit file that you're adding arguments to
 import commands
 import makesubmitargs
 
-#subjects = ["ANGO"]
+subjects = ["ANGO"]
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
 ##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
-subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO not in here
+#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO not in here
 conditions = range(1,5)
 
 """
@@ -39,11 +39,12 @@ for ss in subjects:
     #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 /mnt/tier2/urihas/Andric/steadystate/ --arg2 automask_d3") ## for submit.10.getijk
     #mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, dictionary[ss])
-    mm.maskdumpargs(ss)
-    #for cc in conditions:
+    #mm.maskdumpargs(ss)
+    for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 "+`cc`) ## this was for submit.splice
         #mm.maskdumpargs(ss,cc)
+        mm.fcorrargs(ss,cc)
         #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 /mnt/tier2/urihas/Andric/steadystate/ --arg2 automask_d3 --arg3 "+`cc`) ## for submit.3.maskdump
         #print commands.getoutput("python makesubmitargs.py --subject "+ss+" --arg1 "+dictionary[ss]+" --arg2 "+`cc`)  ## this is for submit.4.corr
         #mm.threshargs(ss,cc) ## for submit.6.threshold
