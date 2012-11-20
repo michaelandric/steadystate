@@ -5,9 +5,9 @@ Here is a sample command line for using this program:
 
 [andric@cosmo mask]$ MaskMaker.py --identity hel1 --volume /gpfs/pads/projects/normal_language/HEL/hel1/masking/volume.hel1+orig. --automask /gpfs/pads/projects/normal_language/HEL/hel1/masking/automask_d1_hel1+orig. --makeautobox n --location /gpfs/pads/projects/normal_language/HEL/hel1/masking/
 
+The volume is hard-coded in here. The volume flag thus doesn't do much.
 Second sample command line:
-[michaeljames.andric@mat-dt410-uhs1 procedures]$ ./maskmaker.py --identity ANGO --volume /mnt/tier2/urihas/Andric/steadystate/ANGO/ANGOavg_Alnd+orig. --automask /mnt/tier2/urihas/Andric/steadystate/ANGO/automask_d2_ANGO+orig. --makeautobox y --location /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ 2>&1 | tee -a maskmaker.log
-
+./maskmaker.py --identity ANGO --automask /mnt/tier2/urihas/Andric/steadystate/ANGO/automask_d2_ANGO+orig. --makeautobox n --location /mnt/tier2/urihas/Andric/steadystate/ANGO/masking2/ 2>&1 | tee -a maskmaker.log
 """
 
 import os
@@ -131,8 +131,6 @@ def main():
     if mm.options.doautobox == "y" or mm.options.doautobox == "yes":
         mm.Autobox()
         vol = mm.options.loc+"/volume.box."+mm.options.id+"+orig"
-    #elif mm.options.doautobox == "n" or mm.options.doautobox == None:
-    #    vol = mm.options.vol
     mm.get_volume()
     mm.bet_brain()
     mm.CalcMaskedVol()
