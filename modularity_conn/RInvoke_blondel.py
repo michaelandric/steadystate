@@ -17,7 +17,7 @@ print R_SCRIPT_PREF
 
 WORKDIR = os.environ["state"]+"/"+ss+"/corrTRIM_BLUR/"
 R_SCRIPT = R_SCRIPT_PREF+".R"
-R_SCRIPT_NEW = R_SCRIPT_PREF+"_"+ss+Cond+".R"
+R_SCRIPT_NEW = R_SCRIPT_PREF+"_gray_"+ss+Cond+".R"
 shutil.copy2(R_SCRIPT,WORKDIR+R_SCRIPT_NEW)
 os.chdir(WORKDIR)
 
