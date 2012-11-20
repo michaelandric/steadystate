@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import os
+from subprocess import call
 from optparse import OptionParser
 
 class AFNIproc_undump:
@@ -21,7 +21,9 @@ class AFNIproc_undump:
         (self.options, args) = self.parser.parse_args()
 
     def get_data(self):
-        ## Adding '1' to every community to not have 0
+        """
+        Adding '1' to every community to not have 0
+        """
         inputf = open(self.options.input,'r')
         voxelnum = []
         community = []
@@ -45,19 +47,21 @@ class AFNIproc_undump:
         outf.close()
 
     def paste_ijk(self):
-        print os.system("paste -d ' ' "+self.options.ijk+" "+self.options.input+".justcomm > "+self.options.input+".ijk.txt")
+        print call("paste -d ' ' "+self.options.ijk+" "+self.options.input+".justcomm > "+self.options.input+".ijk.txt",shell=True)
 
     def paste_ijk2(self):
-        print os.system("paste -d ' ' "+self.options.ijk+" "+self.options.input+" > "+self.options.input+".ijk.txt")
+        print call("paste -d ' ' "+self.options.ijk+" "+self.options.input+" > "+self.options.input+".ijk.txt",shell=True)
 
     def undump(self):
-        print os.system("3dUndump -prefix "+self.options.outname+" -ijk -datum short -master "+self.options.mstr+" "+self.options.input+".ijk.txt")
+        print call("3dUndump -prefix "+self.options.outname+" -ijk -datum short -master "+self.options.mstr+" "+self.options.input+".ijk.txt", shell=True)
 
 
+def main():
+    UD = AFNIproc_undump()
+    UD.get_opts()
+    UD.get_data()
+    UD.paste_ijk()
+    UD.undump()
 
-UD = AFNIproc_undump()
-UD.get_opts()
-#UD.get_data()
-#UD.paste_ijk()
-UD.paste_ijk2()
-UD.undump()
+if __name__ == "__main__":
+    main()
