@@ -83,11 +83,11 @@ class MakeArgs:
         ## HAVE TO MANUALLY REPLACE 'x' WITH THE LEVEL NUMBER!!!!!!!!!!!!!!!!!!!!!
         print "arguments    = 9.hierarchy.R "+self.options.subject+" "+self.options.arg1+" x \nqueue \n"
 
-    def ijkcoordsargs(self,subject,automsk):
+    def ijkcoordsargs(self,subject):
         basedir = os.environ["state"]+"/"
-        automask = basedir+subject+"/"+automsk+"_"+subject+"+orig"
+        automask = basedir+subject+"/masking/"+subject+"_graymattermask_resampled+orig"
         ijkmaster = basedir+subject+"/blur.1."+subject+".steadystate.TRIM+orig"
-        ijkoutname = basedir+subject+"/ijk_coords_"+subject
+        ijkoutname = basedir+subject+"/masking/ijk_coords_graymattermask_"+subject
         print "arguments    = --automask "+automask+" --ijkmaster "+ijkmaster+" --ijkoutputname "+ijkoutname+" \nqueue \n"
 
     def ijkTALAIRACHcoordsargs(self,subject,automsk):
@@ -107,13 +107,17 @@ class MakeArgs:
         outname = self.options.arg1+self.options.subject+"/corrTRIM_BLUR/"+self.options.subject+"."+self.options.arg2+".tree"+self.options.arg3+".ijk"
         print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkf+" --master "+ijkmaster+" --outputname "+outname+" \nqueue \n"
 
-    def undumpargs(self,ss,inputf,outname):
-        ##base directory = steadystate dir, e.g., '/mnt/tier2/urihas/Andric/steadystate/'
-        ##inputf = intput filename
-        ##ijkfile = ijkfile
-        ##ijkmaster
-        base = "/mnt/tier2/urihas/Andric/steadystate/"
-        print "arguments    = --inputfile "+base+ss+"/corrTRIM_BLUR/"+inputf+" --ijkfile "+base+ss+"/ijk_coords_"+ss+" --master "+base+ss+"/blur.1."+ss+".steadystate.TRIM+orig --outputname "+base+ss+"/corrTRIM_BLUR/"+outname+" \nqueue \n"
+    def undumpargs(self,subject,arg1,arg2):
+        """
+        arg1 == the condition number
+        arg2 == the tree number
+        """
+        basedir = "/mnt/tier2/urihas/Andric/steadystate/"
+        inputf = basedir+subject+"/corrTRIM_BLUR/cleanTS."+`arg1`+"."+subject+"_graymask_dump.bin.corr.thresh.tree"+`arg2`
+        ijkfile = basedir+subject+"/masking/ijk_coords_graymattermask_"+subject
+        master = basedir+subject+"/blur.1."+subject+".steadystate.TRIM+orig"
+        outname = basedir+subject+"/corrTRIM_BLUR/modules_"+subject+"_Cond"+`arg1`
+        print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --master "+master+" --outputname "+outname+" \nqueue \n"
 
     def filter(self,subject,arg1,arg2):
         ##arg1 == Condition, e.g., '2'
