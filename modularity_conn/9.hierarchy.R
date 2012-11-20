@@ -9,12 +9,11 @@ nlevels <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
 
 
 
-blondel_hier <- function(i,ss,nlevels)
+blondel_hier <- function(cond,subj,nlevels)
 {
-    subjdir <- paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/",sep="")
-    #subjdir <- paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/thresh.6/",sep="")
+    subjdir <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/",sep="")
     setwd(paste(subjdir))
-    tree <- paste("cleanTS.Cond",i,".",ss,".noijk_dump.bin.corr.thresh.tree",sep="")
+    tree <- paste("cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh.tree",sep="")
     for (lvl in 0:nlevels)
     {
         communities = blondel_hierarchy(tree,lvl)
