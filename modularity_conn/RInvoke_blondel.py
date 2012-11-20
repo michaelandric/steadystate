@@ -22,5 +22,5 @@ shutil.copy2(R_SCRIPT,WORKDIR+R_SCRIPT_NEW)
 os.chdir(WORKDIR)
 
 print os.getcwd()
-print call("R CMD BATCH --vanilla "+R_SCRIPT_NEW)
+print call("R CMD BATCH --vanilla "+R_SCRIPT_NEW, shell=True)
 
