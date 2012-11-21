@@ -17,7 +17,7 @@ class Maker:
         (self.options, args) = self.parser.parse_args()
 
     def make_dir(self):
-        newdir = os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR"
+        newdir = os.environ["state"]+"/"+self.options.subject+"/masking"
         if not os.path.exists(newdir):
             os.makedirs(newdir)
 
