@@ -6,6 +6,7 @@ error		= ./logs/autotlrc.$(Process).err
 log 		= ./logs/autotlrc.$(Process).log
 
 
+
 arguments    = --Subject MYTP --tlrc_brain MYTPtlrc+tlrc 
 queue 
 
@@ -22,9 +23,6 @@ arguments    = --Subject LDMW --tlrc_brain LDMWtlrc+tlrc
 queue 
 
 arguments    = --Subject FLTM --tlrc_brain FLTMtlrc+tlrc 
-queue 
-
-arguments    = --Subject EZCR --tlrc_brain EZCRtlrc+tlrc 
 queue 
 
 arguments    = --Subject EEPA --tlrc_brain EEPAtlrc+tlrc 
