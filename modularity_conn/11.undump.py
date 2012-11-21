@@ -66,8 +66,8 @@ class AFNIproc_undump:
 def main():
     UD = AFNIproc_undump()
     UD.get_opts()
-    UD.get_data()
-    UD.paste_ijk()
+    #UD.get_data()
+    UD.paste_ijk2()
     UD.undump()
 
 if __name__ == "__main__":
