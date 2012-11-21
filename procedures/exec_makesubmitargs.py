@@ -6,7 +6,7 @@ python exec_makesubmitargs.py >> submit.try
 where 'submit.try' is the condor_submit file that you're adding arguments to
 """
 import commands
-import makesubmitargs
+from makesubmitargs import makeargs as mm
 
 #subjects = ["ANGO"]
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
@@ -17,15 +17,11 @@ subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS
 conditions = range(1,5)
 
 """
-this is the dictionary that maps nvox to subject
+nvox_dict subject to the number of voxels in the image. 
+This goes by the voxels in the graymattermask
 """
-dictionary = {'EZCR': '31902', 'FLTM': '32555', 'MRZM': '23081', 'MRMC': '29045', 'ANMS': '25009', 'MRAG': '26830', 'ANGO': '22170', 'PIGL': '26253', 'CLFR': '24883', 'CRFO': '28632', 'EEPA': '30432', 'TRCO': '28705', 'MRMK': '26331', 'SNNW': '27839', 'BARS': '28340', 'LDMW': '27133', 'LRVN': '26562', 'MRVV': '24476', 'DNLN': '25884', 'MYTP': '26202', 'MNGO': '28266'}
+nvox_dict = {'BARS': 10023, 'FLTM': 12215, 'MRZM': 9044, 'ANMS': 10879, 'MRAG': 10235, 'ANGO': 10094, 'PIGL': 10927, 'MRMK': 10885, 'CRFO': 11786, 'EEPA': 10884, 'TRCO': 10753, 'MRMC': 12938, 'SNNW': 11735, 'LDMW': 10612, 'LRVN': 10633, 'MRVV': 9541, 'DNLN': 11296, 'CLFR': 10946, 'MYTP': 10699, 'MNGO': 11001}
 
-"""
-this dictionary gives the highest level (at .5 corr threshold)
-"""
-#dictionary2 = {'MYTP':(4,3,3,3), 'TRCO':(4,4,4,3), 'CLFR':(4,3,4,3), 'PIGL':(4,4,4,4), 'SNNW':(3,4,3,3)}
-#dictionary2 = {"LDMW":(,) ,"FLTM":() ,"EZCR":() ,"EEPA":() ,"DNLN":() ,"CRFO":() ,"ANMS":() ,"BARS":()}
 """
 'tree_d' is a dictionary with the highest hierarachial levels.
 This dictionary was generated with 'get_level.py'
@@ -35,27 +31,25 @@ tree_d = {'BARS': (2, 2, 2, 2), 'FLTM': (3, 3, 2, 2), 'MRZM': (2, 2, 3, 2), 'ANM
 hemispheres = ["lh","rh"]
 
 
-
-mm = makesubmitargs.makeargs
 #mm.ijkTALAIRACHcoordsargs("TTavg152T1","automask_d1")
 
 for ss in subjects:
     #mm.ijkcoordsargs(ss)
-    #mm.autotlrcargs(ss)
+    mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, dictionary[ss])
     #mm.maskdumpargs(ss)
     #mm.maskmakerargs(ss)
-    for cc in conditions:
+    #for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
         #mm.fcorrargs(ss,cc)
         #mm.threshargs(ss,cc) ## for submit.6.threshold
         #mm.convertargs(ss,cc) ## for submit.7.blondel_convert
         #mm.blondelargs(ss,cc) ## for submit.8.blondel
-        mm.hierarchyargs(ss,cc,tree_d[ss][cc-1])
-        #mm.undumpargs(ss,cc,dictionary2[ss][cc-1])
+        #mm.hierarchyargs(ss,cc,tree_d[ss][cc-1])
+        #mm.undumpargs(ss,cc,tree_d[ss][cc-1])
         #mm.filter(ss,cc,dictionary2[ss][cc-1]) ## for submit.13.filter
         #mm.undump14(ss,cc,dictionary2[ss][cc-1],1)
-        #mm.degree(ss,dictionary[ss],cc)
+        #mm.degree(ss,nvox_dict[ss],cc)
 
 
