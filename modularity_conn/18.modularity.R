@@ -12,7 +12,7 @@ for (ss in subjects)
 {
     for (i in conditions)
     {
-        modscore <- paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/modularityscore.",ss,".Cond",i,".txt",sep="")
+        modscore <- paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/mod_score.",ss,".Cond",i,".txt",sep="")
         mod_data <- c(mod_data,as.matrix(read.table(modscore))[1])
         subject_frame <- c(subject_frame,ss)
         condition_frame <- c(condition_frame,paste("cond",i,sep=""))
