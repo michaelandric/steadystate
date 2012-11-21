@@ -115,10 +115,10 @@ class MakeArgs:
         arg2 == the tree number
         """
         basedir = "/mnt/tier2/urihas/Andric/steadystate/"
-        inputf = basedir+subject+"/corrTRIM_BLUR/cleanTS."+`arg1`+"."+subject+"_graymask_dump.bin.corr.thresh.tree"+`arg2`
+        inputf = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray"
         ijkfile = basedir+subject+"/masking/ijk_coords_graymattermask_"+subject
         master = basedir+subject+"/blur.1."+subject+".steadystate.TRIM+orig"
-        outname = basedir+subject+"/corrTRIM_BLUR/modules_"+subject+"_Cond"+`arg1`
+        outname = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray"
         print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --master "+master+" --outputname "+outname+" \nqueue \n"
 
     def filter(self,subject,arg1,arg2):
@@ -133,9 +133,11 @@ class MakeArgs:
         print "arguments    = "+subject+" "+`arg1`+" "+`arg2`+" "+`arg3`+" \nqueue \n"
 
     def degree(self,subject,arg1,arg2):
-        ##arg1 == nvox
-        ##arg2 == condition
-        print "arguments    = 17.degree.R "+subject+" "+arg1+" "+`arg2`+" \nqueue \n"
+        """
+        arg1 == nvox
+        arg2 == condition
+        """
+        print "arguments    = 17.degree.R "+subject+" "+`arg1`+" "+`arg2`+" \nqueue \n"
 
     def vol2surfargs(self,ss,specfile,surfA,surfB,mapfunc,gridparent,outname):
         print "arguments    = --subject "+ss+" --suma_dir /mnt/tier2/urihas/external1TB/UH-CPLX/fssubjects/"+ss+"/SUMA/ --spec "+specfile+" --surfA "+surfA+" --surfB "+surfB+" --map_function "+mapfunc+" --surfvol /mnt/tier2/urihas/sam.steadystate/"+ss+"/"+ss+".SurfVol_Alnd_Exp+orig. --grid_parent /mnt/tier2/urihas/Andric/steadystate/"+ss+"/corrTRIM_BLUR/"+gridparent+" --outputname /mnt/tier2/urihas/Andric/steadystate/"+ss+"/surfacedata/"+outname+" \nqueue \n"
