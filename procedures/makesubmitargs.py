@@ -78,10 +78,12 @@ class MakeArgs:
         ##arg1 == Conditions, e.g., 2
         print "arguments    = 8.blondel "+subject+" "+`arg1`+" \nqueue \n"
 
-    def hierarchyargs(self):
-        ##arg1 == Conditions, e.g., 2
-        ## HAVE TO MANUALLY REPLACE 'x' WITH THE LEVEL NUMBER!!!!!!!!!!!!!!!!!!!!!
-        print "arguments    = 9.hierarchy.R "+self.options.subject+" "+self.options.arg1+" x \nqueue \n"
+    def hierarchyargs(self,subject,arg1,arg2):
+        """
+        arg1 = condition
+        arg2 = nlevels
+        """
+        print "arguments    = 9.hierarchy.R "+subject+" "+`arg1`+" "+`arg2`+" \nqueue \n"
 
     def ijkcoordsargs(self,subject):
         basedir = os.environ["state"]+"/"
