@@ -6,7 +6,7 @@ print(length(noquote(strsplit(Args," ")[[1]])))
 startvox <- as.numeric(noquote(strsplit(Args," ")[[1]][1]))
 endvox <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
 
-subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
+subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
 conditions <- seq(4)
 
 
