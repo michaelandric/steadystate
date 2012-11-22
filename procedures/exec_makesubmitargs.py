@@ -9,16 +9,17 @@ import commands
 from makesubmitargs import makeargs as mm
 
 #subjects = ["ANGO"]
-#subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
-#subjects = ["LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS"]
+subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
+#subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
 ##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
-subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
+#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
 conditions = range(1,5)
 
 """
 nvox_dict subject to the number of voxels in the image. 
-This goes by the voxels in the graymattermask
+This goes by the voxels in the graymattermask.
+See 'get_wc.py' for a way to get these
 """
 nvox_dict = {'BARS': 10023, 'FLTM': 12215, 'MRZM': 9044, 'ANMS': 10879, 'MRAG': 10235, 'ANGO': 10094, 'PIGL': 10927, 'MRMK': 10885, 'CRFO': 11786, 'EEPA': 10884, 'TRCO': 10753, 'MRMC': 12938, 'SNNW': 11735, 'LDMW': 10612, 'LRVN': 10633, 'MRVV': 9541, 'DNLN': 11296, 'CLFR': 10946, 'MYTP': 10699, 'MNGO': 11001}
 
@@ -35,11 +36,11 @@ hemispheres = ["lh","rh"]
 
 for ss in subjects:
     #mm.ijkcoordsargs(ss)
-    mm.autotlrcargs(ss)
+    #mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, dictionary[ss])
     #mm.maskdumpargs(ss)
-    #mm.maskmakerargs(ss)
-    #for cc in conditions:
+    #mm.maskmakerargs(Ss)
+    for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
         #mm.fcorrargs(ss,cc)
@@ -51,5 +52,6 @@ for ss in subjects:
         #mm.filter(ss,cc,dictionary2[ss][cc-1]) ## for submit.13.filter
         #mm.undump14(ss,cc,dictionary2[ss][cc-1],1)
         #mm.degree(ss,nvox_dict[ss],cc)
+        mm.partcoefargs(ss,cc,tree_d[ss][cc-1])
 
 
