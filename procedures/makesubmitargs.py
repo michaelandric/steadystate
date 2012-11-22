@@ -156,6 +156,14 @@ class MakeArgs:
         location = os.environ["state"]+"/"+subject+"/masking/"
         print "arguments   = --identity "+subject+" --automask "+automask+" --makeautobox n --location "+location+" \nqueue \n"
 
+    def partcoefargs(self,subject,arg1,arg2):
+        """
+        arg1 == condition
+        arg2 == tree number
+        """
+        print "arguments   = 16.partcoef.R "+subject+" "+`arg1`+" "+`arg2`+" \nqueue \n"
+    
+
     def tester(self):
         print "this is a test"
 
