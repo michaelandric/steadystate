@@ -112,14 +112,17 @@ class MakeArgs:
     def undumpargs(self,subject,arg1,arg2):
         """
         arg1 == the condition number
-        arg2 == the tree number
+        arg2 == datum type. either short or float
+        OR
+        arg2 == tree number
+        Change in the filename if tree number
         """
         basedir = "/mnt/tier2/urihas/Andric/steadystate/"
-        inputf = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray"
+        inputf = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".part_coef"
         ijkfile = basedir+subject+"/masking/ijk_coords_graymattermask_"+subject
         master = basedir+subject+"/blur.1."+subject+".steadystate.TRIM+orig"
-        outname = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray"
-        print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --master "+master+" --outputname "+outname+" \nqueue \n"
+        outname = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".part_coef"
+        print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --datatype "+arg2+" --master "+master+" --outputname "+outname+" \nqueue \n"
 
     def filter(self,subject,arg1,arg2):
         ##arg1 == Condition, e.g., '2'
@@ -162,6 +165,13 @@ class MakeArgs:
         arg2 == tree number
         """
         print "arguments   = 16.partcoef.R "+subject+" "+`arg1`+" "+`arg2`+" \nqueue \n"
+
+    def module_degreeargs(self,subject,arg1,arg2):
+        """
+        arg1 == condition
+        arg2 == tree number
+        """
+        print "arguments   = 17.module_degree.R "+subject+" "+`arg1`+" "+`arg2`+" \nqueue \n"
     
 
     def tester(self):
