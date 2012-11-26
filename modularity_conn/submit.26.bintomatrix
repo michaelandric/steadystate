@@ -7,15 +7,15 @@ log 		= ./logs/26.$(Process).log
 
 
 
-arguments   = 26.bintomatrix.R ANGO 22170 1 
+arguments   = 26.bintomatrix.R ANGO 10094 1 
 queue 
 
-arguments   = 26.bintomatrix.R ANGO 22170 2 
+arguments   = 26.bintomatrix.R ANGO 10094 2 
 queue 
 
-arguments   = 26.bintomatrix.R ANGO 22170 3 
+arguments   = 26.bintomatrix.R ANGO 10094 3 
 queue 
 
-arguments   = 26.bintomatrix.R ANGO 22170 4 
+arguments   = 26.bintomatrix.R ANGO 10094 4 
 queue 
 
