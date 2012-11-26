@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import os
+from subprocess import call
 from optparse import OptionParser
 
 class VoxelID:
@@ -17,10 +18,10 @@ class VoxelID:
         (self.options, args) = self.parser.parse_args()
 
     def voxel_index(self):
-        os.chdir(os.environ["state"]+"/"+self.options.subject)
+        os.chdir(os.environ["state"]+"/"+self.options.subject+"/masking/")
         print os.getcwd()
 
-        ijk_coords = open("ijk_coords_"+self.options.subject,"r")
+        ijk_coords = open("ijk_coords_graymattermask_"+self.options.subject,"r")
         icoord = []
         jcoord = []
         kcoord = []
@@ -34,22 +35,25 @@ class VoxelID:
         for i in range(int(self.options.nvox)):
             nn += icoord[i]+" "+jcoord[i]+" "+kcoord[i]+" "+`i`+"\n"
 
-        self.outname = self.options.subject+"voxel_index.ijk"
+        self.outname = self.options.subject+"graymatter_voxel_index.ijk"
 
         outf = open(self.outname+".txt","w")
         outf.write(nn)
         outf.close()
 
     def undump(self):
-        print os.system("3dUndump -prefix "+self.outname+" -ijk -datum short -master blur.1."+self.options.subject+".steadystate+orig "+self.outname+".txt")
+        print call("3dUndump -prefix "+self.outname+" -ijk -datum short -master "+os.environ["state"]+"/"+self.options.subject+"/blur.1."+self.options.subject+".steadystate+orig "+self.outname+".txt", shell=True)
 
     def AFNItoNIFTI(self):
-        print os.system("3dAFNItoNIFTI "+self.outname+"+orig")
+        print call("3dAFNItoNIFTI "+self.outname+"+orig", shell=True)
 
 
+def main():
+    ID = VoxelID()
+    ID.get_opts()
+    ID.voxel_index()
+    ID.undump()
+    #ID.AFNItoNIFTI()
 
-ID = VoxelID()
-ID.get_opts()
-ID.voxel_index()
-ID.undump()
-ID.AFNItoNIFTI()
+if __name__ == "__main__":
+    main()
