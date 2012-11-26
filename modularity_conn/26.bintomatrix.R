@@ -25,7 +25,7 @@ bintomatrix <- function(infile,outmat,nrows,ncols)
 
 
 setwd(paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/",sep=""))
-corrmat <- paste("cleanTS.Cond",Cond,".",ss,".noijk_dump.bin.corr",sep="")
+corrmat <- paste("cleanTS.",Cond,".",ss,"_graymask_dump.bin.corr",sep="")
 outname <- paste("Cond",Cond,".",ss,".matrix.corr.txt",sep="")
 bintomatrix(corrmat,outname,nVoxArg,nVoxArg)
 
