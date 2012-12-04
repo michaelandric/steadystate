@@ -1,0 +1,236 @@
+executable	= 27.noderoles.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/noderoles.$(Process).out
+error		= ./logs/noderoles.$(Process).err
+log 		= ./logs/noderoles.$(Process).log
+
+
+arguments   = --subject MYTP --condition 1 
+queue 
+
+arguments   = --subject MYTP --condition 2 
+queue 
+
+arguments   = --subject MYTP --condition 3 
+queue 
+
+arguments   = --subject MYTP --condition 4 
+queue 
+
+arguments   = --subject TRCO --condition 1 
+queue 
+
+arguments   = --subject TRCO --condition 2 
+queue 
+
+arguments   = --subject TRCO --condition 3 
+queue 
+
+arguments   = --subject TRCO --condition 4 
+queue 
+
+arguments   = --subject PIGL --condition 1 
+queue 
+
+arguments   = --subject PIGL --condition 2 
+queue 
+
+arguments   = --subject PIGL --condition 3 
+queue 
+
+arguments   = --subject PIGL --condition 4 
+queue 
+
+arguments   = --subject SNNW --condition 1 
+queue 
+
+arguments   = --subject SNNW --condition 2 
+queue 
+
+arguments   = --subject SNNW --condition 3 
+queue 
+
+arguments   = --subject SNNW --condition 4 
+queue 
+
+arguments   = --subject LDMW --condition 1 
+queue 
+
+arguments   = --subject LDMW --condition 2 
+queue 
+
+arguments   = --subject LDMW --condition 3 
+queue 
+
+arguments   = --subject LDMW --condition 4 
+queue 
+
+arguments   = --subject FLTM --condition 1 
+queue 
+
+arguments   = --subject FLTM --condition 2 
+queue 
+
+arguments   = --subject FLTM --condition 3 
+queue 
+
+arguments   = --subject FLTM --condition 4 
+queue 
+
+arguments   = --subject EEPA --condition 1 
+queue 
+
+arguments   = --subject EEPA --condition 2 
+queue 
+
+arguments   = --subject EEPA --condition 3 
+queue 
+
+arguments   = --subject EEPA --condition 4 
+queue 
+
+arguments   = --subject DNLN --condition 1 
+queue 
+
+arguments   = --subject DNLN --condition 2 
+queue 
+
+arguments   = --subject DNLN --condition 3 
+queue 
+
+arguments   = --subject DNLN --condition 4 
+queue 
+
+arguments   = --subject CRFO --condition 1 
+queue 
+
+arguments   = --subject CRFO --condition 2 
+queue 
+
+arguments   = --subject CRFO --condition 3 
+queue 
+
+arguments   = --subject CRFO --condition 4 
+queue 
+
+arguments   = --subject ANMS --condition 1 
+queue 
+
+arguments   = --subject ANMS --condition 2 
+queue 
+
+arguments   = --subject ANMS --condition 3 
+queue 
+
+arguments   = --subject ANMS --condition 4 
+queue 
+
+arguments   = --subject BARS --condition 1 
+queue 
+
+arguments   = --subject BARS --condition 2 
+queue 
+
+arguments   = --subject BARS --condition 3 
+queue 
+
+arguments   = --subject BARS --condition 4 
+queue 
+
+arguments   = --subject MRZM --condition 1 
+queue 
+
+arguments   = --subject MRZM --condition 2 
+queue 
+
+arguments   = --subject MRZM --condition 3 
+queue 
+
+arguments   = --subject MRZM --condition 4 
+queue 
+
+arguments   = --subject MRVV --condition 1 
+queue 
+
+arguments   = --subject MRVV --condition 2 
+queue 
+
+arguments   = --subject MRVV --condition 3 
+queue 
+
+arguments   = --subject MRVV --condition 4 
+queue 
+
+arguments   = --subject MRMK --condition 1 
+queue 
+
+arguments   = --subject MRMK --condition 2 
+queue 
+
+arguments   = --subject MRMK --condition 3 
+queue 
+
+arguments   = --subject MRMK --condition 4 
+queue 
+
+arguments   = --subject MRMC --condition 1 
+queue 
+
+arguments   = --subject MRMC --condition 2 
+queue 
+
+arguments   = --subject MRMC --condition 3 
+queue 
+
+arguments   = --subject MRMC --condition 4 
+queue 
+
+arguments   = --subject MRAG --condition 1 
+queue 
+
+arguments   = --subject MRAG --condition 2 
+queue 
+
+arguments   = --subject MRAG --condition 3 
+queue 
+
+arguments   = --subject MRAG --condition 4 
+queue 
+
+arguments   = --subject MNGO --condition 1 
+queue 
+
+arguments   = --subject MNGO --condition 2 
+queue 
+
+arguments   = --subject MNGO --condition 3 
+queue 
+
+arguments   = --subject MNGO --condition 4 
+queue 
+
+arguments   = --subject LRVN --condition 1 
+queue 
+
+arguments   = --subject LRVN --condition 2 
+queue 
+
+arguments   = --subject LRVN --condition 3 
+queue 
+
+arguments   = --subject LRVN --condition 4 
+queue 
+
+arguments   = --subject CLFR --condition 1 
+queue 
+
+arguments   = --subject CLFR --condition 2 
+queue 
+
+arguments   = --subject CLFR --condition 3 
+queue 
+
+arguments   = --subject CLFR --condition 4 
+queue 
+
