@@ -4,19 +4,20 @@ import os
 import shutil
 
 
-subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR","ANGO"]
-#subjects = ["EZCR"]
+subjects = ["TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR","ANGO"]
+#subjects = ["MYTP"]
 
 
-def cmdHB():
+def cmdCP():
     """
     simple copy function
     """
-    print "subject: "+ss
-    shutil.copy2(os.environ["state"]+"/"+ss+"/"+ss+"voxel_index.ijk+tlrc.txt", os.environ["state"]+"/tal_coords")
+    print "subject: "+ss+"; Condition: "+`i`
+    shutil.copy2(os.environ["state"]+"/"+ss+"/corrTRIM_BLUR/cleanTS."+`i`+"."+ss+"_graymask_dump.bin.corr.thresh.links", os.environ["state"]+"/graymask_links")
     
 
 
 for ss in subjects:
-    cmdHB()
+    for i in range(1,5):
+        cmdCP()
 
