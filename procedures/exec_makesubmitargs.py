@@ -8,12 +8,12 @@ where 'submit.try' is the condor_submit file that you're adding arguments to
 import commands
 from makesubmitargs import makeargs as mm
 
-subjects = ["ANGO"]
+#subjects = ["ANGO"]
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
 ##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
-#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
+subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
 conditions = range(1,5)
 
 """
@@ -37,7 +37,7 @@ hemispheres = ["lh","rh"]
 for ss in subjects:
     #mm.ijkcoordsargs(ss)
     #mm.autotlrcargs(ss)
-    #mm.voxel_id_args(ss, dictionary[ss])
+    #mm.voxel_id_args(ss, nvox_dict[ss])
     #mm.maskdumpargs(ss)
     #mm.maskmakerargs(Ss)
     for cc in conditions:
@@ -49,11 +49,13 @@ for ss in subjects:
         #mm.blondelargs(ss,cc) ## for submit.8.blondel
         #mm.hierarchyargs(ss,cc,tree_d[ss][cc-1])
         #mm.undumpargs(ss,cc,tree_d[ss][cc-1])
-        #mm.undumpargs(ss,cc,"float")
+        mm.undumpargs(ss,cc,"short")
         #mm.filter(ss,cc,dictionary2[ss][cc-1]) ## for submit.13.filter
         #mm.undump14(ss,cc,dictionary2[ss][cc-1],1)
         #mm.degree(ss,nvox_dict[ss],cc)
         #mm.partcoefargs(ss,cc,tree_d[ss][cc-1])
-        mm.module_degreeargs(ss,cc,tree_d[ss][cc-1])
+        #mm.module_degreeargs(ss,cc,tree_d[ss][cc-1])
+        #mm.getdatafrombin_args(ss,nvox_dict[ss],cc)
+        #mm.noderoles_args(ss,cc)
 
 
