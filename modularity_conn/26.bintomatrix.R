@@ -23,7 +23,7 @@ bintomatrix <- function(infile,outmat,nrows,ncols)
     }
 }            
 
-
+#readBin(corrmat,numeric(),n=(10094^2),size=4)
 setwd(paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/",sep=""))
 corrmat <- paste("cleanTS.",Cond,".",ss,"_graymask_dump.bin.corr",sep="")
 outname <- paste("Cond",Cond,".",ss,".matrix.corr.txt",sep="")
