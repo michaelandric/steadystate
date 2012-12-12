@@ -18,9 +18,9 @@ print "factor combinations: \n"+factor_combos
 os.chdir(os.environ["state"]+"/groupstats/")
 print os.getcwd()
 print "NOW RUNNING THE ANOVA\n"
-print call("3dANOVA2 -type 3 -alevels 4 -blevels "+`len(subjects)`+" -mask "+os.environ["state"]+"/groupstats/automask_d1_TTavg152T1+tlrc. \
+print call("3dANOVA2 -type 3 -alevels 4 -blevels "+`len(subjects)`+" \
             "+factor_combos+" -fa H_fstat -amean 1 H1_mean -amean 2 H2_mean -amean 3 H3_mean -amean 4 H4_mean \
             -acontr -0.75 -0.059 0.63 0.178 poslincorrect \
             -acontr 0.42 -0.57 0.56 -0.41 Ushapecorrect \
             -acontr -1 -1 1 1 stepupcorrect \
-            -bucket degrees_gray.anova_contrasts", shell=True)
+            -bucket degrees_gray.anova_contrastsNOMASK", shell=True)
