@@ -43,11 +43,17 @@ class MakeArgs:
         output = self.options.arg1+self.options.subject+"/blur."+self.options.arg3+"."+self.options.subject+".steadystate.TRIM.noijk_dump"
         print "arguments    = --ijk no --automask "+automask+" --inputfile "+input+" --outputname "+output+" \nqueue \n"
 
-    def maskdumpargs(self,subject,arg1):
-        automask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+orig"
-        input = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM+orig"
-        output = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM_graymask_dump"
-        print "arguments    = --ijk no --automask "+automask+" --inputfile "+input+" --outputname "+output+" \nqueue \n" 
+    def maskdumpargs(self,subject):
+        """
+        arg1 is condition
+        """
+        #automask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+orig"
+        automask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+tlrc"
+        #input = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM+orig"
+        input = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index.ijk+tlrc"
+        #output = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM_graymask_dump"
+        output = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index_tlrc_dump.txt"
+        print "arguments    = --mask "+automask+" --inputfile "+input+" --outputname "+output+" --subject "+subject+" \nqueue \n" 
 
     def dir_maker(self):
         print "arguments    = --Subject "+self.options.subject+" \nqueue \n"
@@ -118,10 +124,10 @@ class MakeArgs:
         Change in the filename if tree number
         """
         basedir = "/mnt/tier2/urihas/Andric/steadystate/"
-        inputf = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".part_coef"
+        inputf = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles"
         ijkfile = basedir+subject+"/masking/ijk_coords_graymattermask_"+subject
         master = basedir+subject+"/blur.1."+subject+".steadystate.TRIM+orig"
-        outname = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".part_coef"
+        outname = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles"
         print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --datatype "+arg2+" --master "+master+" --outputname "+outname+" \nqueue \n"
 
     def filter(self,subject,arg1,arg2):
@@ -149,7 +155,7 @@ class MakeArgs:
         print "arguments    = 19.friedman.R "+`start`+" "+`end`+" \nqueue \n"
 
     def voxel_id_args(self,subject,arg1):
-        print "arguments   = --number_voxels "+arg1+" --subject "+subject+" \nqueue \n"
+        print "arguments   = --number_voxels "+`arg1`+" --subject "+subject+" \nqueue \n"
 
     def bintomatrix_args(self,subject,arg1,arg2):
         print "arguments   = 26.bintomatrix.R "+subject+" "+arg1+" "+`arg2`+" \nqueue \n"
@@ -172,6 +178,19 @@ class MakeArgs:
         arg2 == tree number
         """
         print "arguments   = 17.module_degree.R "+subject+" "+`arg1`+" "+`arg2`+" \nqueue \n"
+
+    def getdatafrombin_args(self,subject,arg1,arg2):
+        """
+        arg1 == nvoxels
+        arg2 == condition
+        """
+        print "arguments   = --subject "+subject+" --number_voxels "+`arg1`+" --condition "+`arg2`+" \nqueue \n"
+
+    def noderoles_args(self,subject,arg1):
+        """
+        arg1 == condition
+        """
+        print "arguments   = --subject "+subject+" --condition "+`arg1`+" \nqueue \n"
     
 
     def tester(self):
