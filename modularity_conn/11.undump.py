@@ -15,6 +15,8 @@ class AFNIproc_undump:
                                help="the ijk coordinates text file")
         self.parser.add_option("--master", dest="mstr",
                                help="file with desired functional parameters")
+        self.parser.add_option("--datatype", dest="datum",
+                               help="Choose data type. 'short' or 'float'")
         self.parser.add_option("--outputname", dest="outname",
                                help="output name")
 
@@ -60,7 +62,7 @@ class AFNIproc_undump:
         print call("paste -d ' ' "+self.options.ijk+" "+self.options.input+" > "+self.options.input+".ijk.txt",shell=True)
 
     def undump(self):
-        print call("3dUndump -prefix "+self.options.outname+" -ijk -datum short -master "+self.options.mstr+" "+self.options.input+".ijk.txt", shell=True)
+        print call("3dUndump -prefix "+self.options.outname+" -ijk -datum "+self.options.datum+" -master "+self.options.mstr+" "+self.options.input+".ijk.txt", shell=True)
 
 
 def main():
