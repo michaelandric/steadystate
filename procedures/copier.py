@@ -12,12 +12,11 @@ def cmdCP():
     """
     simple copy function
     """
-    print "subject: "+ss+"; Condition: "+`i`
-    shutil.copy2(os.environ["state"]+"/"+ss+"/corrTRIM_BLUR/cleanTS."+`i`+"."+ss+"_graymask_dump.bin.corr.thresh.links", os.environ["state"]+"/graymask_links")
+    print "subject: "+ss
+    shutil.copy2(os.environ["state"]+"/"+ss+"/masking/ijk_coords_graymattermask_"+ss, os.environ["state"]+"/graymask_coords/")
     
 
 
 for ss in subjects:
-    for i in range(1,5):
-        cmdCP()
+    cmdCP()
 
