@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import os
-import glob
+from glob import glob 
 from optparse import OptionParser
 
 class Remover:
@@ -9,7 +9,7 @@ class Remover:
     def get_opts(self):
         desc = """simple program for removing CorrTask* files after building them as a matrix binary files."""
         self.usage = "usage: %prog [options]"
-        self.parser = OptionParser(description=desc, version="%prog 13.October.2012")
+        self.parser = OptionParser(description=desc, version="%prog Dec.2012")
         self.parser.add_option("--WorkDir", dest="workdir",
                                help="specify the working directory")
 #        self.parser.add_option("--Condition", dest="Cond",
@@ -23,10 +23,16 @@ class Remover:
         for filename in glob.glob(self.options.workdir+"/CorrTask*."+self.options.subject+"noijk.txt"):
             os.remove(filename)
 
+    def remover2(self):
+        os.chdir(os.environ["state"]+"/"+self.options.subject+"/masking/")
+        print os.getcwd()
+        for filename in glob(self.options.subject+"_graymattermask+tlrc.*"):
+            os.remove(filename)
+
 
 
 RM = Remover()
 RM.get_opts()
-RM.removeFiles()
+RM.remover2()
 
 
