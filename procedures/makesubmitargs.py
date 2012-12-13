@@ -43,16 +43,19 @@ class MakeArgs:
         output = self.options.arg1+self.options.subject+"/blur."+self.options.arg3+"."+self.options.subject+".steadystate.TRIM.noijk_dump"
         print "arguments    = --ijk no --automask "+automask+" --inputfile "+input+" --outputname "+output+" \nqueue \n"
 
-    def maskdumpargs(self,subject):
+    def maskdumpargs(self,subject,arg1):
         """
         arg1 is condition
         """
         #automask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+orig"
-        automask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+tlrc"
+        #automask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+tlrc"
+        automask = os.environ["state"]+"/groupstats/automask_d1_TTavg152T1+tlrc"
         #input = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM+orig"
-        input = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index.ijk+tlrc"
+        #input = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index.ijk+tlrc"
+        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles+tlrc"
         #output = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM_graymask_dump"
-        output = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index_tlrc_dump.txt"
+        #output = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index_tlrc_dump.txt"
+        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles_tlrc_dump.txt"
         print "arguments    = --mask "+automask+" --inputfile "+input+" --outputname "+output+" --subject "+subject+" \nqueue \n" 
 
     def dir_maker(self):
@@ -154,6 +157,9 @@ class MakeArgs:
     def friedmanargs(self,start,end):
         print "arguments    = 19.friedman.R "+`start`+" "+`end`+" \nqueue \n"
 
+    def major_noderoleargs(self,start,end,arg1):
+        print "arguments   = 28.major_noderole.R "+`start`+" "+`end`+" "+`arg1`+" \nqueue \n"
+
     def voxel_id_args(self,subject,arg1):
         print "arguments   = --number_voxels "+`arg1`+" --subject "+subject+" \nqueue \n"
 
@@ -191,6 +197,9 @@ class MakeArgs:
         arg1 == condition
         """
         print "arguments   = --subject "+subject+" --condition "+`arg1`+" \nqueue \n"
+
+    def removerargs(self,subject):
+        print "arguments   = --Subject "+subject+" \nqueue \n"
     
 
     def tester(self):
