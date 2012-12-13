@@ -27,7 +27,7 @@ class AutoTLRC:
         """
         os.chdir(os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/")
         for cc in range(1,5):
-            print call("@auto_tlrc -apar "+self.options.tlrcT1+" -input "+self.options.subject+"."+`cc`+".degrees_gray+orig -dxyz 2", shell=True)
+            print call("@auto_tlrc -apar "+self.options.tlrcT1+" -input "+self.options.subject+"."+`cc`+".node_roles+orig -dxyz 2", shell=True)
 
     def index_auto_tlrc_ex(self):
         """
@@ -43,14 +43,15 @@ class AutoTLRC:
         This is used to talairach the graymatter mask
         """
         os.chdir(os.environ["state"]+"/"+self.options.subject+"/masking/")
-        graymask = self.options.subject+"_graymattermask+orig"
-        print call("@auto_tlrc -apar "+self.options.tlrcT1+" -input "+graymask+" -dxyz 2", shell=True)
+        graymask = self.options.subject+"_graymattermask_resampled+orig"
+        tlrcbrain = os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/"+self.options.tlrcT1
+        print call("@auto_tlrc -apar "+tlrcbrain+" -input "+graymask+" -dxyz 2", shell=True)
 
 
 def main():
     atlrc = AutoTLRC()
     atlrc.get_opts()
-    atlrc.index_auto_tlrc_ex()
+    atlrc.mask_auto_tlrc_ex()
 
 if __name__ == "__main__":
     main()
