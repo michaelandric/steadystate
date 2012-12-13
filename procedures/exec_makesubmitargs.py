@@ -5,7 +5,7 @@ Here's how you use this on the command line:
 python exec_makesubmitargs.py >> submit.try
 where 'submit.try' is the condor_submit file that you're adding arguments to
 """
-import commands
+
 from makesubmitargs import makeargs as mm
 
 #subjects = ["ANGO"]
@@ -35,6 +35,7 @@ hemispheres = ["lh","rh"]
 #mm.ijkTALAIRACHcoordsargs("TTavg152T1","automask_d1")
 
 for ss in subjects:
+    #mm.removerargs(ss)
     #mm.ijkcoordsargs(ss)
     #mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, nvox_dict[ss])
@@ -42,14 +43,14 @@ for ss in subjects:
     #mm.maskmakerargs(Ss)
     for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
-        #mm.maskdumpargs(ss,cc)
+        mm.maskdumpargs(ss,cc)
         #mm.fcorrargs(ss,cc)
         #mm.threshargs(ss,cc) ## for submit.6.threshold
         #mm.convertargs(ss,cc) ## for submit.7.blondel_convert
         #mm.blondelargs(ss,cc) ## for submit.8.blondel
         #mm.hierarchyargs(ss,cc,tree_d[ss][cc-1])
         #mm.undumpargs(ss,cc,tree_d[ss][cc-1])
-        mm.undumpargs(ss,cc,"short")
+        #mm.undumpargs(ss,cc,"short")
         #mm.filter(ss,cc,dictionary2[ss][cc-1]) ## for submit.13.filter
         #mm.undump14(ss,cc,dictionary2[ss][cc-1],1)
         #mm.degree(ss,nvox_dict[ss],cc)
