@@ -1,0 +1,296 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/28.$(Process).out
+error		= ./logs/28.$(Process).err
+log 		= ./logs/28.$(Process).log
+
+
+arguments   = 28.major_noderole.R 0 9999 1 
+queue 
+
+arguments   = 28.major_noderole.R 10000 19999 1 
+queue 
+
+arguments   = 28.major_noderole.R 20000 29999 1 
+queue 
+
+arguments   = 28.major_noderole.R 30000 39999 1 
+queue 
+
+arguments   = 28.major_noderole.R 40000 49999 1 
+queue 
+
+arguments   = 28.major_noderole.R 50000 59999 1 
+queue 
+
+arguments   = 28.major_noderole.R 60000 69999 1 
+queue 
+
+arguments   = 28.major_noderole.R 70000 79999 1 
+queue 
+
+arguments   = 28.major_noderole.R 80000 89999 1 
+queue 
+
+arguments   = 28.major_noderole.R 90000 99999 1 
+queue 
+
+arguments   = 28.major_noderole.R 100000 109999 1 
+queue 
+
+arguments   = 28.major_noderole.R 110000 119999 1 
+queue 
+
+arguments   = 28.major_noderole.R 120000 129999 1 
+queue 
+
+arguments   = 28.major_noderole.R 130000 139999 1 
+queue 
+
+arguments   = 28.major_noderole.R 140000 149999 1 
+queue 
+
+arguments   = 28.major_noderole.R 150000 159999 1 
+queue 
+
+arguments   = 28.major_noderole.R 160000 169999 1 
+queue 
+
+arguments   = 28.major_noderole.R 170000 179999 1 
+queue 
+
+arguments   = 28.major_noderole.R 180000 189999 1 
+queue 
+
+arguments   = 28.major_noderole.R 190000 199999 1 
+queue 
+
+arguments   = 28.major_noderole.R 200000 209999 1 
+queue 
+
+arguments   = 28.major_noderole.R 210000 219999 1 
+queue 
+
+arguments   = 28.major_noderole.R 220000 229999 1 
+queue 
+
+arguments   = 28.major_noderole.R 230000 231202 1 
+queue 
+
+arguments   = 28.major_noderole.R 0 9999 2 
+queue 
+
+arguments   = 28.major_noderole.R 10000 19999 2 
+queue 
+
+arguments   = 28.major_noderole.R 20000 29999 2 
+queue 
+
+arguments   = 28.major_noderole.R 30000 39999 2 
+queue 
+
+arguments   = 28.major_noderole.R 40000 49999 2 
+queue 
+
+arguments   = 28.major_noderole.R 50000 59999 2 
+queue 
+
+arguments   = 28.major_noderole.R 60000 69999 2 
+queue 
+
+arguments   = 28.major_noderole.R 70000 79999 2 
+queue 
+
+arguments   = 28.major_noderole.R 80000 89999 2 
+queue 
+
+arguments   = 28.major_noderole.R 90000 99999 2 
+queue 
+
+arguments   = 28.major_noderole.R 100000 109999 2 
+queue 
+
+arguments   = 28.major_noderole.R 110000 119999 2 
+queue 
+
+arguments   = 28.major_noderole.R 120000 129999 2 
+queue 
+
+arguments   = 28.major_noderole.R 130000 139999 2 
+queue 
+
+arguments   = 28.major_noderole.R 140000 149999 2 
+queue 
+
+arguments   = 28.major_noderole.R 150000 159999 2 
+queue 
+
+arguments   = 28.major_noderole.R 160000 169999 2 
+queue 
+
+arguments   = 28.major_noderole.R 170000 179999 2 
+queue 
+
+arguments   = 28.major_noderole.R 180000 189999 2 
+queue 
+
+arguments   = 28.major_noderole.R 190000 199999 2 
+queue 
+
+arguments   = 28.major_noderole.R 200000 209999 2 
+queue 
+
+arguments   = 28.major_noderole.R 210000 219999 2 
+queue 
+
+arguments   = 28.major_noderole.R 220000 229999 2 
+queue 
+
+arguments   = 28.major_noderole.R 230000 231202 2 
+queue 
+
+arguments   = 28.major_noderole.R 0 9999 3 
+queue 
+
+arguments   = 28.major_noderole.R 10000 19999 3 
+queue 
+
+arguments   = 28.major_noderole.R 20000 29999 3 
+queue 
+
+arguments   = 28.major_noderole.R 30000 39999 3 
+queue 
+
+arguments   = 28.major_noderole.R 40000 49999 3 
+queue 
+
+arguments   = 28.major_noderole.R 50000 59999 3 
+queue 
+
+arguments   = 28.major_noderole.R 60000 69999 3 
+queue 
+
+arguments   = 28.major_noderole.R 70000 79999 3 
+queue 
+
+arguments   = 28.major_noderole.R 80000 89999 3 
+queue 
+
+arguments   = 28.major_noderole.R 90000 99999 3 
+queue 
+
+arguments   = 28.major_noderole.R 100000 109999 3 
+queue 
+
+arguments   = 28.major_noderole.R 110000 119999 3 
+queue 
+
+arguments   = 28.major_noderole.R 120000 129999 3 
+queue 
+
+arguments   = 28.major_noderole.R 130000 139999 3 
+queue 
+
+arguments   = 28.major_noderole.R 140000 149999 3 
+queue 
+
+arguments   = 28.major_noderole.R 150000 159999 3 
+queue 
+
+arguments   = 28.major_noderole.R 160000 169999 3 
+queue 
+
+arguments   = 28.major_noderole.R 170000 179999 3 
+queue 
+
+arguments   = 28.major_noderole.R 180000 189999 3 
+queue 
+
+arguments   = 28.major_noderole.R 190000 199999 3 
+queue 
+
+arguments   = 28.major_noderole.R 200000 209999 3 
+queue 
+
+arguments   = 28.major_noderole.R 210000 219999 3 
+queue 
+
+arguments   = 28.major_noderole.R 220000 229999 3 
+queue 
+
+arguments   = 28.major_noderole.R 230000 231202 3 
+queue 
+
+arguments   = 28.major_noderole.R 0 9999 4 
+queue 
+
+arguments   = 28.major_noderole.R 10000 19999 4 
+queue 
+
+arguments   = 28.major_noderole.R 20000 29999 4 
+queue 
+
+arguments   = 28.major_noderole.R 30000 39999 4 
+queue 
+
+arguments   = 28.major_noderole.R 40000 49999 4 
+queue 
+
+arguments   = 28.major_noderole.R 50000 59999 4 
+queue 
+
+arguments   = 28.major_noderole.R 60000 69999 4 
+queue 
+
+arguments   = 28.major_noderole.R 70000 79999 4 
+queue 
+
+arguments   = 28.major_noderole.R 80000 89999 4 
+queue 
+
+arguments   = 28.major_noderole.R 90000 99999 4 
+queue 
+
+arguments   = 28.major_noderole.R 100000 109999 4 
+queue 
+
+arguments   = 28.major_noderole.R 110000 119999 4 
+queue 
+
+arguments   = 28.major_noderole.R 120000 129999 4 
+queue 
+
+arguments   = 28.major_noderole.R 130000 139999 4 
+queue 
+
+arguments   = 28.major_noderole.R 140000 149999 4 
+queue 
+
+arguments   = 28.major_noderole.R 150000 159999 4 
+queue 
+
+arguments   = 28.major_noderole.R 160000 169999 4 
+queue 
+
+arguments   = 28.major_noderole.R 170000 179999 4 
+queue 
+
+arguments   = 28.major_noderole.R 180000 189999 4 
+queue 
+
+arguments   = 28.major_noderole.R 190000 199999 4 
+queue 
+
+arguments   = 28.major_noderole.R 200000 209999 4 
+queue 
+
+arguments   = 28.major_noderole.R 210000 219999 4 
+queue 
+
+arguments   = 28.major_noderole.R 220000 229999 4 
+queue 
+
+arguments   = 28.major_noderole.R 230000 231202 4 
+queue 
+
