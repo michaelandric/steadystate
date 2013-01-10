@@ -32,7 +32,7 @@ class Remover:
     def remover3(self):
         os.chdir(os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/")
         print os.getcwd()
-        for filename in glob(self.options.subject+"*.node_roles+tlrc*"):
+        for filename in glob(self.options.subject+"*.node_roles_tlrc_dump.txt"):
             os.remove(filename)
 
 
