@@ -32,7 +32,7 @@ class Maskdump:
 def main():
     Md = Maskdump()
     Md.get_opts()
-    adwarp_call(Md.options.subject)
+    #adwarp_call(Md.options.subject)
     Md.dump()
 
 if __name__ == "__main__":
