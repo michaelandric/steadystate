@@ -29,10 +29,16 @@ class Remover:
         for filename in glob(self.options.subject+"_graymattermask+tlrc.*"):
             os.remove(filename)
 
+    def remover3(self):
+        os.chdir(os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/")
+        print os.getcwd()
+        for filename in glob(self.options.subject+"*.node_roles+tlrc*"):
+            os.remove(filename)
+
 
 
 RM = Remover()
 RM.get_opts()
-RM.remover2()
+RM.remover3()
 
 
