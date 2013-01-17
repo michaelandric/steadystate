@@ -27,7 +27,7 @@ class Transform:
 def main():
     TAL = Transform()
     TAL.get_opts()
-    for cc in range(1,5):
+    for cc in range(1,3):
         TAL.adwarp_call(cc)
 
 
