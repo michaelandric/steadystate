@@ -1,0 +1,128 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/32.$(Process).out
+error		= ./logs/32.$(Process).err
+log 		= ./logs/32.$(Process).log
+
+
+arguments   = 32.freqAnaly.R ANGO 1 
+queue 
+
+arguments   = 32.freqAnaly.R ANGO 2 
+queue 
+
+arguments   = 32.freqAnaly.R ANGO 3 
+queue 
+
+arguments   = 32.freqAnaly.R ANGO 4 
+queue 
+
+arguments   = 32.freqAnaly.R MYTP 1 
+queue 
+
+arguments   = 32.freqAnaly.R MYTP 2 
+queue 
+
+arguments   = 32.freqAnaly.R MYTP 3 
+queue 
+
+arguments   = 32.freqAnaly.R MYTP 4 
+queue 
+
+arguments   = 32.freqAnaly.R TRCO 1 
+queue 
+
+arguments   = 32.freqAnaly.R TRCO 2 
+queue 
+
+arguments   = 32.freqAnaly.R TRCO 3 
+queue 
+
+arguments   = 32.freqAnaly.R TRCO 4 
+queue 
+
+arguments   = 32.freqAnaly.R PIGL 1 
+queue 
+
+arguments   = 32.freqAnaly.R PIGL 2 
+queue 
+
+arguments   = 32.freqAnaly.R PIGL 3 
+queue 
+
+arguments   = 32.freqAnaly.R PIGL 4 
+queue 
+
+arguments   = 32.freqAnaly.R SNNW 1 
+queue 
+
+arguments   = 32.freqAnaly.R SNNW 2 
+queue 
+
+arguments   = 32.freqAnaly.R SNNW 3 
+queue 
+
+arguments   = 32.freqAnaly.R SNNW 4 
+queue 
+
+arguments   = 32.freqAnaly.R LDMW 1 
+queue 
+
+arguments   = 32.freqAnaly.R LDMW 2 
+queue 
+
+arguments   = 32.freqAnaly.R LDMW 3 
+queue 
+
+arguments   = 32.freqAnaly.R LDMW 4 
+queue 
+
+arguments   = 32.freqAnaly.R FLTM 1 
+queue 
+
+arguments   = 32.freqAnaly.R FLTM 2 
+queue 
+
+arguments   = 32.freqAnaly.R FLTM 3 
+queue 
+
+arguments   = 32.freqAnaly.R FLTM 4 
+queue 
+
+arguments   = 32.freqAnaly.R EEPA 1 
+queue 
+
+arguments   = 32.freqAnaly.R EEPA 2 
+queue 
+
+arguments   = 32.freqAnaly.R EEPA 3 
+queue 
+
+arguments   = 32.freqAnaly.R EEPA 4 
+queue 
+
+arguments   = 32.freqAnaly.R DNLN 1 
+queue 
+
+arguments   = 32.freqAnaly.R DNLN 2 
+queue 
+
+arguments   = 32.freqAnaly.R DNLN 3 
+queue 
+
+arguments   = 32.freqAnaly.R DNLN 4 
+queue 
+
+arguments   = 32.freqAnaly.R CRFO 1 
+queue 
+
+arguments   = 32.freqAnaly.R CRFO 2 
+queue 
+
+arguments   = 32.freqAnaly.R CRFO 3 
+queue 
+
+arguments   = 32.freqAnaly.R CRFO 4 
+queue 
+
