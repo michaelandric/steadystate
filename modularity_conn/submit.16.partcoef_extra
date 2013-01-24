@@ -1,0 +1,15 @@
+executable	= RInvoke.sh
+universe 	= vanilla
+getenv		= true
+output		= ./logs/16.$(Process).out
+error		= ./logs/16.$(Process).err
+log 		= ./logs/16.$(Process).log
+
+
+
+arguments   = 16.partcoef.R MRAG 1 2 
+queue 
+
+arguments   = 16.partcoef.R MRAG 2 2 
+queue 
+
