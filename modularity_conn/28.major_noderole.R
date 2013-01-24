@@ -17,7 +17,7 @@ VoxRole <- function(vox)
     for (ss in subjects)
     {
         node_role <- paste(Sys.getenv("state"),"/",ss,"/corrTRIM_BLUR/",ss,".",Cond,".node_roles_tlrc_dump.txt",sep="")
-        roles <- c(roles,as.matrix(read.table(node_role,nrows=1,skip=vox)[,4]))
+        roles <- c(roles, scan(node_role,sep=" ",nlines=1,skip=vox)[4])
     }
     ## get the aggregate number occurrences for each role
     agrole = aggregate(roles,list(roles),length)
@@ -40,6 +40,7 @@ VoxRole <- function(vox)
 out <- c()
 for (vv in c(startvox:endvox))
 {
+    print(vv)
     out <- c(out,VoxRole(vv))
 }
 
