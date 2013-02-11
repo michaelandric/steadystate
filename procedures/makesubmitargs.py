@@ -197,6 +197,25 @@ class MakeArgs:
         arg1 == condition
         """
         print "arguments   = --subject "+subject+" --condition "+`arg1`+" \nqueue \n"
+    
+    def freqAnaly_args(self,subject,arg1):
+        """
+        arg1 == condition
+        """
+        print "arguments   = 32.freqAnaly.R "+subject+" "+`arg1`+" \nqueue \n"
+
+    def random_nets_args(self,subject,arg1):
+        """
+        arg1 == condition
+        """
+        print "arguments   = 29.random_nets.R "+subject+" "+`arg1`+" \nqueue \n"
+
+    def freqPowerExp_args(self,subject,arg1,arg2):
+        """
+        arg1 == condition
+        arg2 == Tree
+        """
+        print "arguments   = 33.freqPowerExp.R "+subject+" "+`arg1`+" "+`arg2`+" \nqueue \n"
 
     def removerargs(self,subject):
         print "arguments   = --Subject "+subject+" \nqueue \n"
