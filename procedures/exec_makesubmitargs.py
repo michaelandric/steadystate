@@ -13,7 +13,11 @@ from makesubmitargs import makeargs as mm
 #subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
 ##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
-subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
+#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
+subjects = ["ANGO","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # BARS & EZCR not in here
+#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO"]
+#subjects = ["ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
+#subjects = ["ANMS","MRZM","MRVV"]
 conditions = range(1,5)
 
 """
@@ -43,7 +47,7 @@ for ss in subjects:
     #mm.maskmakerargs(Ss)
     for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
-        mm.maskdumpargs(ss,cc)
+        #mm.maskdumpargs(ss,cc)
         #mm.fcorrargs(ss,cc)
         #mm.threshargs(ss,cc) ## for submit.6.threshold
         #mm.convertargs(ss,cc) ## for submit.7.blondel_convert
@@ -58,5 +62,8 @@ for ss in subjects:
         #mm.module_degreeargs(ss,cc,tree_d[ss][cc-1])
         #mm.getdatafrombin_args(ss,nvox_dict[ss],cc)
         #mm.noderoles_args(ss,cc)
+        #mm.freqAnaly_args(ss,cc)
+        #mm.random_nets_args(ss,cc)
+        mm.freqPowerExp_args(ss,cc,tree_d[ss][cc-1])
 
 
