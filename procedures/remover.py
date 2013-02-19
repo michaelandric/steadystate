@@ -35,10 +35,21 @@ class Remover:
         for filename in glob(self.options.subject+"*.node_roles_tlrc_dump.txt"):
             os.remove(filename)
 
+    def remover4(self):
+        """
+        This is to remove the old *noijk_dump* files.
+        These files included white matter in the cortical mask.
+        Need to make more space on the filesystem.
+        """
+        os.chdir(os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/")
+        print os.getcwd()
+        for filename in glob("*"+self.options.subject+".noijk_dump*"):
+            os.remove(filename)
+
 
 
 RM = Remover()
 RM.get_opts()
-RM.remover3()
+RM.remover4()
 
 
