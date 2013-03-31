@@ -1,0 +1,32 @@
+executable	= 35.sumaVol2Surf.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/35.$(Process).out
+error		= ./logs/35.$(Process).err
+log 		= ./logs/35.$(Process).log
+
+
+arguments  = --subject MRAG --condition 1 --hemi lh 
+queue 
+
+arguments  = --subject MRAG --condition 1 --hemi rh 
+queue 
+
+arguments  = --subject MRAG --condition 2 --hemi lh 
+queue 
+
+arguments  = --subject MRAG --condition 2 --hemi rh 
+queue 
+
+arguments  = --subject MRAG --condition 3 --hemi lh 
+queue 
+
+arguments  = --subject MRAG --condition 3 --hemi rh 
+queue 
+
+arguments  = --subject MRAG --condition 4 --hemi lh 
+queue 
+
+arguments  = --subject MRAG --condition 4 --hemi rh 
+queue 
+
