@@ -36,10 +36,24 @@ class Vol2Surf:
                     -sv "+SV+" -grid_parent "+PARENT+" -map_func max -f_steps 10 -f_index voxels -f_p1_fr -0.3 -f_pn_fr 0.3 \
                     -outcols_NSD_format -oob_index -1 -oob_value 0.0 -out_1D modules_"+self.options.SS+"_"+self.options.H+"_Cond"+self.options.cc+".1D", shell=True)
 
+    def volsurf_tal_cmd(self):
+        """
+        This is projecting from talairach space. 
+        """
+        os.chdir("/mnt/lnif-storage/urihas/uhproject/suma_tlrc/")
+        print os.getcwd()
+        PARENT = os.environ["state"]+"/"+self.options.SS+"/corrTRIM_BLUR/modules_"+self.options.SS+"_Cond"+self.options.cc+"+tlrc"
+        SV = "TT_N27+tlrc"
+        print self.options.SS+" -- Cond"+self.options.cc+" -- "+self.options.H
+        print call("3dVol2Surf -spec ./N27_"+self.options.H+"_tlrc.spec -surf_A ./"+self.options.H+".smoothwm.tlrc.ply -surf_B ./"+self.options.H+".pial.tlrc.ply \
+                    -sv "+SV+" -grid_parent "+PARENT+" -map_func max -f_steps 10 -f_index voxels -f_p1_fr -0.3 -f_pn_fr 0.3 \
+                    -outcols_NSD_format -oob_index -1 -oob_value 0.0 -out_1D modules_"+self.options.SS+"_"+self.options.H+"_Cond"+self.options.cc+".tlrc.1D", shell=True)
+
+
 def main():
     VS = Vol2Surf()
     VS.get_opts()
-    VS.volsurfcmd()
+    VS.volsurf_tal_cmd()
 
 if __name__ == "__main__":
     main()
