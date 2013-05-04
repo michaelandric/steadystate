@@ -15,19 +15,34 @@ def getwc():
     num_lines = sum(1 for line in open(fname))
     return num_lines
 
+def get_linkcount(ss,cc):
+    try:
+        fname = os.environ["state"]+"/"+ss+"/corrTRIM_BLUR/cleanTS."+`cc`+"."+ss+"_graymask_dump.bin.corr.thresh.links"
+        textf = open(fname, 'r')
+    except IOError:
+        print "cannot open file %s for reading" % fname
+        import sys
+        sys.exit(0)
 
-subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR","ANGO"]
+    num_lines = sum(1 for line in open(fname))
+    return num_lines
 
+
+#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR","ANGO"]
+subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR","ANGO"]
 
 cntr = ""
-nvox = []
+os.chdir(os.environ["state"]+"/groupstats/")
+print os.getcwd()
 for ss in subjects:
-    cntr += ss+" "+`getwc()`+"\n"
-    nvox.append(getwc())
+    for cc in range(1,5):
+        cntr += ss+" "+" "+`cc`+" "+`get_linkcount(ss,cc)`+"\n"
 
-outf = open('subject_graymattermask_voxnum.txt','w')
+
+outf = open('link_count_0.5thresh.txt','w')
 outf.write(cntr)
 outf.close()
 
-nvox_dict = dict(zip(subjects,nvox))
-print nvox_dict
+## below two lines were for older version of this code -- see github repos 
+#nvox_dict = dict(zip(subjects,nvox))
+#print nvox_dict
