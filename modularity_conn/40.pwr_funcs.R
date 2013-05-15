@@ -8,16 +8,16 @@ library(RColorBrewer)
 thepal = colorRampPalette(brewer.pal(9,"Set2"))(9)
 
 library(brainwaver)
-
+cutoff = 55
 deg_func <- function(x)
 {
-    degree.dist = x[which(x > 1)]
+    degree.dist = x[which(x > cutoff)]
     nmax = max(degree.dist)
-    tmp = hist(degree.dist, breaks=c(0:nmax))
+    tmp = hist(degree.dist, breaks=c(cutoff:nmax))
     Fn = ecdf(tmp$counts)
     d = fitting(x, nmax)
     ptshape = d$alpha + d$gamma
-    gamma.trace <- log10(1-pgamma((0:(nmax-1)),shape=ptshape,scale=d$beta))
+    gamma.trace <- log10(1-pgamma((cutoff:(nmax-1)),shape=ptshape,scale=d$beta))
     v1 = log10(Fn(tmp$counts))
     Rsq = round((cor(v1,gamma.trace))^2, 4)
 
@@ -37,17 +37,17 @@ for (ss in subjects)
         dat <- c(dat, as.matrix(read.table(paste(ss,".",i,".degrees_gray",sep=""))))
     }
     dat_matrix <- matrix(dat, ncol=4)
-    pdf("deg_distribution_plots.pdf")
+    pdf(paste("deg_distribution_plots",cutoff,".pdf",sep=""))
     rsquares <- c()
     for (i in conditions)
     {
         out = deg_func(dat_matrix[,i])
         rsquares = c(rsquares, out$Rsq)
-        plot(log10(0:(out$nmax-1)), out$log10cnts, main=condition_names[i])
-        lines(log10(0:(out$nmax-1)), out$gamma.trace, col=thepalOrder[i],lwd=2)
+        plot(log10(cutoff:(out$nmax-1)), out$log10cnts, main=condition_names[i])
+        lines(log10(cutoff:(out$nmax-1)), out$gamma.trace, col=thepalOrder[i],lwd=2)
     }
     dev.off()
     rsquared_mat = matrix(rsquares, nrow=1, byrow=T)
-    write.table(rsquared_mat, paste("Rsq_vals",ss,".txt",sep=""), row.names=F,col.names=F,quote=F)
+    write.table(rsquared_mat, paste("Rsq_vals",ss,"cutoff",cutoff,".txt",sep=""), row.names=F,col.names=F,quote=F)
 }
 
