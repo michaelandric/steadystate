@@ -68,6 +68,8 @@ fitting <- function (degree.dist, nmax)
 condition_names = c("Highly ordered", "Some order", "Random", "Almost Random")
 thepalOrder = thepal[c(1,2,4,3)] 
 
+pdf(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/Vers2deg_distribution_plotsGROUP",cutoff,".pdf",sep=""), paper="a4r", width=10.5)
+par(mfrow=c(2,4))
 for (ss in subjects)
 {
     setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR",sep=""))
@@ -77,24 +79,24 @@ for (ss in subjects)
         dat <- c(dat, as.matrix(read.table(paste(ss,".",i,".degrees_gray",sep=""))))
     }
     dat_matrix <- matrix(dat, ncol=4)
-    pdf(paste("Vers2deg_distribution_plots",cutoff,".pdf",sep=""))
+    #pdf(paste("Vers2deg_distribution_plots",cutoff,".pdf",sep=""))
     rsquares <- c()
     for (i in conditions)
     {
-        print(ss)
-        print(i)
+        #print(ss)
+        #print(i)
         out = deg_func(dat_matrix[,i])
         Rsq = round((cor(log10(out$cum.dist)[1:(out$nmax-2)], log10(out$gamma.trace)[1:(out$nmax-2)]))^2, 4)
-        print(Rsq)
+        #print(Rsq)
         rsquares = c(rsquares, Rsq)
         #plot(log10(cutoff:(out$nmax-1)), out$log10cnts, main=paste(condition_names[i]," R^2+",out$Rsq,4,sep=""))
-        plot(log10(cutoff:(out$nmax-1)),log10(out$cum.dist),pch=3,xlab="log(k)",ylab="log(cumulative distribution)", main=paste(condition_names[i]," // R^2=",Rsq,4,sep=""))
+        plot(log10(cutoff:(out$nmax-1)),log10(out$cum.dist),pch=3,xlab="log(k)",ylab="log(cumulative distribution)", main=paste(ss," ",condition_names[i]," // R^2=",round(Rsq,4),sep=""))
         #lines(log10(cutoff:(out$nmax-1)), out$gamma.trace, col=thepalOrder[i],lwd=2)
         lines(log10(cutoff:(out$nmax-1)),log10(out$gamma.trace)[1:(out$nmax-1)], lwd=2, col=thepalOrder[i])
         system(paste("cp fitting.txt fitting_cond",i,".txt",sep=""))
     }
-    dev.off()
+    #dev.off()
     rsquared_mat = matrix(rsquares, nrow=1, byrow=T)
-    write.table(rsquared_mat, paste("Vers2Rsq_vals",ss,"cutoff",cutoff,".txt",sep=""), row.names=F,col.names=F,quote=F)
+    #write.table(rsquared_mat, paste("Vers2Rsq_vals",ss,"cutoff",cutoff,".txt",sep=""), row.names=F,col.names=F,quote=F)
 }
-
+dev.off()
