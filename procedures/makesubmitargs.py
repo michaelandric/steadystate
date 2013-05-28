@@ -52,10 +52,12 @@ class MakeArgs:
         automask = os.environ["state"]+"/groupstats/automask_d1_TTavg152T1+tlrc"
         #input = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM+orig"
         #input = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index.ijk+tlrc"
-        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles+tlrc"
+        #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles+tlrc"
+        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray+tlrc"
         #output = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM_graymask_dump"
         #output = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index_tlrc_dump.txt"
-        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles_tlrc_dump.txt"
+        #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles_tlrc_dump.txt"
+        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray+tlrc.txt"
         print "arguments    = --mask "+automask+" --inputfile "+input+" --outputname "+output+" --subject "+subject+" \nqueue \n" 
 
     def dir_maker(self):
@@ -118,7 +120,7 @@ class MakeArgs:
         outname = self.options.arg1+self.options.subject+"/corrTRIM_BLUR/"+self.options.subject+"."+self.options.arg2+".tree"+self.options.arg3+".ijk"
         print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkf+" --master "+ijkmaster+" --outputname "+outname+" \nqueue \n"
 
-    def undumpargs(self,subject,arg1,arg2):
+    def undumpargs(self,subject,arg1):
         """
         arg1 == the condition number
         arg2 == datum type. either short or float
@@ -127,11 +129,11 @@ class MakeArgs:
         Change in the filename if tree number
         """
         basedir = "/mnt/tier2/urihas/Andric/steadystate/"
-        inputf = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles"
+        inputf = basedir+subject+"/corrTRIM_BLUR/preserved_"+subject+".txt"
         ijkfile = basedir+subject+"/masking/ijk_coords_graymattermask_"+subject
         master = basedir+subject+"/blur.1."+subject+".steadystate.TRIM+orig"
-        outname = basedir+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles"
-        print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --datatype "+arg2+" --master "+master+" --outputname "+outname+" \nqueue \n"
+        outname = basedir+subject+"/corrTRIM_BLUR/preserved_"+subject
+        print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --datatype "+arg1+" --master "+master+" --outputname "+outname+" \nqueue \n"
 
     def filter(self,subject,arg1,arg2):
         ##arg1 == Condition, e.g., '2'
@@ -220,6 +222,12 @@ class MakeArgs:
     def removerargs(self,subject):
         print "arguments   = --Subject "+subject+" \nqueue \n"
     
+    def vol2surfargs(self, subject, arg1, arg2):
+        """
+        arg1 is the condition
+        arg2 is the hemisphere
+        """
+        print "arguments  = --subject "+subject+" --condition "+`arg1`+" --hemi "+arg2+" \nqueue \n"
 
     def tester(self):
         print "this is a test"
