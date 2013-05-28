@@ -9,15 +9,18 @@ where 'submit.try' is the condor_submit file that you're adding arguments to
 from makesubmitargs import makeargs as mm
 
 #subjects = ["ANGO"]
+#subjects = ["ANGO"]
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
 ##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
-subjects = ["ANGO","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # BARS & EZCR not in here
+subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # BARS & EZCR not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO"]
 #subjects = ["ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 #subjects = ["ANMS","MRZM","MRVV"]
+#subjects = ["MRMK","MRMC","MRAG"]
+#subjects = ["MNGO","LRVN","CLFR"]
 conditions = range(1,5)
 
 """
@@ -45,7 +48,8 @@ for ss in subjects:
     #mm.voxel_id_args(ss, nvox_dict[ss])
     #mm.maskdumpargs(ss)
     #mm.maskmakerargs(Ss)
-    for cc in conditions:
+    mm.undumpargs(ss,"float")
+    #for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
         #mm.fcorrargs(ss,cc)
@@ -55,6 +59,7 @@ for ss in subjects:
         #mm.hierarchyargs(ss,cc,tree_d[ss][cc-1])
         #mm.undumpargs(ss,cc,tree_d[ss][cc-1])
         #mm.undumpargs(ss,cc,"short")
+        #mm.undumpargs(ss,"float")
         #mm.filter(ss,cc,dictionary2[ss][cc-1]) ## for submit.13.filter
         #mm.undump14(ss,cc,dictionary2[ss][cc-1],1)
         #mm.degree(ss,nvox_dict[ss],cc)
@@ -64,6 +69,8 @@ for ss in subjects:
         #mm.noderoles_args(ss,cc)
         #mm.freqAnaly_args(ss,cc)
         #mm.random_nets_args(ss,cc)
-        mm.freqPowerExp_args(ss,cc,tree_d[ss][cc-1])
+        #mm.freqPowerExp_args(ss,cc,tree_d[ss][cc-1])
+        #    for h in hemispheres:
+        #        mm.vol2surfargs(ss,cc,h)
 
 
