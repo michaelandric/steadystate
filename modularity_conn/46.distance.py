@@ -21,7 +21,7 @@ get_distance([-2,2,5],[2,4,2])
 Separate function that calls 'get_distance' because it will be easier to run it in a 'for' loop if I want to do only select people or conditions
 """
 
-def dist_grab(ss, cc, p, q): 
+def dist_grab(ss, cc): 
 #for ss in subjects:
     os.chdir(os.environ["state"]+"/"+ss+"/corrTRIM_BLUR/")
     print os.getcwd()
@@ -84,16 +84,21 @@ def dist_grab(ss, cc, p, q):
         for v in others:
             x_dist.append(get_distance(coord_array[i], coord_array[v]))
 
-        """
-        Average distances between voxel 'i' to every other voxel in the module 
-        """
-        euc_dist.append(round(average(x_dist),4)) ## get the average distance for voxel 'i' to all every other voxel in the module  
+        euc_dist.append(round(average(x_dist),4)) ## average distance for voxel 'i' to every other voxel in the module  
 
-    pres_out = ""
-    for line in euc_distance:
-        pres_out += str(round(line,4))+"\n"
+    dist_out = ""
+    for line in euc_dist:
+        dist_out += str(round(line,4))+"\n"
 
-    outf = open("preserved_"+ss+".txt","w")
+    outf = open("euclidean_distancep_"+ss+"_Cond"+cc+".txt","w")
     outf.write(pres_out)
     outf.close()
 
+
+def main():
+    for ss in subjects:
+        for cc in conditions:
+            dist_grab(ss, `cc`)
+
+if __name__ == "__main__":
+    main()
