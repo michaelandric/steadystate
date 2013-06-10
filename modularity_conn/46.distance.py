@@ -8,27 +8,22 @@ from glob import glob
 conditions = range(1,5)
 subjects = ["ANGO","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 
-
-def get_distance(p,q):
-    return sqrt(sum([(x-y)**2 for (x,y) in zip(p,q)]))
-
 """
+Separate function for 'get_distance' because it will be easier to run it in a 'for' loop if I want to do only select people or conditions
 Example to run:
 get_distance([-2,2,5],[2,4,2])
 """
+def get_distance(p,q):
+    return sqrt(sum([(x-y)**2 for (x,y) in zip(p,q)]))
 
-"""
-Separate function that calls 'get_distance' because it will be easier to run it in a 'for' loop if I want to do only select people or conditions
-"""
 
 def dist_grab(ss, cc): 
-#for ss in subjects:
     os.chdir(os.environ["state"]+"/"+ss+"/corrTRIM_BLUR/")
     print os.getcwd()
     """
     Get the community (module) IDs for condition
     """
-    fname = glob("cleanTS."+cc+".ANGO_graymask_dump.bin.corr.thresh.tree*.ijk.txt")
+    fname = glob("cleanTS."+cc+"."+ss+"_graymask_dump.bin.corr.thresh.tree*.ijk.txt")
     comf = open(''.join(fname))
 
     """
@@ -37,35 +32,29 @@ def dist_grab(ss, cc):
     comm_array = []
     coord_array = []
     for line in comf:
-        #comm_array.append([int(x) for x in line.split()][0])
-        #[int(x) for x in line.split()[0:3]]
         a, b, c, d = [int(x) for x in line.split()]
         coord_array.append((a,b,c))
         comm_array.append(d)
 
-
     """
     Two column arrays where Column 1 are voxel IDs and Column 2 are module IDs
     """
-    vox_comm_array = zip(range(len(comm_array)), comm_array)
-    
+    vox_comm_array = zip(range(len(comm_array)), comm_array)    
     """
     get the modules for each condition
     """
     uniq_modules = set(comm_array)
     """
-    Make dictionaries. module numbers are keys and voxels in modules are values
+    Make dictionaries. Module numbers are keys and voxels in modules are values
     """    
     mod_dict = {}
     for i in uniq_modules:
         mod_dict[i] = [item for item in vox_comm_array if item[1]==i]
 
-
     """
     For each voxel, find its module, identify all other voxels in module, find distance between every other voxel, average those distances. 
     Get an average distance for each module, average those for an average distance by condition (this will do in another script).
     """
-
     euc_dist = []
     for i in range(len(comm_array)):
         tmp_set = []
@@ -98,7 +87,7 @@ def dist_grab(ss, cc):
 def main():
     for ss in subjects:
         for cc in conditions:
-            dist_grab(ss, `cc`)
+            dist_grab(ss, `cc`) ## make sure condition is string and not integer
 
 if __name__ == "__main__":
     main()
