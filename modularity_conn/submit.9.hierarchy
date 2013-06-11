@@ -6,14 +6,231 @@ error		= ./logs/9.$(Process).err
 log 		= ./logs/9.$(Process).log
 
 
-arguments    = 9.hierarchy.R ANGO 1 3 
+arguments    = 9.hierarchy.R MYTP 1 3 
 queue 
 
-arguments    = 9.hierarchy.R ANGO 2 3 
+arguments    = 9.hierarchy.R MYTP 2 3 
 queue 
 
-arguments    = 9.hierarchy.R ANGO 3 3 
+arguments    = 9.hierarchy.R MYTP 3 3 
 queue 
 
-arguments    = 9.hierarchy.R ANGO 4 2 
+arguments    = 9.hierarchy.R MYTP 4 3 
 queue 
+
+arguments    = 9.hierarchy.R TRCO 1 2 
+queue 
+
+arguments    = 9.hierarchy.R TRCO 2 2 
+queue 
+
+arguments    = 9.hierarchy.R TRCO 3 3 
+queue 
+
+arguments    = 9.hierarchy.R TRCO 4 3 
+queue 
+
+arguments    = 9.hierarchy.R PIGL 1 3 
+queue 
+
+arguments    = 9.hierarchy.R PIGL 2 3 
+queue 
+
+arguments    = 9.hierarchy.R PIGL 3 3 
+queue 
+
+arguments    = 9.hierarchy.R PIGL 4 3 
+queue 
+
+arguments    = 9.hierarchy.R SNNW 1 3 
+queue 
+
+arguments    = 9.hierarchy.R SNNW 2 2 
+queue 
+
+arguments    = 9.hierarchy.R SNNW 3 2 
+queue 
+
+arguments    = 9.hierarchy.R SNNW 4 3 
+queue 
+
+arguments    = 9.hierarchy.R LDMW 1 2 
+queue 
+
+arguments    = 9.hierarchy.R LDMW 2 3 
+queue 
+
+arguments    = 9.hierarchy.R LDMW 3 2 
+queue 
+
+arguments    = 9.hierarchy.R LDMW 4 2 
+queue 
+
+arguments    = 9.hierarchy.R FLTM 1 3 
+queue 
+
+arguments    = 9.hierarchy.R FLTM 2 3 
+queue 
+
+arguments    = 9.hierarchy.R FLTM 3 2 
+queue 
+
+arguments    = 9.hierarchy.R FLTM 4 2 
+queue 
+
+arguments    = 9.hierarchy.R EEPA 1 3 
+queue 
+
+arguments    = 9.hierarchy.R EEPA 2 2 
+queue 
+
+arguments    = 9.hierarchy.R EEPA 3 3 
+queue 
+
+arguments    = 9.hierarchy.R EEPA 4 2 
+queue 
+
+arguments    = 9.hierarchy.R DNLN 1 2 
+queue 
+
+arguments    = 9.hierarchy.R DNLN 2 2 
+queue 
+
+arguments    = 9.hierarchy.R DNLN 3 1 
+queue 
+
+arguments    = 9.hierarchy.R DNLN 4 3 
+queue 
+
+arguments    = 9.hierarchy.R CRFO 1 2 
+queue 
+
+arguments    = 9.hierarchy.R CRFO 2 3 
+queue 
+
+arguments    = 9.hierarchy.R CRFO 3 2 
+queue 
+
+arguments    = 9.hierarchy.R CRFO 4 2 
+queue 
+
+arguments    = 9.hierarchy.R ANMS 1 2 
+queue 
+
+arguments    = 9.hierarchy.R ANMS 2 2 
+queue 
+
+arguments    = 9.hierarchy.R ANMS 3 2 
+queue 
+
+arguments    = 9.hierarchy.R ANMS 4 2 
+queue 
+
+arguments    = 9.hierarchy.R BARS 1 2 
+queue 
+
+arguments    = 9.hierarchy.R BARS 2 2 
+queue 
+
+arguments    = 9.hierarchy.R BARS 3 2 
+queue 
+
+arguments    = 9.hierarchy.R BARS 4 2 
+queue 
+
+arguments    = 9.hierarchy.R MRZM 1 2 
+queue 
+
+arguments    = 9.hierarchy.R MRZM 2 2 
+queue 
+
+arguments    = 9.hierarchy.R MRZM 3 3 
+queue 
+
+arguments    = 9.hierarchy.R MRZM 4 2 
+queue 
+
+arguments    = 9.hierarchy.R MRVV 1 3 
+queue 
+
+arguments    = 9.hierarchy.R MRVV 2 3 
+queue 
+
+arguments    = 9.hierarchy.R MRVV 3 2 
+queue 
+
+arguments    = 9.hierarchy.R MRVV 4 3 
+queue 
+
+arguments    = 9.hierarchy.R MRMK 1 2 
+queue 
+
+arguments    = 9.hierarchy.R MRMK 2 2 
+queue 
+
+arguments    = 9.hierarchy.R MRMK 3 2 
+queue 
+
+arguments    = 9.hierarchy.R MRMK 4 2 
+queue 
+
+arguments    = 9.hierarchy.R MRMC 1 2 
+queue 
+
+arguments    = 9.hierarchy.R MRMC 2 2 
+queue 
+
+arguments    = 9.hierarchy.R MRMC 3 2 
+queue 
+
+arguments    = 9.hierarchy.R MRMC 4 2 
+queue 
+
+arguments    = 9.hierarchy.R MRAG 1 2 
+queue 
+
+arguments    = 9.hierarchy.R MRAG 2 2 
+queue 
+
+arguments    = 9.hierarchy.R MRAG 3 2 
+queue 
+
+arguments    = 9.hierarchy.R MRAG 4 3 
+queue 
+
+arguments    = 9.hierarchy.R MNGO 1 2 
+queue 
+
+arguments    = 9.hierarchy.R MNGO 2 3 
+queue 
+
+arguments    = 9.hierarchy.R MNGO 3 3 
+queue 
+
+arguments    = 9.hierarchy.R MNGO 4 3 
+queue 
+
+arguments    = 9.hierarchy.R LRVN 1 2 
+queue 
+
+arguments    = 9.hierarchy.R LRVN 2 2 
+queue 
+
+arguments    = 9.hierarchy.R LRVN 3 2 
+queue 
+
+arguments    = 9.hierarchy.R LRVN 4 2 
+queue 
+
+arguments    = 9.hierarchy.R CLFR 1 3 
+queue 
+
+arguments    = 9.hierarchy.R CLFR 2 2 
+queue 
+
+arguments    = 9.hierarchy.R CLFR 3 3 
+queue 
+
+arguments    = 9.hierarchy.R CLFR 4 2 
+queue 
+

@@ -1,248 +1,27 @@
 ++ 3dinfo: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 530979472 (531 million) bytes long!
 ++ 3dZeropad: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./TRCO.1.degrees.ijkSHORT+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./TRCO.1.degrees.ijkSHORT+orig.BRIK is 8.834178 degrees from plumb.
 ++ output dataset: ./__ats_tmp__ipad+orig.BRIK
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 530979849 (531 million) bytes long!
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 530980119 (531 million) bytes long!
 ++ 3dWarp: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
 ++ Authored by: RW Cox
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./__ats_tmp__ipad+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./__ats_tmp__ipad+orig.BRIK is 8.834178 degrees from plumb.
-++ 8.834178 degrees from plumb.
-*+ WARNING: Deoblique datasets with 3dWarp before proceeding with other transformations
 ++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
 ++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 530980527 (531 million) bytes long!
 ++ Processing AFNI dataset __ats_tmp__warp_grid+tlrc
  + Changed dataset view type and filenames.
 *+ WARNING: Over-writing dataset ./__ats_tmp__warp_grid+orig.HEAD
 ++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 530980600 (531 million) bytes long!
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./__ats_tmp_TRCO.1.degrees.ijkSHORT+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./__ats_tmp_TRCO.1.degrees.ijkSHORT+orig.BRIK is 8.834178 degrees from plumb.
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.1.degrees.ijkSHORT+orig.HEAD
+*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO_graymattermask+orig.HEAD
 ++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
 ++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 530981875 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp_TRCO.1.degrees.ijkSHORT+orig
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.1.degrees.ijkSHORT+orig.HEAD
+++ Processing AFNI dataset __ats_tmp_TRCO_graymattermask+orig
+*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO_graymattermask+orig.HEAD
 ++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 530981961 (531 million) bytes long!
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.1.degrees.ijkSHORT+orig.HEAD
+*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO_graymattermask+orig.HEAD
 ++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
 ++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 530982237 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp_TRCO.1.degrees.ijkSHORT+orig.HEAD
+++ Processing AFNI dataset __ats_tmp_TRCO_graymattermask+orig.HEAD
  + Changed dataset view type and filenames.
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.1.degrees.ijkSHORT+tlrc.HEAD
+*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO_graymattermask+tlrc.HEAD
 ++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 530984050 (531 million) bytes long!
 ++ Warning: ignoring +tlrc on new_prefix.
-++ THD_rename_dataset_files: rename __ats_tmp_TRCO.1.degrees.ijkSHORT+tlrc.HEAD -> TRCO.1.degrees.ijkSHORT+tlrc.HEAD
-++ THD_rename_dataset_files: rename __ats_tmp_TRCO.1.degrees.ijkSHORT+tlrc.BRIK -> TRCO.1.degrees.ijkSHORT+tlrc.BRIK
-++ 3dinfo: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531003055 (531 million) bytes long!
-++ 3dZeropad: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./TRCO.2.degrees.ijkSHORT+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./TRCO.2.degrees.ijkSHORT+orig.BRIK is 8.834178 degrees from plumb.
-++ output dataset: ./__ats_tmp__ipad+orig.BRIK
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531003187 (531 million) bytes long!
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531003570 (531 million) bytes long!
-++ 3dWarp: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./__ats_tmp__ipad+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./__ats_tmp__ipad+orig.BRIK is 8.834178 degrees from plumb.
-++ 8.834178 degrees from plumb.
-*+ WARNING: Deoblique datasets with 3dWarp before proceeding with other transformations
-++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531003837 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp__warp_grid+tlrc
- + Changed dataset view type and filenames.
-*+ WARNING: Over-writing dataset ./__ats_tmp__warp_grid+orig.HEAD
-++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531003910 (531 million) bytes long!
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./__ats_tmp_TRCO.2.degrees.ijkSHORT+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./__ats_tmp_TRCO.2.degrees.ijkSHORT+orig.BRIK is 8.834178 degrees from plumb.
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.2.degrees.ijkSHORT+orig.HEAD
-++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531005455 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp_TRCO.2.degrees.ijkSHORT+orig
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.2.degrees.ijkSHORT+orig.HEAD
-++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531005541 (531 million) bytes long!
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.2.degrees.ijkSHORT+orig.HEAD
-++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531005952 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp_TRCO.2.degrees.ijkSHORT+orig.HEAD
- + Changed dataset view type and filenames.
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.2.degrees.ijkSHORT+tlrc.HEAD
-++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531007250 (531 million) bytes long!
-++ Warning: ignoring +tlrc on new_prefix.
-++ THD_rename_dataset_files: rename __ats_tmp_TRCO.2.degrees.ijkSHORT+tlrc.HEAD -> TRCO.2.degrees.ijkSHORT+tlrc.HEAD
-++ THD_rename_dataset_files: rename __ats_tmp_TRCO.2.degrees.ijkSHORT+tlrc.BRIK -> TRCO.2.degrees.ijkSHORT+tlrc.BRIK
-++ 3dinfo: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531026252 (531 million) bytes long!
-++ 3dZeropad: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./TRCO.3.degrees.ijkSHORT+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./TRCO.3.degrees.ijkSHORT+orig.BRIK is 8.834178 degrees from plumb.
-++ output dataset: ./__ats_tmp__ipad+orig.BRIK
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531026384 (531 million) bytes long!
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531026767 (531 million) bytes long!
-++ 3dWarp: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./__ats_tmp__ipad+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./__ats_tmp__ipad+orig.BRIK is 8.834178 degrees from plumb.
-++ 8.834178 degrees from plumb.
-*+ WARNING: Deoblique datasets with 3dWarp before proceeding with other transformations
-++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531026902 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp__warp_grid+tlrc
- + Changed dataset view type and filenames.
-*+ WARNING: Over-writing dataset ./__ats_tmp__warp_grid+orig.HEAD
-++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531027107 (531 million) bytes long!
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./__ats_tmp_TRCO.3.degrees.ijkSHORT+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./__ats_tmp_TRCO.3.degrees.ijkSHORT+orig.BRIK is 8.834178 degrees from plumb.
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.3.degrees.ijkSHORT+orig.HEAD
-++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531028250 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp_TRCO.3.degrees.ijkSHORT+orig
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.3.degrees.ijkSHORT+orig.HEAD
-++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531028606 (531 million) bytes long!
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.3.degrees.ijkSHORT+orig.HEAD
-++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531028882 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp_TRCO.3.degrees.ijkSHORT+orig.HEAD
- + Changed dataset view type and filenames.
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.3.degrees.ijkSHORT+tlrc.HEAD
-++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531030315 (531 million) bytes long!
-++ Warning: ignoring +tlrc on new_prefix.
-++ THD_rename_dataset_files: rename __ats_tmp_TRCO.3.degrees.ijkSHORT+tlrc.HEAD -> TRCO.3.degrees.ijkSHORT+tlrc.HEAD
-++ THD_rename_dataset_files: rename __ats_tmp_TRCO.3.degrees.ijkSHORT+tlrc.BRIK -> TRCO.3.degrees.ijkSHORT+tlrc.BRIK
-++ 3dinfo: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531049317 (531 million) bytes long!
-++ 3dZeropad: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./TRCO.4.degrees.ijkSHORT+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./TRCO.4.degrees.ijkSHORT+orig.BRIK is 8.834178 degrees from plumb.
-++ output dataset: ./__ats_tmp__ipad+orig.BRIK
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531049449 (531 million) bytes long!
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531049660 (531 million) bytes long!
-++ 3dWarp: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./__ats_tmp__ipad+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./__ats_tmp__ipad+orig.BRIK is 8.834178 degrees from plumb.
-++ 8.834178 degrees from plumb.
-*+ WARNING: Deoblique datasets with 3dWarp before proceeding with other transformations
-++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531050099 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp__warp_grid+tlrc
- + Changed dataset view type and filenames.
-*+ WARNING: Over-writing dataset ./__ats_tmp__warp_grid+orig.HEAD
-++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531050310 (531 million) bytes long!
-*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-  such as ./__ats_tmp_TRCO.4.degrees.ijkSHORT+orig.BRIK,
-  or viewing/combining it with volumes of differing obliquity,
-  you should consider running: 
-     3dWarp -deoblique 
-  on this and  other oblique datasets in the same session.
- See 3dWarp -help for details.
-++ Oblique dataset:./__ats_tmp_TRCO.4.degrees.ijkSHORT+orig.BRIK is 8.834178 degrees from plumb.
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.4.degrees.ijkSHORT+orig.HEAD
-++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531051315 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp_TRCO.4.degrees.ijkSHORT+orig
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.4.degrees.ijkSHORT+orig.HEAD
-++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531051533 (531 million) bytes long!
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.4.degrees.ijkSHORT+orig.HEAD
-++ 3drefit: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
-++ Authored by: RW Cox
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531051947 (531 million) bytes long!
-++ Processing AFNI dataset __ats_tmp_TRCO.4.degrees.ijkSHORT+orig.HEAD
- + Changed dataset view type and filenames.
-*+ WARNING: Over-writing dataset ./__ats_tmp_TRCO.4.degrees.ijkSHORT+tlrc.HEAD
-++ 3drefit processed 1 datasets
-++ WARNING: file /home/michaeljames.andric/.afni.log is now 531053380 (531 million) bytes long!
-++ Warning: ignoring +tlrc on new_prefix.
-++ THD_rename_dataset_files: rename __ats_tmp_TRCO.4.degrees.ijkSHORT+tlrc.HEAD -> TRCO.4.degrees.ijkSHORT+tlrc.HEAD
-++ THD_rename_dataset_files: rename __ats_tmp_TRCO.4.degrees.ijkSHORT+tlrc.BRIK -> TRCO.4.degrees.ijkSHORT+tlrc.BRIK
+++ THD_rename_dataset_files: rename __ats_tmp_TRCO_graymattermask+tlrc.HEAD -> TRCO_graymattermask+tlrc.HEAD
+++ THD_rename_dataset_files: rename __ats_tmp_TRCO_graymattermask+tlrc.BRIK -> TRCO_graymattermask+tlrc.BRIK

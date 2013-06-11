@@ -36,3 +36,22 @@ hist(mod_means_tot[which(mod_vox_count_tot > 100)], breaks=length(mod_means_tot[
 dev.off()
 
 
+fh <- hist(mod_means_tot[which(mod_vox_count_tot > 2)], breaks=length(mod_means_tot[which(mod_vox_count_tot > 2)]) / 4, col="yellow", plot=F)
+#aggregate(mod_vox_count_tot, list(cut(mod_means_tot, fh$breaks, labels=FALSE)), mean)
+#which(!seq(43) %in% b)
+mm=matrix(nrow=length(fh$counts),ncol=3)
+med_ag = aggregate(mod_vox_count_tot[which(mod_vox_count_tot > 2)], list(cut(mod_means_tot[which(mod_vox_count_tot > 2)], fh$breaks, labels=FALSE)), median)
+#med_ag = aggregate(mod_vox_count_tot, list(cut(mod_means_tot, fh$breaks, labels=FALSE)), median)
+mm[,1] = fh$counts
+mm[med_ag$Group.1,2] = med_ag$x
+
+library(RColorBrewer)
+thepal=colorRampPalette(brewer.pal(9,"YlGnBu"))(length(mm[,1]))
+#pdf("preserved_hist2.pdf", paper="USr",width=11)
+#b=barplot(mm[,1],names.arg=fh$breaks[-1],ylim=c(min(mm[,1]), max(mm[,1])+5), col=thepal, main="Proportion preserved in Highly Ordered and Random",sub="(with median module size in voxels above each bin)")
+pdf("preserved_hist2BW.pdf", paper="USr",width=11)
+b=barplot(mm[,1],names.arg=fh$breaks[-1],ylim=c(min(mm[,1]), max(mm[,1])+5), main="Proportion preserved in Highly Ordered and Random", ylab="Count module averages" )
+#text(x=b, mm[,1]+1, as.character(mm[,2]),srt=90, cex=.75)
+b2=barplot(mm[,2],names.arg=fh$breaks[-1], main="Median module size for bins in proportion preserved in Highly Ordered and Random", ylab="Median module size in voxels")
+dev.off()
+

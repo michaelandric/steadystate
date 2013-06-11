@@ -6,6 +6,20 @@ error		= ./logs/dm.$(Process).err
 log 		= ./logs/dm.$(Process).log
 
 
+arguments    = --Subject MYTP 
+queue
+
+arguments    = --Subject TRCO 
+queue
+
+arguments    = --Subject CLFR
+queue
+
+arguments    = --Subject PIGL
+queue
+
+arguments    = --Subject SNNW
+queue
 
 arguments    = --Subject LDMW 
 queue 

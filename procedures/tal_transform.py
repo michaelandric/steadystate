@@ -21,13 +21,13 @@ class Transform:
         os.chdir(os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/")
         print os.getcwd()
         apar = self.options.subject+"tlrc+tlrc"
-        print call("adwarp -apar "+apar+" -dpar "+self.options.subject+"."+`cc`+".node_roles+orig -dxyz 2 -resam NN", shell=True)
+        print call("adwarp -apar "+apar+" -dpar modules_"+self.options.subject+"_Cond"+`cc`+"+orig -dxyz 2 -resam NN", shell=True)
 
 
 def main():
     TAL = Transform()
     TAL.get_opts()
-    for cc in range(1,3):
+    for cc in range(3,5):
         TAL.adwarp_call(cc)
 
 

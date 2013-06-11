@@ -1,4 +1,5 @@
 ++ 3dUndump: AFNI version=AFNI_2010_10_19_1028 (Apr 26 2011) [64-bit]
+++ WARNING: file /home/michaeljames.andric/.afni.log is now 531259438 (531 million) bytes long!
 *+ WARNING:   If you are performing spatial transformations on an oblique dset, 
   such as /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig.BRIK,
   or viewing/combining it with volumes of differing obliquity,
@@ -7,4 +8,4 @@
   on this and  other oblique datasets in the same session.
  See 3dWarp -help for details.
 ++ Oblique dataset:/mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig.BRIK is 1.412501 degrees from plumb.
-++ Output dataset /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.1.degrees.ijkSHORT+orig.BRIK
+++ Output dataset /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/preserved_MYTP+orig.BRIK

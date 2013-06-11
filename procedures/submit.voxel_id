@@ -6,61 +6,7 @@ error		= ./logs/voxel_id.$(Process).err
 log 		= ./logs/voxel_id.$(Process).log
 
 
-arguments   = --number_voxels 26202 --subject MYTP 
-queue 
 
-arguments   = --number_voxels 28705 --subject TRCO 
+arguments   = --number_voxels 10946 --subject CLFR 
 queue 
-
-arguments   = --number_voxels 26253 --subject PIGL 
-queue 
-
-arguments   = --number_voxels 27839 --subject SNNW 
-queue 
-
-arguments   = --number_voxels 27133 --subject LDMW 
-queue 
-
-arguments   = --number_voxels 32555 --subject FLTM 
-queue 
-
-arguments   = --number_voxels 31902 --subject EZCR 
-queue 
-
-arguments   = --number_voxels 30432 --subject EEPA 
-queue 
-
-arguments   = --number_voxels 25884 --subject DNLN 
-queue 
-
-arguments   = --number_voxels 28632 --subject CRFO 
-queue 
-
-arguments   = --number_voxels 25009 --subject ANMS 
-queue 
-
-arguments   = --number_voxels 28340 --subject BARS 
-queue 
-
-arguments   = --number_voxels 23081 --subject MRZM 
-queue 
-
-arguments   = --number_voxels 24476 --subject MRVV 
-queue 
-
-arguments   = --number_voxels 26331 --subject MRMK 
-queue 
-
-arguments   = --number_voxels 29045 --subject MRMC 
-queue 
-
-arguments   = --number_voxels 26830 --subject MRAG 
-queue 
-
-arguments   = --number_voxels 28266 --subject MNGO 
-queue 
-
-arguments   = --number_voxels 26562 --subject LRVN 
-queue 
-
 

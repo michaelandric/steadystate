@@ -6,244 +6,243 @@ error		= ./logs/3.$(Process).err
 log 		= ./logs/3.$(Process).log
 
 
-
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/MYTP_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/MYTP_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.2.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.2.MYTP.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/MYTP_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.3.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.3.MYTP.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/MYTP.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/MYTP_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.4.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.4.MYTP.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/TRCO.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/TRCO.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/TRCO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.1.TRCO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.1.TRCO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/TRCO.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/TRCO.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/TRCO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.2.TRCO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.2.TRCO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/TRCO.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/TRCO.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/TRCO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.3.TRCO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.3.TRCO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/TRCO.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/TRCO.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/TRCO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.4.TRCO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.4.TRCO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/PIGL.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/PIGL.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/PIGL_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.1.PIGL.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.1.PIGL.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/PIGL.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/PIGL.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/PIGL_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.2.PIGL.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.2.PIGL.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/PIGL.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/PIGL.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/PIGL_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.3.PIGL.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.3.PIGL.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/PIGL.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/PIGL.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/PIGL_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.4.PIGL.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.4.PIGL.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/SNNW.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/SNNW.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/SNNW_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.1.SNNW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.1.SNNW.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/SNNW.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/SNNW.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/SNNW_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.2.SNNW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.2.SNNW.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/SNNW.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/SNNW.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/SNNW_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.3.SNNW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.3.SNNW.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/SNNW.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/SNNW.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/SNNW_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.4.SNNW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.4.SNNW.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/LDMW.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/LDMW.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.1.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.1.LDMW.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/LDMW.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/LDMW.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.2.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.2.LDMW.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/LDMW.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/LDMW.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.3.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.3.LDMW.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/LDMW.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/LDMW.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.4.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.4.LDMW.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/FLTM.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/FLTM.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.1.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.1.FLTM.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/FLTM.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/FLTM.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.2.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.2.FLTM.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/FLTM.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/FLTM.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.3.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.3.FLTM.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/FLTM.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/FLTM.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.4.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.4.FLTM.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/EZCR.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/EZCR.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EZCR/masking/EZCR_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.1.EZCR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.1.EZCR.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/EZCR.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/EZCR.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EZCR/masking/EZCR_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.2.EZCR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.2.EZCR.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/EZCR.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/EZCR.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EZCR/masking/EZCR_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.3.EZCR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.3.EZCR.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/EZCR.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/EZCR.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EZCR/masking/EZCR_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.4.EZCR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EZCR/blur.4.EZCR.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/EEPA.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/EEPA.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.1.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.1.EEPA.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/EEPA.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/EEPA.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.2.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.2.EEPA.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/EEPA.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/EEPA.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.3.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.3.EEPA.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/EEPA.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/EEPA.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.4.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.4.EEPA.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/DNLN.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/DNLN.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.1.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.1.DNLN.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/DNLN.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/DNLN.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.2.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.2.DNLN.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/DNLN.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/DNLN.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.3.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.3.DNLN.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/DNLN.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/DNLN.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.4.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.4.DNLN.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/CRFO.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/CRFO.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.1.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.1.CRFO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/CRFO.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/CRFO.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.2.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.2.CRFO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/CRFO.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/CRFO.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.3.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.3.CRFO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/CRFO.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/CRFO.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.4.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.4.CRFO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ANMS.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ANMS.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.1.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.1.ANMS.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ANMS.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ANMS.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.2.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.2.ANMS.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ANMS.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ANMS.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.3.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.3.ANMS.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ANMS.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ANMS.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.4.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.4.ANMS.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/BARS.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/BARS.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/BARS/masking/BARS_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/blur.1.BARS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/blur.1.BARS.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/BARS.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/BARS.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/BARS/masking/BARS_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/blur.2.BARS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/blur.2.BARS.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/BARS.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/BARS.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/BARS/masking/BARS_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/blur.3.BARS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/blur.3.BARS.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/BARS.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/BARS.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/BARS/masking/BARS_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/BARS/blur.4.BARS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/BARS/blur.4.BARS.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/MRZM.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/MRZM.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/MRZM_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.1.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.1.MRZM.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/MRZM.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/MRZM.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/MRZM_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.2.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.2.MRZM.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/MRZM.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/MRZM.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/MRZM_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.3.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.3.MRZM.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/MRZM.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/MRZM.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/MRZM_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.4.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.4.MRZM.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/MRVV.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/MRVV.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/MRVV_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.1.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.1.MRVV.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/MRVV.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/MRVV.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/MRVV_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.2.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.2.MRVV.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/MRVV.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/MRVV.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/MRVV_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.3.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.3.MRVV.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/MRVV.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/MRVV.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/MRVV_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.4.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.4.MRVV.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/MRMK.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/MRMK.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/MRMK_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.1.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.1.MRMK.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/MRMK.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/MRMK.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/MRMK_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.2.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.2.MRMK.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/MRMK.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/MRMK.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/MRMK_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.3.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.3.MRMK.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/MRMK.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/MRMK.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/MRMK_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.4.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.4.MRMK.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/MRMC.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/MRMC.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/MRMC_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.1.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.1.MRMC.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/MRMC.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/MRMC.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/MRMC_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.2.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.2.MRMC.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/MRMC.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/MRMC.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/MRMC_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.3.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.3.MRMC.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/MRMC.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/MRMC.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/MRMC_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.4.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.4.MRMC.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/MRAG.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/MRAG.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/MRAG_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/MRAG.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/MRAG.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/MRAG_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.2.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.2.MRAG.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/MRAG.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/MRAG.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/MRAG_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.3.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.3.MRAG.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/MRAG.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/MRAG.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/MRAG_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.4.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.4.MRAG.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/MNGO.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/MNGO.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/MNGO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.1.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.1.MNGO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/MNGO.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/MNGO.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/MNGO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.2.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.2.MNGO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/MNGO.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/MNGO.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/MNGO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.3.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.3.MNGO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/MNGO.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/MNGO.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/MNGO_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.4.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.4.MNGO.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/LRVN.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/LRVN.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/LRVN_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.1.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.1.LRVN.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/LRVN.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/LRVN.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/LRVN_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.2.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.2.LRVN.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/LRVN.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/LRVN.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/LRVN_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.3.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.3.LRVN.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/LRVN.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/LRVN.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/LRVN_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.4.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.4.LRVN.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.1.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.1.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/CLFR_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.1.CLFR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.1.CLFR.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.2.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.2.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/CLFR_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.2.CLFR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.2.CLFR.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.3.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.3.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/CLFR_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.3.CLFR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.3.CLFR.steadystate.TRIM_graymask_dump 
 queue 
 
-arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.4.degrees.ijkSHORT+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.4.degrees.ijkSHORTtlrc.txt 
+arguments    = --ijk no --automask /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/CLFR_graymattermask_resampled+orig --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.4.CLFR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.4.CLFR.steadystate.TRIM_graymask_dump 
 queue 
 

@@ -26,40 +26,6 @@ michaelandric
 
 96124bb9-799c-41e6-a70a-8a1efc0fdf20
 
-11.undump.py
-file
-23
-
-
-
-2012-10-18T17:19:22.000000Z
-2d2ab1947a72c8cdd43a05ec34a1d156
-2012-10-18T20:25:43.207667Z
-23
-michaelandric
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1966
-
 submit.19.friedman
 file
 50
@@ -93,6 +59,40 @@ michaelandric
 
 
 1386
+
+11.undump.py
+file
+23
+
+
+
+2012-10-18T17:19:22.000000Z
+2d2ab1947a72c8cdd43a05ec34a1d156
+2012-10-18T20:25:43.207667Z
+23
+michaelandric
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1966
 
 20.undump_friedman.py
 file
@@ -164,6 +164,20 @@ michaelandric
 
 
 328
+
+28.major_noderole.R
+file
+0
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
 
 submit.11.undump
 file
@@ -335,40 +349,6 @@ michaelandric
 
 1172
 
-17.degree.Rout
-file
-
-
-
-
-2012-10-05T12:10:27.000000Z
-a31e54b88bb01e4af83347ce962b81aa
-2012-10-16T14:55:01.088856Z
-4
-michaelandric
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1619
-
 submit.13.filter
 file
 
@@ -402,6 +382,40 @@ michaelandric
 
 
 367
+
+17.degree.Rout
+file
+
+
+
+
+2012-10-05T12:10:27.000000Z
+a31e54b88bb01e4af83347ce962b81aa
+2012-10-16T14:55:01.088856Z
+4
+michaelandric
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1619
 
 2.automask.py
 file
@@ -1083,40 +1097,6 @@ michaelandric
 
 460
 
-submit.12zscoreMPI
-file
-
-
-
-
-2012-10-04T21:00:51.000000Z
-8b38e610dd68d23efd57726a263dc6de
-2012-10-16T14:55:01.088856Z
-4
-michaelandric
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-340
-
 18.modularity.R
 file
 57
@@ -1151,16 +1131,16 @@ michaelandric
 
 1651
 
-7.blondel_convert.R
+submit.12zscoreMPI
 file
-37
 
 
 
-2012-10-23T16:52:29.000000Z
-3527eb226100bb7c6821d8fc8a51f49a
-2012-10-24T10:03:02.901786Z
-37
+
+2012-10-04T21:00:51.000000Z
+8b38e610dd68d23efd57726a263dc6de
+2012-10-16T14:55:01.088856Z
+4
 michaelandric
 
 
@@ -1183,7 +1163,7 @@ michaelandric
 
 
 
-705
+340
 
 submit.3.maskdump
 file
@@ -1218,6 +1198,40 @@ michaelandric
 
 
 17623
+
+7.blondel_convert.R
+file
+37
+
+
+
+2012-10-23T16:52:29.000000Z
+3527eb226100bb7c6821d8fc8a51f49a
+2012-10-24T10:03:02.901786Z
+37
+michaelandric
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+705
 
 9.hierarchy.R
 file
@@ -1355,40 +1369,6 @@ michaelandric
 
 2228
 
-submit.6.threshold
-file
-36
-
-
-
-2012-10-22T21:30:33.000000Z
-7d8a233551d501aec39aac030b1b8343
-2012-10-24T10:02:50.305589Z
-36
-michaelandric
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1504
-
 6.thresholdmat.R
 file
 35
@@ -1423,8 +1403,39 @@ michaelandric
 
 467
 
-logs
-dir
+submit.6.threshold
+file
+36
+
+
+
+2012-10-22T21:30:33.000000Z
+7d8a233551d501aec39aac030b1b8343
+2012-10-24T10:02:50.305589Z
+36
+michaelandric
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1504
 
 5.6.filestomat.threshmat.Rout
 file
@@ -1459,6 +1470,9 @@ michaelandric
 
 
 447312
+
+logs
+dir
 
 7.blondel_convert.Rout
 file
@@ -1528,40 +1542,6 @@ michaelandric
 
 289
 
-10.getijk.py
-file
-
-
-
-
-2012-10-04T17:36:07.000000Z
-b54a9cd976d497c0a274488329b360b7
-2012-10-16T14:55:01.088856Z
-4
-michaelandric
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-924
-
 submit.17.degree
 file
 34
@@ -1596,6 +1576,47 @@ michaelandric
 
 555
 
+10.getijk.py
+file
+
+
+
+
+2012-10-04T17:36:07.000000Z
+b54a9cd976d497c0a274488329b360b7
+2012-10-16T14:55:01.088856Z
+4
+michaelandric
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+924
+
+26.bintomatrix.R
+file
+0
+
+
+add
+
 RInvoke.sh
 file
 
@@ -1629,6 +1650,13 @@ has-props
 
 
 91
+
+17.module_degree.R
+file
+0
+
+
+add
 
 submit.8.blondel
 file
@@ -1970,40 +1998,6 @@ michaelandric
 
 1070
 
-4.corr.R
-file
-
-
-
-
-2012-10-14T11:56:59.000000Z
-4f60a80b4280742c20cf5a92cbe20229
-2012-10-16T14:55:01.088856Z
-4
-michaelandric
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1951
-
 1.copier.py
 file
 
@@ -2038,18 +2032,17 @@ michaelandric
 
 897
 
-.RData
+4.corr.R
 file
 
 
 
 
-2012-10-04T20:44:03.000000Z
-0f89112c7d5a86e007ceb3f150378d34
+2012-10-14T11:56:59.000000Z
+4f60a80b4280742c20cf5a92cbe20229
 2012-10-16T14:55:01.088856Z
 4
 michaelandric
-has-props
 
 
 
@@ -2070,7 +2063,8 @@ has-props
 
 
 
-42
+
+1951
 
 submit.4.corr
 file
@@ -2105,6 +2099,40 @@ michaelandric
 
 
 1531
+
+.RData
+file
+
+
+
+
+2012-10-04T20:44:03.000000Z
+0f89112c7d5a86e007ceb3f150378d34
+2012-10-16T14:55:01.088856Z
+4
+michaelandric
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+42
 
 13.filter_comm.Rout
 file

@@ -7,6 +7,60 @@ log 		= ./logs/10.$(Process).log
 
 
 
-arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ANGO_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/ANGO/blur.1.ANGO.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/ANGO/masking/ijk_coords_graymattermask_ANGO 
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/MYTP_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/ijk_coords_graymattermask_MYTP 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/TRCO_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.1.TRCO.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/ijk_coords_graymattermask_TRCO 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/PIGL_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.1.PIGL.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/ijk_coords_graymattermask_PIGL 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/SNNW_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.1.SNNW.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/ijk_coords_graymattermask_SNNW 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.1.LDMW.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/ijk_coords_graymattermask_LDMW 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.1.FLTM.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/ijk_coords_graymattermask_FLTM 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.1.EEPA.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/ijk_coords_graymattermask_EEPA 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.1.DNLN.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/ijk_coords_graymattermask_DNLN 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.1.CRFO.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/ijk_coords_graymattermask_CRFO 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.1.ANMS.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ijk_coords_graymattermask_ANMS 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/BARS/masking/BARS_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/BARS/blur.1.BARS.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/BARS/masking/ijk_coords_graymattermask_BARS 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/MRZM_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.1.MRZM.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/ijk_coords_graymattermask_MRZM 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/MRVV_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.1.MRVV.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/ijk_coords_graymattermask_MRVV 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/MRMK_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.1.MRMK.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/ijk_coords_graymattermask_MRMK 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/MRMC_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.1.MRMC.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/ijk_coords_graymattermask_MRMC 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/MRAG_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/ijk_coords_graymattermask_MRAG 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/MNGO_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.1.MNGO.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/ijk_coords_graymattermask_MNGO 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/LRVN_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.1.LRVN.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/ijk_coords_graymattermask_LRVN 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/CLFR_graymattermask_resampled+orig --ijkmaster /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.1.CLFR.steadystate.TRIM+orig --ijkoutputname /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/ijk_coords_graymattermask_CLFR 
 queue 
 

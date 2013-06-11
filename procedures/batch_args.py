@@ -14,7 +14,7 @@ ends[len(ends)-1] = totalvox-1
 
 mm = makesubmitargs.makeargs
 
-for cc in range(1,5):
+for cc in range(3,5):
     for i in range(0,len(starts)):
         mm.major_noderoleargs(starts[i],ends[i],cc)
 

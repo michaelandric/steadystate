@@ -6,123 +6,123 @@ error		= ./logs/32.$(Process).err
 log 		= ./logs/32.$(Process).log
 
 
-arguments   = 32.freqAnaly.R ANGO 1 
+arguments   = 32.freqAnaly.R ANMS 1 
 queue 
 
-arguments   = 32.freqAnaly.R ANGO 2 
+arguments   = 32.freqAnaly.R ANMS 2 
 queue 
 
-arguments   = 32.freqAnaly.R ANGO 3 
+arguments   = 32.freqAnaly.R ANMS 3 
 queue 
 
-arguments   = 32.freqAnaly.R ANGO 4 
+arguments   = 32.freqAnaly.R ANMS 4 
 queue 
 
-arguments   = 32.freqAnaly.R MYTP 1 
+arguments   = 32.freqAnaly.R BARS 1 
 queue 
 
-arguments   = 32.freqAnaly.R MYTP 2 
+arguments   = 32.freqAnaly.R BARS 2 
 queue 
 
-arguments   = 32.freqAnaly.R MYTP 3 
+arguments   = 32.freqAnaly.R BARS 3 
 queue 
 
-arguments   = 32.freqAnaly.R MYTP 4 
+arguments   = 32.freqAnaly.R BARS 4 
 queue 
 
-arguments   = 32.freqAnaly.R TRCO 1 
+arguments   = 32.freqAnaly.R MRZM 1 
 queue 
 
-arguments   = 32.freqAnaly.R TRCO 2 
+arguments   = 32.freqAnaly.R MRZM 2 
 queue 
 
-arguments   = 32.freqAnaly.R TRCO 3 
+arguments   = 32.freqAnaly.R MRZM 3 
 queue 
 
-arguments   = 32.freqAnaly.R TRCO 4 
+arguments   = 32.freqAnaly.R MRZM 4 
 queue 
 
-arguments   = 32.freqAnaly.R PIGL 1 
+arguments   = 32.freqAnaly.R MRVV 1 
 queue 
 
-arguments   = 32.freqAnaly.R PIGL 2 
+arguments   = 32.freqAnaly.R MRVV 2 
 queue 
 
-arguments   = 32.freqAnaly.R PIGL 3 
+arguments   = 32.freqAnaly.R MRVV 3 
 queue 
 
-arguments   = 32.freqAnaly.R PIGL 4 
+arguments   = 32.freqAnaly.R MRVV 4 
 queue 
 
-arguments   = 32.freqAnaly.R SNNW 1 
+arguments   = 32.freqAnaly.R MRMK 1 
 queue 
 
-arguments   = 32.freqAnaly.R SNNW 2 
+arguments   = 32.freqAnaly.R MRMK 2 
 queue 
 
-arguments   = 32.freqAnaly.R SNNW 3 
+arguments   = 32.freqAnaly.R MRMK 3 
 queue 
 
-arguments   = 32.freqAnaly.R SNNW 4 
+arguments   = 32.freqAnaly.R MRMK 4 
 queue 
 
-arguments   = 32.freqAnaly.R LDMW 1 
+arguments   = 32.freqAnaly.R MRMC 1 
 queue 
 
-arguments   = 32.freqAnaly.R LDMW 2 
+arguments   = 32.freqAnaly.R MRMC 2 
 queue 
 
-arguments   = 32.freqAnaly.R LDMW 3 
+arguments   = 32.freqAnaly.R MRMC 3 
 queue 
 
-arguments   = 32.freqAnaly.R LDMW 4 
+arguments   = 32.freqAnaly.R MRMC 4 
 queue 
 
-arguments   = 32.freqAnaly.R FLTM 1 
+arguments   = 32.freqAnaly.R MRAG 1 
 queue 
 
-arguments   = 32.freqAnaly.R FLTM 2 
+arguments   = 32.freqAnaly.R MRAG 2 
 queue 
 
-arguments   = 32.freqAnaly.R FLTM 3 
+arguments   = 32.freqAnaly.R MRAG 3 
 queue 
 
-arguments   = 32.freqAnaly.R FLTM 4 
+arguments   = 32.freqAnaly.R MRAG 4 
 queue 
 
-arguments   = 32.freqAnaly.R EEPA 1 
+arguments   = 32.freqAnaly.R MNGO 1 
 queue 
 
-arguments   = 32.freqAnaly.R EEPA 2 
+arguments   = 32.freqAnaly.R MNGO 2 
 queue 
 
-arguments   = 32.freqAnaly.R EEPA 3 
+arguments   = 32.freqAnaly.R MNGO 3 
 queue 
 
-arguments   = 32.freqAnaly.R EEPA 4 
+arguments   = 32.freqAnaly.R MNGO 4 
 queue 
 
-arguments   = 32.freqAnaly.R DNLN 1 
+arguments   = 32.freqAnaly.R LRVN 1 
 queue 
 
-arguments   = 32.freqAnaly.R DNLN 2 
+arguments   = 32.freqAnaly.R LRVN 2 
 queue 
 
-arguments   = 32.freqAnaly.R DNLN 3 
+arguments   = 32.freqAnaly.R LRVN 3 
 queue 
 
-arguments   = 32.freqAnaly.R DNLN 4 
+arguments   = 32.freqAnaly.R LRVN 4 
 queue 
 
-arguments   = 32.freqAnaly.R CRFO 1 
+arguments   = 32.freqAnaly.R CLFR 1 
 queue 
 
-arguments   = 32.freqAnaly.R CRFO 2 
+arguments   = 32.freqAnaly.R CLFR 2 
 queue 
 
-arguments   = 32.freqAnaly.R CRFO 3 
+arguments   = 32.freqAnaly.R CLFR 3 
 queue 
 
-arguments   = 32.freqAnaly.R CRFO 4 
+arguments   = 32.freqAnaly.R CLFR 4 
 queue 
 
