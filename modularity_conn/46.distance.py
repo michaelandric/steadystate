@@ -8,8 +8,8 @@ from glob import glob
 
 
 conditions = range(1,5)
-subjects = ["ANGO","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
-
+#subjects = ["ANGO","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
+subjects = ["ANGO"]
 """
 Separate function 'get_distance' makes it easier to run a 'for' loop, if I subset people or conditions
 Run example:
@@ -60,7 +60,6 @@ def dist_grab(ss, cc):
     euc_dist = []
     for i in range(len(comm_array)):
         tmp_set = []
-
 		"""
 		If only 1 voxel comprises module then distance is 0
 		"""
