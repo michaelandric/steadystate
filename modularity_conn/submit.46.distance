@@ -1,0 +1,62 @@
+executable	= 46.distance.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/46.$(Process).out
+error		= ./logs/46.$(Process).err
+log 		= ./logs/46.$(Process).log
+
+
+arguments = --subject MYTP 
+queue 
+
+arguments = --subject TRCO 
+queue 
+
+arguments = --subject PIGL 
+queue 
+
+arguments = --subject SNNW 
+queue 
+
+arguments = --subject LDMW 
+queue 
+
+arguments = --subject FLTM 
+queue 
+
+arguments = --subject EEPA 
+queue 
+
+arguments = --subject DNLN 
+queue 
+
+arguments = --subject CRFO 
+queue 
+
+arguments = --subject ANMS 
+queue 
+
+arguments = --subject MRZM 
+queue 
+
+arguments = --subject MRVV 
+queue 
+
+arguments = --subject MRMK 
+queue 
+
+arguments = --subject MRMC 
+queue 
+
+arguments = --subject MRAG 
+queue 
+
+arguments = --subject MNGO 
+queue 
+
+arguments = --subject LRVN 
+queue 
+
+arguments = --subject CLFR 
+queue 
+
