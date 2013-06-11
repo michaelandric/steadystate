@@ -83,6 +83,9 @@ def dist_grab(ss, cc):
     outf.write(pres_out)
     outf.close()
 
+"""
+Call the function with 'main()'
+"""
 
 def main():
     for ss in subjects:
