@@ -1,5 +1,7 @@
 #!/usr/bin/python
-
+"""
+Get average euclidean distance between a voxel and other voxels in module.
+"""
 import os
 from numpy import *
 from glob import glob
@@ -9,8 +11,8 @@ conditions = range(1,5)
 subjects = ["ANGO","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 
 """
-Separate function for 'get_distance' because it will be easier to run it in a 'for' loop if I want to do only select people or conditions
-Example to run:
+Separate function 'get_distance' makes it easier to run a 'for' loop, if I subset people or conditions
+Run example:
 get_distance([-2,2,5],[2,4,2])
 """
 def get_distance(p,q):
@@ -59,27 +61,33 @@ def dist_grab(ss, cc):
     for i in range(len(comm_array)):
         tmp_set = []
 
-        for item in mod_dict[vox_comm_array[i][1]]:
-            tmp_set.append(item[0]) ## these are the voxels in a module with voxel 'i'
+		"""
+		If only 1 voxel comprises module then distance is 0
+		"""
+		if len(mod_dict[vox_comm_array[i][1]]) == 1:
+			euc_dist.append(0)
+		else:
+			for item in mod_dict[vox_comm_array[i][1]]:
+				tmp_set.append(item[0]) ## these are the voxels in a module with voxel 'i'
 
-        """
-        'others' is a list of all other voxels in the module besides the current one ('i')
-        """
-        others = [v for v in tmp_set if v != i]
-        """
-        'x_dist' is a list of distances from voxel 'i' to every other voxel in the modules   
-        """
-        x_dist = []
-        for v in others:
-            x_dist.append(get_distance(coord_array[i], coord_array[v]))
+			"""
+			'others' is a list of all other voxels in the module besides the current one ('i')
+			"""
+			others = [v for v in tmp_set if v != i]
+			"""
+			'x_dist' is a list of distances from voxel 'i' to every other voxel in the modules   
+			"""
+			x_dist = []
+			for v in others:
+				x_dist.append(get_distance(coord_array[i], coord_array[v]))
 
-        euc_dist.append(round(average(x_dist),4)) ## average distance for voxel 'i' to every other voxel in the module  
+			euc_dist.append(round(average(x_dist),4)) ## average distance for voxel 'i' to every other voxel in the module
 
     dist_out = ""
     for line in euc_dist:
         dist_out += str(round(line,4))+"\n"
 
-    outf = open("euclidean_distancep_"+ss+"_Cond"+cc+".txt","w")
+    outf = open("distance_"+ss+"_Cond"+cc+".txt","w")
     outf.write(pres_out)
     outf.close()
 
@@ -90,7 +98,7 @@ Call the function with 'main()'
 def main():
     for ss in subjects:
         for cc in conditions:
-            dist_grab(ss, `cc`) ## make sure condition is string and not integer
+            dist_grab(ss, `cc`) ## make sure condition is string and not integer type
 
 if __name__ == "__main__":
     main()
