@@ -3,13 +3,10 @@
 Get average euclidean distance between a voxel and other voxels in module.
 """
 import os
+from optparse import OptionParser
 from numpy import *
 from glob import glob
 
-
-conditions = range(1,5)
-#subjects = ["ANGO","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
-subjects = ["ANGO"]
 
 def get_distance(p,q):
     """Get distance between 2 x, y, z voxel coords.
@@ -36,6 +33,7 @@ def dist_grab(ss, cc):
     """
     os.chdir(os.environ["state"]+"/"+ss+"/corrTRIM_BLUR/")
     print os.getcwd()
+    print "Condition: "+cc
 
     # Get the community (module) IDs for condition
 
@@ -95,15 +93,20 @@ def dist_grab(ss, cc):
         dist_out += str(round(line,4))+"\n"
 
     outf = open("distance_"+ss+"_Cond"+cc+".txt","w")
-    outf.write(pres_out)
+    outf.write(dist_out)
     outf.close()
 
 
+conditions = range(1,5)
+
 def main():
     """Run the above functions."""
-    for ss in subjects:
-        for cc in conditions:
-            dist_grab(ss, `cc`)   # Make sure condition is string and not integer type
+    parser = OptionParser()
+    parser.add_option("--subject", dest="ss", help = "give the subject identifier")
+    options, args = parser.parse_args()
+
+    for cc in conditions:
+        dist_grab(options.ss, `cc`)   # Make sure condition is string and not integer type
 
 if __name__ == "__main__":
     main()
