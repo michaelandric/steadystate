@@ -64,6 +64,7 @@ for (ss in subjects)
 setwd(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/", sep=""))
 dat1 = dat1[which(dat1 >= cutoff)]
 tmp1 = hist(dat1, breaks = c(cutoff:(max(dat1)+1)), plot = F)
+tmp1 = hist(dat1, breaks = c(cutoff:(max(dat1) + 1)), plot = F)
 cum.dist1 = 1-cumsum(tmp1$counts) / length(dat1)
 d1 = fitting(dat1, (max(dat1) + 1))
 gamma.trace1 <- 1 - pgamma((0:(max(dat1) + 1)), shape = d1$alpha, scale = d1$beta)
