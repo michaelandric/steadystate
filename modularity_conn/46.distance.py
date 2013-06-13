@@ -87,7 +87,11 @@ def dist_grab(ss, cc):
                 x_dist.append(get_distance(coord_array[i], coord_array[v]))
 
             x_dist_filtered = [y for y in x_dist if y > 20]   # filter distance of 20 to replicate Power et al. (2011)
-            euc_dist.append(round(average(x_dist_filtered),4))   # Average distance for voxel 'i' to every other voxel in the module
+
+            if len(x_dist_filtered) == 0:
+                euc_dist.append(0)
+            else:
+                euc_dist.append(round(average(x_dist_filtered),4))   # Average distance for voxel 'i' to every other voxel in the module
 
     dist_out = ""
     for line in euc_dist:
