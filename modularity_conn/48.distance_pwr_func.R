@@ -58,7 +58,7 @@ i=1
 for (ss in subjects)
 {
     setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR", sep=""))
-    dat1 <- c(dat1, as.matrix(read.table(paste("distanceFilter20_",ss,"_Cond",i,".txt", sep=""))))
+    dat1 <- c(dat1, as.matrix(read.table(paste("distanceFilter6_",ss,"_Cond",i,".txt", sep=""))))
 }
 
 setwd(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/", sep=""))
@@ -74,7 +74,7 @@ i=2
 for (ss in subjects)
 {
     setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR", sep=""))
-    dat2 <- c(dat2, as.matrix(read.table(paste("distanceFilter20_",ss,"_Cond",i,".txt", sep=""))))
+    dat2 <- c(dat2, as.matrix(read.table(paste("distanceFilter6_",ss,"_Cond",i,".txt", sep=""))))
 }
 
 setwd(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/", sep=""))
@@ -90,7 +90,7 @@ i=3
 for (ss in subjects)
 {
     setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR", sep=""))
-    dat3 <- c(dat3, as.matrix(read.table(paste("distanceFilter20_",ss,"_Cond",i,".txt", sep=""))))
+    dat3 <- c(dat3, as.matrix(read.table(paste("distanceFilter6_",ss,"_Cond",i,".txt", sep=""))))
 }
 
 setwd(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/", sep=""))
@@ -106,7 +106,7 @@ i=4
 for (ss in subjects)
 {
     setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR", sep=""))
-    dat4 <- c(dat4, as.matrix(read.table(paste("distanceFilter20_",ss,"_Cond",i,".txt", sep=""))))
+    dat4 <- c(dat4, as.matrix(read.table(paste("distanceFilter6_",ss,"_Cond",i,".txt", sep=""))))
 }
 
 setwd(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/", sep=""))
@@ -116,7 +116,7 @@ cum.dist4 = 1 - cumsum(tmp4$counts) / length(dat4)
 d4 = fitting(dat4, (max(dat4) + 1))
 gamma.trace4 <- 1 - pgamma((0:(max(dat4) + 1)), shape=d4$alpha, scale=d4$beta)
 
-pdf("distanceFilter20_log10fits.pdf")
+pdf("distanceFilter6_log10fits.pdf")
 plot(log10(cutoff:(max(dat1) + 1)), log10(gamma.trace1)[-1], lwd = 3, col = thepalOrder[1], type = "l")
 lines(log10(cutoff:(max(dat2) + 1)), log10(gamma.trace2)[-1], lwd = 3, col = thepalOrder[2])
 lines(log10(cutoff:(max(dat3) + 1)), log10(gamma.trace3)[-1], lwd = 3, col = thepalOrder[3])
