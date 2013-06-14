@@ -86,7 +86,7 @@ def dist_grab(ss, cc):
             for v in others:
                 x_dist.append(get_distance(coord_array[i], coord_array[v]))
 
-            x_dist_filtered = [y for y in x_dist if y > 20]   # filter distance of 20 to replicate Power et al. (2011)
+            x_dist_filtered = [y for y in x_dist if y > 6]   # filter distance 
 
             if len(x_dist_filtered) == 0:
                 euc_dist.append(0)
@@ -97,7 +97,7 @@ def dist_grab(ss, cc):
     for line in euc_dist:
         dist_out += str(round(line,4))+"\n"
 
-    outf = open("distanceFilter20_"+ss+"_Cond"+cc+".txt","w")
+    outf = open("distanceFilter6_"+ss+"_Cond"+cc+".txt","w")
     outf.write(dist_out)
     outf.close()
 
