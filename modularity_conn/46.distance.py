@@ -84,7 +84,7 @@ def dist_grab(ss, cc):
             
             x_dist = []   # 'x_dist' is a list of distances from voxel 'i' to every other voxel in the modules
             for v in others:
-                x_dist.append(get_distance(coord_array[i], coord_array[v]))
+                x_dist.append((get_distance(coord_array[i], coord_array[v])) * 5)   # since voxels are 4 x 4 x 4.8, use 5 to be conservative for scaling
 
             x_dist_filtered = [y for y in x_dist if y > 6]   # filter distance 
 
