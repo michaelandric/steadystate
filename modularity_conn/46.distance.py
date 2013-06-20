@@ -35,19 +35,24 @@ def dist_grab(ss, cc):
     print os.getcwd()
     print "Condition: "+cc
 
-    # Get the community (module) IDs for condition
+    # Get community identifiers
 
-    fname = glob("cleanTS."+cc+"."+ss+"_graymask_dump.bin.corr.thresh.tree*.ijk.txt")
-    comf = open(''.join(fname))
-
-    # Get lines from ijk+community identifiers file
+    comfname = glob("cleanTS."+cc+"."+ss+"_graymask_dump.bin.corr.thresh.tree*.justcomm")
+    comf = open(''.join(comfname))
 
     comm_array = []
-    coord_array = []
     for line in comf:
-        a, b, c, d = [int(x) for x in line.split()]
-        coord_array.append((a,b,c))
-        comm_array.append(d)
+        comm_array.append(int(line))
+    
+    # Get lines for x, y, z
+    
+    coordfname = glob(os.environ["state"]+"/"+ss+"/masking/xyz_coords_graymattermask_"+ss)
+    coordf = open(''.join(coordfname))
+    
+    coord_array = []
+    for line in coordf:
+    	a, b, c = [float(x) for x in line.split()]
+    	coord_array.append((a,b,c))
 
 
     # Two column arrays where Column 1 are voxel IDs and Column 2 are module IDs
@@ -84,7 +89,7 @@ def dist_grab(ss, cc):
             
             x_dist = []   # 'x_dist' is a list of distances from voxel 'i' to every other voxel in the modules
             for v in others:
-                x_dist.append((get_distance(coord_array[i], coord_array[v])) * 5)   # since voxels are 4 x 4 x 4.8, use 5 to be conservative for scaling
+                x_dist.append((get_distance(coord_array[i], coord_array[v])))   # since voxels are 4 x 4 x 4.8, use 5 to be conservative for scaling
 
             x_dist_filtered = [y for y in x_dist if y > 20]   # filter distance 
 
@@ -97,7 +102,7 @@ def dist_grab(ss, cc):
     for line in euc_dist:
         dist_out += str(round(line,4))+"\n"
 
-    outf = open("distanceFilter20_"+ss+"_Cond"+cc+".txt","w")
+    outf = open("distance_xyz_Filter20_"+ss+"_Cond"+cc+".txt","w")
     outf.write(dist_out)
     outf.close()
 
