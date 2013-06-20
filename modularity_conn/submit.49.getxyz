@@ -1,0 +1,63 @@
+executable	= 49.getxyz.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/49.$(Process).out
+error		= ./logs/49.$(Process).err
+log 		= ./logs/49.$(Process).log
+
+
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/MYTP_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/MYTP_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/xyz_coords_graymattermask_MYTP 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/TRCO_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/TRCO_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/xyz_coords_graymattermask_TRCO 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/PIGL_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/PIGL_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/xyz_coords_graymattermask_PIGL 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/SNNW_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/SNNW_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/xyz_coords_graymattermask_SNNW 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/xyz_coords_graymattermask_LDMW 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/xyz_coords_graymattermask_FLTM 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/xyz_coords_graymattermask_EEPA 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/xyz_coords_graymattermask_DNLN 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/xyz_coords_graymattermask_CRFO 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/xyz_coords_graymattermask_ANMS 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/MRZM_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/MRZM_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/xyz_coords_graymattermask_MRZM 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/MRVV_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/MRVV_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/xyz_coords_graymattermask_MRVV 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/MRMK_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/MRMK_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/xyz_coords_graymattermask_MRMK 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/MRMC_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/MRMC_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/xyz_coords_graymattermask_MRMC 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/MRAG_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/MRAG_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/xyz_coords_graymattermask_MRAG 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/MNGO_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/MNGO_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/xyz_coords_graymattermask_MNGO 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/LRVN_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/LRVN_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/xyz_coords_graymattermask_LRVN 
+queue 
+
+arguments    = --automask /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/CLFR_graymattermask_resampled+orig --xyzmaster /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/CLFR_graymattermask_resampled+orig --xyzoutputname /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/xyz_coords_graymattermask_CLFR 
+queue 
+
