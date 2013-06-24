@@ -15,7 +15,7 @@ for (ss in subjects)
 
 setwd("/mnt/tier2/urihas/Andric/steadystate/groupstats/")
 avg_dist_mat <- matrix(c(avg_dist_data), ncol=4, byrow=T)
-dist_df <- data.frame(avg_dist_data, rep(seq(4), 19), rep(subjects, each=4))
+dist_df <- data.frame(avg_dist_data, as.factor(rep(seq(4), 19)), rep(subjects, each=4))
 colnames(dist_df) <- c("dists", "condition", "subject")
 print(summary(aov(dists ~ condition + Error(subject/condition), data=dist_df)))
 print(avg_dist_mat)
