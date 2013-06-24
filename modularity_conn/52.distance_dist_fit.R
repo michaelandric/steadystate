@@ -1,5 +1,6 @@
 # get parameters for distribution fit
 library(MASS)
+Args <- Sys.getenv("R_ARGS")
 ss <- noquote(strsplit(Args," ")[[1]][1])
 conditions <- seq(4)
 dist_fit <- c()
