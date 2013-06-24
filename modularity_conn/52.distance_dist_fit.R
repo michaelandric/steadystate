@@ -5,7 +5,7 @@ ss <- noquote(strsplit(Args," ")[[1]][1])
 conditions <- seq(4)
 dist_fit <- c()
 
-setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR/", sep="")
+setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR/", sep=""))
 
 for (i in conditions)
 {
