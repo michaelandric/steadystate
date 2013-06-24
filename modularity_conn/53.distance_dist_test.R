@@ -12,6 +12,8 @@ for (ss in subjects)
     dist_dat <- c(dist_dat, dd[,1])
 }
 
+setwd(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/", sep=""))
+
 dist_df <- data.frame(dist_dat, rep(seq(4), 19), rep(subjects, each=4))
 colnames(dist_df) <- c("dists", "condition", "subject")
 dist_mat <- matrix(dist_dat, ncol=4, byrow=T)
