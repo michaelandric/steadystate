@@ -7,7 +7,7 @@ Rsq_vec <- c()
 
 for (ss in subjects)
 {
-    setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR/"))
+    setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR/", sep=""))
     for (i in conditions)
     {
         dist_dat <- as.matrix(read.table(paste("distance_xyz_Filter20_",ss,"_Cond",i,".txt", sep="")))
