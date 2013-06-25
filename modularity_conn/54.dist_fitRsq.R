@@ -20,6 +20,8 @@ for (ss in subjects)
     }
 }
 
+setwd(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/", sep=""))
+
 Rsq_df <- data.frame(Rsq_vec, as.factor(rep(seq(4), 19)), rep(subjects, each=4))
 colnames(Rsq_df) <- c("RsqVals", "condition", "subject")
 
