@@ -27,9 +27,9 @@ for (n in c("gamma", "rate"))
 {
     dist_df <- get(paste(n,"_df", sep=""))
     dist_mat <- get(paste(n,"_mat", sep=""))
-    print(aggregate(dist_df$dists, list(dist_df$condition), summary))
-    print(aggregate(dist_df$dists, list(dist_df$subject), summary))
-    print(ad.test(dist_df$dists))   # normality test
-    print(summary(aov(dists ~ condition + Error(subject/condition), data=dist_df)))
+    print(aggregate(dist_df[,1], list(dist_df$condition), summary))
+    print(aggregate(dist_df[,1], list(dist_df$subject), summary))
+    print(ad.test(dist_df[,1]))   # normality test
+    print(summary(aov(dist_df[,1] ~ condition + Error(subject/condition), data=dist_df)))
     print(friedman.test(dist_mat))
 }
