@@ -4,6 +4,7 @@ subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DN
 conditions <- seq(4)
 
 Rsq_vec <- c()
+shape_param_vec <- c()
 
 for (ss in subjects)
 {
@@ -17,12 +18,15 @@ for (ss in subjects)
         b = rgamma(length(dist_dat), shape=shape, rate=rate)
         Rsq = summary(lm(sort(dist_dat) ~ sort(b)))$r.squared
         Rsq_vec <- c(Rsq_vec, Rsq)
+        shape_param_vec <- c(shape_param_vec, shape)
     }
 }
 
 setwd(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/", sep=""))
 
+shape_df <- data.frame(shape_param_vec, as.factor(rep(seq(4), 19)), rep(subjects, each=4))
 Rsq_df <- data.frame(Rsq_vec, as.factor(rep(seq(4), 19)), rep(subjects, each=4))
+colnames(shape_df) <- c("shapes", "condition", "subject")
 colnames(Rsq_df) <- c("RsqVals", "condition", "subject")
 
 print(mean(Rsq_vec))
