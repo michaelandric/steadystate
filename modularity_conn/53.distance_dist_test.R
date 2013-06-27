@@ -23,7 +23,7 @@ colnames(rate_df) <- c("rate", "condition", "subject")
 gamma_mat <- matrix(gamma_dat, ncol=4, byrow=T)
 rate_mat <- matrix(rate_dat, ncol=4, byrow=T)
 
-for (n in c("gamma", "rate")
+for (n in c("gamma", "rate"))
 {
     dist_df <- get(paste(n,"_df", sep=""))
     dist_mat <- get(paste(n,"_mat", sep=""))
