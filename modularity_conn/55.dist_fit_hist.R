@@ -1,8 +1,7 @@
 # plot data histogram with estimated gamma fit, also get R^2 between them
 library(MASS)
 library(RColorBrewer)
-#subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
-subjects <- c("ANGO")
+subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
 conditions <- seq(4)
 condition_names = c("Highly ordered", "Some order", "Random", "Almost Random")
 
@@ -22,7 +21,7 @@ for (ss in subjects)
         dist_dat <- dist_dat[!dist_dat == 0]
         b = rgamma(length(dist_dat), shape = dd$shape[i], rate = dd$rate[i])
         Rsq = summary(lm(sort(dist_dat) ~ sort(b)))$r.squared
-        ddh = hist(dist_dat, probability = TRUE, ylim = c(range(density(b)$y)), main = paste(ss," ",condition_names[i]," // R^2=",round(Rsq,4), sep=""))
+        ddh = hist(dist_dat, probability = TRUE, ylim = c(range(density(b)$y)), xlab = "Distance", main = paste(ss," ",condition_names[i]," // R^2=",round(Rsq, 3), sep=""))
         lines(density(b, from = ddh$breaks[1], to = ddh$breaks[length(ddh$breaks)]), col = thepalOrder[i], lwd = 2)
     }
 }
