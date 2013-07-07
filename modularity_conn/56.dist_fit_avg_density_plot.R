@@ -25,12 +25,10 @@ for (ss in subjects)
 shapes_mat <- matrix(shapes, nrow = length(subjects), byrow = TRUE)
 rates_mat <- matrix(rates, nrow = length(subjects), byrow = TRUE)
 
-b1 <- rgamma(10000, shape = mean(shapes_mat[,1]), rate = mean(rates_mat[,1]))
-b2 <- rgamma(10000, shape = mean(shapes_mat[,2]), rate = mean(rates_mat[,2]))
-b3 <- rgamma(10000, shape = mean(shapes_mat[,3]), rate = mean(rates_mat[,3]))
-b4 <- rgamma(10000, shape = mean(shapes_mat[,4]), rate = mean(rates_mat[,4]))
-
-maxy <- max(max(density(b1)$y), max(density(b2)$y), max(density(b3)$y), max(density(b4)$y))
+b1 <- rgamma(15000000, shape = mean(shapes_mat[,1]), rate = mean(rates_mat[,1]))
+b2 <- rgamma(15000000, shape = mean(shapes_mat[,2]), rate = mean(rates_mat[,2]))
+b3 <- rgamma(15000000, shape = mean(shapes_mat[,3]), rate = mean(rates_mat[,3]))
+b4 <- rgamma(15000000, shape = mean(shapes_mat[,4]), rate = mean(rates_mat[,4]))
 
 xmaxmin <- c()
 ymaxmin <- c()
@@ -45,5 +43,4 @@ plot(density(b1), xlim = c(range(xmaxmin)), ylim = c(range(ymaxmin)), lwd = 2, c
 lines(density(b2), lwd = 2, col = thepalOrder[2])
 lines(density(b3), lwd = 2, col = thepalOrder[3])
 lines(density(b4), lwd = 2, col = thepalOrder[4])
-
 dev.off()
