@@ -6,243 +6,39 @@ error		= ./logs/7.$(Process).err
 log 		= ./logs/7.$(Process).log
 
 
-arguments    = 7.blondel_convert.R MYTP 1 
+arguments    = 7.blondel_convert.R ANGO 1 0.2 
 queue 
 
-arguments    = 7.blondel_convert.R MYTP 2 
+arguments    = 7.blondel_convert.R ANGO 1 0.3 
 queue 
 
-arguments    = 7.blondel_convert.R MYTP 3 
+arguments    = 7.blondel_convert.R ANGO 1 0.4 
 queue 
 
-arguments    = 7.blondel_convert.R MYTP 4 
+arguments    = 7.blondel_convert.R ANGO 2 0.2 
 queue 
 
-arguments    = 7.blondel_convert.R TRCO 1 
+arguments    = 7.blondel_convert.R ANGO 2 0.3 
 queue 
 
-arguments    = 7.blondel_convert.R TRCO 2 
+arguments    = 7.blondel_convert.R ANGO 2 0.4 
 queue 
 
-arguments    = 7.blondel_convert.R TRCO 3 
+arguments    = 7.blondel_convert.R ANGO 3 0.2 
 queue 
 
-arguments    = 7.blondel_convert.R TRCO 4 
+arguments    = 7.blondel_convert.R ANGO 3 0.3 
 queue 
 
-arguments    = 7.blondel_convert.R PIGL 1 
+arguments    = 7.blondel_convert.R ANGO 3 0.4 
 queue 
 
-arguments    = 7.blondel_convert.R PIGL 2 
+arguments    = 7.blondel_convert.R ANGO 4 0.2 
 queue 
 
-arguments    = 7.blondel_convert.R PIGL 3 
+arguments    = 7.blondel_convert.R ANGO 4 0.3 
 queue 
 
-arguments    = 7.blondel_convert.R PIGL 4 
-queue 
-
-arguments    = 7.blondel_convert.R SNNW 1 
-queue 
-
-arguments    = 7.blondel_convert.R SNNW 2 
-queue 
-
-arguments    = 7.blondel_convert.R SNNW 3 
-queue 
-
-arguments    = 7.blondel_convert.R SNNW 4 
-queue 
-
-arguments    = 7.blondel_convert.R LDMW 1 
-queue 
-
-arguments    = 7.blondel_convert.R LDMW 2 
-queue 
-
-arguments    = 7.blondel_convert.R LDMW 3 
-queue 
-
-arguments    = 7.blondel_convert.R LDMW 4 
-queue 
-
-arguments    = 7.blondel_convert.R FLTM 1 
-queue 
-
-arguments    = 7.blondel_convert.R FLTM 2 
-queue 
-
-arguments    = 7.blondel_convert.R FLTM 3 
-queue 
-
-arguments    = 7.blondel_convert.R FLTM 4 
-queue 
-
-arguments    = 7.blondel_convert.R EZCR 1 
-queue 
-
-arguments    = 7.blondel_convert.R EZCR 2 
-queue 
-
-arguments    = 7.blondel_convert.R EZCR 3 
-queue 
-
-arguments    = 7.blondel_convert.R EZCR 4 
-queue 
-
-arguments    = 7.blondel_convert.R EEPA 1 
-queue 
-
-arguments    = 7.blondel_convert.R EEPA 2 
-queue 
-
-arguments    = 7.blondel_convert.R EEPA 3 
-queue 
-
-arguments    = 7.blondel_convert.R EEPA 4 
-queue 
-
-arguments    = 7.blondel_convert.R DNLN 1 
-queue 
-
-arguments    = 7.blondel_convert.R DNLN 2 
-queue 
-
-arguments    = 7.blondel_convert.R DNLN 3 
-queue 
-
-arguments    = 7.blondel_convert.R DNLN 4 
-queue 
-
-arguments    = 7.blondel_convert.R CRFO 1 
-queue 
-
-arguments    = 7.blondel_convert.R CRFO 2 
-queue 
-
-arguments    = 7.blondel_convert.R CRFO 3 
-queue 
-
-arguments    = 7.blondel_convert.R CRFO 4 
-queue 
-
-arguments    = 7.blondel_convert.R ANMS 1 
-queue 
-
-arguments    = 7.blondel_convert.R ANMS 2 
-queue 
-
-arguments    = 7.blondel_convert.R ANMS 3 
-queue 
-
-arguments    = 7.blondel_convert.R ANMS 4 
-queue 
-
-arguments    = 7.blondel_convert.R BARS 1 
-queue 
-
-arguments    = 7.blondel_convert.R BARS 2 
-queue 
-
-arguments    = 7.blondel_convert.R BARS 3 
-queue 
-
-arguments    = 7.blondel_convert.R BARS 4 
-queue 
-
-arguments    = 7.blondel_convert.R MRZM 1 
-queue 
-
-arguments    = 7.blondel_convert.R MRZM 2 
-queue 
-
-arguments    = 7.blondel_convert.R MRZM 3 
-queue 
-
-arguments    = 7.blondel_convert.R MRZM 4 
-queue 
-
-arguments    = 7.blondel_convert.R MRVV 1 
-queue 
-
-arguments    = 7.blondel_convert.R MRVV 2 
-queue 
-
-arguments    = 7.blondel_convert.R MRVV 3 
-queue 
-
-arguments    = 7.blondel_convert.R MRVV 4 
-queue 
-
-arguments    = 7.blondel_convert.R MRMK 1 
-queue 
-
-arguments    = 7.blondel_convert.R MRMK 2 
-queue 
-
-arguments    = 7.blondel_convert.R MRMK 3 
-queue 
-
-arguments    = 7.blondel_convert.R MRMK 4 
-queue 
-
-arguments    = 7.blondel_convert.R MRMC 1 
-queue 
-
-arguments    = 7.blondel_convert.R MRMC 2 
-queue 
-
-arguments    = 7.blondel_convert.R MRMC 3 
-queue 
-
-arguments    = 7.blondel_convert.R MRMC 4 
-queue 
-
-arguments    = 7.blondel_convert.R MRAG 1 
-queue 
-
-arguments    = 7.blondel_convert.R MRAG 2 
-queue 
-
-arguments    = 7.blondel_convert.R MRAG 3 
-queue 
-
-arguments    = 7.blondel_convert.R MRAG 4 
-queue 
-
-arguments    = 7.blondel_convert.R MNGO 1 
-queue 
-
-arguments    = 7.blondel_convert.R MNGO 2 
-queue 
-
-arguments    = 7.blondel_convert.R MNGO 3 
-queue 
-
-arguments    = 7.blondel_convert.R MNGO 4 
-queue 
-
-arguments    = 7.blondel_convert.R LRVN 1 
-queue 
-
-arguments    = 7.blondel_convert.R LRVN 2 
-queue 
-
-arguments    = 7.blondel_convert.R LRVN 3 
-queue 
-
-arguments    = 7.blondel_convert.R LRVN 4 
-queue 
-
-arguments    = 7.blondel_convert.R CLFR 1 
-queue 
-
-arguments    = 7.blondel_convert.R CLFR 2 
-queue 
-
-arguments    = 7.blondel_convert.R CLFR 3 
-queue 
-
-arguments    = 7.blondel_convert.R CLFR 4 
+arguments    = 7.blondel_convert.R ANGO 4 0.4 
 queue 
 
