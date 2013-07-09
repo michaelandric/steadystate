@@ -4,10 +4,11 @@ print(noquote(strsplit(Args," ")[[1]]))
 print(length(noquote(strsplit(Args," ")[[1]])))
 subj <- noquote(strsplit(Args," ")[[1]][1])
 cond <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
-
+thresh <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
+ 
 
 library(bct)
 corrmat <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/cleanTS.",cond,".",subj,"_graymask_dump.bin.corr",sep="")
-outname <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh_0.5",sep="")
-fthreshold_absolute(corrmat,outname,.5,0)
+outname <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh_",thresh,sep="")
+fthreshold_absolute(corrmat,outname,thresh,0)
 
