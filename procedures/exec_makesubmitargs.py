@@ -8,14 +8,13 @@ where 'submit.try' is the condor_submit file that you're adding arguments to
 
 from makesubmitargs import makeargs as mm
 
-#subjects = ["ANGO"]
-#subjects = ["ANGO"]
+subjects = ["ANGO"]
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
 ##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
-subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # BARS & EZCR not in here
+#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO, BARS & EZCR not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO"]
 #subjects = ["ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 #subjects = ["ANMS","MRZM","MRVV"]
@@ -38,7 +37,7 @@ CURRENTLY DOES NOT INCLUDE 'EZCR' - COULDN'T GET SEGMENTATION FOR MASK WITH THIS
 tree_d = {'BARS': (2, 2, 2, 2), 'FLTM': (3, 3, 2, 2), 'MRZM': (2, 2, 3, 2), 'ANMS': (2, 2, 2, 2), 'MRAG': (2, 2, 2, 3), 'ANGO': (3, 3, 3, 2), 'PIGL': (3, 3, 3, 3), 'MRMK': (2, 2, 2, 2), 'CRFO': (2, 3, 2, 2), 'EEPA': (3, 2, 3, 2), 'TRCO': (2, 2, 3, 3), 'MRMC': (2, 2, 2, 2), 'SNNW': (3, 2, 2, 3), 'LDMW': (2, 3, 2, 2), 'LRVN': (2, 2, 2, 2), 'MRVV': (3, 3, 2, 3), 'DNLN': (2, 2, 1, 3), 'CLFR': (3, 2, 3, 2), 'MYTP': (3, 3, 3, 3), 'MNGO': (2, 3, 3, 3)}
 hemispheres = ["lh","rh"]
 
-
+thresholds = ["0.2", "0.3", "0.4"]
 #mm.ijkTALAIRACHcoordsargs("TTavg152T1","automask_d1")
 
 for ss in subjects:
@@ -48,8 +47,11 @@ for ss in subjects:
     #mm.voxel_id_args(ss, nvox_dict[ss])
     #mm.maskdumpargs(ss)
     #mm.maskmakerargs(Ss)
-    mm.undumpargs(ss,"float")
-    #for cc in conditions:
+    #mm.undumpargs(ss,"float")
+    #mm.distanceargs(ss)
+    #mm.xyzcoordsargs(ss)
+    #mm.distance_dit_fitargs(ss)
+    for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
         #mm.fcorrargs(ss,cc)
@@ -72,5 +74,9 @@ for ss in subjects:
         #mm.freqPowerExp_args(ss,cc,tree_d[ss][cc-1])
         #    for h in hemispheres:
         #        mm.vol2surfargs(ss,cc,h)
+        for t in thresholds:
+            #mm.threshargs(ss, cc, t)
+            #mm.convertargs(ss, cc, t)
+            mm.blondelargs(ss, cc, t)
 
 
