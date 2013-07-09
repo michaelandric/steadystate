@@ -4,11 +4,11 @@ print(noquote(strsplit(Args," ")[[1]]))
 print(length(noquote(strsplit(Args," ")[[1]])))
 subj <- noquote(strsplit(Args," ")[[1]][1])
 cond <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
-
+thresh <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
 
 library(bct)
-thresh_mat <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh",sep="")
-blondel_mat <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh.srcdst",sep="")
+thresh_mat <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh_",thresh,sep="")
+blondel_mat <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh_",thresh,".srcdst",sep="")
 blondel_convert(thresh_mat,blondel_mat)
 
 
