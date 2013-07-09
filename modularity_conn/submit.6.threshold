@@ -6,15 +6,40 @@ error		= ./logs/6.$(Process).err
 log 		= ./logs/6.$(Process).log
 
 
-arguments    = 6.thresholdmat.R ANGO 1 
+
+arguments    = 6.thresholdmat.R ANGO 1 0.2 
 queue 
 
-arguments    = 6.thresholdmat.R ANGO 2 
+arguments    = 6.thresholdmat.R ANGO 1 0.3 
 queue 
 
-arguments    = 6.thresholdmat.R ANGO 3 
+arguments    = 6.thresholdmat.R ANGO 1 0.4 
 queue 
 
-arguments    = 6.thresholdmat.R ANGO 4 
+arguments    = 6.thresholdmat.R ANGO 2 0.2 
+queue 
+
+arguments    = 6.thresholdmat.R ANGO 2 0.3 
+queue 
+
+arguments    = 6.thresholdmat.R ANGO 2 0.4 
+queue 
+
+arguments    = 6.thresholdmat.R ANGO 3 0.2 
+queue 
+
+arguments    = 6.thresholdmat.R ANGO 3 0.3 
+queue 
+
+arguments    = 6.thresholdmat.R ANGO 3 0.4 
+queue 
+
+arguments    = 6.thresholdmat.R ANGO 4 0.2 
+queue 
+
+arguments    = 6.thresholdmat.R ANGO 4 0.3 
+queue 
+
+arguments    = 6.thresholdmat.R ANGO 4 0.4 
 queue 
 
