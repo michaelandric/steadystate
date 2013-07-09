@@ -77,17 +77,20 @@ class MakeArgs:
         mask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+orig"
         print "arguments    = --subject "+subject+" --source_directory "+sourcedir+" --output_directory "+outdir+" --mask "+mask+" --condition "+`arg1`+" \nqueue \n"
 
-    def threshargs(self,subject,arg1):
+    def threshargs(self, subject, arg1, arg2):
         ##arg1 == Condition, e.g., 2
-        print "arguments    = 6.thresholdmat.R "+subject+" "+`arg1`+" \nqueue \n"
+        ## arg2 == Threshold, e.g., 0.5
+        print "arguments    = 6.thresholdmat.R "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
 
-    def convertargs(self,subject,arg1):
+    def convertargs(self, subject, arg1, arg2):
         ##arg1 == Conditions, e.g., 2
-        print "arguments    = 7.blondel_convert.R "+subject+" "+`arg1`+" \nqueue \n"
+        ## arg2 == Threshold, e.g., 0.5
+        print "arguments    = 7.blondel_convert.R "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
 
-    def blondelargs(self,subject,arg1):
+    def blondelargs(self, subject, arg1, arg2):
         ##arg1 == Conditions, e.g., 2
-        print "arguments    = 8.blondel "+subject+" "+`arg1`+" \nqueue \n"
+        ## arg2 == Threshold, e.g., 0.5
+        print "arguments    = 8.blondel "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
 
     def hierarchyargs(self,subject,arg1,arg2):
         """
@@ -95,6 +98,13 @@ class MakeArgs:
         arg2 = nlevels
         """
         print "arguments    = 9.hierarchy.R "+subject+" "+`arg1`+" "+`arg2`+" \nqueue \n"
+
+    def xyzcoordsargs(self,subject):
+        basedir = os.environ["state"]+"/"
+        automask = basedir+subject+"/masking/"+subject+"_graymattermask_resampled+orig"
+        xyzmaster = automask
+        xyzoutname = basedir+subject+"/masking/xyz_coords_graymattermask_"+subject
+        print "arguments    = --automask "+automask+" --xyzmaster "+xyzmaster+" --xyzoutputname "+xyzoutname+" \nqueue \n"
 
     def ijkcoordsargs(self,subject):
         basedir = os.environ["state"]+"/"
@@ -228,6 +238,12 @@ class MakeArgs:
         arg2 is the hemisphere
         """
         print "arguments  = --subject "+subject+" --condition "+`arg1`+" --hemi "+arg2+" \nqueue \n"
+
+    def distanceargs(self, subject):
+        print "arguments = --subject "+subject+" \nqueue \n"
+
+    def distance_dit_fitargs(self, subject):
+        print "arguments = 52.distance_dist_fit.R "+subject+" \nqueue \n"
 
     def tester(self):
         print "this is a test"
