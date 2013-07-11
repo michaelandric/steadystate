@@ -46,10 +46,17 @@ class Remover:
         for filename in glob("*"+self.options.subject+".noijk_dump*"):
             os.remove(filename)
 
+    def remover5(self):
+        """
+        """
+        os.chdir(os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/")
+        for filename in glob("*.thresh_*"):
+            os.remove(filename)
+
 
 
 RM = Remover()
 RM.get_opts()
-RM.remover4()
+RM.remover5()
 
 

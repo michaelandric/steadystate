@@ -7,39 +7,219 @@ log 		= ./logs/8.$(Process).log
 
 
 
-arguments    = 8.blondel ANGO 1 0.2 
+arguments    = 8.blondel MRMK 1 0.2 
 queue 
 
-arguments    = 8.blondel ANGO 1 0.3 
+arguments    = 8.blondel MRMK 1 0.3 
 queue 
 
-arguments    = 8.blondel ANGO 1 0.4 
+arguments    = 8.blondel MRMK 1 0.4 
 queue 
 
-arguments    = 8.blondel ANGO 2 0.2 
+arguments    = 8.blondel MRMK 2 0.2 
 queue 
 
-arguments    = 8.blondel ANGO 2 0.3 
+arguments    = 8.blondel MRMK 2 0.3 
 queue 
 
-arguments    = 8.blondel ANGO 2 0.4 
+arguments    = 8.blondel MRMK 2 0.4 
 queue 
 
-arguments    = 8.blondel ANGO 3 0.2 
+arguments    = 8.blondel MRMK 3 0.2 
 queue 
 
-arguments    = 8.blondel ANGO 3 0.3 
+arguments    = 8.blondel MRMK 3 0.3 
 queue 
 
-arguments    = 8.blondel ANGO 3 0.4 
+arguments    = 8.blondel MRMK 3 0.4 
 queue 
 
-arguments    = 8.blondel ANGO 4 0.2 
+arguments    = 8.blondel MRMK 4 0.2 
 queue 
 
-arguments    = 8.blondel ANGO 4 0.3 
+arguments    = 8.blondel MRMK 4 0.3 
 queue 
 
-arguments    = 8.blondel ANGO 4 0.4 
+arguments    = 8.blondel MRMK 4 0.4 
+queue 
+
+arguments    = 8.blondel MRMC 1 0.2 
+queue 
+
+arguments    = 8.blondel MRMC 1 0.3 
+queue 
+
+arguments    = 8.blondel MRMC 1 0.4 
+queue 
+
+arguments    = 8.blondel MRMC 2 0.2 
+queue 
+
+arguments    = 8.blondel MRMC 2 0.3 
+queue 
+
+arguments    = 8.blondel MRMC 2 0.4 
+queue 
+
+arguments    = 8.blondel MRMC 3 0.2 
+queue 
+
+arguments    = 8.blondel MRMC 3 0.3 
+queue 
+
+arguments    = 8.blondel MRMC 3 0.4 
+queue 
+
+arguments    = 8.blondel MRMC 4 0.2 
+queue 
+
+arguments    = 8.blondel MRMC 4 0.3 
+queue 
+
+arguments    = 8.blondel MRMC 4 0.4 
+queue 
+
+arguments    = 8.blondel MRAG 1 0.2 
+queue 
+
+arguments    = 8.blondel MRAG 1 0.3 
+queue 
+
+arguments    = 8.blondel MRAG 1 0.4 
+queue 
+
+arguments    = 8.blondel MRAG 2 0.2 
+queue 
+
+arguments    = 8.blondel MRAG 2 0.3 
+queue 
+
+arguments    = 8.blondel MRAG 2 0.4 
+queue 
+
+arguments    = 8.blondel MRAG 3 0.2 
+queue 
+
+arguments    = 8.blondel MRAG 3 0.3 
+queue 
+
+arguments    = 8.blondel MRAG 3 0.4 
+queue 
+
+arguments    = 8.blondel MRAG 4 0.2 
+queue 
+
+arguments    = 8.blondel MRAG 4 0.3 
+queue 
+
+arguments    = 8.blondel MRAG 4 0.4 
+queue 
+
+arguments    = 8.blondel MNGO 1 0.2 
+queue 
+
+arguments    = 8.blondel MNGO 1 0.3 
+queue 
+
+arguments    = 8.blondel MNGO 1 0.4 
+queue 
+
+arguments    = 8.blondel MNGO 2 0.2 
+queue 
+
+arguments    = 8.blondel MNGO 2 0.3 
+queue 
+
+arguments    = 8.blondel MNGO 2 0.4 
+queue 
+
+arguments    = 8.blondel MNGO 3 0.2 
+queue 
+
+arguments    = 8.blondel MNGO 3 0.3 
+queue 
+
+arguments    = 8.blondel MNGO 3 0.4 
+queue 
+
+arguments    = 8.blondel MNGO 4 0.2 
+queue 
+
+arguments    = 8.blondel MNGO 4 0.3 
+queue 
+
+arguments    = 8.blondel MNGO 4 0.4 
+queue 
+
+arguments    = 8.blondel LRVN 1 0.2 
+queue 
+
+arguments    = 8.blondel LRVN 1 0.3 
+queue 
+
+arguments    = 8.blondel LRVN 1 0.4 
+queue 
+
+arguments    = 8.blondel LRVN 2 0.2 
+queue 
+
+arguments    = 8.blondel LRVN 2 0.3 
+queue 
+
+arguments    = 8.blondel LRVN 2 0.4 
+queue 
+
+arguments    = 8.blondel LRVN 3 0.2 
+queue 
+
+arguments    = 8.blondel LRVN 3 0.3 
+queue 
+
+arguments    = 8.blondel LRVN 3 0.4 
+queue 
+
+arguments    = 8.blondel LRVN 4 0.2 
+queue 
+
+arguments    = 8.blondel LRVN 4 0.3 
+queue 
+
+arguments    = 8.blondel LRVN 4 0.4 
+queue 
+
+arguments    = 8.blondel CLFR 1 0.2 
+queue 
+
+arguments    = 8.blondel CLFR 1 0.3 
+queue 
+
+arguments    = 8.blondel CLFR 1 0.4 
+queue 
+
+arguments    = 8.blondel CLFR 2 0.2 
+queue 
+
+arguments    = 8.blondel CLFR 2 0.3 
+queue 
+
+arguments    = 8.blondel CLFR 2 0.4 
+queue 
+
+arguments    = 8.blondel CLFR 3 0.2 
+queue 
+
+arguments    = 8.blondel CLFR 3 0.3 
+queue 
+
+arguments    = 8.blondel CLFR 3 0.4 
+queue 
+
+arguments    = 8.blondel CLFR 4 0.2 
+queue 
+
+arguments    = 8.blondel CLFR 4 0.3 
+queue 
+
+arguments    = 8.blondel CLFR 4 0.4 
 queue 
 

@@ -8,7 +8,8 @@ where 'submit.try' is the condor_submit file that you're adding arguments to
 
 from makesubmitargs import makeargs as mm
 
-subjects = ["ANGO"]
+#subjects = ["ANGO"]
+#subjects = ["TRCO"]
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
@@ -17,9 +18,9 @@ subjects = ["ANGO"]
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO, BARS & EZCR not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO"]
 #subjects = ["ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
-#subjects = ["ANMS","MRZM","MRVV"]
-#subjects = ["MRMK","MRMC","MRAG"]
-#subjects = ["MNGO","LRVN","CLFR"]
+#subjects = ["TRCO","PIGL","SNNW","LDMW","FLTM"]
+#subjects = ["EEPA","DNLN","CRFO","ANMS","MRZM","MRVV"]
+subjects = ["MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 conditions = range(1,5)
 
 """
@@ -41,7 +42,7 @@ thresholds = ["0.2", "0.3", "0.4"]
 #mm.ijkTALAIRACHcoordsargs("TTavg152T1","automask_d1")
 
 for ss in subjects:
-    #mm.removerargs(ss)
+    mm.removerargs(ss)
     #mm.ijkcoordsargs(ss)
     #mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, nvox_dict[ss])
@@ -51,7 +52,7 @@ for ss in subjects:
     #mm.distanceargs(ss)
     #mm.xyzcoordsargs(ss)
     #mm.distance_dit_fitargs(ss)
-    for cc in conditions:
+#    for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
         #mm.fcorrargs(ss,cc)
@@ -74,9 +75,10 @@ for ss in subjects:
         #mm.freqPowerExp_args(ss,cc,tree_d[ss][cc-1])
         #    for h in hemispheres:
         #        mm.vol2surfargs(ss,cc,h)
-        for t in thresholds:
+#        for t in thresholds:
             #mm.threshargs(ss, cc, t)
             #mm.convertargs(ss, cc, t)
-            mm.blondelargs(ss, cc, t)
+#            mm.blondelargs(ss, cc, t)
+#            mm.threshold_convertargs(ss, cc, t)
 
 

@@ -87,6 +87,11 @@ class MakeArgs:
         ## arg2 == Threshold, e.g., 0.5
         print "arguments    = 7.blondel_convert.R "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
 
+    def threshold_convertargs(self, subject, arg1, arg2):
+        ##arg1 == Conditions, e.g., 2
+        ## arg2 == Threshold, e.g., 0.5
+        print "arguments    = 6.7.threshold_convert.R "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
+
     def blondelargs(self, subject, arg1, arg2):
         ##arg1 == Conditions, e.g., 2
         ## arg2 == Threshold, e.g., 0.5

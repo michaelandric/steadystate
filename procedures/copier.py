@@ -4,22 +4,30 @@ import os
 import shutil
 from glob import glob
 
-#subjects = ["TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR","ANGO"]
-subjects = ["MYTP"]
 
+subjects = ["TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR","ANGO"]
+#subjects = ["MYTP"]
 
-def cmdCP():
+def cmdCP(ss):
     """
     simple copy function
     """
     print "subject: "+ss
-    #shutil.copy2(os.environ["state"]+"/"+ss+"/masking/ijk_coords_graymattermask_"+ss, os.environ["state"]+"/graymask_coords/")
-    for filename in glob("cleanTS.*."+ss+"_graymask_dump.bin.corr.thresh.tree*.justcomm"):
-        shutil.copy2(filename, os.environ["state"]+"/module_files")
+    print os.getcwd()
+    for filename in glob("blur*TRIM_graymask_dump"):
+        shutil.copy2(filename, os.environ["state"]+"/TSfiles")
+
+    for filename in glob("masking/xyz_coords_graymattermask_*"):
+        shutil.copy2(filename, os.environ["state"]+"/TSfiles")
     
 
+def main():
+    for ss in subjects:
+        os.chdir(os.environ["state"]+"/"+ss)
+        cmdCP(ss)
 
-for ss in subjects:
-    os.chdir(os.environ["state"]+"/"+ss+"/corrTRIM_BLUR/")
-    cmdCP()
+
+if __name__ == "__main__":
+    main()
+
 
