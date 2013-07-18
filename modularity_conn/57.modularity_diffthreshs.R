@@ -53,13 +53,21 @@ for (t in levels(mod_score_frame$thresh))
 #title("Modularity by connection threshold (Pearson's r)")
 #dev.off()
 
+error_vec <- c()
 means_mat <- matrix(nrow = length(thresholds), ncol = length(conditions))
-for (i in 1:length(thresholds))
+for (t in 1:length(thresholds))
 {
-    means_mat[i,] <- colMeans(matrix(subset(mod_score_frame$modularity, mod_score_frame$thresh == thresholds[i]), nrow = 19, byrow = TRUE)) 
+    means_mat[t,] <- colMeans(matrix(subset(mod_score_frame$modularity, mod_score_frame$thresh == thresholds[t]), nrow = 19, byrow = TRUE)) 
+    tmp <- subset(mod_score_frame, mod_score_frame$thresh == thresholds[t])
+    for (i in conditions)
+    {
+        er <- sd(matrix(tmp$modularity, ncol = 4, byrow = T)[,i] - tapply(tmp$modularity, tmp$subject, mean)) / (sqrt(length(subjects)))
+        error_vec <- c(error_vec, er)
+    }
 }
-
+error_vec_mat = matrix(error_vec, nrow = length(conditions), byrow = T)
 means_mat2 = means_mat[,c(1,2,4,3)]
+error_vec_mat2 = error_vec_mat[,c(1,2,4,3)]
 
 #pdf("agplot2_mod_scores.pdf")
 #plot(means_mat2[1,], type = "b", ylim = c(range(means_mat)), lwd = 2, pch = 2, cex = 1.5, ylab = "Modularity (Q)", xlab = "", xaxt = "n", main = "Modularity by connectivity threshold")
