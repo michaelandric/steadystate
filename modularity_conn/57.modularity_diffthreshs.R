@@ -61,11 +61,25 @@ for (i in 1:length(thresholds))
 
 means_mat2 = means_mat[,c(1,2,4,3)]
 
-pdf("agplot2_mod_scores.pdf")
-plot(means_mat2[1,], type = "b", ylim = c(range(means_mat)), lwd = 2, pch = 2, cex = 1.5, ylab = "Modularity (Q)", xlab = "", xaxt = "n", main = "Modularity by connectivity threshold")
-lines(means_mat2[2,], type = "b", lwd = 2, pch = 3, cex = 1.5)
-lines(means_mat2[3,], type = "b", lwd = 2, pch = 4, cex = 1.5)
-lines(means_mat2[4,], type = "b", lwd = 2, pch = 5, cex = 1.5)
-axis(1, 1:4, condition_names[c(1,2,4,3)])
-legend("topleft", thresholds, pch = c(2:5), title="thresh")
+#pdf("agplot2_mod_scores.pdf")
+#plot(means_mat2[1,], type = "b", ylim = c(range(means_mat)), lwd = 2, pch = 2, cex = 1.5, ylab = "Modularity (Q)", xlab = "", xaxt = "n", main = "Modularity by connectivity threshold")
+#lines(means_mat2[2,], type = "b", lwd = 2, pch = 3, cex = 1.5)
+#lines(means_mat2[3,], type = "b", lwd = 2, pch = 4, cex = 1.5)
+#lines(means_mat2[4,], type = "b", lwd = 2, pch = 5, cex = 1.5)
+#axis(1, 1:4, condition_names[c(1,2,4,3)])
+#legend("topleft", thresholds, pch = c(2:5), title="thresh")
+#dev.off()
+
+## aggregate.plot deconstructed for my own w/in person error bars
+pdf("agplot3_mod_scores.pdf")
+aa = tapply(mod_score_frame$modularity, list(mod_score_frame$condition, mod_score_frame$thresh), mean)
+trans_means <- t(means_mat)[c(4,1,3,2),]
+trans_errs <- t(error_vec_mat)[c(4,1,3,2),]
+ylim <- c(0, 1.01 * max(aa + trans_errs))
+ab = barplot(aa, beside = TRUE, ylim = ylim, ylab = "Modularity (Q)")
+segments(x0 = ab, x1 = ab, y0 = trans_means, y1 = trans_means + trans_errs)
+segments(x0 = ab - .2, x1 = ab + .2, y0 = trans_means + trans_errs, y1 = trans_means + trans_errs)
+bar.col <- grey.colors(length(levels(factor(list(mod_score_frame$condition, mod_score_frame$thresh)[[1]]))))
+legend("topleft", levels(factor(list(mod_score_frame$condition, mod_score_frame$thresh)[[1]])), fill = bar.col, box.lwd = 0)
+title("Modularity by connection threshold (Pearson's r)")
 dev.off()
