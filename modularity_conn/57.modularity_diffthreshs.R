@@ -48,7 +48,24 @@ for (t in levels(mod_score_frame$thresh))
 }
 
 ## Barplots for the scores in each condition at different thresholds 
-pdf("agplot_mod_scores.pdf")
-aggregate.plot(mod_score_frame$modularity, list(mod_score_frame$thresh, mod_score_frame$condition), mean, main = F, legend.site = "topleft")
-title("Modularity by connection threshold (Pearson's r)")
+#pdf("agplot_mod_scores.pdf")
+#aggregate.plot(mod_score_frame$modularity, list(mod_score_frame$thresh, mod_score_frame$condition), mean, main = F, legend.site = "topleft")
+#title("Modularity by connection threshold (Pearson's r)")
+#dev.off()
+
+means_mat <- matrix(nrow = length(thresholds), ncol = length(conditions))
+for (i in 1:length(thresholds))
+{
+    means_mat[i,] <- colMeans(matrix(subset(mod_score_frame$modularity, mod_score_frame$thresh == thresholds[i]), nrow = 19, byrow = TRUE)) 
+}
+
+means_mat2 = means_mat[,c(1,2,4,3)]
+
+pdf("agplot2_mod_scores.pdf")
+plot(means_mat2[1,], type = "b", ylim = c(range(means_mat)), lwd = 2, pch = 1, cex = 1.5, ylab = "Modularity (Q)", xlab = "", xaxt = "n", main = "Modularity by connectivity threshold")
+lines(means_mat2[2,], type = "b", lwd = 2, pch = 2, cex = 1.5)
+lines(means_mat2[3,], type = "b", lwd = 2, pch = 3, cex = 1.5)
+lines(means_mat2[4,], type = "b", lwd = 2, pch = 4, cex = 1.5)
+axis(1, 1:4, condition_names[c(1,2,4,3)])
+legend("topleft", thresholds, pch = c(1:4), title="thresh")
 dev.off()
