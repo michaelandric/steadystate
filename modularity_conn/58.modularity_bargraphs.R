@@ -39,7 +39,8 @@ aa_ordered <- aa[c(2, 4, 1, 3)]
 error_vec_ordered <- error_vec[c(1, 2, 4, 3)]
 
 #bar.col <- grey.colors(length(levels(factor(list(mod_score_frame$condition)[[1]]))))  # alternative (removal of) colors
-thepal = colorRampPalette(brewer.pal(9,"Blues"))(9)[c(7, 5, 3, 1)]
+#thepal = colorRampPalette(brewer.pal(9,"Blues"))(9)[c(7, 5, 3, 1)]
+thepal = colorRampPalette(brewer.pal(9,"Set2"))(9)
 pdf("modularity_bargraph.pdf")
 ab <- barplot2(aa_ordered, beside = TRUE, ylim = ylim, ylab = "Modularity (Q)", col = thepal, plot.grid = TRUE)
 #ab <- barplot(aa_ordered, beside = TRUE, ylim = ylim, ylab = "Modularity (Q)", col = thepal)   # use this if gplots not available

@@ -43,7 +43,8 @@ aB_ordered <- aB[c(1, 2, 4, 3)]
 error_vecG_ordered <- error_vecG[c(1, 2, 4, 3)]
 error_vecB_ordered <- error_vecB[c(1, 2, 4, 3)]
 
-thepal = colorRampPalette(brewer.pal(9,"Blues"))(9)[c(7, 5, 3, 1)]
+#thepal = colorRampPalette(brewer.pal(9,"Blues"))(9)[c(7, 5, 3, 1)]
+thepal = colorRampPalette(brewer.pal(9,"Set2"))(9)
 
 pdf("Degrees_PowerLaw_bargraph.pdf")
 ylimG <- c(1.15, 1.01 * max(aG + error_vecG))
