@@ -4,7 +4,7 @@ conditions <- seq(4)
 condition_names = c("Highly ordered", "Some order", "Random", "Almost Random")
 
 library(RColorBrewer)
-thepal = colorRampPalette(brewer.pal(9,"YlGnBu"))(9)[1,3,5,7]
+thepal = colorRampPalette(brewer.pal(9,"Blues"))(9)[c(7, 5, 3, 1)]
 
 dat_orig <- c()
 for (ss in subjects)
@@ -37,7 +37,6 @@ ylim <- c(0, 1.01 * max(aa + error_vec))
 aa_ordered <- aa[c(2, 4, 1, 3)]
 error_vec_ordered <- error_vec[c(1, 2, 4, 3)]
 
-thepal = colorRampPalette(brewer.pal(9,"Blues"))(9)[c(7, 5, 3, 1)]
 #bar.col <- grey.colors(length(levels(factor(list(mod_score_frame$condition)[[1]]))))  # alternative (removal of) colors
 pdf("modularity_bargraph.pdf")
 ab <- barplot(aa_ordered, beside = TRUE, ylim = ylim, ylab = "Modularity (Q)", col = thepal)
