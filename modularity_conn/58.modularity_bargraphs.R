@@ -34,7 +34,7 @@ for (i in conditions)
 
 par(mfrow = c(1,2))
 aa <- tapply(mod_score_frame$modularity, list(mod_score_frame$condition), mean)   # This gives alphabetical ("Almost random", "Highly ordered", "Some order", "Random")
-ylim <- c(0, 1.01 * max(aa + error_vec))
+ylim <- c(0, 1.2 * max(aa + error_vec))
 aa_ordered <- aa[c(2, 4, 1, 3)]
 error_vec_ordered <- error_vec[c(1, 2, 4, 3)]
 
