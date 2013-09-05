@@ -79,3 +79,13 @@ for (i in unique(Clsts)[2:length(unique(Clsts))])
     lines(mean_frame2[c(1:4)+(4*i),1], type = "b", lty = i, pch = i, lwd = 2)
 }
 dev.off()
+
+## Color Version 2 — cleaner, same pch for all
+pdf("Deg_Avg_eachcluster_linesColor2.pdf")
+plot(mean_frame2[c(1:4)+(4*1),1], ylim = ylimit, type = "b", pch = 16, col = thepal[1], ylab = "Mean Degrees (k)", xaxt = "n", bty = "n", lwd = 2)
+axis(side = 1, at = c(seq(4)))
+for (i in unique(Clsts)[2:length(unique(Clsts))])
+{
+    lines(mean_frame2[c(1:4)+(4*i),1], type = "b", pch = 16, col = thepal[i], lwd = 2)
+}
+dev.off()
