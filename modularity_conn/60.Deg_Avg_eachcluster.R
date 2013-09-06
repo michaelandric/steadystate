@@ -62,9 +62,9 @@ ylimit = c(0, 1.1 * max(means))
 ## Color Version
 thepal = colorRampPalette(brewer.pal(8,"Dark2"))(20)
 pdf("Deg_Avg_eachcluster_linesColor.pdf")
-plot(mean_frame2[c(1:4)+(4*1),1], ylim = ylimit, type = "b", pch = 1, col = thepal[1], ylab = "Mean Degrees (k)", xaxt = "n", bty = "n", lwd = 2)
+plot(mean_frame2[c(1:4),1], ylim = ylimit, type = "b", pch = 1, col = thepal[1], ylab = "Mean Degrees (k)", xaxt = "n", bty = "n", lwd = 2)
 axis(side = 1, at = c(seq(4)))
-for (i in unique(Clsts)[2:length(unique(Clsts))])
+for (i in unique(Clsts)[1:(length(unique(Clsts)) - 1)])
 {
     lines(mean_frame2[c(1:4)+(4*i),1], type = "b", pch = i, col = thepal[i], lwd = 2)
 }
@@ -72,9 +72,9 @@ dev.off()
 
 ## BW Version
 pdf("Deg_Avg_eachcluster_linesBW.pdf")
-plot(mean_frame2[c(1:4)+(4*1),1], ylim = ylimit, type = "b", lty = 1, pch = 1, ylab = "Mean Degrees (k)", xaxt = "n", bty = "n", lwd = 2)
+plot(mean_frame2[c(1:4),1], ylim = ylimit, type = "b", lty = 1, pch = 1, ylab = "Mean Degrees (k)", xaxt = "n", bty = "n", lwd = 2)
 axis(side = 1, at = c(seq(4)))
-for (i in unique(Clsts)[2:length(unique(Clsts))])
+for (i in unique(Clsts)[1:(length(unique(Clsts)) - 1)])
 {
     lines(mean_frame2[c(1:4)+(4*i),1], type = "b", lty = i, pch = i, lwd = 2)
 }
@@ -82,10 +82,58 @@ dev.off()
 
 ## Color Version 2 — cleaner, same pch for all
 pdf("Deg_Avg_eachcluster_linesColor2.pdf")
-plot(mean_frame2[c(1:4)+(4*1),1], ylim = ylimit, type = "b", pch = 16, col = thepal[1], ylab = "Mean Degrees (k)", xaxt = "n", bty = "n", lwd = 2)
+plot(mean_frame2[c(1:4),1], ylim = ylimit, type = "b", pch = 16, col = thepal[1], ylab = "Mean Degrees (k)", xaxt = "n", bty = "n", lwd = 2)
 axis(side = 1, at = c(seq(4)))
-for (i in unique(Clsts)[2:length(unique(Clsts))])
+for (i in unique(Clsts)[1:(length(unique(Clsts)) - 1)])
 {
     lines(mean_frame2[c(1:4)+(4*i),1], type = "b", pch = 16, col = thepal[i], lwd = 2)
 }
 dev.off()
+
+## TREND INFORMATION
+trends <- vector(mode = "list", length = length(unique(Clsts)))
+names(trends) <- c(letters[1:length(unique(Clsts))])
+
+for (i in unique(Clsts))
+{
+    print(c(i, mean_frame2[c(1:4) + (4 * (i - 1)), 1]))
+    print(rank(mean_frame2[c(1:4) + (4 * (i - 1)), 1]))
+    trends[[letters[i]]] = c(rank(mean_frame2[c(1:4) + (4 * (i - 1)), 1]))
+}
+
+uniq <- unique(trends)
+clust_types <- vector(mode = "list", length = length(uniq))
+cnt = 0
+for (a in uniq)
+{
+    cnt = cnt+1
+    i = 0
+    ident <- c()
+    for (t in 1:length(trends))
+    {
+        if (identical(a,trends[[t]]))
+        {
+            i = i+1
+            ident <- c(ident, t)
+        }
+    }
+    #print(ident)
+    clust_types[[cnt]] = ident
+    #print(clust_types)
+    #print(c(a, i))
+}
+
+
+for (x in 1:length(clust_types))
+{
+    pdf(paste("Deg_Trends",x,".pdf", sep = ""))
+    #mean_frame2[c(1:4) + (4 * (clust_types[[x]][1] - 1)), 1]
+    #clust_types[[x]][1]
+    plot(mean_frame2[c(1:4) + (4 * (clust_types[[x]][1] - 1)), 1], ylim = ylimit, type = "b", pch = 16, col = thepal[clust_types[[x]][1]], ylab = "Mean Degrees (k)", xaxt = "n", bty = "n", lwd = 2, main = paste("Trend",x))
+    axis(side = 1, at = c(seq(4)))
+    for (i in 2:length(clust_types[[x]]))
+    {
+        lines(mean_frame2[c(1:4) + (4 * (clust_types[[x]][i] - 1)), 1], type = "b", pch = 16, col = thepal[clust_types[[x]][i]], lwd = 2)
+    }
+    dev.off()
+}
