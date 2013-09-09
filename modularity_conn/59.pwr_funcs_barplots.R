@@ -54,7 +54,7 @@ segments(x0 = plotaG - .2, x1 = plotaG + .2, y0 = aG_ordered + error_vecG_ordere
 dev.off()
 
 pdf("Degrees_ExpCutoff_bargraph.pdf")
-ylimB <- c(0, 1.01 * max(aB + error_vecB))
+ylimB <- c(0, 1.15 * max(aB + error_vecB))
 plotaB <- barplot2(aB_ordered, beside = TRUE, ylim = ylimB, ylab = "Exponent cutoff values", col = thepal, plot.grid = TRUE)
 segments(x0 = plotaB, x1 = plotaB, y0 = aB_ordered, y1 = aB_ordered + error_vecB_ordered)
 segments(x0 = plotaB - .2, x1 = plotaB + .2, y0 = aB_ordered + error_vecB_ordered, y1 = aB_ordered + error_vecB_ordered)
