@@ -1,7 +1,8 @@
 ## repeated measures ANOVA on modularity scores
 
 #subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
-subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
+#subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
+subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
 conditions <- seq(4)
 
 mod_data <- c()
@@ -39,5 +40,10 @@ print(t.test(c2,c3,paired=T))
 print(t.test(c2,c4,paired=T))
 print(t.test(c3,c4,paired=T))
 ## non-parametric 
-#friedman.test(modularity ~ condition | subject)
-#wilcox.test(c1,c3,paired=T)
+friedman.test(modularity ~ condition | subject)
+wilcox.test(c1,c2,paired=T)
+wilcox.test(c1,c3,paired=T)
+wilcox.test(c1,c4,paired=T)
+wilcox.test(c2,c3,paired=T)
+wilcox.test(c2,c4,paired=T)
+wilcox.test(c3,c4,paired=T)
