@@ -47,11 +47,28 @@ class AutoTLRC:
         tlrcbrain = os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/"+self.options.tlrcT1
         print call("@auto_tlrc -apar "+tlrcbrain+" -input "+graymask+" -dxyz 2", shell=True)
 
+    def TS_tlrc(self):
+        """
+        Use this to auto_tlrc the time series
+        """
+        os.chdir(os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/")
+        for cc in range(1,5):
+            print call("@auto_tlrc -apar "+self.options.tlrcT1+" -input cleanTS.masked.Cond"+`cc`+"."+self.options.subject+"+orig -dxyz 2", shell=True)
+
+    def pres_tlrc_ex(self):
+        """
+        Mapping the preserved files (that index Within Module Set Consistency)
+        """
+        os.chdir(os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/")
+        tlrcbrain = os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/"+self.options.tlrcT1
+        presbrain = "preserved_"+self.options.subject+"+orig"
+        print call("@auto_tlrc -apar "+tlrcbrain+" -input "+presbrain+" -dxyz 2", shell=True)
+
 
 def main():
     atlrc = AutoTLRC()
     atlrc.get_opts()
-    atlrc.mask_auto_tlrc_ex()
+    atlrc.pres_tlrc_ex()
 
 if __name__ == "__main__":
     main()
