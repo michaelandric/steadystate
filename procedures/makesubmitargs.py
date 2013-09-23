@@ -43,7 +43,7 @@ class MakeArgs:
         output = self.options.arg1+self.options.subject+"/blur."+self.options.arg3+"."+self.options.subject+".steadystate.TRIM.noijk_dump"
         print "arguments    = --ijk no --automask "+automask+" --inputfile "+input+" --outputname "+output+" \nqueue \n"
 
-    def maskdumpargs(self,subject,arg1):
+    def maskdumpargs(self,subject):
         """
         arg1 is condition
         """
@@ -53,11 +53,13 @@ class MakeArgs:
         #input = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM+orig"
         #input = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index.ijk+tlrc"
         #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles+tlrc"
-        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray+tlrc"
+        #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray+tlrc"
         #output = os.environ["state"]+"/"+subject+"/blur."+`arg1`+"."+subject+".steadystate.TRIM_graymask_dump"
         #output = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index_tlrc_dump.txt"
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles_tlrc_dump.txt"
-        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray+tlrc.txt"
+        #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray+tlrc.txt"
+        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"+tlrc"
+        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_tlrc_dump.txt"
         print "arguments    = --mask "+automask+" --inputfile "+input+" --outputname "+output+" --subject "+subject+" \nqueue \n" 
 
     def dir_maker(self):
@@ -75,7 +77,8 @@ class MakeArgs:
         Have to give full path for mask
         """
         mask = os.environ["state"]+"/"+subject+"/masking/"+subject+"_graymattermask_resampled+orig"
-        print "arguments    = --subject "+subject+" --source_directory "+sourcedir+" --output_directory "+outdir+" --mask "+mask+" --condition "+`arg1`+" \nqueue \n"
+        #print "arguments    = --subject "+subject+" --source_directory "+sourcedir+" --output_directory "+outdir+" --mask "+mask+" --condition "+`arg1`+" \nqueue \n"
+        print "arguments    = --subject "+subject+"  --output_directory "+outdir+" --condition "+`arg1`+" \nqueue \n"
 
     def threshargs(self, subject, arg1, arg2):
         ##arg1 == Condition, e.g., 2
