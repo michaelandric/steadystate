@@ -13,6 +13,7 @@ from makesubmitargs import makeargs as mm
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
+subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","CLFR","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #EZCR, BARS & ANGO not in here
 ##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO, BARS & EZCR not in here
@@ -20,7 +21,7 @@ from makesubmitargs import makeargs as mm
 #subjects = ["ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 #subjects = ["TRCO","PIGL","SNNW","LDMW","FLTM"]
 #subjects = ["EEPA","DNLN","CRFO","ANMS","MRZM","MRVV"]
-subjects = ["MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
+#subjects = ["MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 conditions = range(1,5)
 
 """
@@ -42,11 +43,11 @@ thresholds = ["0.2", "0.3", "0.4"]
 #mm.ijkTALAIRACHcoordsargs("TTavg152T1","automask_d1")
 
 for ss in subjects:
-    mm.removerargs(ss)
+    #mm.removerargs(ss)
     #mm.ijkcoordsargs(ss)
     #mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, nvox_dict[ss])
-    #mm.maskdumpargs(ss)
+    mm.maskdumpargs(ss)
     #mm.maskmakerargs(Ss)
     #mm.undumpargs(ss,"float")
     #mm.distanceargs(ss)
@@ -55,7 +56,7 @@ for ss in subjects:
 #    for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
-        #mm.fcorrargs(ss,cc)
+#        mm.fcorrargs(ss,cc)
         #mm.threshargs(ss,cc) ## for submit.6.threshold
         #mm.convertargs(ss,cc) ## for submit.7.blondel_convert
         #mm.blondelargs(ss,cc) ## for submit.8.blondel
