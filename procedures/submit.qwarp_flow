@@ -1,0 +1,12 @@
+executable	= qwarp_flow.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/qw.$(Process).out
+error		= ./logs/qw.$(Process).err
+log 		= ./logs/qw.$(Process).log
+
+
+
+arguments    = --Subject ANGO 
+queue 
+
