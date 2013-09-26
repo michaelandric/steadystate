@@ -253,6 +253,9 @@ class MakeArgs:
     def distance_dit_fitargs(self, subject):
         print "arguments = 52.distance_dist_fit.R "+subject+" \nqueue \n"
 
+    def qwarp_flowargs(self,subject):
+        print "arguments    = --Subject "+subject+" \nqueue \n"
+
     def tester(self):
         print "this is a test"
 
