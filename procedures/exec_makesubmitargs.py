@@ -8,12 +8,12 @@ where 'submit.try' is the condor_submit file that you're adding arguments to
 
 from makesubmitargs import makeargs as mm
 
-#subjects = ["ANGO"]
+subjects = ["ANGO"]
 #subjects = ["TRCO"]
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
-subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","CLFR","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #EZCR, BARS & ANGO not in here
+#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","CLFR","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #EZCR, BARS & ANGO not in here
 ##subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO, BARS & EZCR not in here
@@ -47,12 +47,13 @@ for ss in subjects:
     #mm.ijkcoordsargs(ss)
     #mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, nvox_dict[ss])
-    mm.maskdumpargs(ss)
+    #mm.maskdumpargs(ss)
     #mm.maskmakerargs(Ss)
     #mm.undumpargs(ss,"float")
     #mm.distanceargs(ss)
     #mm.xyzcoordsargs(ss)
     #mm.distance_dit_fitargs(ss)
+    mm.qwarp_flowargs(ss)
 #    for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
