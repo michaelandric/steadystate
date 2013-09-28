@@ -6,7 +6,54 @@ error		= ./logs/qw.$(Process).err
 log 		= ./logs/qw.$(Process).log
 
 
+arguments    = --Subject MYTP 
+queue 
 
-arguments    = --Subject ANGO 
+arguments    = --Subject TRCO 
+queue 
+
+arguments    = --Subject PIGL 
+queue 
+
+arguments    = --Subject SNNW 
+queue 
+
+arguments    = --Subject LDMW 
+queue 
+
+arguments    = --Subject FLTM 
+queue 
+
+arguments    = --Subject EEPA 
+queue 
+
+arguments    = --Subject DNLN 
+queue 
+
+arguments    = --Subject CRFO 
+queue 
+
+arguments    = --Subject ANMS 
+queue 
+
+arguments    = --Subject MRZM 
+queue 
+
+arguments    = --Subject MRVV 
+queue 
+
+arguments    = --Subject MRMK 
+queue 
+
+arguments    = --Subject MRMC 
+queue 
+
+arguments    = --Subject MRAG 
+queue 
+
+arguments    = --Subject MNGO 
+queue 
+
+arguments    = --Subject LRVN 
 queue 
 
