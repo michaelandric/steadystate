@@ -1,0 +1,55 @@
+executable	= 11.undump_another.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/11.$(Process).out
+error		= ./logs/11.$(Process).err
+log 		= ./logs/11.$(Process).log
+
+
+
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/another/cleanTS.3.PIGL_graymask_dump.bin.corr.thresh.tree3 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/another/cleanTS.3.SNNW_graymask_dump.bin.corr.thresh.tree2 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/another/cleanTS.3.FLTM_graymask_dump.bin.corr.thresh.tree2 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/another/cleanTS.3.EEPA_graymask_dump.bin.corr.thresh.tree2 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/another/cleanTS.3.DNLN_graymask_dump.bin.corr.thresh.tree1 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/another/cleanTS.3.CRFO_graymask_dump.bin.corr.thresh.tree2 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/another/cleanTS.3.ANMS_graymask_dump.bin.corr.thresh.tree3 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/another/cleanTS.3.MRZM_graymask_dump.bin.corr.thresh.tree3 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/another/cleanTS.3.MRVV_graymask_dump.bin.corr.thresh.tree2 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/another/cleanTS.3.MRMK_graymask_dump.bin.corr.thresh.tree3 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/another/cleanTS.3.MRMC_graymask_dump.bin.corr.thresh.tree2 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/another/cleanTS.3.MRAG_graymask_dump.bin.corr.thresh.tree3 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/another/cleanTS.3.MYTP_graymask_dump.bin.corr.thresh.tree3 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/another/cleanTS.3.LRVN_graymask_dump.bin.corr.thresh.tree3 
+queue 
+
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/another/cleanTS.3.ANGO_graymask_dump.bin.corr.thresh.tree3 
+queue 
+
