@@ -78,6 +78,28 @@ class LinksCor:
 
         The elements kept in upper triangle:
         [ii[0] for ii in enumerate(np.array(np.triu(np.array(aa).reshape(nn,nn), 1)).reshape(-1).tolist()) if ii[1] != 0.0]
+        
+        Gives indicies for which elements to keep
+        #keepers = [ii[0] for ii in enumerate(np.array(np.triu(np.array(np.repeat(1, 16)).reshape(nn, nn), 1)).reshape(-1).tolist()) if ii[1] !=0 ]
+        f_out_keepers = [ii[0] for ii in enumerate(np.array(np.triu(np.array(np.repeat(1, (nvox*nvox))).reshape(nvox, nvox), 1)).reshape(-1).tolist()) if ii[1] !=0 ]
+        
+        f_out_uppertri = []
+        xy_uppertri = []
+        for k in f_out_keepers:
+            f_out_uppertri.append((f_out[k], k))
+            #xy_uppertri.append(xy_pairs[k])
+        
+        
+        
+        keepers = [ii[0] for ii in enumerate(np.array(np.triu(np.array(np.repeat(1, 16)).reshape(nn, nn), 1)).reshape(-1).tolist()) if ii[1] !=0 ]
+        aa_keepers = []
+        for ii in keepers:
+            aa_keepers.append((aa[ii], ii))
+        
+        new_aa = list(np.repeat(0, len(aa)))
+        aa_keepers_cut = sorted(aa_keepers, reverse = True)[0:(int(len(aa)*(1/8.000)))]
+        
+        np.array(new_aa).reshape(4,4)
 
         """
 
