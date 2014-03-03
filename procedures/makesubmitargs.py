@@ -58,8 +58,10 @@ class MakeArgs:
         #output = os.environ["state"]+"/"+subject+"/masking/"+subject+"graymatter_voxel_index_tlrc_dump.txt"
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles_tlrc_dump.txt"
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray+tlrc.txt"
-        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"+tlrc"
-        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_tlrc_dump.txt"
+        #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"+tlrc"
+        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_warped+tlrc"
+        #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_tlrc_dump.txt"
+        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_warped_tlrc_dump.txt"
         print "arguments    = --mask "+automask+" --inputfile "+input+" --outputname "+output+" --subject "+subject+" \nqueue \n" 
 
     def dir_maker(self):
@@ -88,7 +90,8 @@ class MakeArgs:
     def convertargs(self, subject, arg1, arg2):
         ##arg1 == Conditions, e.g., 2
         ## arg2 == Threshold, e.g., 0.5
-        print "arguments    = 7.blondel_convert.R "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
+        #print "arguments    = 7.blondel_convert.R "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
+        print "arguments    = 7.blondel_convert_iterations.R "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
 
     def threshold_convertargs(self, subject, arg1, arg2):
         ##arg1 == Conditions, e.g., 2
@@ -98,7 +101,13 @@ class MakeArgs:
     def blondelargs(self, subject, arg1, arg2):
         ##arg1 == Conditions, e.g., 2
         ## arg2 == Threshold, e.g., 0.5
-        print "arguments    = 8.blondel "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
+        #print "arguments    = 8.blondel "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
+        print "arguments    = 8.blondel_iterations "+subject+" "+`arg1`+" "+arg2+" \nqueue \n"
+        """
+        Note that the above line was the original run. The below line is just to re-test reliability of WMSC for individual.
+        This is why I hard code condition 3 and the threshold at 0.5 (as was in the original)
+        """
+        #print "arguments    = 8.blondel_another "+subject+" 3 0.5 \nqueue \n"
 
     def hierarchyargs(self,subject,arg1,arg2):
         """
@@ -255,6 +264,14 @@ class MakeArgs:
 
     def qwarp_flowargs(self,subject):
         print "arguments    = --Subject "+subject+" \nqueue \n"
+
+#    def links_thresh(self, subject, arg1, arg2):
+#        print "arguments    = --subject "+subject+" --number_voxels "+`arg1`+" --condition "+`arg2`+" \nqueue \n"
+
+    def links_thresh(self, subject, arg1):
+        print "arguments    = --subject "+subject+" --number_voxels "+`arg1`+" \nqueue \n"
+
+
 
     def tester(self):
         print "this is a test"
