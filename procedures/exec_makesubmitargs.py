@@ -14,14 +14,17 @@ from makesubmitargs import makeargs as mm
 #subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","CLFR","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #EZCR, BARS & ANGO not in here
-subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
+#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO, BARS & EZCR not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO"]
 #subjects = ["ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 #subjects = ["TRCO","PIGL","SNNW","LDMW","FLTM"]
+#subjects = ["PIGL","SNNW","LDMW","FLTM"]
 #subjects = ["EEPA","DNLN","CRFO","ANMS","MRZM","MRVV"]
 #subjects = ["MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
+subjects = ["PIGL","SNNW","LDMW","FLTM", "TRCO", "ANGO", "MYTP"]
+#subjects = ["PIGL","SNNW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","ANGO"]
 conditions = range(1,5)
 
 """
@@ -47,20 +50,22 @@ for ss in subjects:
     #mm.ijkcoordsargs(ss)
     #mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, nvox_dict[ss])
-    #mm.maskdumpargs(ss)
+#    mm.maskdumpargs(ss)
     #mm.maskmakerargs(Ss)
     #mm.undumpargs(ss,"float")
     #mm.distanceargs(ss)
     #mm.xyzcoordsargs(ss)
     #mm.distance_dit_fitargs(ss)
-    mm.qwarp_flowargs(ss)
-#    for cc in conditions:
+    #mm.qwarp_flowargs(ss)
+#    mm.blondelargs(ss)
+#    mm.links_thresh(ss, nvox_dict[ss])
+    for cc in conditions:
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
 #        mm.fcorrargs(ss,cc)
         #mm.threshargs(ss,cc) ## for submit.6.threshold
-        #mm.convertargs(ss,cc) ## for submit.7.blondel_convert
-        #mm.blondelargs(ss,cc) ## for submit.8.blondel
+#        mm.convertargs(ss, cc, "0.5") ## for submit.7.blondel_convert
+        mm.blondelargs(ss, cc, "0.5") ## for submit.8.blondel
         #mm.hierarchyargs(ss,cc,tree_d[ss][cc-1])
         #mm.undumpargs(ss,cc,tree_d[ss][cc-1])
         #mm.undumpargs(ss,cc,"short")
@@ -77,6 +82,7 @@ for ss in subjects:
         #mm.freqPowerExp_args(ss,cc,tree_d[ss][cc-1])
         #    for h in hemispheres:
         #        mm.vol2surfargs(ss,cc,h)
+#        mm.links_thresh(ss, nvox_dict[ss], cc)
 #        for t in thresholds:
             #mm.threshargs(ss, cc, t)
             #mm.convertargs(ss, cc, t)
