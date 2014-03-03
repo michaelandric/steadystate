@@ -1,0 +1,5 @@
+## Make Talairach ref image in 4mm^3
+/mnt/tier2/urihas/Software/fsl/bin/fslcreatehd 45 55 45 1 4 4 4 1 0 0 0 16  TT_avg152T1_4by4_tmp.nii.gz ; /mnt/tier2/urihas/Software/fsl/bin/flirt -in /mnt/tier2/urihas/Andric/steadystate/groupstats/TT_avg152T1.nii -applyxfm -init /mnt/tier2/urihas/Software/fsl/etc/flirtsch/ident.mat -out TT_avg152T1_4by4 -paddingsize 0.0 -interp trilinear -ref TT_avg152T1_4by4_tmp
+
+## Make AFNI func in Talairach
+/mnt/tier2/urihas/Software/fsl/bin/flirt -in /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.1.degrees.ijk.nii -ref /mnt/tier2/urihas/Andric/steadystate/groupstats/TT_avg152T1_4by4.nii.gz -out /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.1.degrees.ijk_4by4 -omat /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/CLFR.1.degrees.ijk_4by4.mat -bins 256 -cost corratio -searchrx -180 180 -searchry -180 180 -searchrz -180 180 -dof 12  -interp nearestneighbour
