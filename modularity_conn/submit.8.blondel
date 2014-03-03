@@ -6,40 +6,87 @@ error		= ./logs/8.$(Process).err
 log 		= ./logs/8.$(Process).log
 
 
-
-arguments    = 8.blondel TRCO 1 0.5 
+arguments    = 8.blondel_iterations PIGL 1 0.5 
 queue 
 
-arguments    = 8.blondel TRCO 2 0.5 
+arguments    = 8.blondel_iterations PIGL 2 0.5 
 queue 
 
-arguments    = 8.blondel TRCO 3 0.5 
+arguments    = 8.blondel_iterations PIGL 3 0.5 
 queue 
 
-arguments    = 8.blondel TRCO 4 0.5 
+arguments    = 8.blondel_iterations PIGL 4 0.5 
 queue 
 
-arguments    = 8.blondel ANGO 1 0.5 
+arguments    = 8.blondel_iterations SNNW 1 0.5 
 queue 
 
-arguments    = 8.blondel ANGO 2 0.5 
+arguments    = 8.blondel_iterations SNNW 2 0.5 
 queue 
 
-arguments    = 8.blondel ANGO 3 0.5 
+arguments    = 8.blondel_iterations SNNW 3 0.5 
 queue 
 
-arguments    = 8.blondel ANGO 4 0.5 
+arguments    = 8.blondel_iterations SNNW 4 0.5 
 queue 
 
-arguments    = 8.blondel MYTP 1 0.5 
+arguments    = 8.blondel_iterations LDMW 1 0.5 
 queue 
 
-arguments    = 8.blondel MYTP 2 0.5 
+arguments    = 8.blondel_iterations LDMW 2 0.5 
 queue 
 
-arguments    = 8.blondel MYTP 3 0.5 
+arguments    = 8.blondel_iterations LDMW 3 0.5 
 queue 
 
-arguments    = 8.blondel MYTP 4 0.5 
+arguments    = 8.blondel_iterations LDMW 4 0.5 
+queue 
+
+arguments    = 8.blondel_iterations FLTM 1 0.5 
+queue 
+
+arguments    = 8.blondel_iterations FLTM 2 0.5 
+queue 
+
+arguments    = 8.blondel_iterations FLTM 3 0.5 
+queue 
+
+arguments    = 8.blondel_iterations FLTM 4 0.5 
+queue 
+
+arguments    = 8.blondel_iterations TRCO 1 0.5 
+queue 
+
+arguments    = 8.blondel_iterations TRCO 2 0.5 
+queue 
+
+arguments    = 8.blondel_iterations TRCO 3 0.5 
+queue 
+
+arguments    = 8.blondel_iterations TRCO 4 0.5 
+queue 
+
+arguments    = 8.blondel_iterations ANGO 1 0.5 
+queue 
+
+arguments    = 8.blondel_iterations ANGO 2 0.5 
+queue 
+
+arguments    = 8.blondel_iterations ANGO 3 0.5 
+queue 
+
+arguments    = 8.blondel_iterations ANGO 4 0.5 
+queue 
+
+arguments    = 8.blondel_iterations MYTP 1 0.5 
+queue 
+
+arguments    = 8.blondel_iterations MYTP 2 0.5 
+queue 
+
+arguments    = 8.blondel_iterations MYTP 3 0.5 
+queue 
+
+arguments    = 8.blondel_iterations MYTP 4 0.5 
 queue 
 

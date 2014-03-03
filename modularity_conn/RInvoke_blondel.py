@@ -25,7 +25,7 @@ print R_SCRIPT_PREF
 WORKDIR = os.environ["state"]+"/links_files/modularity/"
 R_SCRIPT = R_SCRIPT_PREF+".R"
 #R_SCRIPT_NEW = R_SCRIPT_PREF+"_gray_"+ss+Cond+"_thresh_"+Thresh+".R"
-R_SCRIPT_NEW = R_SCRIPT_PREF+"_gray_"+ss+Cond+"median_linksthresh_"+Thresh+".R"
+R_SCRIPT_NEW = R_SCRIPT_PREF+"_"+ss+Cond+"_linksthresh_"+Thresh+"proportions.R"
 shutil.copy2(R_SCRIPT,WORKDIR+R_SCRIPT_NEW)
 os.chdir(WORKDIR)
 

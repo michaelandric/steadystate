@@ -6,39 +6,88 @@ error		= ./logs/7.$(Process).err
 log 		= ./logs/7.$(Process).log
 
 
-arguments    = 7.blondel_convert.R ANGO 1 0.2 
+
+arguments    = 7.blondel_convert_iterations.R PIGL 1 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 1 0.3 
+arguments    = 7.blondel_convert_iterations.R PIGL 2 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 1 0.4 
+arguments    = 7.blondel_convert_iterations.R PIGL 3 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 2 0.2 
+arguments    = 7.blondel_convert_iterations.R PIGL 4 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 2 0.3 
+arguments    = 7.blondel_convert_iterations.R SNNW 1 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 2 0.4 
+arguments    = 7.blondel_convert_iterations.R SNNW 2 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 3 0.2 
+arguments    = 7.blondel_convert_iterations.R SNNW 3 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 3 0.3 
+arguments    = 7.blondel_convert_iterations.R SNNW 4 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 3 0.4 
+arguments    = 7.blondel_convert_iterations.R LDMW 1 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 4 0.2 
+arguments    = 7.blondel_convert_iterations.R LDMW 2 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 4 0.3 
+arguments    = 7.blondel_convert_iterations.R LDMW 3 0.5 
 queue 
 
-arguments    = 7.blondel_convert.R ANGO 4 0.4 
+arguments    = 7.blondel_convert_iterations.R LDMW 4 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R FLTM 1 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R FLTM 2 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R FLTM 3 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R FLTM 4 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R TRCO 1 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R TRCO 2 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R TRCO 3 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R TRCO 4 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R ANGO 1 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R ANGO 2 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R ANGO 3 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R ANGO 4 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R MYTP 1 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R MYTP 2 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R MYTP 3 0.5 
+queue 
+
+arguments    = 7.blondel_convert_iterations.R MYTP 4 0.5 
 queue 
 

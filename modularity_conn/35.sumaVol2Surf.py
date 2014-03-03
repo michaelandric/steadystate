@@ -49,17 +49,17 @@ class Vol2Surf:
                     -sv "+SV+" -grid_parent "+PARENT+" -map_func max -f_steps 10 -f_index voxels -f_p1_fr -0.3 -f_pn_fr 0.3 \
                     -outcols_NSD_format -oob_index -1 -oob_value 0.0 -out_1D modules_"+self.options.SS+"_"+self.options.H+"_Cond"+self.options.cc+".tlrc.1D", shell=True)
 
-def volsurf_tal_pres_avg_cmd(H):
+def volsurf_tal_pres_avg_cmd(H, pn):
     """
     This is projecting preserved avg group data—i.e., no interations 
     """
     os.chdir("/mnt/lnif-storage/urihas/uhproject/suma_tlrc/")
     print os.getcwd()
-    PARENT = os.environ["state"]+"/groupstats/preserved_group_avg+tlrc"
+    PARENT = os.environ["state"]+"/groupstats/preserved_group_median+tlrc"
     SV = "TT_N27+tlrc"
     print call("3dVol2Surf -spec ./N27_"+H+"_tlrc.spec -surf_A ./"+H+".smoothwm.tlrc.ply -surf_B ./"+H+".pial.tlrc.ply \
-                -sv "+SV+" -grid_parent "+PARENT+" -map_func max -f_steps 10 -f_index voxels -f_p1_fr -0.3 -f_pn_fr 0.3 \
-                -outcols_NSD_format -oob_index -1 -oob_value 0.0 -out_1D preserved_group_avg_"+H+".tlrc.1D", shell=True)
+                -sv "+SV+" -grid_parent "+PARENT+" -map_func max -f_steps 10 -f_index voxels -f_p1_fr -"+pn+" -f_pn_fr "+pn+" \
+                -outcols_NSD_format -oob_index -1 -oob_value 0.0 -out_1D preserved_group_median_"+H+".pn"+pn+".tlrc.1D", shell=True)
 
 
 def main():
@@ -69,4 +69,7 @@ def main():
 if __name__ == "__main__":
     #main()
     for H in ["lh", "rh"]:
-        volsurf_tal_pres_avg_cmd(H)
+        for pn in ["1.0", "2.0"]:
+            volsurf_tal_pres_avg_cmd(H, pn)
+
+

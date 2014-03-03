@@ -7,8 +7,8 @@ thresh <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
 
 library(bct)
 
-thresh_mat <- paste(Sys.getenv("state"),"/links_files/",subj,".",cond,".",thresh,"median_linksthresh.out", sep="")
-blondel_mat <- paste(Sys.getenv("state"),"/links_files/modularity/",subj,".",cond,".",thresh,"median_linksthresh.out.srcdst", sep="")
+thresh_mat <- paste(Sys.getenv("state"),"/links_files/",subj,".",cond,".",thresh,"median_linksthresh_proportion.out", sep="")
+blondel_mat <- paste(Sys.getenv("state"),"/links_files/modularity/",subj,".",cond,".",thresh,"median_linksthresh_proportion.out.srcdst", sep="")
 blondel_convert(thresh_mat, blondel_mat)
 
 

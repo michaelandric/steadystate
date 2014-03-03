@@ -10,6 +10,7 @@ mi <- function(a, b)
 }
 
 NMIvals <- c()
+avgs <- c()
 
 for (ss in subjects)
 {
@@ -18,9 +19,18 @@ for (ss in subjects)
     setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/corrTRIM_BLUR/another/", sep = ""))
     another_coms <- as.matrix(read.table(list.files(pattern=paste("cleanTS.3.*.justcomm",sep=""))))
     NMIvals <- c(NMIvals, mi(orig_coms, another_coms))
+
+    pr <- as.matrix(read.table(paste("preserved_",ss,"_another.txt", sep = "")))   # also now getting the preserved to compare with WMSC
+    avgs <- c(avgs, mean(pr))
 }
 
 print(NMIvals)
 print(summary(NMIvals))
 print(sd(NMIvals))
+
+print(avgs)
+print(summary(avgs))
+print(sd(avgs))
+
+print(cor(NMIvals, avgs))
 

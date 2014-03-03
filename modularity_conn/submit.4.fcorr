@@ -1,4 +1,4 @@
-executable	= 4.fcorr.py
+executable	= 4.tlrc_fcorr.py
 universe 	= vanilla
 getenv		= true
 output		= ./logs/4.$(Process).out
@@ -6,99 +6,15 @@ error		= ./logs/4.$(Process).err
 log 		= ./logs/4.$(Process).log
 
 
-arguments    = --subject LDMW --source_directory /mnt/tier2/urihas/Andric/steadystate/LDMW/ --output_directory /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --condition 1 
+arguments    = --subject ANGO  --output_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ --condition 1 
 queue 
 
-arguments    = --subject LDMW --source_directory /mnt/tier2/urihas/Andric/steadystate/LDMW/ --output_directory /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --condition 2 
+arguments    = --subject ANGO  --output_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ --condition 2 
 queue 
 
-arguments    = --subject LDMW --source_directory /mnt/tier2/urihas/Andric/steadystate/LDMW/ --output_directory /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --condition 3 
+arguments    = --subject ANGO  --output_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ --condition 3 
 queue 
 
-arguments    = --subject LDMW --source_directory /mnt/tier2/urihas/Andric/steadystate/LDMW/ --output_directory /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/LDMW_graymattermask_resampled+orig --condition 4 
-queue 
-
-arguments    = --subject FLTM --source_directory /mnt/tier2/urihas/Andric/steadystate/FLTM/ --output_directory /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --condition 1 
-queue 
-
-arguments    = --subject FLTM --source_directory /mnt/tier2/urihas/Andric/steadystate/FLTM/ --output_directory /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --condition 2 
-queue 
-
-arguments    = --subject FLTM --source_directory /mnt/tier2/urihas/Andric/steadystate/FLTM/ --output_directory /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --condition 3 
-queue 
-
-arguments    = --subject FLTM --source_directory /mnt/tier2/urihas/Andric/steadystate/FLTM/ --output_directory /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/FLTM_graymattermask_resampled+orig --condition 4 
-queue 
-
-arguments    = --subject EZCR --source_directory /mnt/tier2/urihas/Andric/steadystate/EZCR/ --output_directory /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/EZCR/masking/EZCR_graymattermask_resampled+orig --condition 1 
-queue 
-
-arguments    = --subject EZCR --source_directory /mnt/tier2/urihas/Andric/steadystate/EZCR/ --output_directory /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/EZCR/masking/EZCR_graymattermask_resampled+orig --condition 2 
-queue 
-
-arguments    = --subject EZCR --source_directory /mnt/tier2/urihas/Andric/steadystate/EZCR/ --output_directory /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/EZCR/masking/EZCR_graymattermask_resampled+orig --condition 3 
-queue 
-
-arguments    = --subject EZCR --source_directory /mnt/tier2/urihas/Andric/steadystate/EZCR/ --output_directory /mnt/tier2/urihas/Andric/steadystate/EZCR/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/EZCR/masking/EZCR_graymattermask_resampled+orig --condition 4 
-queue 
-
-arguments    = --subject EEPA --source_directory /mnt/tier2/urihas/Andric/steadystate/EEPA/ --output_directory /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --condition 1 
-queue 
-
-arguments    = --subject EEPA --source_directory /mnt/tier2/urihas/Andric/steadystate/EEPA/ --output_directory /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --condition 2 
-queue 
-
-arguments    = --subject EEPA --source_directory /mnt/tier2/urihas/Andric/steadystate/EEPA/ --output_directory /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --condition 3 
-queue 
-
-arguments    = --subject EEPA --source_directory /mnt/tier2/urihas/Andric/steadystate/EEPA/ --output_directory /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/EEPA_graymattermask_resampled+orig --condition 4 
-queue 
-
-arguments    = --subject DNLN --source_directory /mnt/tier2/urihas/Andric/steadystate/DNLN/ --output_directory /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --condition 1 
-queue 
-
-arguments    = --subject DNLN --source_directory /mnt/tier2/urihas/Andric/steadystate/DNLN/ --output_directory /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --condition 2 
-queue 
-
-arguments    = --subject DNLN --source_directory /mnt/tier2/urihas/Andric/steadystate/DNLN/ --output_directory /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --condition 3 
-queue 
-
-arguments    = --subject DNLN --source_directory /mnt/tier2/urihas/Andric/steadystate/DNLN/ --output_directory /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/DNLN_graymattermask_resampled+orig --condition 4 
-queue 
-
-arguments    = --subject CRFO --source_directory /mnt/tier2/urihas/Andric/steadystate/CRFO/ --output_directory /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --condition 1 
-queue 
-
-arguments    = --subject CRFO --source_directory /mnt/tier2/urihas/Andric/steadystate/CRFO/ --output_directory /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --condition 2 
-queue 
-
-arguments    = --subject CRFO --source_directory /mnt/tier2/urihas/Andric/steadystate/CRFO/ --output_directory /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --condition 3 
-queue 
-
-arguments    = --subject CRFO --source_directory /mnt/tier2/urihas/Andric/steadystate/CRFO/ --output_directory /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/CRFO_graymattermask_resampled+orig --condition 4 
-queue 
-
-arguments    = --subject ANMS --source_directory /mnt/tier2/urihas/Andric/steadystate/ANMS/ --output_directory /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --condition 1 
-queue 
-
-arguments    = --subject ANMS --source_directory /mnt/tier2/urihas/Andric/steadystate/ANMS/ --output_directory /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --condition 2 
-queue 
-
-arguments    = --subject ANMS --source_directory /mnt/tier2/urihas/Andric/steadystate/ANMS/ --output_directory /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --condition 3 
-queue 
-
-arguments    = --subject ANMS --source_directory /mnt/tier2/urihas/Andric/steadystate/ANMS/ --output_directory /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ANMS_graymattermask_resampled+orig --condition 4 
-queue 
-
-arguments    = --subject BARS --source_directory /mnt/tier2/urihas/Andric/steadystate/BARS/ --output_directory /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/BARS/masking/BARS_graymattermask_resampled+orig --condition 1 
-queue 
-
-arguments    = --subject BARS --source_directory /mnt/tier2/urihas/Andric/steadystate/BARS/ --output_directory /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/BARS/masking/BARS_graymattermask_resampled+orig --condition 2 
-queue 
-
-arguments    = --subject BARS --source_directory /mnt/tier2/urihas/Andric/steadystate/BARS/ --output_directory /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/BARS/masking/BARS_graymattermask_resampled+orig --condition 3 
-queue 
-
-arguments    = --subject BARS --source_directory /mnt/tier2/urihas/Andric/steadystate/BARS/ --output_directory /mnt/tier2/urihas/Andric/steadystate/BARS/corrTRIM_BLUR/ --mask /mnt/tier2/urihas/Andric/steadystate/BARS/masking/BARS_graymattermask_resampled+orig --condition 4 
+arguments    = --subject ANGO  --output_directory /mnt/tier2/urihas/Andric/steadystate/ANGO/corrTRIM_BLUR/ --condition 4 
 queue 
 
