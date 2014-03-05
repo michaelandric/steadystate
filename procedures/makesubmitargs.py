@@ -271,6 +271,8 @@ class MakeArgs:
     def links_thresh(self, subject, arg1):
         print "arguments    = --subject "+subject+" --number_voxels "+`arg1`+" \nqueue \n"
 
+    def community_iterations(self, subject, arg1, arg2):
+        print "arguments    = "+subject+" "+arg1+" "+`arg2`+" \nqueue \n"
 
 
     def tester(self):
