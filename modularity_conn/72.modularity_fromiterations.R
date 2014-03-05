@@ -1,0 +1,77 @@
+## repeated measures ANOVA on modularity scores
+subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
+conditions <- seq(4)
+
+densities <- c("5p", "8p", "12p", "15p")
+#setwd("/mnt/tier2/urihas/Andric/steadystate/groupstats/")
+#print(getwd())
+
+for (de in densities)
+{   # graph links density
+    mod_data <- c()
+    stddev_data <- c()
+    range_data <- c()
+    firstQ <- c()
+    thirdQ <- c()
+    subject_frame <- c()
+    condition_frame <- c()
+    print(paste("GRAPH LINK DENSITY ",de, sep = ""))
+    for (ss in subjects)
+    {
+        setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/modularity",de,"/", sep = "")) 
+        for (i in conditions)
+        {
+            modscores <- c()
+            filelist = list.files(pattern = glob2rx(paste("*",ss,".",i,"*.Qval", sep = "")))
+            for (f in filelist)
+            {
+                modscores <- c(modscores, as.matrix(read.table(f)))
+            }
+            mod_data <- c(mod_data, sort(modscores)[51])
+            stddev_data <- c(stddev_data, sd(modscores))
+            range_data <- c(range_data, diff(range(modscores)))
+            firstQ <- c(firstQ, summary(modscores)[[2]])
+            thirdQ <- c(thirdQ, summary(modscores)[[5]])
+            subject_frame <- c(subject_frame, ss)
+            condition_frame <- c(condition_frame, paste("cond",i,sep=""))
+        }
+    }
+
+
+    mod_score_frame <- data.frame(mod_data,subject_frame,condition_frame)
+    variance_score_frame <- data.frame(stddev_data, range_data, firstQ, thirdQ, subject_frame,condition_frame)
+    colnames(mod_score_frame) <- c("modularity","subject","condition")
+    colnames(variance_score_frame) <- c("stddev", "range_diff", "FirstQ", "ThirdQ", "Subject", "Condition")
+    write.table(variance_score_frame, paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/variance_score_frame",de,"_fromiters.txt", sep = ""), row.names = F, quote = F)
+    print(summary(aov(modularity ~ condition + Error(subject/condition), data=mod_score_frame)))
+    cond_means <- tapply(mod_score_frame$modularity, mod_score_frame$condition, mean)
+    print(cond_means)
+    cond_meds <- tapply(mod_score_frame$modularity, mod_score_frame$condition, median)
+    print(cond_meds)
+    print("Average of std dev by condition: ")
+    print(tapply(variance_score_frame$stddev, variance_score_frame$Condition, mean))
+    print("Average of std dev by participant: ")
+    print(tapply(variance_score_frame$stddev, variance_score_frame$Subject, mean))
+    attach(mod_score_frame)
+    print(pairwise.t.test(modularity, condition, p.adjust.method="bonferroni",paired=T))
+    #with(mod_score_frame, pairwise.t.test(modularity, condition, p.adjust.method="fdr", paired=T))
+    c1 = c(modularity[which(condition=="cond1")])
+    c2 = c(modularity[which(condition=="cond2")])
+    c3 = c(modularity[which(condition=="cond3")])
+    c4 = c(modularity[which(condition=="cond4")])
+    #print(t.test(c1,c2,paired=T))
+    #print(t.test(c1,c3,paired=T))
+    #print(t.test(c1,c4,paired=T))
+    #print(t.test(c2,c3,paired=T))
+    #print(t.test(c2,c4,paired=T))
+    #print(t.test(c3,c4,paired=T))
+    ## non-parametric 
+    print(friedman.test(modularity ~ condition | subject))
+    print(wilcox.test(c1,c2,paired=T))
+    print(wilcox.test(c1,c3,paired=T))
+    print(wilcox.test(c1,c4,paired=T))
+    print(wilcox.test(c2,c3,paired=T))
+    print(wilcox.test(c2,c4,paired=T))
+    print(wilcox.test(c3,c4,paired=T))
+}
+
