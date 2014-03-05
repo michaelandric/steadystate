@@ -1,4 +1,6 @@
 ## This now includes 'thresh' variable 
+## DIDN'T HAVE TO USE THIS: SEE 70.community_iterations.py INSTEAD
+
 Args <- Sys.getenv("R_ARGS")
 print(noquote(strsplit(Args," ")[[1]]))
 print(length(noquote(strsplit(Args," ")[[1]])))

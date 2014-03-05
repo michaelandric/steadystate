@@ -7,7 +7,7 @@ thresh <- 0.5   # this corresponds to a Pearson threshold but does not apply her
 thresholds <- c(15, 12, 8, 5)  #These are densities. % of complete graph
 
 
-
+## THIS A BIT F'D UP BECAUSE I STARTED MODIFYING -- CHECK A PREVIOUS VERSION ON GIT
 dat <- c()
 for (t in 1:(length(thresholds)))
 {
