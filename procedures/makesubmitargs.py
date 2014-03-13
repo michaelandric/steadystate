@@ -274,6 +274,8 @@ class MakeArgs:
     def community_iterations(self, subject, arg1, arg2):
         print "arguments    = "+subject+" "+arg1+" "+`arg2`+" \nqueue \n"
 
+    def RunMatlab_random_nets(self, subject, arg1):
+        print "arguments    = runrandom.m "+subject+" "+`arg1`+" \nqueue \n" 
 
     def tester(self):
         print "this is a test"

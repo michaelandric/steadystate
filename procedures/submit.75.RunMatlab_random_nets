@@ -1,0 +1,80 @@
+executable	= 75.RunMatlab_random_nets.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/75.$(Process).out
+error		= ./logs/75.$(Process).err
+log 		= ./logs/75.$(Process).log
+
+
+arguments    = runrandom.m EEPA 1 
+queue 
+
+arguments    = runrandom.m EEPA 2 
+queue 
+
+arguments    = runrandom.m EEPA 3 
+queue 
+
+arguments    = runrandom.m EEPA 4 
+queue 
+
+arguments    = runrandom.m DNLN 1 
+queue 
+
+arguments    = runrandom.m DNLN 2 
+queue 
+
+arguments    = runrandom.m DNLN 3 
+queue 
+
+arguments    = runrandom.m DNLN 4 
+queue 
+
+arguments    = runrandom.m CRFO 1 
+queue 
+
+arguments    = runrandom.m CRFO 2 
+queue 
+
+arguments    = runrandom.m CRFO 3 
+queue 
+
+arguments    = runrandom.m CRFO 4 
+queue 
+
+arguments    = runrandom.m ANMS 1 
+queue 
+
+arguments    = runrandom.m ANMS 2 
+queue 
+
+arguments    = runrandom.m ANMS 3 
+queue 
+
+arguments    = runrandom.m ANMS 4 
+queue 
+
+arguments    = runrandom.m MRZM 1 
+queue 
+
+arguments    = runrandom.m MRZM 2 
+queue 
+
+arguments    = runrandom.m MRZM 3 
+queue 
+
+arguments    = runrandom.m MRZM 4 
+queue 
+
+arguments    = runrandom.m MRVV 1 
+queue 
+
+arguments    = runrandom.m MRVV 2 
+queue 
+
+arguments    = runrandom.m MRVV 3 
+queue 
+
+arguments    = runrandom.m MRVV 4 
+queue 
+

@@ -1,0 +1,872 @@
+executable	= 70.community_iterations.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/70.$(Process).out
+error		= ./logs/70.$(Process).err
+log 		= ./logs/70.$(Process).log
+
+
+arguments    = MYTP 5p 1 
+queue 
+
+arguments    = MYTP 5p 2 
+queue 
+
+arguments    = MYTP 5p 3 
+queue 
+
+arguments    = MYTP 5p 4 
+queue 
+
+arguments    = MYTP 8p 1 
+queue 
+
+arguments    = MYTP 8p 2 
+queue 
+
+arguments    = MYTP 8p 3 
+queue 
+
+arguments    = MYTP 8p 4 
+queue 
+
+arguments    = MYTP 12p 1 
+queue 
+
+arguments    = MYTP 12p 2 
+queue 
+
+arguments    = MYTP 12p 3 
+queue 
+
+arguments    = MYTP 12p 4 
+queue 
+
+arguments    = MYTP 15p 1 
+queue 
+
+arguments    = MYTP 15p 2 
+queue 
+
+arguments    = MYTP 15p 3 
+queue 
+
+arguments    = MYTP 15p 4 
+queue 
+
+arguments    = TRCO 5p 1 
+queue 
+
+arguments    = TRCO 5p 2 
+queue 
+
+arguments    = TRCO 5p 3 
+queue 
+
+arguments    = TRCO 5p 4 
+queue 
+
+arguments    = TRCO 8p 1 
+queue 
+
+arguments    = TRCO 8p 2 
+queue 
+
+arguments    = TRCO 8p 3 
+queue 
+
+arguments    = TRCO 8p 4 
+queue 
+
+arguments    = TRCO 12p 1 
+queue 
+
+arguments    = TRCO 12p 2 
+queue 
+
+arguments    = TRCO 12p 3 
+queue 
+
+arguments    = TRCO 12p 4 
+queue 
+
+arguments    = TRCO 15p 1 
+queue 
+
+arguments    = TRCO 15p 2 
+queue 
+
+arguments    = TRCO 15p 3 
+queue 
+
+arguments    = TRCO 15p 4 
+queue 
+
+arguments    = PIGL 5p 1 
+queue 
+
+arguments    = PIGL 5p 2 
+queue 
+
+arguments    = PIGL 5p 3 
+queue 
+
+arguments    = PIGL 5p 4 
+queue 
+
+arguments    = PIGL 8p 1 
+queue 
+
+arguments    = PIGL 8p 2 
+queue 
+
+arguments    = PIGL 8p 3 
+queue 
+
+arguments    = PIGL 8p 4 
+queue 
+
+arguments    = PIGL 12p 1 
+queue 
+
+arguments    = PIGL 12p 2 
+queue 
+
+arguments    = PIGL 12p 3 
+queue 
+
+arguments    = PIGL 12p 4 
+queue 
+
+arguments    = PIGL 15p 1 
+queue 
+
+arguments    = PIGL 15p 2 
+queue 
+
+arguments    = PIGL 15p 3 
+queue 
+
+arguments    = PIGL 15p 4 
+queue 
+
+arguments    = SNNW 5p 1 
+queue 
+
+arguments    = SNNW 5p 2 
+queue 
+
+arguments    = SNNW 5p 3 
+queue 
+
+arguments    = SNNW 5p 4 
+queue 
+
+arguments    = SNNW 8p 1 
+queue 
+
+arguments    = SNNW 8p 2 
+queue 
+
+arguments    = SNNW 8p 3 
+queue 
+
+arguments    = SNNW 8p 4 
+queue 
+
+arguments    = SNNW 12p 1 
+queue 
+
+arguments    = SNNW 12p 2 
+queue 
+
+arguments    = SNNW 12p 3 
+queue 
+
+arguments    = SNNW 12p 4 
+queue 
+
+arguments    = SNNW 15p 1 
+queue 
+
+arguments    = SNNW 15p 2 
+queue 
+
+arguments    = SNNW 15p 3 
+queue 
+
+arguments    = SNNW 15p 4 
+queue 
+
+arguments    = LDMW 5p 1 
+queue 
+
+arguments    = LDMW 5p 2 
+queue 
+
+arguments    = LDMW 5p 3 
+queue 
+
+arguments    = LDMW 5p 4 
+queue 
+
+arguments    = LDMW 8p 1 
+queue 
+
+arguments    = LDMW 8p 2 
+queue 
+
+arguments    = LDMW 8p 3 
+queue 
+
+arguments    = LDMW 8p 4 
+queue 
+
+arguments    = LDMW 12p 1 
+queue 
+
+arguments    = LDMW 12p 2 
+queue 
+
+arguments    = LDMW 12p 3 
+queue 
+
+arguments    = LDMW 12p 4 
+queue 
+
+arguments    = LDMW 15p 1 
+queue 
+
+arguments    = LDMW 15p 2 
+queue 
+
+arguments    = LDMW 15p 3 
+queue 
+
+arguments    = LDMW 15p 4 
+queue 
+
+arguments    = FLTM 5p 1 
+queue 
+
+arguments    = FLTM 5p 2 
+queue 
+
+arguments    = FLTM 5p 3 
+queue 
+
+arguments    = FLTM 5p 4 
+queue 
+
+arguments    = FLTM 8p 1 
+queue 
+
+arguments    = FLTM 8p 2 
+queue 
+
+arguments    = FLTM 8p 3 
+queue 
+
+arguments    = FLTM 8p 4 
+queue 
+
+arguments    = FLTM 12p 1 
+queue 
+
+arguments    = FLTM 12p 2 
+queue 
+
+arguments    = FLTM 12p 3 
+queue 
+
+arguments    = FLTM 12p 4 
+queue 
+
+arguments    = FLTM 15p 1 
+queue 
+
+arguments    = FLTM 15p 2 
+queue 
+
+arguments    = FLTM 15p 3 
+queue 
+
+arguments    = FLTM 15p 4 
+queue 
+
+arguments    = EEPA 5p 1 
+queue 
+
+arguments    = EEPA 5p 2 
+queue 
+
+arguments    = EEPA 5p 3 
+queue 
+
+arguments    = EEPA 5p 4 
+queue 
+
+arguments    = EEPA 8p 1 
+queue 
+
+arguments    = EEPA 8p 2 
+queue 
+
+arguments    = EEPA 8p 3 
+queue 
+
+arguments    = EEPA 8p 4 
+queue 
+
+arguments    = EEPA 12p 1 
+queue 
+
+arguments    = EEPA 12p 2 
+queue 
+
+arguments    = EEPA 12p 3 
+queue 
+
+arguments    = EEPA 12p 4 
+queue 
+
+arguments    = EEPA 15p 1 
+queue 
+
+arguments    = EEPA 15p 2 
+queue 
+
+arguments    = EEPA 15p 3 
+queue 
+
+arguments    = EEPA 15p 4 
+queue 
+
+arguments    = DNLN 5p 1 
+queue 
+
+arguments    = DNLN 5p 2 
+queue 
+
+arguments    = DNLN 5p 3 
+queue 
+
+arguments    = DNLN 5p 4 
+queue 
+
+arguments    = DNLN 8p 1 
+queue 
+
+arguments    = DNLN 8p 2 
+queue 
+
+arguments    = DNLN 8p 3 
+queue 
+
+arguments    = DNLN 8p 4 
+queue 
+
+arguments    = DNLN 12p 1 
+queue 
+
+arguments    = DNLN 12p 2 
+queue 
+
+arguments    = DNLN 12p 3 
+queue 
+
+arguments    = DNLN 12p 4 
+queue 
+
+arguments    = DNLN 15p 1 
+queue 
+
+arguments    = DNLN 15p 2 
+queue 
+
+arguments    = DNLN 15p 3 
+queue 
+
+arguments    = DNLN 15p 4 
+queue 
+
+arguments    = CRFO 5p 1 
+queue 
+
+arguments    = CRFO 5p 2 
+queue 
+
+arguments    = CRFO 5p 3 
+queue 
+
+arguments    = CRFO 5p 4 
+queue 
+
+arguments    = CRFO 8p 1 
+queue 
+
+arguments    = CRFO 8p 2 
+queue 
+
+arguments    = CRFO 8p 3 
+queue 
+
+arguments    = CRFO 8p 4 
+queue 
+
+arguments    = CRFO 12p 1 
+queue 
+
+arguments    = CRFO 12p 2 
+queue 
+
+arguments    = CRFO 12p 3 
+queue 
+
+arguments    = CRFO 12p 4 
+queue 
+
+arguments    = CRFO 15p 1 
+queue 
+
+arguments    = CRFO 15p 2 
+queue 
+
+arguments    = CRFO 15p 3 
+queue 
+
+arguments    = CRFO 15p 4 
+queue 
+
+arguments    = ANMS 5p 1 
+queue 
+
+arguments    = ANMS 5p 2 
+queue 
+
+arguments    = ANMS 5p 3 
+queue 
+
+arguments    = ANMS 5p 4 
+queue 
+
+arguments    = ANMS 8p 1 
+queue 
+
+arguments    = ANMS 8p 2 
+queue 
+
+arguments    = ANMS 8p 3 
+queue 
+
+arguments    = ANMS 8p 4 
+queue 
+
+arguments    = ANMS 12p 1 
+queue 
+
+arguments    = ANMS 12p 2 
+queue 
+
+arguments    = ANMS 12p 3 
+queue 
+
+arguments    = ANMS 12p 4 
+queue 
+
+arguments    = ANMS 15p 1 
+queue 
+
+arguments    = ANMS 15p 2 
+queue 
+
+arguments    = ANMS 15p 3 
+queue 
+
+arguments    = ANMS 15p 4 
+queue 
+
+arguments    = MRZM 5p 1 
+queue 
+
+arguments    = MRZM 5p 2 
+queue 
+
+arguments    = MRZM 5p 3 
+queue 
+
+arguments    = MRZM 5p 4 
+queue 
+
+arguments    = MRZM 8p 1 
+queue 
+
+arguments    = MRZM 8p 2 
+queue 
+
+arguments    = MRZM 8p 3 
+queue 
+
+arguments    = MRZM 8p 4 
+queue 
+
+arguments    = MRZM 12p 1 
+queue 
+
+arguments    = MRZM 12p 2 
+queue 
+
+arguments    = MRZM 12p 3 
+queue 
+
+arguments    = MRZM 12p 4 
+queue 
+
+arguments    = MRZM 15p 1 
+queue 
+
+arguments    = MRZM 15p 2 
+queue 
+
+arguments    = MRZM 15p 3 
+queue 
+
+arguments    = MRZM 15p 4 
+queue 
+
+arguments    = MRVV 5p 1 
+queue 
+
+arguments    = MRVV 5p 2 
+queue 
+
+arguments    = MRVV 5p 3 
+queue 
+
+arguments    = MRVV 5p 4 
+queue 
+
+arguments    = MRVV 8p 1 
+queue 
+
+arguments    = MRVV 8p 2 
+queue 
+
+arguments    = MRVV 8p 3 
+queue 
+
+arguments    = MRVV 8p 4 
+queue 
+
+arguments    = MRVV 12p 1 
+queue 
+
+arguments    = MRVV 12p 2 
+queue 
+
+arguments    = MRVV 12p 3 
+queue 
+
+arguments    = MRVV 12p 4 
+queue 
+
+arguments    = MRVV 15p 1 
+queue 
+
+arguments    = MRVV 15p 2 
+queue 
+
+arguments    = MRVV 15p 3 
+queue 
+
+arguments    = MRVV 15p 4 
+queue 
+
+arguments    = MRMK 5p 1 
+queue 
+
+arguments    = MRMK 5p 2 
+queue 
+
+arguments    = MRMK 5p 3 
+queue 
+
+arguments    = MRMK 5p 4 
+queue 
+
+arguments    = MRMK 8p 1 
+queue 
+
+arguments    = MRMK 8p 2 
+queue 
+
+arguments    = MRMK 8p 3 
+queue 
+
+arguments    = MRMK 8p 4 
+queue 
+
+arguments    = MRMK 12p 1 
+queue 
+
+arguments    = MRMK 12p 2 
+queue 
+
+arguments    = MRMK 12p 3 
+queue 
+
+arguments    = MRMK 12p 4 
+queue 
+
+arguments    = MRMK 15p 1 
+queue 
+
+arguments    = MRMK 15p 2 
+queue 
+
+arguments    = MRMK 15p 3 
+queue 
+
+arguments    = MRMK 15p 4 
+queue 
+
+arguments    = MRMC 5p 1 
+queue 
+
+arguments    = MRMC 5p 2 
+queue 
+
+arguments    = MRMC 5p 3 
+queue 
+
+arguments    = MRMC 5p 4 
+queue 
+
+arguments    = MRMC 8p 1 
+queue 
+
+arguments    = MRMC 8p 2 
+queue 
+
+arguments    = MRMC 8p 3 
+queue 
+
+arguments    = MRMC 8p 4 
+queue 
+
+arguments    = MRMC 12p 1 
+queue 
+
+arguments    = MRMC 12p 2 
+queue 
+
+arguments    = MRMC 12p 3 
+queue 
+
+arguments    = MRMC 12p 4 
+queue 
+
+arguments    = MRMC 15p 1 
+queue 
+
+arguments    = MRMC 15p 2 
+queue 
+
+arguments    = MRMC 15p 3 
+queue 
+
+arguments    = MRMC 15p 4 
+queue 
+
+arguments    = MRAG 5p 1 
+queue 
+
+arguments    = MRAG 5p 2 
+queue 
+
+arguments    = MRAG 5p 3 
+queue 
+
+arguments    = MRAG 5p 4 
+queue 
+
+arguments    = MRAG 8p 1 
+queue 
+
+arguments    = MRAG 8p 2 
+queue 
+
+arguments    = MRAG 8p 3 
+queue 
+
+arguments    = MRAG 8p 4 
+queue 
+
+arguments    = MRAG 12p 1 
+queue 
+
+arguments    = MRAG 12p 2 
+queue 
+
+arguments    = MRAG 12p 3 
+queue 
+
+arguments    = MRAG 12p 4 
+queue 
+
+arguments    = MRAG 15p 1 
+queue 
+
+arguments    = MRAG 15p 2 
+queue 
+
+arguments    = MRAG 15p 3 
+queue 
+
+arguments    = MRAG 15p 4 
+queue 
+
+arguments    = MNGO 5p 1 
+queue 
+
+arguments    = MNGO 5p 2 
+queue 
+
+arguments    = MNGO 5p 3 
+queue 
+
+arguments    = MNGO 5p 4 
+queue 
+
+arguments    = MNGO 8p 1 
+queue 
+
+arguments    = MNGO 8p 2 
+queue 
+
+arguments    = MNGO 8p 3 
+queue 
+
+arguments    = MNGO 8p 4 
+queue 
+
+arguments    = MNGO 12p 1 
+queue 
+
+arguments    = MNGO 12p 2 
+queue 
+
+arguments    = MNGO 12p 3 
+queue 
+
+arguments    = MNGO 12p 4 
+queue 
+
+arguments    = MNGO 15p 1 
+queue 
+
+arguments    = MNGO 15p 2 
+queue 
+
+arguments    = MNGO 15p 3 
+queue 
+
+arguments    = MNGO 15p 4 
+queue 
+
+arguments    = LRVN 5p 1 
+queue 
+
+arguments    = LRVN 5p 2 
+queue 
+
+arguments    = LRVN 5p 3 
+queue 
+
+arguments    = LRVN 5p 4 
+queue 
+
+arguments    = LRVN 8p 1 
+queue 
+
+arguments    = LRVN 8p 2 
+queue 
+
+arguments    = LRVN 8p 3 
+queue 
+
+arguments    = LRVN 8p 4 
+queue 
+
+arguments    = LRVN 12p 1 
+queue 
+
+arguments    = LRVN 12p 2 
+queue 
+
+arguments    = LRVN 12p 3 
+queue 
+
+arguments    = LRVN 12p 4 
+queue 
+
+arguments    = LRVN 15p 1 
+queue 
+
+arguments    = LRVN 15p 2 
+queue 
+
+arguments    = LRVN 15p 3 
+queue 
+
+arguments    = LRVN 15p 4 
+queue 
+
+arguments    = CLFR 5p 1 
+queue 
+
+arguments    = CLFR 5p 2 
+queue 
+
+arguments    = CLFR 5p 3 
+queue 
+
+arguments    = CLFR 5p 4 
+queue 
+
+arguments    = CLFR 8p 1 
+queue 
+
+arguments    = CLFR 8p 2 
+queue 
+
+arguments    = CLFR 8p 3 
+queue 
+
+arguments    = CLFR 8p 4 
+queue 
+
+arguments    = CLFR 12p 1 
+queue 
+
+arguments    = CLFR 12p 2 
+queue 
+
+arguments    = CLFR 12p 3 
+queue 
+
+arguments    = CLFR 12p 4 
+queue 
+
+arguments    = CLFR 15p 1 
+queue 
+
+arguments    = CLFR 15p 2 
+queue 
+
+arguments    = CLFR 15p 3 
+queue 
+
+arguments    = CLFR 15p 4 
+queue 
+

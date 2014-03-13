@@ -21,9 +21,9 @@ from makesubmitargs import makeargs as mm
 #subjects = ["ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 #subjects = ["TRCO","PIGL","SNNW","LDMW","FLTM"]
 #subjects = ["PIGL","SNNW","LDMW","FLTM"]
-#subjects = ["EEPA","DNLN","CRFO","ANMS","MRZM","MRVV"]
+subjects = ["EEPA","DNLN","CRFO","ANMS","MRZM","MRVV"]
 #subjects = ["MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
-subjects = ["PIGL","SNNW","LDMW","FLTM", "TRCO", "ANGO", "MYTP"]
+#subjects = ["PIGL","SNNW","LDMW","FLTM", "TRCO", "ANGO", "MYTP"]
 #subjects = ["PIGL","SNNW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","ANGO"]
 conditions = range(1,5)
 
@@ -60,12 +60,13 @@ for ss in subjects:
 #    mm.blondelargs(ss)
 #    mm.links_thresh(ss, nvox_dict[ss])
     for cc in conditions:
+        mm.RunMatlab_random_nets(ss, cc)
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
 #        mm.fcorrargs(ss,cc)
         #mm.threshargs(ss,cc) ## for submit.6.threshold
 #        mm.convertargs(ss, cc, "0.5") ## for submit.7.blondel_convert
-        mm.blondelargs(ss, cc, "0.5") ## for submit.8.blondel
+#        mm.blondelargs(ss, cc, "0.5") ## for submit.8.blondel
         #mm.hierarchyargs(ss,cc,tree_d[ss][cc-1])
         #mm.undumpargs(ss,cc,tree_d[ss][cc-1])
         #mm.undumpargs(ss,cc,"short")
