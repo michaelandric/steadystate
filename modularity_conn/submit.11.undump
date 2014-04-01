@@ -6,57 +6,57 @@ error		= ./logs/11.$(Process).err
 log 		= ./logs/11.$(Process).log
 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/preserved_MYTP.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/ijk_coords_graymattermask_MYTP --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/preserved_MYTP 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/modularity5p/set_consistency/iters_MYTP_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MYTP/masking/ijk_coords_graymattermask_MYTP --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MYTP/blur.1.MYTP.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/iters_MYTP_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/preserved_TRCO.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/ijk_coords_graymattermask_TRCO --datatype float --master /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.1.TRCO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/preserved_TRCO 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/modularity5p/set_consistency/iters_TRCO_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/TRCO/masking/ijk_coords_graymattermask_TRCO --datatype float --master /mnt/tier2/urihas/Andric/steadystate/TRCO/blur.1.TRCO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/iters_TRCO_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/preserved_PIGL.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/ijk_coords_graymattermask_PIGL --datatype float --master /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.1.PIGL.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/preserved_PIGL 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/modularity5p/set_consistency/iters_PIGL_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/PIGL/masking/ijk_coords_graymattermask_PIGL --datatype float --master /mnt/tier2/urihas/Andric/steadystate/PIGL/blur.1.PIGL.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/iters_PIGL_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/preserved_SNNW.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/ijk_coords_graymattermask_SNNW --datatype float --master /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.1.SNNW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/preserved_SNNW 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/modularity5p/set_consistency/iters_SNNW_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/SNNW/masking/ijk_coords_graymattermask_SNNW --datatype float --master /mnt/tier2/urihas/Andric/steadystate/SNNW/blur.1.SNNW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/iters_SNNW_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/preserved_LDMW.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/ijk_coords_graymattermask_LDMW --datatype float --master /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.1.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/preserved_LDMW 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/modularity5p/set_consistency/iters_LDMW_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/LDMW/masking/ijk_coords_graymattermask_LDMW --datatype float --master /mnt/tier2/urihas/Andric/steadystate/LDMW/blur.1.LDMW.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/iters_LDMW_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/preserved_FLTM.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/ijk_coords_graymattermask_FLTM --datatype float --master /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.1.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/preserved_FLTM 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/modularity5p/set_consistency/iters_FLTM_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/FLTM/masking/ijk_coords_graymattermask_FLTM --datatype float --master /mnt/tier2/urihas/Andric/steadystate/FLTM/blur.1.FLTM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/iters_FLTM_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/preserved_EEPA.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/ijk_coords_graymattermask_EEPA --datatype float --master /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.1.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/preserved_EEPA 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/modularity5p/set_consistency/iters_CLFR_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/ijk_coords_graymattermask_CLFR --datatype float --master /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.1.CLFR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/iters_CLFR_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/preserved_DNLN.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/ijk_coords_graymattermask_DNLN --datatype float --master /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.1.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/preserved_DNLN 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/modularity5p/set_consistency/iters_EEPA_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/EEPA/masking/ijk_coords_graymattermask_EEPA --datatype float --master /mnt/tier2/urihas/Andric/steadystate/EEPA/blur.1.EEPA.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/iters_EEPA_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/preserved_CRFO.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/ijk_coords_graymattermask_CRFO --datatype float --master /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.1.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/preserved_CRFO 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/modularity5p/set_consistency/iters_DNLN_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/DNLN/masking/ijk_coords_graymattermask_DNLN --datatype float --master /mnt/tier2/urihas/Andric/steadystate/DNLN/blur.1.DNLN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/iters_DNLN_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/preserved_ANMS.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ijk_coords_graymattermask_ANMS --datatype float --master /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.1.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/preserved_ANMS 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/modularity5p/set_consistency/iters_CRFO_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/CRFO/masking/ijk_coords_graymattermask_CRFO --datatype float --master /mnt/tier2/urihas/Andric/steadystate/CRFO/blur.1.CRFO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/iters_CRFO_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/preserved_MRZM.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/ijk_coords_graymattermask_MRZM --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.1.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/preserved_MRZM 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/modularity5p/set_consistency/iters_ANMS_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/ANMS/masking/ijk_coords_graymattermask_ANMS --datatype float --master /mnt/tier2/urihas/Andric/steadystate/ANMS/blur.1.ANMS.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/iters_ANMS_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/preserved_MRVV.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/ijk_coords_graymattermask_MRVV --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.1.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/preserved_MRVV 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/modularity5p/set_consistency/iters_MRZM_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRZM/masking/ijk_coords_graymattermask_MRZM --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRZM/blur.1.MRZM.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/iters_MRZM_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/preserved_MRMK.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/ijk_coords_graymattermask_MRMK --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.1.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/preserved_MRMK 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/modularity5p/set_consistency/iters_MRVV_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRVV/masking/ijk_coords_graymattermask_MRVV --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRVV/blur.1.MRVV.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/iters_MRVV_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/preserved_MRMC.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/ijk_coords_graymattermask_MRMC --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.1.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/preserved_MRMC 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/modularity5p/set_consistency/iters_MRMK_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRMK/masking/ijk_coords_graymattermask_MRMK --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRMK/blur.1.MRMK.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/iters_MRMK_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/preserved_MRAG.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/ijk_coords_graymattermask_MRAG --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/preserved_MRAG 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/modularity5p/set_consistency/iters_MRMC_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRMC/masking/ijk_coords_graymattermask_MRMC --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRMC/blur.1.MRMC.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/iters_MRMC_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/preserved_MNGO.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/ijk_coords_graymattermask_MNGO --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.1.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/preserved_MNGO 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/modularity5p/set_consistency/iters_MRAG_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MRAG/masking/ijk_coords_graymattermask_MRAG --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MRAG/blur.1.MRAG.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/iters_MRAG_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/preserved_LRVN.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/ijk_coords_graymattermask_LRVN --datatype float --master /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.1.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/preserved_LRVN 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/modularity5p/set_consistency/iters_MNGO_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/MNGO/masking/ijk_coords_graymattermask_MNGO --datatype float --master /mnt/tier2/urihas/Andric/steadystate/MNGO/blur.1.MNGO.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/iters_MNGO_median5p 
 queue 
 
-arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/preserved_CLFR.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/CLFR/masking/ijk_coords_graymattermask_CLFR --datatype float --master /mnt/tier2/urihas/Andric/steadystate/CLFR/blur.1.CLFR.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/preserved_CLFR 
+arguments    = --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/modularity5p/set_consistency/iters_LRVN_median5p.txt --ijkfile /mnt/tier2/urihas/Andric/steadystate/LRVN/masking/ijk_coords_graymattermask_LRVN --datatype float --master /mnt/tier2/urihas/Andric/steadystate/LRVN/blur.1.LRVN.steadystate.TRIM+orig --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/iters_LRVN_median5p 
 queue 
 

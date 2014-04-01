@@ -29,6 +29,8 @@ for (t in 1:(length(thresholds)))
 
 setwd("/mnt/tier2/urihas/Andric/steadystate/groupstats/")
 
+write.table(dat, "dat.txt", row.names = F, col.names = F, quote = F)
+
 condition_vec <- rep(rep(condition_names, 19), 4)
 subjects_vec <- rep(rep(subjects, each=4), 4)
 thresh_levels <- rep(thresholds, each = length(subjects) * length(conditions))
@@ -39,8 +41,9 @@ error_vec <- c()
 means_mat <- matrix(nrow = length(thresholds), ncol = length(conditions))
 for (t in 1:length(thresholds))
 {
-    means_mat[t,] <- colMeans(matrix(subset(mod_score_frame$modularity, mod_score_frame$thresh == thresholds[t]), nrow = 19, byrow = TRUE))
+    #means_mat[t,] <- colMeans(matrix(subset(mod_score_frame$modularity, mod_score_frame$thresh == thresholds[t]), nrow = 19, byrow = TRUE))
     #means_mat[t,] <- tapply(mod_score_frame$modularity, list(mod_score_frame$condition, mod_score_frame$thresh==thresholds[t]), mean)[,2]   # This re-orders to "A, B, C, D" rather than "A, B, D, C"
+    means_mat[t,] <- tapply(mod_score_frame$modularity, list(mod_score_frame$condition, mod_score_frame$thresh==thresholds[t]), mean)[,2]   # This re-orders to "A, B, C, D" rather than "A, B, D, C"
     tmp <- subset(mod_score_frame, mod_score_frame$thresh == thresholds[t])
     for (i in conditions)
     {
@@ -51,7 +54,7 @@ for (t in 1:length(thresholds))
 error_vec_mat = matrix(error_vec, nrow = length(conditions), byrow = T)
 
 ## aggregate.plot deconstructed for my own w/in person error bars
-pdf("agplot_fromiters_linkthresh_mod_scores.pdf")
+#pdf("agplot_fromiters_linkthresh_mod_scores.pdf")
 aa = tapply(mod_score_frame$modularity, list(mod_score_frame$condition, mod_score_frame$thresh), mean)
 trans_means <- t(apply(means_mat[,c(1,2,4,3)], 2, rev))
 trans_errs <- t(apply(error_vec_mat[,c(1,2,4,3)], 2, rev))

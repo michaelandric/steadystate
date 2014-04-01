@@ -8,6 +8,12 @@ Find whether voxels part of a module in one condition prune or reorganize
 This version is to do this on iterations of the modularity solution.
 
 Doing this between conditions or on the same condition is very easy to change: Lines 107 and 108 
+
+SPECIAL:
+This version set up to handle MRAG. When running the 'hierarchy' on this pariticpant, only parsed 10234 voxels and left out the last one.
+This is only the case for conditions 1 and 3. Conditions 2 and 4 both received that last voxel. 
+Work around: Adding the single voxel to the end of the list based on the same as previous voxel (i.e., 10234 becomes 10235, as well).
+
 """
 
 import os
@@ -35,6 +41,9 @@ def set_consist(ss, ia, ib, input1, input2):
         a, b = map(int, line.split())
         voxID1_array.append(a)
         comm1_array.append(b)
+
+    voxID1_array.append(10234)
+    comm1_array.append(comm1_array[len(comm1_array)-1])
 
     for line in comf3:
         a, b = map(int, line.split())

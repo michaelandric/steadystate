@@ -12,7 +12,7 @@ subject = sys.argv[2]
 cond = sys.argv[3]
 nn = 1   # start
 ee = 101   # end
-print 'matlab_2010 -nodisplay -nosplash -nojvm -nodesktop -r "'+matlab_script.split('.')[0]+'(\''+subject+'\','+`cond`+','+`nn`+','+`ee`+'); exit; quit"'
+#print 'matlab_2010 -nodisplay -nosplash -nojvm -nodesktop -r "'+matlab_script.split('.')[0]+'(\''+subject+'\','+`cond`+','+`nn`+','+`ee`+'); exit; quit"'
 
 subprocess.call('matlab_2010 -nodisplay -nosplash -nojvm -nodesktop -r "'+matlab_script.split('.')[0]+'(\''+subject+'\','+`cond`+','+`nn`+','+`ee`+'); exit; quit"', shell = True)
 
