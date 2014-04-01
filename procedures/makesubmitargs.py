@@ -59,9 +59,15 @@ class MakeArgs:
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".node_roles_tlrc_dump.txt"
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/"+subject+"."+`arg1`+".degrees_gray+tlrc.txt"
         #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"+tlrc"
-        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_warped+tlrc"
+        #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_warped+tlrc"
+        #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_median5p_warped+tlrc"
+        #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_diff_"+subject+"_median5p_warped+tlrc"
+        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p_warped+tlrc"
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_tlrc_dump.txt"
-        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_warped_tlrc_dump.txt"
+        #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_warped_tlrc_dump.txt"
+        #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_median5p_warped_tlrc_dump.txt"
+        #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_diff_"+subject+"_median5p_warped_tlrc_dump.txt"
+        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p_warped_tlrc_dump.txt"
         print "arguments    = --mask "+automask+" --inputfile "+input+" --outputname "+output+" --subject "+subject+" \nqueue \n" 
 
     def dir_maker(self):
@@ -160,6 +166,22 @@ class MakeArgs:
         ijkfile = basedir+subject+"/masking/ijk_coords_graymattermask_"+subject
         master = basedir+subject+"/blur.1."+subject+".steadystate.TRIM+orig"
         outname = basedir+subject+"/corrTRIM_BLUR/preserved_"+subject
+        print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --datatype "+arg1+" --master "+master+" --outputname "+outname+" \nqueue \n"
+
+    def undumpargs2(self,subject,arg1):
+        """
+        arg1 == datum type. either short or float
+        Change in the filename if tree number
+        """
+        basedir = "/mnt/tier2/urihas/Andric/steadystate/"
+        #inputf = basedir+subject+"/modularity5p/set_consistency/preserved_"+subject+"_median5p.txt"
+        #inputf = basedir+subject+"/modularity5p/set_consistency/preserved_diff_"+subject+"_median5p.txt"
+        inputf = basedir+subject+"/modularity5p/set_consistency/iters_"+subject+"_median5p.txt"
+        ijkfile = basedir+subject+"/masking/ijk_coords_graymattermask_"+subject
+        master = basedir+subject+"/blur.1."+subject+".steadystate.TRIM+orig"
+        #outname = basedir+subject+"/corrTRIM_BLUR/preserved_"+subject+"_median5p"
+        #outname = basedir+subject+"/corrTRIM_BLUR/preserved_diff_"+subject+"_median5p"
+        outname = basedir+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p"
         print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --datatype "+arg1+" --master "+master+" --outputname "+outname+" \nqueue \n"
 
     def filter(self,subject,arg1,arg2):
@@ -275,7 +297,14 @@ class MakeArgs:
         print "arguments    = "+subject+" "+arg1+" "+`arg2`+" \nqueue \n"
 
     def RunMatlab_random_nets(self, subject, arg1):
-        print "arguments    = runrandom.m "+subject+" "+`arg1`+" \nqueue \n" 
+        print "arguments    = runrandom_tree.m "+subject+" "+`arg1`+" \nqueue \n" 
+
+    def voxel_module_setmembers2(self, subject):
+        print "arguments    = "+subject+" \nqueue \n"
+
+    def composite_set_preserved_iters(self, subject):
+        print "arguments    = 80.composite_set_preserved_iters.R "+subject+" \nqueue \n"
+
 
     def tester(self):
         print "this is a test"

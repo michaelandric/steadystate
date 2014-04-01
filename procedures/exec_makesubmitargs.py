@@ -13,7 +13,7 @@ from makesubmitargs import makeargs as mm
 #subjects = ["MYTP","TRCO","CLFR","PIGL","SNNW"]
 #subjects = ["LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS"]
 #subjects = ["MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"]
-#subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","CLFR","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #EZCR, BARS & ANGO not in here
+subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","CLFR","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #EZCR, BARS & ANGO not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EZCR","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN"] #CLFR & ANGO not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","BARS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO & EZCR not in here
 #subjects = ["MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"] # ANGO, BARS & EZCR not in here
@@ -21,10 +21,13 @@ from makesubmitargs import makeargs as mm
 #subjects = ["ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
 #subjects = ["TRCO","PIGL","SNNW","LDMW","FLTM"]
 #subjects = ["PIGL","SNNW","LDMW","FLTM"]
-subjects = ["EEPA","DNLN","CRFO","ANMS","MRZM","MRVV"]
+#subjects = ["EEPA","DNLN","CRFO","ANMS","MRZM","MRVV"]
 #subjects = ["MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
+#subjects = ["TRCO", "ANGO", "MYTP"]
 #subjects = ["PIGL","SNNW","LDMW","FLTM", "TRCO", "ANGO", "MYTP"]
 #subjects = ["PIGL","SNNW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","ANGO"]
+#subjects = ["EEPA", "DNLN", "CRFO"]
+#subjects = ["ANMS", "MRZM", "MRVV"]
 conditions = range(1,5)
 
 """
@@ -50,8 +53,9 @@ for ss in subjects:
     #mm.ijkcoordsargs(ss)
     #mm.autotlrcargs(ss)
     #mm.voxel_id_args(ss, nvox_dict[ss])
-#    mm.maskdumpargs(ss)
+    mm.maskdumpargs(ss)
     #mm.maskmakerargs(Ss)
+    #mm.undumpargs2(ss,"float")
     #mm.undumpargs(ss,"float")
     #mm.distanceargs(ss)
     #mm.xyzcoordsargs(ss)
@@ -59,8 +63,10 @@ for ss in subjects:
     #mm.qwarp_flowargs(ss)
 #    mm.blondelargs(ss)
 #    mm.links_thresh(ss, nvox_dict[ss])
-    for cc in conditions:
-        mm.RunMatlab_random_nets(ss, cc)
+#    mm.voxel_module_setmembers2(ss)
+    #mm.composite_set_preserved_iters(ss)
+#    for cc in conditions:
+#        mm.RunMatlab_random_nets(ss, cc)
         #for i in range(dictionary2[ss][cc-1]+1): 
         #mm.maskdumpargs(ss,cc)
 #        mm.fcorrargs(ss,cc)

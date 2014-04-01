@@ -6,7 +6,7 @@ subjects = ["ANGO", "MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRF
 densities = ["5p", "8p", "12p", "15p"]
 
 def mk(ss, de):
-    newdir = os.environ["state"]+"/"+ss+"/modularity"+de
+    newdir = os.environ["state"]+"/"+ss+"/modularity"+de+"/set_consistency"
     if not os.path.exists(newdir):
         os.makedirs(newdir)
 
