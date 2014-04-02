@@ -70,28 +70,31 @@ def set_consist(ss, ia, ib, input1, input2):
     """
 
     preservation = []
-    for i in range(len(comm3_array)):
+    for i in xrange(len(comm3_array)):
         tmp3 = []
         tmp1 = []
 
-        for item in mod3_dict[vox_comm3_array[i][1]]:
-            tmp3.append(item[0]) ## these are the voxels in a module with voxel 'i'
+        if mod3_dict[vox_comm3_array[i][1]] < 20:
+            preservation.append(777)
+        else:
+            for item in mod3_dict[vox_comm3_array[i][1]]:
+                tmp3.append(item[0]) ## these are the voxels in a module with voxel 'i'
+            for item in mod1_dict[vox_comm1_array[i][1]]:
+                tmp1.append(item[0])
 
-        for item in mod1_dict[vox_comm1_array[i][1]]:
-            tmp1.append(item[0])
-
-        #pruning = [filter(lambda x: x in tmp3, sublist) for sublist in tmp1]
-        #len_tmp_intersect = len([x in for x in tmp3 if x in tmp1])
-        #len(set(tmp3) & set(tmp1))
-        preservation.append(round(len(set(tmp3).intersection(set(tmp1))) / float(len(tmp3)), 4))
-        #preservation.append(round(float(len(set(tmp3) & set(tmp1))) / float(len(tmp3)), 4))
+            #pruning = [filter(lambda x: x in tmp3, sublist) for sublist in tmp1]
+            #len_tmp_intersect = len([x in for x in tmp3 if x in tmp1])
+            #len(set(tmp3) & set(tmp1))
+            preservation.append(round(len(set(tmp3).intersection(set(tmp1))) / float(len(tmp3)), 4))
+            #preservation.append(round(float(len(set(tmp3) & set(tmp1))) / float(len(tmp3)), 4))
     
     pres_out = ""
     for line in preservation:
         pres_out += str(round(line,4))+"\n"
 
     #outname = os.environ["state"]+"/"+ss+"/modularity5p/set_consistency/preserved_iters_"+ia+"_"+ib+"_"+ss+".txt"
-    outname = os.environ["state"]+"/"+ss+"/modularity5p/set_consistency/iter"+ia+"_"+ss+"_preserved.txt"
+    #outname = os.environ["state"]+"/"+ss+"/modularity5p/set_consistency/iter"+ia+"_"+ss+"_preserved.txt"
+    outname = os.environ["state"]+"/"+ss+"/modularity5p/set_consistency2/iter"+ia+"_"+ss+"_preserved.txt"
     outf = open(outname, "w")
     outf.write(pres_out)
     outf.close()
