@@ -1,0 +1,26 @@
+executable	= 87.distance.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/87.$(Process).out
+error		= ./logs/87.$(Process).err
+log 		= ./logs/87.$(Process).log
+
+
+arguments    = --subject EEPA --nvoxels 10884 
+queue 
+
+arguments    = --subject DNLN --nvoxels 11296 
+queue 
+
+arguments    = --subject CRFO --nvoxels 11786 
+queue 
+
+arguments    = --subject ANMS --nvoxels 10879 
+queue 
+
+arguments    = --subject MRZM --nvoxels 9044 
+queue 
+
+arguments    = --subject MRVV --nvoxels 9541 
+queue 
+
