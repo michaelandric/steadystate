@@ -69,9 +69,21 @@ class QWARP_FLOW:
         data_dir = os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/"
         #print data_dir+"preserved_"+self.options.subject+"_median5p+orig"
         print call("3dNwarpApply -nwarp '"+mask_dir+self.options.subject+".SurfVol_Alnd_Exp_SkStAlQ_WARP+tlrc "+mask_dir+self.options.subject+".SurfVol_Alnd_Exp_SkStAl.aff12.1D' \
-                    -source "+data_dir+"iters_"+self.options.subject+"_median5p+orig -master NWARP -prefix "+data_dir+"iters_"+self.options.subject+"_median5p_warped", shell = True)
+                    -source "+data_dir+"preserved_"+self.options.subject+"_median5p_20vxFltr+orig -master NWARP -prefix "+data_dir+"preserved_"+self.options.subject+"_median5p_20vxFltr_warped", shell = True)
 
-def main():
+    def Nwarp3(self):
+        """
+        Differs from Nwarp2 because added here the '-ainterp NN' flag to not interpolate values. Using '777' as a filter identifier for voxels that were in modules n < 1
+        """
+        mask_dir = os.environ["state"]+"/"+self.options.subject+"/masking/"
+        data_dir = os.environ["state"]+"/"+self.options.subject+"/corrTRIM_BLUR/"
+        #print data_dir+"preserved_"+self.options.subject+"_median5p+orig"
+        print call("3dNwarpApply -nwarp '"+mask_dir+self.options.subject+".SurfVol_Alnd_Exp_SkStAlQ_WARP+tlrc "+mask_dir+self.options.subject+".SurfVol_Alnd_Exp_SkStAl.aff12.1D' \
+                    -source "+data_dir+"iters_"+self.options.subject+"_median5p_20vxFltr+orig -master NWARP -ainterp NN -prefix "+data_dir+"iters_"+self.options.subject+"_median5p_20vxFltr_warped", shell = True)
+
+
+if __name__ == "__main__":
+
     qw = QWARP_FLOW()
     qw.get_opts()
     #qw.Unfize()   # This gave a wacky looking uniformity to the SurfVol_Alnd_Exp brain that made the subsequent SkullStrip horrible. Leave out for now. 
@@ -79,9 +91,5 @@ def main():
 #    qw.Allineate()
     #qw.Qwarp()
     #qw.Nwarp()
-    qw.Nwarp2()
-
-if __name__ == "__main__":
-    main()
-
+    qw.Nwarp3()
 

@@ -62,12 +62,15 @@ class MakeArgs:
         #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_warped+tlrc"
         #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_median5p_warped+tlrc"
         #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_diff_"+subject+"_median5p_warped+tlrc"
-        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p_warped+tlrc"
+        #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p_warped+tlrc"
+        #input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_median5p_20vxFltr_warped+tlrc"
+        input = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p_20vxFltr_warped+tlrc"
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_tlrc_dump.txt"
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_warped_tlrc_dump.txt"
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_"+subject+"_median5p_warped_tlrc_dump.txt"
         #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/preserved_diff_"+subject+"_median5p_warped_tlrc_dump.txt"
-        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p_warped_tlrc_dump.txt"
+        #output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p_warped_tlrc_dump.txt"
+        output = os.environ["state"]+"/"+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p_20vxFltr_warped_tlrc_dump.txt"
         print "arguments    = --mask "+automask+" --inputfile "+input+" --outputname "+output+" --subject "+subject+" \nqueue \n" 
 
     def dir_maker(self):
@@ -176,12 +179,16 @@ class MakeArgs:
         basedir = "/mnt/tier2/urihas/Andric/steadystate/"
         #inputf = basedir+subject+"/modularity5p/set_consistency/preserved_"+subject+"_median5p.txt"
         #inputf = basedir+subject+"/modularity5p/set_consistency/preserved_diff_"+subject+"_median5p.txt"
-        inputf = basedir+subject+"/modularity5p/set_consistency/iters_"+subject+"_median5p.txt"
+        #inputf = basedir+subject+"/modularity5p/set_consistency/iters_"+subject+"_median5p.txt"
+        #inputf = basedir+subject+"/modularity5p/set_consistency2/preserved_"+subject+"_median5p_20vxFltr.txt"
+        inputf = basedir+subject+"/modularity5p/set_consistency2/iters_"+subject+"_median5p_20vxFltr.txt"
         ijkfile = basedir+subject+"/masking/ijk_coords_graymattermask_"+subject
         master = basedir+subject+"/blur.1."+subject+".steadystate.TRIM+orig"
         #outname = basedir+subject+"/corrTRIM_BLUR/preserved_"+subject+"_median5p"
         #outname = basedir+subject+"/corrTRIM_BLUR/preserved_diff_"+subject+"_median5p"
-        outname = basedir+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p"
+        #outname = basedir+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p"
+        #outname = basedir+subject+"/corrTRIM_BLUR/preserved_"+subject+"_median5p_20vxFltr"
+        outname = basedir+subject+"/corrTRIM_BLUR/iters_"+subject+"_median5p_20vxFltr"
         print "arguments    = --inputfile "+inputf+" --ijkfile "+ijkfile+" --datatype "+arg1+" --master "+master+" --outputname "+outname+" \nqueue \n"
 
     def filter(self,subject,arg1,arg2):
@@ -305,6 +312,8 @@ class MakeArgs:
     def composite_set_preserved_iters(self, subject):
         print "arguments    = 80.composite_set_preserved_iters.R "+subject+" \nqueue \n"
 
+    def distance_newargs(self, subject, arg1):
+        print "arguments    = --subject "+subject+" --nvoxels "+`arg1`+" \nqueue \n"
 
     def tester(self):
         print "this is a test"

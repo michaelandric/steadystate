@@ -36,11 +36,11 @@ class AFNIproc_undump:
 
         communityint = map(int, community)
         newcomm = []
-        for i in range(len(communityint)):
+        for i in xrange(len(communityint)):
             newcomm.append(communityint[i]+1)
 
         justcomm = ""
-        for i in range(len(newcomm)):
+        for i in xrange(len(newcomm)):
             justcomm += `newcomm[i]`+"\n"
 
         outname = self.options.input+".justcomm"

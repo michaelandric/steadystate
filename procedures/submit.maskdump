@@ -6,57 +6,57 @@ error		= ./logs/maskdump.$(Process).err
 log 		= ./logs/maskdump.$(Process).log
 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/iters_MYTP_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/iters_MYTP_median5p_warped_tlrc_dump.txt --subject MYTP 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/iters_MYTP_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MYTP/corrTRIM_BLUR/iters_MYTP_median5p_20vxFltr_warped_tlrc_dump.txt --subject MYTP 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/iters_TRCO_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/iters_TRCO_median5p_warped_tlrc_dump.txt --subject TRCO 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/iters_TRCO_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/TRCO/corrTRIM_BLUR/iters_TRCO_median5p_20vxFltr_warped_tlrc_dump.txt --subject TRCO 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/iters_PIGL_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/iters_PIGL_median5p_warped_tlrc_dump.txt --subject PIGL 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/iters_PIGL_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/PIGL/corrTRIM_BLUR/iters_PIGL_median5p_20vxFltr_warped_tlrc_dump.txt --subject PIGL 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/iters_SNNW_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/iters_SNNW_median5p_warped_tlrc_dump.txt --subject SNNW 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/iters_SNNW_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/SNNW/corrTRIM_BLUR/iters_SNNW_median5p_20vxFltr_warped_tlrc_dump.txt --subject SNNW 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/iters_LDMW_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/iters_LDMW_median5p_warped_tlrc_dump.txt --subject LDMW 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/iters_LDMW_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LDMW/corrTRIM_BLUR/iters_LDMW_median5p_20vxFltr_warped_tlrc_dump.txt --subject LDMW 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/iters_FLTM_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/iters_FLTM_median5p_warped_tlrc_dump.txt --subject FLTM 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/iters_FLTM_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/FLTM/corrTRIM_BLUR/iters_FLTM_median5p_20vxFltr_warped_tlrc_dump.txt --subject FLTM 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/iters_CLFR_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/iters_CLFR_median5p_warped_tlrc_dump.txt --subject CLFR 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/iters_CLFR_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CLFR/corrTRIM_BLUR/iters_CLFR_median5p_20vxFltr_warped_tlrc_dump.txt --subject CLFR 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/iters_EEPA_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/iters_EEPA_median5p_warped_tlrc_dump.txt --subject EEPA 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/iters_EEPA_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/EEPA/corrTRIM_BLUR/iters_EEPA_median5p_20vxFltr_warped_tlrc_dump.txt --subject EEPA 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/iters_DNLN_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/iters_DNLN_median5p_warped_tlrc_dump.txt --subject DNLN 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/iters_DNLN_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/DNLN/corrTRIM_BLUR/iters_DNLN_median5p_20vxFltr_warped_tlrc_dump.txt --subject DNLN 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/iters_CRFO_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/iters_CRFO_median5p_warped_tlrc_dump.txt --subject CRFO 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/iters_CRFO_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/CRFO/corrTRIM_BLUR/iters_CRFO_median5p_20vxFltr_warped_tlrc_dump.txt --subject CRFO 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/iters_ANMS_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/iters_ANMS_median5p_warped_tlrc_dump.txt --subject ANMS 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/iters_ANMS_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/ANMS/corrTRIM_BLUR/iters_ANMS_median5p_20vxFltr_warped_tlrc_dump.txt --subject ANMS 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/iters_MRZM_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/iters_MRZM_median5p_warped_tlrc_dump.txt --subject MRZM 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/iters_MRZM_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRZM/corrTRIM_BLUR/iters_MRZM_median5p_20vxFltr_warped_tlrc_dump.txt --subject MRZM 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/iters_MRVV_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/iters_MRVV_median5p_warped_tlrc_dump.txt --subject MRVV 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/iters_MRVV_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRVV/corrTRIM_BLUR/iters_MRVV_median5p_20vxFltr_warped_tlrc_dump.txt --subject MRVV 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/iters_MRMK_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/iters_MRMK_median5p_warped_tlrc_dump.txt --subject MRMK 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/iters_MRMK_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMK/corrTRIM_BLUR/iters_MRMK_median5p_20vxFltr_warped_tlrc_dump.txt --subject MRMK 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/iters_MRMC_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/iters_MRMC_median5p_warped_tlrc_dump.txt --subject MRMC 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/iters_MRMC_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRMC/corrTRIM_BLUR/iters_MRMC_median5p_20vxFltr_warped_tlrc_dump.txt --subject MRMC 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/iters_MRAG_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/iters_MRAG_median5p_warped_tlrc_dump.txt --subject MRAG 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/iters_MRAG_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MRAG/corrTRIM_BLUR/iters_MRAG_median5p_20vxFltr_warped_tlrc_dump.txt --subject MRAG 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/iters_MNGO_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/iters_MNGO_median5p_warped_tlrc_dump.txt --subject MNGO 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/iters_MNGO_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/MNGO/corrTRIM_BLUR/iters_MNGO_median5p_20vxFltr_warped_tlrc_dump.txt --subject MNGO 
 queue 
 
-arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/iters_LRVN_median5p_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/iters_LRVN_median5p_warped_tlrc_dump.txt --subject LRVN 
+arguments    = --mask /mnt/tier2/urihas/Andric/steadystate/groupstats/automask_d1_TTavg152T1+tlrc --inputfile /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/iters_LRVN_median5p_20vxFltr_warped+tlrc --outputname /mnt/tier2/urihas/Andric/steadystate/LRVN/corrTRIM_BLUR/iters_LRVN_median5p_20vxFltr_warped_tlrc_dump.txt --subject LRVN 
 queue 
 

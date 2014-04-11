@@ -1,6 +1,10 @@
 #!/usr/bin/python
 """
 Get average euclidean distance between a voxel and other voxels in module.
+
+!!!This differs from '46.distance.py' because '46.distance.py' was just a post hoc effort on x, y, z vals w/o scaling
+!!!This uses ijk coords and scales by voxel size
+!!!Now running this for connectivity matrices that were set at equal edge densities
 """
 import os
 from optparse import OptionParser
@@ -35,24 +39,19 @@ def dist_grab(ss, cc):
     print os.getcwd()
     print "Condition: "+cc
 
-    # Get community identifiers
+    # Get the community (module) IDs for condition
 
-    comfname = glob("cleanTS."+cc+"."+ss+"_graymask_dump.bin.corr.thresh.tree*.justcomm")
-    comf = open(''.join(comfname))
+    fname = glob("cleanTS."+cc+"."+ss+"_graymask_dump.bin.corr.thresh.tree*.ijk.txt")
+    comf = open(''.join(fname))
+
+    # Get lines from ijk+community identifiers file
 
     comm_array = []
-    for line in comf:
-        comm_array.append(int(line))
-    
-    # Get lines for x, y, z
-    
-    coordfname = glob(os.environ["state"]+"/"+ss+"/masking/xyz_coords_graymattermask_"+ss)
-    coordf = open(''.join(coordfname))
-    
     coord_array = []
-    for line in coordf:
-    	a, b, c = [float(x) for x in line.split()]
-    	coord_array.append((a,b,c))
+    for line in comf:
+        a, b, c, d = [int(x) for x in line.split()]
+        coord_array.append((a,b,c))
+        comm_array.append(d)
 
 
     # Two column arrays where Column 1 are voxel IDs and Column 2 are module IDs
@@ -89,7 +88,7 @@ def dist_grab(ss, cc):
             
             x_dist = []   # 'x_dist' is a list of distances from voxel 'i' to every other voxel in the modules
             for v in others:
-                x_dist.append((get_distance(coord_array[i], coord_array[v])))   # since voxels are 4 x 4 x 4.8, use 5 to be conservative for scaling
+                x_dist.append((get_distance(coord_array[i], coord_array[v])) * 5)   # since voxels are 4 x 4 x 4.8, use 5 to be conservative for scaling
 
             x_dist_filtered = [y for y in x_dist if y > 20]   # filter distance 
 
@@ -102,7 +101,7 @@ def dist_grab(ss, cc):
     for line in euc_dist:
         dist_out += str(round(line,4))+"\n"
 
-    outf = open("TESTdistance_xyz_Filter20_"+ss+"_Cond"+cc+".txt","w")
+    outf = open("distanceFilter20_"+ss+"_Cond"+cc+".txt","w")
     outf.write(dist_out)
     outf.close()
 
@@ -120,3 +119,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
