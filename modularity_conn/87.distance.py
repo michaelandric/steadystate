@@ -9,135 +9,76 @@ from glob import glob
 from time import ctime
 
 
-def get_distance(p,q):
-    """Get distance between 2 x, y, z voxel coords.
+class GetDistance(object):
 
-    Separate function 'get_distance' makes it easier to run a 'for' loop and subset people or conditions.
-    Args:
-        p: one coordinate
-        q: other coordinate
-        
-    Run example:
-    get_distance([-2,2,5],[2,4,2])
+    def make_mod_dict(self, ComArray):
+        """Make dictionary of modules and their voxels"""
+        uniq_modules = set(ComArray)
+        mod_dict = {}
+        for i in uniq_modules:
+            mod_dict[i] = [v for v, c in enumerate(ComArray) if c == i]
+        return(mod_dict)
 
-    """
-    return sqrt(sum([(x-y)**2 for (x,y) in zip(p,q)]))
+    def getSNSC(self, i, others, ComArray, CoordArray):
+        """linalg.norm is from the numpy module and used here to get Euc distance."""
+        xdist = array([linalg.norm(CoordArray[i]-CoordArray[v]) for v in others])
+        try:
+            snsc = average(xdist[where(xdist > 20)])   # filter by 20
+        except:
+            pass
+        return snsc
 
-def filterbyvalue(seq, value):
-    for el in seq:
-        if el > value: yield el
+    def dist_grab(self, i, ss, nvox, cc):
+        nvox = int(nvox)
+        comfname = os.environ["state"]+"/%(ss)s/modularity5p/iter%(i)s.%(ss)s.%(cc)s.5p_r0.5_linksthresh_proportion.out.maxlevel_tree" % locals()
+        ca = (line.split()[1] for line in open("".join(comfname)))
+        comm_array = map(int, ca)
 
-def dist_grab(i, ss, cc):
-    """Run get_distance function
+        coordfname = os.environ["state"]+"/%(ss)s/masking/xyz_coords_graymattermask_%(ss)s" % locals()
+        coordf = open("".join(coordfname))
+        npCoordArray = array([map(float, line.split()) for line in coordf])
 
-    Args:
-        ss: Subject (participant)
-        cc: condition identifier
-        
-    """
-    # Get community identifiers
-    comfname = os.environ["state"]+"/"+ss+"/modularity5p/iter"+`i`+"."+ss+"."+cc+".5p_r0.5_linksthresh_proportion.out.maxlevel_tree"
-    comf = open(comfname, 'r')
-    comm_array = []
-    for line in comf:
-        comm_array.append(line.split()[1])
-    comm_array = map(int, comm_array)
+        md = self.make_mod_dict(comm_array)   # dictionary of modules and their voxels
 
-    # Get lines for x, y, z
-    coordfname = glob(os.environ["state"]+"/"+ss+"/masking/xyz_coords_graymattermask_"+ss)
-    coordf = open(''.join(coordfname))
-    coord_array = []
-    for line in coordf:
-    	a, b, c = [float(x) for x in line.split()]
-    	coord_array.append((a,b,c))
-
-    # Get the modules for each condition
-    uniq_modules = set(comm_array)
-
-    # Make dictionaries. Module numbers are keys and voxels in modules are values
-    mod_dict = {}
-    for i in uniq_modules:
-        mod_dict[i] = [v for v, c in enumerate(comm_array) if c == i]
-
-    # For each voxel, find its module, identify all other voxels in module, find distance between every other voxel, average those distances. 
-    # Get an average distance for each module, average those for an average distance by condition (this will be in another script).
-    #euc_dist = []
-    euc_dist = array(zeros(len(comm_array)))
-
-    """
-    for i in mod_dict.keys():
-        if len(mod_dict[i]) == 1:
-            continue
-            #euc_dist[mod_dict[i][0]] = 0
-        else:
-            for v in mod_dict[i]:
-                v_dist = []
-                others = (vx for vx in mod_dict[i] if vx != v)
-                for vv in others:
-                    gd = get_distance(coord_array[v], coord_array[vv])
-                    if gd > 20:
-                        v_dist.append(gd)
-                euc_dist[v] = average(v_dist)
-
-    """
-    for i in xrange(len(comm_array)):
-        if len(mod_dict[comm_array[i]]) == 1:
-            #euc_dist.append(0)
-            continue
-        else:
-            others = (v for v in mod_dict[comm_array[i]] if v != i)
-            x_dist = []
-            for v in others:
-                x_dist.append((get_distance(coord_array[i], coord_array[v])))
-
-            x_dist_filtered = [y for y in filterbyvalue(x_dist, 20)]   # Filter here by 20
-            if len(x_dist_filtered) == 0:
-                #euc_dist.append(0)
-                euc_dist[i] = 0.
+        euc_dist = array(zeros(nvox))
+        for i in xrange(nvox):
+            if len(md[comm_array[i]]) > 1:
+                mod_dict_vals = md.get(comm_array[i])
+                others = array(mod_dict_vals)[where(array(mod_dict_vals) != i)]
+                euc_dist[i] = self.getSNSC(i, others, comm_array, npCoordArray)
             else:
-                #euc_dist.append(round(average(x_dist_filtered), 4))   # Average distance for voxel 'i' to all other voxels in its module
-                euc_dist[i] = average(x_dist_filtered)   # Average distance for voxel 'i' to all other voxels in its module
-
-    return euc_dist
-
-    #dist_out = ""
-    #for line in euc_dist:
-    #    dist_out += str(round(line,4))+"\n"
-
-    #outf = open("distance_xyz_Filter20_"+ss+"_Cond"+cc+".txt","w")
-    #outf.write(dist_out)
-    #outf.close()
+                pass
+        return euc_dist
 
 
-
-conditions = range(1,5)
-
+#conditions = range(1,5)
 if __name__ == "__main__":
     """Run the above functions."""
     parser = OptionParser()
     parser.add_option("--subject", dest="ss", help = "give the subject identifier")
     parser.add_option("--nvoxels", dest="nvox", help = "subject number of voxels")
+    parser.add_option("--condition", dest="cond", help = "subject number of voxels")
     options, args = parser.parse_args()
+    ss = options.ss
+    cc = options.cond
+    
+    GD = GetDistance()
+    #for cc in conditions:
+    niterations = 50
+    ss_array = array(zeros(int(options.nvox)*niterations)).reshape(int(options.nvox), niterations)
+    for iter in xrange(1, (1+niterations)):
+        print ctime()
+        print cc, iter
 
-    for cc in conditions:
-        niterations = 50
-        #print int(options.nvox)*niterations
-        ss_array = array(zeros(int(options.nvox)*niterations)).reshape(int(options.nvox), niterations)
-        for iter in xrange(1, (1+niterations)):
-            print ctime()
-            print cc, iter
-            dd = dist_grab(iter, options.ss, `cc`)   # Make sure condition is string and not integer type
-            ss_array[:,(iter-1)] = dd
-            savetxt(os.environ['state']+'/'+options.ss+'/ss_array'+`iter`+'.'+options.ss+'.txt', ss_array, fmt='%1.3f')
+        ss_array[:,(iter-1)] = GD.dist_grab(iter, options.ss, options.nvox, cc)   # Make sure condition is string and not integer type
 
-        array_out = ""
-        for line in ss_array:
-            array_out += str(round(average(line), 3))+'\n'
+    array_out_list = (str(round(average(line), 3))+'\n' for line in ss_array)
+    array_out = "".join(array_out_list)
 
-        foutname = os.environ['state']+'/'+options.ss+'/modularity5p/distances/distances_xyz_filt20_'+options.ss+'_Cond'+`cc`+'.txt'
-        outf = open(foutname, 'w')
-        outf.write(array_out)
-        outf.close()
+    foutname = os.environ['state']+'/%(ss)s/modularity5p/distances/distances_xyz_filt20_%(ss)s_Cond%(cc)s.txt' % locals()
+    outf = open(foutname, 'w')
+    outf.write(array_out)
+    outf.close()
 
 
 
