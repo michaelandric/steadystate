@@ -29,7 +29,8 @@ if __name__ == "__main__":
 
     for i in xrange(len(subjects)):
         print subjects[i]+" // "+ctime()
-        ss_nullfname = os.environ['state']+'/%s/corrTRIM_BLUR/iters_%s_median5p_20vxFltr_warped_tlrc_dump.txt' % (subjects[i], subjects[i])
+        #ss_nullfname = os.environ['state']+'/%s/corrTRIM_BLUR/iters_%s_median5p_20vxFltr_warped_tlrc_dump.txt' % (subjects[i], subjects[i])
+        ss_nullfname = os.environ['state']+'/%s/corrTRIM_BLUR/preserved_%s_median5p_20vxFltr_warped_tlrc_dump.txt' % (subjects[i], subjects[i])
         ss_nullf = open(''.join(ss_nullfname))
         ss_null = (line.split()[3] for line in ss_nullf)
         null_mat[:,i] = map(float, ss_null)
@@ -38,12 +39,14 @@ if __name__ == "__main__":
     outmean = np.apply_along_axis(fltmean, axis = 1, arr = null_mat)
 
     os.chdir(os.environ['state']+'/groupstats')
-    np.savetxt('iters_group_median5p_20vxFltr_warped_median.out', outmedian, fmt='%.4f')
-    np.savetxt('iters_group_median5p_20vxFltr_warped_average.out', outmean, fmt='%.4f')
+    #np.savetxt('iters_group_median5p_20vxFltr_warped_median.out', outmedian, fmt='%.4f')
+    #np.savetxt('iters_group_median5p_20vxFltr_warped_average.out', outmean, fmt='%.4f')
+    np.savetxt('preserved_group_median5p_20vxFltr_warped_median.out', outmedian, fmt='%.4f')
+    np.savetxt('preserved_group_median5p_20vxFltr_warped_average.out', outmean, fmt='%.4f')
 
     m1 = "Voxels in median group that are 777: %s" % round((len(outmedian[outmedian==777]) / nvoxels) * 100, 4)
     m2 = "Voxels in mean group that are 777: %s" % round((len(outmean[outmean==777]) / nvoxels) * 100, 4)
-    fsummary = open('iters_group_median5p_20vxFltr_warped_summary.out', 'w')
+    fsummary = open('preserved_group_median5p_20vxFltr_warped_summary.out', 'w')
     fsummary.write(m1+'\n'+m2+'\n')
     fsummary.close()
 
