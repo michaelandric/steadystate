@@ -1,0 +1,62 @@
+executable	= RInvoke.py
+universe 	= vanilla
+getenv		= true
+output		= ./logs/89.$(Process).out
+error		= ./logs/89.$(Process).err
+log 		= ./logs/89.$(Process).log
+
+
+arguments = 89.distance_dist_fit.R MYTP 
+queue 
+
+arguments = 89.distance_dist_fit.R TRCO 
+queue 
+
+arguments = 89.distance_dist_fit.R PIGL 
+queue 
+
+arguments = 89.distance_dist_fit.R SNNW 
+queue 
+
+arguments = 89.distance_dist_fit.R LDMW 
+queue 
+
+arguments = 89.distance_dist_fit.R FLTM 
+queue 
+
+arguments = 89.distance_dist_fit.R CLFR 
+queue 
+
+arguments = 89.distance_dist_fit.R EEPA 
+queue 
+
+arguments = 89.distance_dist_fit.R DNLN 
+queue 
+
+arguments = 89.distance_dist_fit.R CRFO 
+queue 
+
+arguments = 89.distance_dist_fit.R ANMS 
+queue 
+
+arguments = 89.distance_dist_fit.R MRZM 
+queue 
+
+arguments = 89.distance_dist_fit.R MRVV 
+queue 
+
+arguments = 89.distance_dist_fit.R MRMK 
+queue 
+
+arguments = 89.distance_dist_fit.R MRMC 
+queue 
+
+arguments = 89.distance_dist_fit.R MRAG 
+queue 
+
+arguments = 89.distance_dist_fit.R MNGO 
+queue 
+
+arguments = 89.distance_dist_fit.R LRVN 
+queue 
+
