@@ -1,10 +1,9 @@
-executable	= RInvoke.sh
+executable	= RInvoke.py
 universe 	= vanilla
 getenv		= true
 output		= ./logs/17.$(Process).out
 error		= ./logs/17.$(Process).err
 log 		= ./logs/17.$(Process).log
-
 
 
 arguments    = 17.degree.R MYTP 10699 1 
@@ -79,6 +78,18 @@ queue
 arguments    = 17.degree.R FLTM 12215 4 
 queue 
 
+arguments    = 17.degree.R CLFR 10946 1 
+queue 
+
+arguments    = 17.degree.R CLFR 10946 2 
+queue 
+
+arguments    = 17.degree.R CLFR 10946 3 
+queue 
+
+arguments    = 17.degree.R CLFR 10946 4 
+queue 
+
 arguments    = 17.degree.R EEPA 10884 1 
 queue 
 
@@ -125,18 +136,6 @@ arguments    = 17.degree.R ANMS 10879 3
 queue 
 
 arguments    = 17.degree.R ANMS 10879 4 
-queue 
-
-arguments    = 17.degree.R BARS 10023 1 
-queue 
-
-arguments    = 17.degree.R BARS 10023 2 
-queue 
-
-arguments    = 17.degree.R BARS 10023 3 
-queue 
-
-arguments    = 17.degree.R BARS 10023 4 
 queue 
 
 arguments    = 17.degree.R MRZM 9044 1 
@@ -221,17 +220,5 @@ arguments    = 17.degree.R LRVN 10633 3
 queue 
 
 arguments    = 17.degree.R LRVN 10633 4 
-queue 
-
-arguments    = 17.degree.R CLFR 10946 1 
-queue 
-
-arguments    = 17.degree.R CLFR 10946 2 
-queue 
-
-arguments    = 17.degree.R CLFR 10946 3 
-queue 
-
-arguments    = 17.degree.R CLFR 10946 4 
 queue 
 

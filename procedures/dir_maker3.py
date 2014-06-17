@@ -3,10 +3,11 @@
 import os
 
 subjects = ["ANGO", "MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN","CLFR"]
-densities = ["5p", "8p", "12p", "15p"]
+#densities = ["5p", "8p", "12p", "15p"]
+densities = ["5p"]
 
 def mk(ss, de):
-    newdir = os.environ["state"]+"/"+ss+"/modularity"+de+"/distances"
+    newdir = os.environ["state"]+"/"+ss+"/modularity"+de+"/similarity_measures"
     if not os.path.exists(newdir):
         os.makedirs(newdir)
 

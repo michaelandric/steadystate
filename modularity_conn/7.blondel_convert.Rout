@@ -21,9 +21,7 @@ Type 'q()' to quit R.
 > ## take the bin and make into link format for the blondel method to find communities
 > Args <- Sys.getenv("R_ARGS")
 > print(noquote(strsplit(Args," ")[[1]]))
-[1] ANGO 3    0.3 
-> print(length(noquote(strsplit(Args," ")[[1]])))
-[1] 3
+[1] MYTP 1    0.5 
 > subj <- noquote(strsplit(Args," ")[[1]][1])
 > cond <- as.numeric(noquote(strsplit(Args," ")[[1]][2]))
 > thresh <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
@@ -32,13 +30,14 @@ Type 'q()' to quit R.
 Loading required package: RcppGSL
 Loading required package: Rcpp
 Loading required package: snow
-> thresh_mat <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh_",thresh,sep="")
-> blondel_mat <- paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh_",thresh,".srcdst",sep="")
-> blondel_convert(thresh_mat,blondel_mat)
+> 
+> thresh_mat <- paste(Sys.getenv("state"),"/links_files/",subj,".",cond,".",thresh,"median_linksthresh_proportion.out", sep="")
+> blondel_mat <- paste(Sys.getenv("state"),"/links_files/modularity/",subj,".",cond,".",thresh,"median_linksthresh_proportion.out.srcdst", sep="")
+> blondel_convert(thresh_mat, blondel_mat)
 [1] 0
 > 
 > 
 > 
 > proc.time()
     user   system  elapsed 
-  10.493    0.474 1205.898 
+  13.102    0.606 1105.264 

@@ -56,11 +56,11 @@ def volsurf_tal_pres_avg_cmd(H, pn):
     os.chdir("/mnt/lnif-storage/urihas/uhproject/suma_tlrc/")
     print os.getcwd()
     #PARENT = os.environ["state"]+"/groupstats/preserved_group_median+tlrc"
-    PARENT = "preserved_group_median5p_20vxFltr_warped_median+tlrc"   # already copied to suma_tlrc dir from groupstats dir
+    PARENT = "preserved_group_median5p_20vxFltr_warped_median.out+tlrc"   # already copied to suma_tlrc dir from groupstats dir
     SV = "TT_N27+tlrc"
     print call("3dVol2Surf -spec ./N27_"+H+"_tlrc.spec -surf_A ./"+H+".smoothwm.tlrc.ply -surf_B ./"+H+".pial.tlrc.ply \
                 -sv "+SV+" -grid_parent "+PARENT+" -map_func max -f_steps 10 -f_index voxels -f_p1_fr -"+pn+" -f_pn_fr "+pn+" \
-                -outcols_NSD_format -oob_index -1 -oob_value 0.0 -out_1D preserved_group_median5p__20vxFltr_warped_median_"+H+".pn"+pn+".tlrc.1D", shell=True)
+                -outcols_NSD_format -oob_index -1 -oob_value 0.0 -out_1D preserved_group_median5p__20vxFltr_warped_median.out_"+H+".pn"+pn+".tlrc.1D", shell=True)
 
 
 def main():

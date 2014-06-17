@@ -6,21 +6,12 @@ error		= ./logs/87.$(Process).err
 log 		= ./logs/87.$(Process).log
 
 
-arguments    = --subject EEPA --nvoxels 10884 
+arguments    = --subject FLTM --nvoxels 12214 --condition 4 
 queue 
 
-arguments    = --subject DNLN --nvoxels 11296 
+arguments    = --subject MRAG --nvoxels 10234 --condition 1 
 queue 
 
-arguments    = --subject CRFO --nvoxels 11786 
-queue 
-
-arguments    = --subject ANMS --nvoxels 10879 
-queue 
-
-arguments    = --subject MRZM --nvoxels 9044 
-queue 
-
-arguments    = --subject MRVV --nvoxels 9541 
+arguments    = --subject MRAG --nvoxels 10234 --condition 2 
 queue 
 

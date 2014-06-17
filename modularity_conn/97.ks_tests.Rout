@@ -1,0 +1,104 @@
+
+R version 2.15.2 (2012-10-26) -- "Trick or Treat"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # test whether distributions are different
+> 
+> subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
+> 
+> # test SNSC against null 
+> setwd("/mnt/tier2/urihas/Andric/steadystate/groupstats/")
+> gg1 <- read.table("preserved_group_median5p_20vxFltr_warped_median.out")$V1
+> gg2 <- read.table("iters_group_median5p_20vxFltr_warped_median.out")$V1
+> newgg1 <- gg1[which(gg1 > 0 & gg1 < 777)]
+> newgg2 <- gg2[which(gg2 > 0 & gg2 < 777)]
+> 
+> print(ks.test(newgg1, newgg2))
+
+	Two-sample Kolmogorov-Smirnov test
+
+data:  newgg1 and newgg2 
+D = 0.9421, p-value < 2.2e-16
+alternative hypothesis: two-sided 
+
+Warning message:
+In ks.test(newgg1, newgg2) :
+  p-values will be approximate in the presence of ties
+> 
+> # construct vectors for adj rand index and nmi 
+> adjrand_btwn_all <- c()   # this is for all the upper.tri (unique pairs) values instead of just their mean
+> adjrand_1_all <- c()
+> nmi_btwn_all <- c()
+> nmi_1_all <- c()
+> 
+> for (ss in subjects)
++ {
++     setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/modularity5p/similarity_measures/", sep = ""))
++     adjrand_btwn_mat <- as.matrix(read.table(paste("adjrands_mat_btwn.",ss,".txt", sep = "")))
++     adjrand_btwn_all <- c(adjrand_btwn_all, c(adjrand_btwn_mat[upper.tri(adjrand_btwn_mat)]))
++     adjrand_1_mat <- as.matrix(read.table(paste("adjrands_mat1.",ss,".txt", sep = "")))
++     adjrand_1_all <- c(adjrand_1_all, c(adjrand_1_mat[upper.tri(adjrand_1_mat)]))
++     nmi_btwn_mat <- (as.matrix(read.table(paste("nmi_mat_btwn.",ss,".txt", sep = ""))))
++     nmi_btwn_all <- c(nmi_btwn_all, c(nmi_btwn_mat[upper.tri(nmi_btwn_mat)]))
++     nmi_1_mat <- as.matrix(read.table(paste("nmi_mat1.",ss,".txt", sep = "")))
++     nmi_1_all <- c(nmi_1_all, c(nmi_1_mat[upper.tri(nmi_1_mat)]))
++ }
+> 
+> 
+> # test adjusted Rand Index distribution against null
+> print(ks.test(adjrand_btwn_all, adjrand_1_all))
+
+	Two-sample Kolmogorov-Smirnov test
+
+data:  adjrand_btwn_all and adjrand_1_all 
+D = 0.9981, p-value < 2.2e-16
+alternative hypothesis: two-sided 
+
+Warning message:
+In ks.test(adjrand_btwn_all, adjrand_1_all) :
+  p-values will be approximate in the presence of ties
+> print(summary(adjrand_btwn_all))
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.0400  0.1470  0.1930  0.1925  0.2290  0.3710 
+> print(summary(adjrand_1_all))
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.2830  0.6200  0.7350  0.7394  0.8710  1.0000 
+> # test normalized mutual info against null
+> print(ks.test(nmi_btwn_all, nmi_1_all))
+
+	Two-sample Kolmogorov-Smirnov test
+
+data:  nmi_btwn_all and nmi_1_all 
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided 
+
+Warning message:
+In ks.test(nmi_btwn_all, nmi_1_all) :
+  p-values will be approximate in the presence of ties
+> print(summary(nmi_btwn_all))
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.0770  0.2200  0.2490  0.2534  0.2870  0.4160 
+> print(summary(nmi_1_all))
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.4310  0.6810  0.7620  0.7689  0.8650  1.0000 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+  1.837   0.059   2.009 

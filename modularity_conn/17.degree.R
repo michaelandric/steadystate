@@ -10,9 +10,9 @@ cond <- as.numeric(noquote(strsplit(Args," ")[[1]][3]))
 print(cond)
 print(nVoxArg)
 
-setwd(paste(Sys.getenv("state"),"/",subj,"/corrTRIM_BLUR/",sep=""))
-inmatrix <- paste("cleanTS.",cond,".",subj,"_graymask_dump.bin.corr.thresh",sep="")
-outname <- paste(subj,".",cond,".degrees_gray",sep="")
+setwd(paste(Sys.getenv("state"),"/links_files5p/",sep=""))   # now doing this on matrices thresholded by edge density. 5p == 5 %
+inmatrix <- paste(subj,".",cond,".5p_r0.5_linksthresh_proportion.out",sep="")
+outname <- paste(subj,".",cond,".5p_linksthresh_proportion.degrees_gray",sep="")
 
 outdegrees <- fdegrees_und(inmatrix,nVoxArg)
 write(outdegrees,outname,sep="\n")

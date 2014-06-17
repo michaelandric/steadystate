@@ -57,8 +57,8 @@ if __name__ == "__main__":
 
     os.chdir("/mnt/lnif-storage/urihas/uhproject/suma_tlrc")
     for h in ['lh', 'rh']:
-        inname = "preserved_group_median5p__20vxFltr_warped_median_"+h+".pn1.0.tlrc.1D"
-        outname = "stratified_preserved_group_median5p__20vxFltr_warped_median_"+h+".pn1.0.tlrc.1D"
+        inname = "preserved_group_median5p__20vxFltr_warped_median.out_"+h+".pn2.0.tlrc.1D"
+        outname = "stratified_preserved_group_median5p__20vxFltr_warped_median.out_"+h+".pn2.0.tlrc.1D"
         assigner(inname, outname)
 
 

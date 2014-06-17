@@ -1,0 +1,183 @@
+
+R version 2.15.2 (2012-10-26) -- "Trick or Treat"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # get an R^2 value from distribution w/ fit parameters and data
+> library(MASS)
+> subjects <- c("ANGO","CLFR","MYTP","TRCO","PIGL","SNNW","LDMW","FLTM","EEPA","DNLN","CRFO","ANMS","MRZM","MRVV","MRMK","MRMC","MRAG","MNGO","LRVN")
+> conditions <- seq(4)
+> 
+> Rsq_vec <- c()
+> shape_param_vec <- c()
+> for (ss in subjects)
++ {
++     setwd(paste("/mnt/tier2/urihas/Andric/steadystate/",ss,"/modularity5p/distances/", sep=""))
++     dd <- read.table(paste("distance_gammafits_",ss,".txt", sep=""), header=T)
++     for (i in conditions)
++     {
++         print(date())
++         dist_dat <- as.matrix(read.table(paste("distances_xyz_filt20_",ss,"_Cond",i,".txt", sep="")))
++         dist_dat <- dist_dat[!dist_dat == 0]   # remove where distance did not have value pass filter
++         est_shape = dd$shape[i]
++         est_rate = dd$rate[i]
++         b = rgamma(length(dist_dat), shape=est_shape, rate=est_rate)
++         Rsq = summary(lm(sort(dist_dat) ~ sort(b)))$r.squared
++         Rsq_vec <- c(Rsq_vec, Rsq)
++         shape_param_vec <- c(shape_param_vec, est_shape)
++     }
++ }
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:48 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:49 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:50 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+[1] "Fri Apr 18 16:32:51 2014"
+> 
+> setwd(paste("/mnt/tier2/urihas/Andric/steadystate/groupstats/", sep=""))
+> print("=====For distributions without average at each voxel======")
+[1] "=====For distributions without average at each voxel======"
+> print(matrix(Rsq_vec, ncol=4, byrow=T))
+           [,1]      [,2]      [,3]      [,4]
+ [1,] 0.9882331 0.9931338 0.9933378 0.9546921
+ [2,] 0.9877614 0.9968856 0.9854049 0.9887196
+ [3,] 0.9845186 0.9806351 0.9717345 0.9630551
+ [4,] 0.9946498 0.9899946 0.9943413 0.9919572
+ [5,] 0.9838212 0.9919645 0.9909419 0.9848421
+ [6,] 0.9912512 0.9915384 0.9934754 0.9811577
+ [7,] 0.9901993 0.9950144 0.9840117 0.9889248
+ [8,] 0.9531603 0.9905324 0.9976517 0.9862184
+ [9,] 0.9505826 0.9930576 0.9910150 0.9871291
+[10,] 0.9922943 0.9918215 0.9945447 0.9677894
+[11,] 0.9617352 0.9697530 0.9855263 0.9743035
+[12,] 0.9956371 0.9646936 0.9953622 0.9735606
+[13,] 0.9640395 0.9924332 0.9714997 0.9708101
+[14,] 0.9956905 0.9966171 0.9878081 0.9931385
+[15,] 0.9895732 0.9890038 0.9711003 0.9762862
+[16,] 0.9808613 0.9687499 0.9492105 0.9762044
+[17,] 0.9952288 0.9887557 0.9875990 0.9870602
+[18,] 0.9948347 0.9869657 0.9788903 0.9928871
+[19,] 0.9852027 0.9915392 0.9905270 0.9886540
+> print(matrix(shape_param_vec, ncol=4, byrow=T))
+          [,1]     [,2]     [,3]     [,4]
+ [1,] 38.26316 32.68170 38.45936 29.27565
+ [2,] 30.21041 34.27359 29.56251 36.98203
+ [3,] 29.05731 29.33691 26.84627 23.62600
+ [4,] 26.59347 37.79321 32.32820 31.92486
+ [5,] 30.40015 33.57322 31.76045 23.88493
+ [6,] 26.54115 29.99012 25.72346 25.03606
+ [7,] 42.10658 24.54831 33.36702 28.64659
+ [8,] 22.50836 33.97149 26.03665 26.42811
+ [9,] 38.23576 36.76996 28.49751 28.48210
+[10,] 34.90504 34.43907 29.92863 30.42963
+[11,] 27.04100 29.48601 29.08038 27.66643
+[12,] 28.69329 28.07073 39.16956 28.17785
+[13,] 24.40447 48.24241 31.67490 30.98395
+[14,] 35.53161 35.35594 35.08754 35.04482
+[15,] 22.90310 26.96492 30.52536 23.77031
+[16,] 24.50815 33.42293 30.48353 36.52915
+[17,] 23.75659 24.68353 20.18088 21.50293
+[18,] 28.83769 34.38335 24.55720 33.96851
+[19,] 30.73993 31.51944 32.49319 31.71883
+> shape_df <- data.frame(shape_param_vec, as.factor(rep(seq(4), 19)), rep(subjects, each=4))
+> Rsq_df <- data.frame(Rsq_vec, as.factor(rep(seq(4), 19)), rep(subjects, each=4))
+> colnames(shape_df) <- c("shapes", "condition", "subject")
+> colnames(Rsq_df) <- c("RsqVals", "condition", "subject")
+> 
+> print(mean(Rsq_vec))
+[1] 0.9839965
+> print(aggregate(Rsq_df$RsqVals, list(Rsq_df$condition), summary))
+  Group.1 x.Min. x.1st Qu. x.Median x.Mean x.3rd Qu. x.Max.
+1       1 0.9506    0.9823   0.9882 0.9831    0.9935 0.9957
+2       2 0.9647    0.9879   0.9915 0.9875    0.9927 0.9969
+3       3 0.9492    0.9815   0.9878 0.9849    0.9934 0.9977
+4       4 0.9547    0.9739   0.9848 0.9804    0.9887 0.9931
+> 
+> proc.time()
+   user  system elapsed 
+  3.688   0.055   3.855 

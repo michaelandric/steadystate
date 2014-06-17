@@ -291,6 +291,9 @@ class MakeArgs:
     def distance_dit_fitargs(self, subject):
         print "arguments = 52.distance_dist_fit.R "+subject+" \nqueue \n"
 
+    def distance_dit_fitargs2(self, subject):
+        print "arguments = 89.distance_dist_fit.R "+subject+" \nqueue \n"
+
     def qwarp_flowargs(self,subject):
         print "arguments    = --Subject "+subject+" \nqueue \n"
 
@@ -312,8 +315,11 @@ class MakeArgs:
     def composite_set_preserved_iters(self, subject):
         print "arguments    = 80.composite_set_preserved_iters.R "+subject+" \nqueue \n"
 
-    def distance_newargs(self, subject, arg1):
-        print "arguments    = --subject "+subject+" --nvoxels "+`arg1`+" \nqueue \n"
+    def distance_newargs(self, subject, arg1, arg2):
+        print "arguments    = --subject "+subject+" --nvoxels "+`arg1`+" --condition "+`arg2`+" \nqueue \n"
+
+    def partition_similarity_args(self, subject):
+        print "arguments    = 95.partition_similarity.R "+subject+" \nqueue \n"
 
     def tester(self):
         print "this is a test"

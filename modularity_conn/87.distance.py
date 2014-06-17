@@ -22,11 +22,11 @@ class GetDistance(object):
     def getSNSC(self, i, others, ComArray, CoordArray):
         """linalg.norm is from the numpy module and used here to get Euc distance."""
         xdist = array([linalg.norm(CoordArray[i]-CoordArray[v]) for v in others])
-        try:
-            snsc = average(xdist[where(xdist > 20)])   # filter by 20
-        except:
-            pass
-        return snsc
+        snsc = average(xdist[where(xdist > 20)])   # filter by 20
+        if isnan(snsc):
+            return 0.        
+        else:
+            return snsc
 
     def dist_grab(self, i, ss, nvox, cc):
         nvox = int(nvox)
